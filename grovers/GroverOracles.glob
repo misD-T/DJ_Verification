@@ -1,0 +1,40 @@
+DIGEST 5097b4d9b37f7905dd8e4f395283c37e
+FGrover.GroverOracles
+R871:874 Coq.Bool.Bool <> <> lib
+R876:879 Coq.Lists.List <> <> lib
+R892:904 Coq.Lists.List ListNotations <> mod
+R925:949 DJ.Foundations.BitStrings <> <> lib
+R968:994 DJ.Oracles.BooleanFunctions <> <> lib
+R1013:1030 DJ.Oracles.Oracles <> <> lib
+def 1388:1399 <> marked_state
+R1403:1411 DJ.Foundations.BitStrings <> BitString def
+R1419:1419 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1424:1425 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1430:1430 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1420:1423 Coq.Init.Datatypes <> true constr
+R1426:1429 Coq.Init.Datatypes <> true constr
+def 1804:1820 <> grover_oracle_fun
+R1824:1829 DJ.Oracles.BooleanFunctions <> Oracle def
+binder 1839:1839 <> x:1
+R1847:1859 DJ.Foundations.BitStrings <> bitstring_eqb def
+R1861:1861 Grover.GroverOracles <> x:1 var
+R1863:1874 Grover.GroverOracles <> marked_state def
+def 2088:2100 <> oracle_grover
+R2104:2117 DJ.Oracles.Oracles <> OracleInstance rec
+R2129:2139 DJ.Oracles.Oracles <> oracle_kind proj
+R2129:2139 DJ.Oracles.Oracles <> oracle_kind proj
+R2129:2139 DJ.Oracles.Oracles <> oracle_kind proj
+R2157:2171 DJ.Oracles.Oracles <> oracle_function proj
+R2157:2171 DJ.Oracles.Oracles <> oracle_function proj
+R2144:2151 DJ.Oracles.Oracles <> OKGrover constr
+R2176:2192 Grover.GroverOracles <> grover_oracle_fun def
+def 2607:2618 <> SingleMarked
+binder 2640:2640 <> x:2
+R2672:2682 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R2665:2667 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2646:2662 Grover.GroverOracles <> grover_oracle_fun def
+R2664:2664 Grover.GroverOracles <> x:2 var
+R2668:2671 Coq.Init.Datatypes <> true constr
+R2684:2686 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2683:2683 Grover.GroverOracles <> x:2 var
+R2687:2698 Grover.GroverOracles <> marked_state def

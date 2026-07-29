@@ -1,0 +1,138 @@
+DIGEST a4d8283b15da3822dd67725331317640
+FGrover.GroverExperimentResults
+R350:353 Coq.Lists.List <> <> lib
+R355:359 Coq.Arith.Arith <> <> lib
+R361:365 Coq.Reals.Reals <> <> lib
+R378:390 Coq.Lists.List ListNotations <> mod
+R411:435 DJ.Foundations.BitStrings <> <> lib
+R454:471 DJ.Oracles.Oracles <> <> lib
+R492:511 Quantum.QuantumState <> <> lib
+R530:555 Quantum.AmplitudeSemantics <> <> lib
+R576:593 Grover.GroverTrace <> <> lib
+R612:635 Grover.GroverExperiments <> <> lib
+rec 843:857 <> GroverDataPoint
+proj 870:874 <> DataN
+proj 886:898 <> DataIteration
+proj 910:918 <> DataState
+proj 936:950 <> DataProbability
+R878:880 Coq.Init.Datatypes <> nat ind
+R902:904 Coq.Init.Datatypes <> nat ind
+R922:930 DJ.Foundations.BitStrings <> BitString def
+R954:954 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+def 1171:1190 <> ProbabilityFromEntry
+R1213:1228 Grover.GroverTrace <> GroverTraceEntry rec
+binder 1205:1209 <> entry:6
+R1249:1257 DJ.Foundations.BitStrings <> BitString def
+binder 1244:1245 <> bs:7
+R1274:1274 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R1282:1297 Grover.GroverTrace <> TraceProbability def
+R1299:1303 Grover.GroverExperimentResults <> entry:6 var
+R1305:1306 Grover.GroverExperimentResults <> bs:7 var
+def 1516:1526 <> TraceToData
+R1543:1545 Coq.Init.Datatypes <> nat ind
+binder 1539:1539 <> n:8
+R1567:1570 Coq.Init.Datatypes <> list ind
+R1572:1587 Grover.GroverTrace <> GroverTraceEntry rec
+binder 1559:1563 <> trace:9
+R1606:1614 DJ.Foundations.BitStrings <> BitString def
+binder 1601:1602 <> bs:10
+R1629:1632 Coq.Init.Datatypes <> list ind
+R1634:1648 Grover.GroverExperimentResults <> GroverDataPoint rec
+R1662:1666 Grover.GroverExperimentResults <> trace:9 var
+R1678:1679 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R1684:1685 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R1697:1700 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1716:1725 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1887:1914 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1726:1730 Grover.GroverExperimentResults <> DataN proj
+R1726:1730 Grover.GroverExperimentResults <> DataN proj
+R1726:1730 Grover.GroverExperimentResults <> DataN proj
+R1747:1759 Grover.GroverExperimentResults <> DataIteration proj
+R1747:1759 Grover.GroverExperimentResults <> DataIteration proj
+R1804:1812 Grover.GroverExperimentResults <> DataState proj
+R1804:1812 Grover.GroverExperimentResults <> DataState proj
+R1830:1844 Grover.GroverExperimentResults <> DataProbability proj
+R1830:1844 Grover.GroverExperimentResults <> DataProbability proj
+R1735:1735 Grover.GroverExperimentResults <> n:8 var
+R1773:1786 Grover.GroverTrace <> TraceIteration proj
+R1817:1818 Grover.GroverExperimentResults <> bs:10 var
+R1858:1877 Grover.GroverExperimentResults <> ProbabilityFromEntry def
+R1885:1886 Grover.GroverExperimentResults <> bs:10 var
+R1915:1925 Grover.GroverExperimentResults <> TraceToData:11 def
+R1934:1935 Grover.GroverExperimentResults <> bs:10 var
+R1927:1927 Grover.GroverExperimentResults <> n:8 var
+def 2154:2168 <> FindMarkedState
+R2185:2198 DJ.Oracles.Oracles <> OracleInstance rec
+binder 2181:2181 <> f:13
+R2221:2224 Coq.Init.Datatypes <> list ind
+R2226:2234 DJ.Foundations.BitStrings <> BitString def
+binder 2212:2217 <> states:14
+R2249:2254 Coq.Init.Datatypes <> option ind
+R2256:2264 DJ.Foundations.BitStrings <> BitString def
+R2278:2283 Grover.GroverExperimentResults <> states:14 var
+R2295:2296 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R2301:2304 Coq.Init.Datatypes <> None constr
+R2312:2315 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2332:2346 DJ.Oracles.Oracles <> oracle_function proj
+R2348:2348 Grover.GroverExperimentResults <> f:13 var
+R2379:2393 Grover.GroverExperimentResults <> FindMarkedState:15 def
+R2395:2395 Grover.GroverExperimentResults <> f:13 var
+R2362:2365 Coq.Init.Datatypes <> Some constr
+def 2619:2637 <> RunGroverExperiment
+R2656:2658 Coq.Init.Datatypes <> nat ind
+binder 2652:2652 <> n:17
+R2678:2691 DJ.Oracles.Oracles <> OracleInstance rec
+binder 2674:2674 <> f:18
+R2708:2711 Coq.Init.Datatypes <> list ind
+R2713:2727 Grover.GroverExperimentResults <> GroverDataPoint rec
+R2741:2755 Grover.GroverExperimentResults <> FindMarkedState def
+R2757:2757 Grover.GroverExperimentResults <> f:18 var
+R2760:2770 Quantum.AmplitudeSemantics <> BasisStates def
+R2772:2772 Grover.GroverExperimentResults <> n:17 var
+R2785:2788 Coq.Init.Datatypes <> None constr
+R2793:2794 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R2801:2804 Coq.Init.Datatypes <> Some constr
+R2823:2833 Grover.GroverExperimentResults <> TraceToData def
+R2845:2845 Grover.GroverExperimentResults <> n:17 var
+R2858:2875 Grover.GroverExperiments <> ExampleGroverTrace def
+R2877:2877 Grover.GroverExperimentResults <> n:17 var
+R2879:2879 Grover.GroverExperimentResults <> f:18 var
+prf 3111:3128 <> TraceToData_length
+binder 3142:3142 <> n:19
+binder 3144:3148 <> trace:20
+binder 3150:3151 <> bs:21
+R3188:3192 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3157:3162 Coq.Init.Datatypes <> length def
+R3165:3175 Grover.GroverExperimentResults <> TraceToData def
+R3177:3177 Grover.GroverExperimentResults <> n:19 var
+R3179:3183 Grover.GroverExperimentResults <> trace:20 var
+R3185:3186 Grover.GroverExperimentResults <> bs:21 var
+R3193:3198 Coq.Init.Datatypes <> length def
+R3200:3204 Grover.GroverExperimentResults <> trace:20 var
+prf 3385:3399 <> TraceToData_nil
+binder 3413:3413 <> n:22
+binder 3415:3416 <> bs:23
+R3441:3443 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3422:3432 Grover.GroverExperimentResults <> TraceToData def
+R3434:3434 Grover.GroverExperimentResults <> n:22 var
+R3436:3437 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R3439:3440 Grover.GroverExperimentResults <> bs:23 var
+R3444:3445 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+prf 3506:3528 <> FindMarkedState_correct
+binder 3542:3542 <> f:24
+binder 3544:3549 <> states:25
+binder 3551:3552 <> bs:26
+R3592:3597 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3582:3584 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3558:3572 Grover.GroverExperimentResults <> FindMarkedState def
+R3574:3574 Grover.GroverExperimentResults <> f:24 var
+R3576:3581 Grover.GroverExperimentResults <> states:25 var
+R3585:3588 Coq.Init.Datatypes <> Some constr
+R3590:3591 Grover.GroverExperimentResults <> bs:26 var
+R3618:3620 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3598:3612 DJ.Oracles.Oracles <> oracle_function proj
+R3614:3614 Grover.GroverExperimentResults <> f:24 var
+R3616:3617 Grover.GroverExperimentResults <> bs:26 var
+R3621:3624 Coq.Init.Datatypes <> true constr
+R3812:3826 DJ.Oracles.Oracles <> oracle_function proj
+R3812:3826 DJ.Oracles.Oracles <> oracle_function proj

@@ -1,0 +1,175 @@
+DIGEST 23298c4f796d8e8e5de2e9563be70f10
+FQuantum.QDL
+R611:614 Coq.Lists.List <> <> lib
+R616:619 Coq.Bool.Bool <> <> lib
+R630:642 Coq.Lists.List ListNotations <> mod
+R663:682 Quantum.QuantumState <> <> lib
+R701:724 Quantum.QuantumOperators <> <> lib
+def 936:945 <> QPredicate
+R965:968 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R953:964 Quantum.QuantumState <> QuantumState rec
+ind 1185:1191 <> Formula
+constr 1208:1212 <> Truth
+constr 1219:1227 <> Falsehood
+constr 1234:1237 <> Atom
+constr 1266:1276 <> Conjunction
+constr 1306:1316 <> Disjunction
+constr 1346:1356 <> Implication
+constr 1386:1393 <> Negation
+constr 1420:1422 <> Box
+constr 1476:1482 <> Diamond
+R1249:1258 Quantum.QDL <> QPredicate def
+binder 1245:1245 <> P:3
+R1292:1298 Quantum.QDL <> Formula:1 ind
+binder 1284:1285 <> φ:4
+binder 1287:1288 <> ψ:5
+R1332:1338 Quantum.QDL <> Formula:1 ind
+binder 1324:1325 <> φ:6
+binder 1327:1328 <> ψ:7
+R1372:1378 Quantum.QDL <> Formula:1 ind
+binder 1364:1365 <> φ:8
+binder 1367:1368 <> ψ:9
+R1406:1412 Quantum.QDL <> Formula:1 ind
+binder 1401:1402 <> φ:10
+R1434:1448 Quantum.QuantumOperators <> QuantumOperator def
+binder 1430:1430 <> U:11
+R1462:1468 Quantum.QDL <> Formula:1 ind
+binder 1457:1458 <> φ:12
+R1494:1508 Quantum.QuantumOperators <> QuantumOperator def
+binder 1490:1490 <> U:13
+R1522:1528 Quantum.QDL <> Formula:1 ind
+binder 1517:1518 <> φ:14
+scheme 1185:1191 <> Formula_rect
+scheme 1185:1191 <> Formula_ind
+scheme 1185:1191 <> Formula_rec
+scheme 1185:1191 <> Formula_sind
+def 1870:1878 <> satisfies
+R1896:1907 Quantum.QuantumState <> QuantumState rec
+binder 1891:1892 <> ρ:15
+R1926:1932 Quantum.QDL <> Formula ind
+binder 1921:1922 <> φ:16
+R1964:1965 Quantum.QDL <> φ:16 var
+R1977:1981 Quantum.QDL <> Truth constr
+R1991:1994 Coq.Init.Logic <> True ind
+R2001:2009 Quantum.QDL <> Falsehood constr
+R2019:2023 Coq.Init.Logic <> False ind
+R2030:2033 Quantum.QDL <> Atom constr
+R2047:2048 Quantum.QDL <> ρ:15 var
+R2055:2065 Quantum.QDL <> Conjunction constr
+R2096:2109 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R2081:2089 Quantum.QDL <> satisfies:17 def
+R2094:2095 Quantum.QDL <> φ:16 var
+R2091:2092 Quantum.QDL <> ρ:15 var
+R2110:2118 Quantum.QDL <> satisfies:17 def
+R2120:2121 Quantum.QDL <> ρ:15 var
+R2131:2141 Quantum.QDL <> Disjunction constr
+R2172:2185 Coq.Init.Logic <> ::type_scope:x_'\/'_x not
+R2157:2165 Quantum.QDL <> satisfies:17 def
+R2170:2171 Quantum.QDL <> φ:16 var
+R2167:2168 Quantum.QDL <> ρ:15 var
+R2186:2194 Quantum.QDL <> satisfies:17 def
+R2196:2197 Quantum.QDL <> ρ:15 var
+R2207:2217 Quantum.QDL <> Implication constr
+R2248:2256 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2233:2241 Quantum.QDL <> satisfies:17 def
+R2246:2247 Quantum.QDL <> φ:16 var
+R2243:2244 Quantum.QDL <> ρ:15 var
+R2257:2265 Quantum.QDL <> satisfies:17 def
+R2267:2268 Quantum.QDL <> ρ:15 var
+R2278:2285 Quantum.QDL <> Negation constr
+R2298:2299 Coq.Init.Logic <> ::type_scope:'~'_x not
+R2300:2308 Quantum.QDL <> satisfies:17 def
+R2313:2314 Quantum.QDL <> φ:16 var
+R2310:2311 Quantum.QDL <> ρ:15 var
+R2321:2323 Quantum.QDL <> Box constr
+R2338:2346 Quantum.QDL <> satisfies:17 def
+R2355:2356 Quantum.QDL <> φ:16 var
+R2351:2352 Quantum.QDL <> ρ:15 var
+R2363:2369 Quantum.QDL <> Diamond constr
+R2384:2392 Quantum.QDL <> satisfies:17 def
+R2401:2402 Quantum.QDL <> φ:16 var
+R2397:2398 Quantum.QDL <> ρ:15 var
+def 2621:2625 <> Valid
+R2645:2651 Quantum.QDL <> Formula ind
+binder 2640:2641 <> φ:19
+binder 2686:2687 <> ρ:20
+R2693:2701 Quantum.QDL <> satisfies def
+R2703:2704 Quantum.QDL <> ρ:20 var
+R2706:2707 Quantum.QDL <> φ:19 var
+def 2919:2925 <> Entails
+R2948:2954 Quantum.QDL <> Formula ind
+binder 2940:2941 <> φ:21
+binder 2943:2944 <> ψ:22
+binder 2989:2990 <> ρ:23
+R3011:3015 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2996:3004 Quantum.QDL <> satisfies def
+R3006:3007 Quantum.QDL <> ρ:23 var
+R3009:3010 Quantum.QDL <> φ:21 var
+R3016:3024 Quantum.QDL <> satisfies def
+R3026:3027 Quantum.QDL <> ρ:23 var
+R3029:3030 Quantum.QDL <> ψ:22 var
+def 3242:3250 <> Preserves
+R3269:3283 Quantum.QuantumOperators <> QuantumOperator def
+binder 3265:3265 <> U:24
+R3305:3311 Quantum.QDL <> Formula ind
+binder 3299:3299 <> P:25
+binder 3301:3301 <> Q:26
+binder 3346:3347 <> ρ:27
+R3367:3376 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3353:3361 Quantum.QDL <> satisfies def
+R3363:3364 Quantum.QDL <> ρ:27 var
+R3366:3366 Quantum.QDL <> P:25 var
+R3377:3385 Quantum.QDL <> satisfies def
+R3392:3392 Quantum.QDL <> U:24 var
+R3394:3395 Quantum.QDL <> ρ:27 var
+R3402:3402 Quantum.QDL <> Q:26 var
+rec 3610:3625 <> QDLSpecification
+proj 3638:3649 <> Precondition
+proj 3665:3671 <> Program
+proj 3695:3707 <> Postcondition
+R3653:3659 Quantum.QDL <> Formula ind
+R3675:3689 Quantum.QuantumOperators <> QuantumOperator def
+R3711:3717 Quantum.QDL <> Formula ind
+def 3934:3944 <> QDLVerified
+R3966:3981 Quantum.QDL <> QDLSpecification rec
+binder 3959:3962 <> spec:32
+binder 4016:4017 <> ρ:33
+R4055:4064 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4023:4031 Quantum.QDL <> satisfies def
+R4033:4034 Quantum.QDL <> ρ:33 var
+R4037:4048 Quantum.QDL <> Precondition proj
+R4050:4053 Quantum.QDL <> spec:32 var
+R4065:4073 Quantum.QDL <> satisfies def
+R4081:4087 Quantum.QDL <> Program proj
+R4089:4092 Quantum.QDL <> spec:32 var
+R4095:4096 Quantum.QDL <> ρ:33 var
+R4104:4116 Quantum.QDL <> Postcondition proj
+R4118:4121 Quantum.QDL <> spec:32 var
+prf 4329:4349 <> Valid_implies_entails
+binder 4363:4364 <> φ:34
+binder 4366:4367 <> ψ:35
+R4398:4407 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4373:4377 Quantum.QDL <> Valid def
+R4380:4390 Quantum.QDL <> Implication constr
+R4392:4393 Quantum.QDL <> φ:34 var
+R4395:4396 Quantum.QDL <> ψ:35 var
+R4408:4414 Quantum.QDL <> Entails def
+R4416:4417 Quantum.QDL <> φ:34 var
+R4419:4420 Quantum.QDL <> ψ:35 var
+prf 4465:4476 <> entails_refl
+binder 4490:4491 <> φ:36
+R4497:4503 Quantum.QDL <> Entails def
+R4505:4506 Quantum.QDL <> φ:36 var
+R4508:4509 Quantum.QDL <> φ:36 var
+R4795:4802 Quantum.QDL <> Negation constr
+not 4780:4780 <> ::qdl_scope:'¬'_x
+R4890:4900 Quantum.QDL <> Conjunction constr
+not 4871:4871 <> ::qdl_scope:x_'∧'_x
+R4991:5001 Quantum.QDL <> Disjunction constr
+not 4972:4972 <> ::qdl_scope:x_'∨'_x
+R5092:5102 Quantum.QDL <> Implication constr
+not 5073:5073 <> ::qdl_scope:x_'⇒'_x
+R5192:5194 Quantum.QDL <> Box constr
+not 5174:5174 <> ::qdl_scope:'['_x_']'_x
+R5283:5289 Quantum.QDL <> Diamond constr
+not 5265:5265 <> ::qdl_scope:'<'_x_'>'_x

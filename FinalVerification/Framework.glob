@@ -1,0 +1,126 @@
+DIGEST f50401090d48f7fccb696b52f5e5efab
+FFinal.Framework
+R550:553 Coq.Lists.List <> <> lib
+R555:558 Coq.Bool.Bool <> <> lib
+R560:564 Coq.Arith.Arith <> <> lib
+R566:568 Coq.micromega.Lia <> <> lib
+R570:578 Coq.Logic.Classical <> <> lib
+R580:585 Coq.Strings.String <> <> lib
+R598:610 Coq.Lists.List ListNotations <> mod
+R633:652 Quantum.QuantumState <> <> lib
+R671:694 Quantum.QuantumOperators <> <> lib
+R715:725 Quantum.QDL <> <> lib
+R744:767 Quantum.HoaresHeisenberg <> <> lib
+rec 1260:1280 <> VerifiedAlgorithmCase
+proj 1293:1305 <> AlgorithmName
+proj 1320:1339 <> VerificationProperty
+R1309:1314 Coq.Strings.String <> string ind
+def 1565:1579 <> SemanticCorrect
+R1598:1612 Quantum.QuantumOperators <> QuantumOperator def
+binder 1594:1594 <> U:4
+R1632:1640 Quantum.HoaresHeisenberg <> Predicate def
+binder 1628:1628 <> P:5
+R1660:1668 Quantum.HoaresHeisenberg <> Predicate def
+binder 1656:1656 <> Q:6
+binder 1703:1704 <> ρ:7
+R1714:1720 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1710:1710 Final.Framework <> P:5 var
+R1712:1713 Final.Framework <> ρ:7 var
+R1721:1721 Final.Framework <> Q:6 var
+R1724:1724 Final.Framework <> U:4 var
+R1726:1727 Final.Framework <> ρ:7 var
+prf 1984:2010 <> HH_implies_semantic_correct
+R2029:2037 Quantum.HoaresHeisenberg <> Predicate def
+binder 2025:2025 <> P:8
+R2053:2067 Quantum.QuantumOperators <> QuantumOperator def
+binder 2049:2049 <> U:9
+R2083:2091 Quantum.HoaresHeisenberg <> Predicate def
+binder 2079:2079 <> Q:10
+R2115:2124 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2098:2108 Quantum.HoaresHeisenberg <> HoareTriple def
+R2110:2110 Final.Framework <> P:8 var
+R2112:2112 Final.Framework <> U:9 var
+R2114:2114 Final.Framework <> Q:10 var
+R2125:2139 Final.Framework <> SemanticCorrect def
+R2141:2141 Final.Framework <> U:9 var
+R2143:2143 Final.Framework <> P:8 var
+R2145:2145 Final.Framework <> Q:10 var
+R2191:2205 Final.Framework <> SemanticCorrect def
+prf 2241:2275 <> HHVerified_implies_semantic_correct
+binder 2289:2292 <> spec:11
+R2313:2322 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2298:2307 Quantum.HoaresHeisenberg <> HHVerified def
+R2309:2312 Final.Framework <> spec:11 var
+R2323:2337 Final.Framework <> SemanticCorrect def
+R2344:2352 Quantum.HoaresHeisenberg <> HHProgram proj
+R2354:2357 Final.Framework <> spec:11 var
+R2365:2369 Quantum.HoaresHeisenberg <> HHPre proj
+R2371:2374 Final.Framework <> spec:11 var
+R2382:2387 Quantum.HoaresHeisenberg <> HHPost proj
+R2389:2392 Final.Framework <> spec:11 var
+R2438:2447 Quantum.HoaresHeisenberg <> HHVerified def
+R2466:2492 Final.Framework <> HH_implies_semantic_correct thm
+R2466:2492 Final.Framework <> HH_implies_semantic_correct thm
+def 2728:2750 <> QDLSpecificationCorrect
+R2772:2787 Quantum.QDL <> QDLSpecification rec
+binder 2765:2768 <> spec:12
+binder 2822:2823 <> ρ:13
+R2861:2870 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2829:2837 Quantum.QDL <> satisfies def
+R2839:2840 Final.Framework <> ρ:13 var
+R2843:2854 Quantum.QDL <> Precondition proj
+R2856:2859 Final.Framework <> spec:12 var
+R2871:2879 Quantum.QDL <> satisfies def
+R2885:2891 Quantum.QDL <> Program proj
+R2893:2896 Final.Framework <> spec:12 var
+R2899:2900 Final.Framework <> ρ:13 var
+R2906:2918 Quantum.QDL <> Postcondition proj
+R2920:2923 Final.Framework <> spec:12 var
+prf 2938:2973 <> QDLVerified_implies_semantic_correct
+binder 2987:2990 <> spec:14
+R3012:3021 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2996:3006 Quantum.QDL <> QDLVerified def
+R3008:3011 Final.Framework <> spec:14 var
+R3022:3044 Final.Framework <> QDLSpecificationCorrect def
+R3046:3049 Final.Framework <> spec:14 var
+prf 3115:3153 <> QDL_valid_implies_specification_correct
+binder 3167:3168 <> φ:15
+R3182:3191 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3174:3178 Quantum.QDL <> Valid def
+R3180:3181 Final.Framework <> φ:15 var
+binder 3199:3200 <> ρ:16
+R3206:3214 Quantum.QDL <> satisfies def
+R3216:3217 Final.Framework <> ρ:16 var
+R3219:3220 Final.Framework <> φ:15 var
+prf 3481:3500 <> semantic_composition
+binder 3514:3514 <> P:17
+binder 3516:3516 <> Q:18
+binder 3518:3518 <> R:19
+binder 3520:3520 <> U:20
+binder 3522:3522 <> V:21
+R3549:3555 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3528:3542 Final.Framework <> SemanticCorrect def
+R3544:3544 Final.Framework <> U:20 var
+R3546:3546 Final.Framework <> P:17 var
+R3548:3548 Final.Framework <> Q:18 var
+R3577:3583 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3556:3570 Final.Framework <> SemanticCorrect def
+R3572:3572 Final.Framework <> V:21 var
+R3574:3574 Final.Framework <> Q:18 var
+R3576:3576 Final.Framework <> R:19 var
+R3584:3598 Final.Framework <> SemanticCorrect def
+R3605:3611 Quantum.HoaresHeisenberg <> Compose def
+R3613:3613 Final.Framework <> U:20 var
+R3615:3615 Final.Framework <> V:21 var
+R3622:3622 Final.Framework <> P:17 var
+R3628:3628 Final.Framework <> R:19 var
+R3682:3696 Final.Framework <> SemanticCorrect def
+R3716:3722 Quantum.HoaresHeisenberg <> Compose def
+prf 4005:4023 <> identity_is_correct
+binder 4037:4037 <> P:22
+R4043:4057 Final.Framework <> SemanticCorrect def
+R4063:4070 Quantum.QuantumOperators <> Identity def
+R4076:4076 Final.Framework <> P:22 var
+R4082:4082 Final.Framework <> P:22 var
+R4122:4136 Final.Framework <> SemanticCorrect def
+R4169:4176 Quantum.QuantumOperators <> Identity def

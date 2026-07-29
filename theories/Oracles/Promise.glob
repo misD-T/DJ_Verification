@@ -1,0 +1,226 @@
+DIGEST e174430cdc30cc377a27db4c076e7a5d
+FDJ.Oracles.Promise
+R221:224 Coq.Bool.Bool <> <> lib
+R226:229 Coq.Lists.List <> <> lib
+R231:239 Coq.Logic.Classical <> <> lib
+R252:264 Coq.Lists.List ListNotations <> mod
+R285:309 DJ.Foundations.BitStrings <> <> lib
+R328:354 DJ.Oracles.BooleanFunctions <> <> lib
+R373:390 DJ.Oracles.Oracles <> <> lib
+R409:432 DJ.Verification.Balanced <> <> lib
+def 646:657 <> PromiseHolds
+R676:678 Coq.Init.Datatypes <> nat ind
+binder 672:672 <> n:1
+R698:711 DJ.Oracles.Oracles <> OracleInstance rec
+binder 694:694 <> f:2
+R739:747 DJ.Verification.Balanced <> DJPromise def
+R749:749 DJ.Oracles.Promise <> n:1 var
+R751:751 DJ.Oracles.Promise <> f:2 var
+def 770:781 <> PromiseFails
+R800:802 Coq.Init.Datatypes <> nat ind
+binder 796:796 <> n:3
+R822:835 DJ.Oracles.Oracles <> OracleInstance rec
+binder 818:818 <> f:4
+R863:869 DJ.Verification.Balanced <> Invalid def
+R871:871 DJ.Oracles.Promise <> n:3 var
+R873:873 DJ.Oracles.Promise <> f:4 var
+def 1089:1098 <> OutputZero
+R1117:1119 Coq.Init.Datatypes <> nat ind
+binder 1113:1113 <> n:5
+R1139:1147 DJ.Foundations.BitStrings <> BitString def
+binder 1135:1135 <> b:6
+R1176:1178 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1175:1175 DJ.Oracles.Promise <> b:6 var
+R1179:1187 DJ.Foundations.BitStrings <> all_zeros def
+R1189:1189 DJ.Oracles.Promise <> n:5 var
+def 1208:1220 <> OutputNonZero
+R1239:1241 Coq.Init.Datatypes <> nat ind
+binder 1235:1235 <> n:7
+R1261:1269 DJ.Foundations.BitStrings <> BitString def
+binder 1257:1257 <> b:8
+R1298:1301 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R1297:1297 DJ.Oracles.Promise <> b:8 var
+R1302:1310 DJ.Foundations.BitStrings <> all_zeros def
+R1312:1312 DJ.Oracles.Promise <> n:7 var
+def 1528:1542 <> DJSpecification
+R1561:1563 Coq.Init.Datatypes <> nat ind
+binder 1557:1557 <> n:9
+R1583:1596 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1579:1579 <> f:10
+R1621:1629 DJ.Foundations.BitStrings <> BitString def
+binder 1612:1617 <> result:11
+R1657:1657 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R1693:1700 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R1739:1739 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R1670:1673 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1658:1665 DJ.Verification.Balanced <> Constant def
+R1667:1667 DJ.Oracles.Promise <> n:9 var
+R1669:1669 DJ.Oracles.Promise <> f:10 var
+R1674:1683 DJ.Oracles.Promise <> OutputZero def
+R1685:1685 DJ.Oracles.Promise <> n:9 var
+R1687:1692 DJ.Oracles.Promise <> result:11 var
+R1713:1716 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1701:1708 DJ.Verification.Balanced <> Balanced def
+R1710:1710 DJ.Oracles.Promise <> n:9 var
+R1712:1712 DJ.Oracles.Promise <> f:10 var
+R1717:1729 DJ.Oracles.Promise <> OutputNonZero def
+R1731:1731 DJ.Oracles.Promise <> n:9 var
+R1733:1738 DJ.Oracles.Promise <> result:11 var
+def 1955:1963 <> DJCorrect
+R1982:1984 Coq.Init.Datatypes <> nat ind
+binder 1978:1978 <> n:12
+R2004:2017 DJ.Oracles.Oracles <> OracleInstance rec
+binder 2000:2000 <> f:13
+R2042:2050 DJ.Foundations.BitStrings <> BitString def
+binder 2033:2038 <> result:14
+R2094:2099 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R2078:2089 DJ.Oracles.Promise <> PromiseHolds def
+R2091:2091 DJ.Oracles.Promise <> n:12 var
+R2093:2093 DJ.Oracles.Promise <> f:13 var
+R2100:2114 DJ.Oracles.Promise <> DJSpecification def
+R2116:2116 DJ.Oracles.Promise <> n:12 var
+R2118:2118 DJ.Oracles.Promise <> f:13 var
+R2120:2125 DJ.Oracles.Promise <> result:14 var
+def 2339:2356 <> UndefinedBehaviour
+R2375:2377 Coq.Init.Datatypes <> nat ind
+binder 2371:2371 <> n:15
+R2397:2410 DJ.Oracles.Oracles <> OracleInstance rec
+binder 2393:2393 <> f:16
+R2438:2449 DJ.Oracles.Promise <> PromiseFails def
+R2451:2451 DJ.Oracles.Promise <> n:15 var
+R2453:2453 DJ.Oracles.Promise <> f:16 var
+prf 2662:2678 <> promise_partition
+R2697:2699 Coq.Init.Datatypes <> nat ind
+binder 2693:2693 <> n:17
+R2707:2720 DJ.Oracles.Oracles <> OracleInstance rec
+binder 2703:2703 <> f:18
+R2743:2748 Coq.Init.Logic <> ::type_scope:x_'\/'_x not
+R2727:2738 DJ.Oracles.Promise <> PromiseHolds def
+R2740:2740 DJ.Oracles.Promise <> n:17 var
+R2742:2742 DJ.Oracles.Promise <> f:18 var
+R2749:2760 DJ.Oracles.Promise <> PromiseFails def
+R2762:2762 DJ.Oracles.Promise <> n:17 var
+R2764:2764 DJ.Oracles.Promise <> f:18 var
+R2802:2813 DJ.Oracles.Promise <> PromiseHolds def
+R2824:2835 DJ.Oracles.Promise <> PromiseFails def
+R2851:2857 Coq.Logic.Classical_Prop <> classic prfax
+R2860:2868 DJ.Verification.Balanced <> DJPromise def
+R2851:2857 Coq.Logic.Classical_Prop <> classic prfax
+R2860:2868 DJ.Verification.Balanced <> DJPromise def
+prf 2947:2966 <> constant_correctness
+binder 2980:2980 <> n:19
+binder 2982:2982 <> f:20
+binder 2984:2989 <> result:21
+R3011:3017 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2995:3006 DJ.Oracles.Promise <> PromiseHolds def
+R3008:3008 DJ.Oracles.Promise <> n:19 var
+R3010:3010 DJ.Oracles.Promise <> f:20 var
+R3030:3036 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3018:3025 DJ.Verification.Balanced <> Constant def
+R3027:3027 DJ.Oracles.Promise <> n:19 var
+R3029:3029 DJ.Oracles.Promise <> f:20 var
+R3056:3063 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3099:3099 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3037:3046 DJ.Oracles.Promise <> OutputZero def
+R3048:3048 DJ.Oracles.Promise <> n:19 var
+R3050:3055 DJ.Oracles.Promise <> result:21 var
+R3076:3079 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3064:3071 DJ.Verification.Balanced <> Constant def
+R3073:3073 DJ.Oracles.Promise <> n:19 var
+R3075:3075 DJ.Oracles.Promise <> f:20 var
+R3080:3089 DJ.Oracles.Promise <> OutputZero def
+R3091:3091 DJ.Oracles.Promise <> n:19 var
+R3093:3098 DJ.Oracles.Promise <> result:21 var
+prf 3207:3226 <> balanced_correctness
+binder 3240:3240 <> n:22
+binder 3242:3242 <> f:23
+binder 3244:3249 <> result:24
+R3271:3277 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3255:3266 DJ.Oracles.Promise <> PromiseHolds def
+R3268:3268 DJ.Oracles.Promise <> n:22 var
+R3270:3270 DJ.Oracles.Promise <> f:23 var
+R3290:3296 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3278:3285 DJ.Verification.Balanced <> Balanced def
+R3287:3287 DJ.Oracles.Promise <> n:22 var
+R3289:3289 DJ.Oracles.Promise <> f:23 var
+R3319:3326 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3365:3365 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3297:3309 DJ.Oracles.Promise <> OutputNonZero def
+R3311:3311 DJ.Oracles.Promise <> n:22 var
+R3313:3318 DJ.Oracles.Promise <> result:24 var
+R3339:3342 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3327:3334 DJ.Verification.Balanced <> Balanced def
+R3336:3336 DJ.Oracles.Promise <> n:22 var
+R3338:3338 DJ.Oracles.Promise <> f:23 var
+R3343:3355 DJ.Oracles.Promise <> OutputNonZero def
+R3357:3357 DJ.Oracles.Promise <> n:22 var
+R3359:3364 DJ.Oracles.Promise <> result:24 var
+prf 3481:3500 <> invalid_is_undefined
+binder 3514:3514 <> n:25
+binder 3516:3516 <> f:26
+R3538:3544 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3522:3533 DJ.Oracles.Promise <> PromiseFails def
+R3535:3535 DJ.Oracles.Promise <> n:25 var
+R3537:3537 DJ.Oracles.Promise <> f:26 var
+R3545:3562 DJ.Oracles.Promise <> UndefinedBehaviour def
+R3564:3564 DJ.Oracles.Promise <> n:25 var
+R3566:3566 DJ.Oracles.Promise <> f:26 var
+prf 3629:3641 <> promise_cases
+binder 3655:3655 <> n:27
+binder 3657:3657 <> f:28
+R3676:3686 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R3663:3671 DJ.Verification.Balanced <> DJPromise def
+R3673:3673 DJ.Oracles.Promise <> n:27 var
+R3675:3675 DJ.Oracles.Promise <> f:28 var
+R3699:3708 Coq.Init.Logic <> ::type_scope:x_'\/'_x not
+R3687:3694 DJ.Verification.Balanced <> Constant def
+R3696:3696 DJ.Oracles.Promise <> n:27 var
+R3698:3698 DJ.Oracles.Promise <> f:28 var
+R3709:3716 DJ.Verification.Balanced <> Balanced def
+R3718:3718 DJ.Oracles.Promise <> n:27 var
+R3720:3720 DJ.Oracles.Promise <> f:28 var
+prf 3769:3787 <> promise_not_invalid
+binder 3801:3801 <> n:29
+binder 3803:3803 <> f:30
+R3822:3831 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3809:3817 DJ.Verification.Balanced <> DJPromise def
+R3819:3819 DJ.Oracles.Promise <> n:29 var
+R3821:3821 DJ.Oracles.Promise <> f:30 var
+R3832:3833 Coq.Init.Logic <> ::type_scope:'~'_x not
+R3834:3840 DJ.Verification.Balanced <> Invalid def
+R3842:3842 DJ.Oracles.Promise <> n:29 var
+R3844:3844 DJ.Oracles.Promise <> f:30 var
+prf 3893:3912 <> invalid_not_constant
+binder 3926:3926 <> n:31
+binder 3928:3928 <> f:32
+R3945:3954 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3934:3940 DJ.Verification.Balanced <> Invalid def
+R3942:3942 DJ.Oracles.Promise <> n:31 var
+R3944:3944 DJ.Oracles.Promise <> f:32 var
+R3955:3956 Coq.Init.Logic <> ::type_scope:'~'_x not
+R3957:3964 DJ.Verification.Balanced <> Constant def
+R3966:3966 DJ.Oracles.Promise <> n:31 var
+R3968:3968 DJ.Oracles.Promise <> f:32 var
+prf 4017:4039 <> promise_implies_defined
+binder 4053:4053 <> n:33
+binder 4055:4055 <> f:34
+R4077:4086 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4061:4072 DJ.Oracles.Promise <> PromiseHolds def
+R4074:4074 DJ.Oracles.Promise <> n:33 var
+R4076:4076 DJ.Oracles.Promise <> f:34 var
+R4087:4088 Coq.Init.Logic <> ::type_scope:'~'_x not
+R4089:4100 DJ.Oracles.Promise <> PromiseFails def
+R4102:4102 DJ.Oracles.Promise <> n:33 var
+R4104:4104 DJ.Oracles.Promise <> f:34 var
+prf 4153:4182 <> DJPromise_implies_PromiseHolds
+binder 4196:4196 <> n:35
+binder 4198:4198 <> f:36
+R4217:4223 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4204:4212 DJ.Verification.Balanced <> DJPromise def
+R4214:4214 DJ.Oracles.Promise <> n:35 var
+R4216:4216 DJ.Oracles.Promise <> f:36 var
+R4224:4235 DJ.Oracles.Promise <> PromiseHolds def
+R4237:4237 DJ.Oracles.Promise <> n:35 var
+R4239:4239 DJ.Oracles.Promise <> f:36 var
+R4279:4287 DJ.Verification.Balanced <> DJPromise def
+R4305:4316 DJ.Oracles.Promise <> PromiseHolds def

@@ -1,0 +1,45 @@
+DIGEST 03becc634c0ca9ff977c54950db87659
+FFinal.CaseStudyComparison
+R548:551 Coq.Lists.List <> <> lib
+R553:556 Coq.Bool.Bool <> <> lib
+R558:562 Coq.Arith.Arith <> <> lib
+R564:566 Coq.micromega.Lia <> <> lib
+R568:576 Coq.Logic.Classical <> <> lib
+R578:583 Coq.Strings.String <> <> lib
+R596:608 Coq.Lists.List ListNotations <> mod
+R631:650 Quantum.QuantumState <> <> lib
+R669:692 Quantum.QuantumOperators <> <> lib
+R713:723 Quantum.QDL <> <> lib
+R742:765 Quantum.HoaresHeisenberg <> <> lib
+R786:803 DJ.DeutschJozsa.DJ <> <> lib
+R822:845 DJ.DeutschJozsa.DJProofs <> <> lib
+R864:881 DJ.Oracles.Oracles <> <> lib
+R902:920 Grover.GroverProofs <> <> lib
+R939:958 Grover.GroverOracles <> <> lib
+R979:993 Final.Framework <> <> lib
+R1012:1038 Final.AlgorithmVerification <> <> lib
+R1057:1077 Final.LogicComparison <> <> lib
+R1297:1316 DJ.Tests.DJCaseStudy <> <> lib
+R1337:1358 Grover.GroverCaseStudy <> <> lib
+prf 1571:1595 <> DeutschJozsaCase_verified
+R1602:1621 Final.Framework <> VerificationProperty proj
+R1623:1638 DJ.Tests.DJCaseStudy <> DeutschJozsaCase def
+R1663:1678 DJ.Tests.DJCaseStudy <> DeutschJozsaCase def
+R1722:1736 DJ.DeutschJozsa.DJProofs <> parity_verified thm
+R1722:1736 DJ.DeutschJozsa.DJProofs <> parity_verified thm
+prf 1773:1791 <> GroverCase_verified
+R1798:1817 Final.Framework <> VerificationProperty proj
+R1819:1834 Grover.GroverCaseStudy <> GroverSearchCase def
+R1859:1874 Grover.GroverCaseStudy <> GroverSearchCase def
+R1918:1935 Grover.GroverProofs <> Grover_HH_verified thm
+R1918:1935 Grover.GroverProofs <> Grover_HH_verified thm
+prf 2317:2356 <> DJ_and_Grover_verified_by_same_framework
+R2400:2409 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R2363:2382 Final.Framework <> VerificationProperty proj
+R2384:2399 DJ.Tests.DJCaseStudy <> DeutschJozsaCase def
+R2410:2429 Final.Framework <> VerificationProperty proj
+R2431:2446 Grover.GroverCaseStudy <> GroverSearchCase def
+R2484:2508 Final.CaseStudyComparison <> DeutschJozsaCase_verified thm
+R2484:2508 Final.CaseStudyComparison <> DeutschJozsaCase_verified thm
+R2524:2542 Final.CaseStudyComparison <> GroverCase_verified thm
+R2524:2542 Final.CaseStudyComparison <> GroverCase_verified thm

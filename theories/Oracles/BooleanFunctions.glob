@@ -1,0 +1,91 @@
+DIGEST e2f28fe2e8c73e6841e6eb687f289747
+FDJ.Oracles.BooleanFunctions
+R221:224 Coq.Lists.List <> <> lib
+R226:229 Coq.Bool.Bool <> <> lib
+R231:235 Coq.Arith.Arith <> <> lib
+R246:258 Coq.Lists.List ListNotations <> mod
+R279:303 DJ.Foundations.BitStrings <> <> lib
+def 517:522 <> Oracle
+R536:539 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R527:535 DJ.Foundations.BitStrings <> BitString def
+R540:542 DJ.Foundations.BitStrings <> Bit def
+def 559:566 <> evaluate
+R585:590 DJ.Oracles.BooleanFunctions <> Oracle def
+binder 581:581 <> f:1
+R610:618 DJ.Foundations.BitStrings <> BitString def
+binder 606:606 <> x:2
+R635:637 DJ.Foundations.BitStrings <> Bit def
+R645:645 DJ.Oracles.BooleanFunctions <> f:1 var
+R647:647 DJ.Oracles.BooleanFunctions <> x:2 var
+def 861:872 <> xor_two_bits
+R891:899 DJ.Foundations.BitStrings <> BitString def
+binder 887:887 <> x:3
+R916:919 Coq.Init.Datatypes <> bool ind
+R935:935 DJ.Oracles.BooleanFunctions <> x:3 var
+R949:950 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R953:954 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R967:969 DJ.Foundations.BitStrings <> xor def
+R987:991 Coq.Init.Datatypes <> false constr
+def 1015:1020 <> affine
+R1039:1047 DJ.Foundations.BitStrings <> BitString def
+binder 1035:1035 <> x:5
+R1064:1067 Coq.Init.Datatypes <> bool ind
+R1077:1079 DJ.Foundations.BitStrings <> xor def
+R1082:1087 DJ.Foundations.BitStrings <> parity def
+R1089:1089 DJ.Oracles.BooleanFunctions <> x:5 var
+R1092:1095 Coq.Init.Datatypes <> true constr
+def 1116:1126 <> alternating
+R1145:1153 DJ.Foundations.BitStrings <> BitString def
+binder 1141:1141 <> x:6
+R1170:1173 Coq.Init.Datatypes <> bool ind
+R1183:1186 Coq.Init.Datatypes <> negb def
+R1189:1197 DJ.Foundations.BitStrings <> first_bit def
+R1199:1199 DJ.Oracles.BooleanFunctions <> x:6 var
+def 1412:1419 <> majority
+R1438:1446 DJ.Foundations.BitStrings <> BitString def
+binder 1434:1434 <> x:7
+R1463:1466 Coq.Init.Datatypes <> bool ind
+R1474:1480 Coq.Arith.PeanoNat Nat leb def
+R1502:1504 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R1498:1500 Coq.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R1486:1495 DJ.Foundations.BitStrings <> bit_length def
+R1497:1497 DJ.Oracles.BooleanFunctions <> x:7 var
+R1512:1521 DJ.Foundations.BitStrings <> count_ones def
+R1523:1523 DJ.Oracles.BooleanFunctions <> x:7 var
+prf 1731:1745 <> evaluate_oracle
+binder 1759:1759 <> f:8
+binder 1761:1761 <> x:9
+R1779:1781 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1767:1774 DJ.Oracles.BooleanFunctions <> evaluate def
+R1776:1776 DJ.Oracles.BooleanFunctions <> f:8 var
+R1778:1778 DJ.Oracles.BooleanFunctions <> x:9 var
+R1782:1782 DJ.Oracles.BooleanFunctions <> f:8 var
+R1784:1784 DJ.Oracles.BooleanFunctions <> x:9 var
+prf 1830:1853 <> affine_is_negated_parity
+binder 1867:1867 <> x:10
+R1881:1883 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1873:1878 DJ.Oracles.BooleanFunctions <> affine def
+R1880:1880 DJ.Oracles.BooleanFunctions <> x:10 var
+R1884:1887 Coq.Init.Datatypes <> negb def
+R1890:1895 DJ.Foundations.BitStrings <> parity def
+R1897:1897 DJ.Oracles.BooleanFunctions <> x:10 var
+R1932:1937 DJ.Oracles.BooleanFunctions <> affine def
+R1953:1958 DJ.Foundations.BitStrings <> parity def
+R1953:1958 DJ.Foundations.BitStrings <> parity def
+prf 2002:2029 <> bitstring_eqb_all_zeros_refl
+binder 2043:2043 <> n:11
+R2090:2094 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2049:2061 DJ.Foundations.BitStrings <> bitstring_eqb def
+R2064:2072 DJ.Foundations.BitStrings <> all_zeros def
+R2074:2074 DJ.Oracles.BooleanFunctions <> n:11 var
+R2078:2086 DJ.Foundations.BitStrings <> all_zeros def
+R2088:2088 DJ.Oracles.BooleanFunctions <> n:11 var
+R2095:2098 Coq.Init.Datatypes <> true constr
+prf 2228:2245 <> bitstring_eqb_refl
+R2264:2272 DJ.Foundations.BitStrings <> BitString def
+binder 2259:2260 <> bs:12
+R2297:2299 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2278:2290 DJ.Foundations.BitStrings <> bitstring_eqb def
+R2292:2293 DJ.Oracles.BooleanFunctions <> bs:12 var
+R2295:2296 DJ.Oracles.BooleanFunctions <> bs:12 var
+R2300:2303 Coq.Init.Datatypes <> true constr

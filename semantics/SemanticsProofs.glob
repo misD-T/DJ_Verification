@@ -1,0 +1,189 @@
+DIGEST 677c95af8297bcb491c7e0d58fb1e2a5
+FQuantum.SemanticsProofs
+R416:419 Coq.Bool.Bool <> <> lib
+R421:424 Coq.Lists.List <> <> lib
+R426:434 Coq.Logic.Classical <> <> lib
+R436:459 Coq.Logic.FunctionalExtensionality <> <> lib
+R472:484 Coq.Lists.List ListNotations <> mod
+R505:524 Quantum.QuantumState <> <> lib
+R543:566 Quantum.QuantumOperators <> <> lib
+R585:595 Quantum.QDL <> <> lib
+R614:637 Quantum.HoaresHeisenberg <> <> lib
+prf 846:856 <> valid_truth
+R863:867 Quantum.QDL <> Valid def
+R869:873 Quantum.QDL <> Truth constr
+R894:898 Quantum.QDL <> Valid def
+prf 949:960 <> entails_refl
+binder 974:975 <> φ:1
+R983:989 Quantum.QDL <> Entails def
+R991:992 Quantum.SemanticsProofs <> φ:1 var
+R994:995 Quantum.SemanticsProofs <> φ:1 var
+prf 1036:1048 <> entails_trans
+binder 1062:1063 <> φ:2
+binder 1065:1066 <> ψ:3
+binder 1068:1069 <> χ:4
+R1090:1098 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1077:1083 Quantum.QDL <> Entails def
+R1085:1086 Quantum.SemanticsProofs <> φ:2 var
+R1088:1089 Quantum.SemanticsProofs <> ψ:3 var
+R1112:1120 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1099:1105 Quantum.QDL <> Entails def
+R1107:1108 Quantum.SemanticsProofs <> ψ:3 var
+R1110:1111 Quantum.SemanticsProofs <> χ:4 var
+R1121:1127 Quantum.QDL <> Entails def
+R1129:1130 Quantum.SemanticsProofs <> φ:2 var
+R1132:1133 Quantum.SemanticsProofs <> χ:4 var
+prf 1174:1186 <> valid_entails
+binder 1200:1201 <> φ:5
+binder 1203:1204 <> ψ:6
+R1220:1228 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1212:1216 Quantum.QDL <> Valid def
+R1218:1219 Quantum.SemanticsProofs <> φ:5 var
+R1242:1250 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1229:1235 Quantum.QDL <> Entails def
+R1237:1238 Quantum.SemanticsProofs <> φ:5 var
+R1240:1241 Quantum.SemanticsProofs <> ψ:6 var
+R1251:1255 Quantum.QDL <> Valid def
+R1257:1258 Quantum.SemanticsProofs <> ψ:6 var
+prf 1299:1307 <> box_truth
+binder 1321:1321 <> U:7
+R1329:1333 Quantum.QDL <> Valid def
+R1336:1338 Quantum.QDL <> Box constr
+R1340:1340 Quantum.SemanticsProofs <> U:7 var
+R1342:1346 Quantum.QDL <> Truth constr
+R1368:1372 Quantum.QDL <> Valid def
+prf 1620:1639 <> refinement_reflexive
+binder 1653:1653 <> P:8
+R1661:1667 Quantum.HoaresHeisenberg <> Refines def
+R1669:1669 Quantum.SemanticsProofs <> P:8 var
+R1671:1671 Quantum.SemanticsProofs <> P:8 var
+prf 1712:1727 <> refinement_trans
+binder 1741:1741 <> P:9
+binder 1743:1743 <> Q:10
+binder 1745:1745 <> R:11
+R1764:1772 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1753:1759 Quantum.HoaresHeisenberg <> Refines def
+R1761:1761 Quantum.SemanticsProofs <> P:9 var
+R1763:1763 Quantum.SemanticsProofs <> Q:10 var
+R1784:1792 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1773:1779 Quantum.HoaresHeisenberg <> Refines def
+R1781:1781 Quantum.SemanticsProofs <> Q:10 var
+R1783:1783 Quantum.SemanticsProofs <> R:11 var
+R1793:1799 Quantum.HoaresHeisenberg <> Refines def
+R1801:1801 Quantum.SemanticsProofs <> P:9 var
+R1803:1803 Quantum.SemanticsProofs <> R:11 var
+prf 2041:2059 <> compose_associative
+binder 2073:2073 <> A:12
+binder 2075:2075 <> B:13
+binder 2077:2077 <> C:14
+R2108:2120 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2085:2091 Quantum.HoaresHeisenberg <> Compose def
+R2093:2093 Quantum.SemanticsProofs <> A:12 var
+R2096:2102 Quantum.HoaresHeisenberg <> Compose def
+R2104:2104 Quantum.SemanticsProofs <> B:13 var
+R2106:2106 Quantum.SemanticsProofs <> C:14 var
+R2121:2127 Quantum.HoaresHeisenberg <> Compose def
+R2130:2136 Quantum.HoaresHeisenberg <> Compose def
+R2138:2138 Quantum.SemanticsProofs <> A:12 var
+R2140:2140 Quantum.SemanticsProofs <> B:13 var
+R2143:2143 Quantum.SemanticsProofs <> C:14 var
+R2175:2181 Quantum.HoaresHeisenberg <> Compose def
+R2193:2217 Coq.Logic.FunctionalExtensionality <> functional_extensionality thm
+R2193:2217 Coq.Logic.FunctionalExtensionality <> functional_extensionality thm
+prf 2264:2286 <> operator_extensionality
+R2307:2321 Quantum.QuantumOperators <> QuantumOperator def
+binder 2301:2301 <> U:15
+binder 2303:2303 <> V:16
+R2330:2330 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2368:2377 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2343:2354 Quantum.QuantumState <> QuantumState rec
+binder 2338:2339 <> ρ:17
+R2361:2363 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2357:2357 Quantum.SemanticsProofs <> U:15 var
+R2359:2360 Quantum.SemanticsProofs <> ρ:17 var
+R2364:2364 Quantum.SemanticsProofs <> V:16 var
+R2366:2367 Quantum.SemanticsProofs <> ρ:17 var
+R2379:2381 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2378:2378 Quantum.SemanticsProofs <> U:15 var
+R2382:2382 Quantum.SemanticsProofs <> V:16 var
+R2419:2443 Coq.Logic.FunctionalExtensionality <> functional_extensionality thm
+R2419:2443 Coq.Logic.FunctionalExtensionality <> functional_extensionality thm
+prf 2685:2701 <> box_implies_hoare
+binder 2715:2715 <> U:18
+binder 2717:2717 <> P:19
+R2747:2760 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2725:2729 Quantum.QDL <> Valid def
+R2732:2734 Quantum.QDL <> Box constr
+R2736:2736 Quantum.SemanticsProofs <> U:18 var
+R2739:2742 Quantum.QDL <> Atom constr
+R2744:2744 Quantum.SemanticsProofs <> P:19 var
+R2761:2763 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R2765:2768 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R2770:2773 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R2775:2777 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R2764:2764 Quantum.SemanticsProofs <> P:19 var
+R2769:2769 Quantum.SemanticsProofs <> U:18 var
+R2774:2774 Quantum.SemanticsProofs <> P:19 var
+prf 2810:2828 <> hoare_implies_modal
+binder 2842:2842 <> U:20
+binder 2844:2844 <> P:21
+R2869:2882 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2852:2854 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R2856:2859 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R2861:2864 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R2866:2868 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R2855:2855 Quantum.SemanticsProofs <> P:21 var
+R2860:2860 Quantum.SemanticsProofs <> U:20 var
+R2865:2865 Quantum.SemanticsProofs <> P:21 var
+R2883:2887 Quantum.QDL <> Valid def
+R2890:2892 Quantum.QDL <> Box constr
+R2894:2894 Quantum.SemanticsProofs <> U:20 var
+R2897:2900 Quantum.QDL <> Atom constr
+R2902:2902 Quantum.SemanticsProofs <> P:21 var
+def 3137:3156 <> SemanticallyVerified
+R3175:3183 Quantum.HoaresHeisenberg <> Predicate def
+binder 3171:3171 <> P:22
+R3203:3217 Quantum.QuantumOperators <> QuantumOperator def
+binder 3199:3199 <> U:23
+R3237:3245 Quantum.HoaresHeisenberg <> Predicate def
+binder 3233:3233 <> Q:24
+R3273:3283 Quantum.HoaresHeisenberg <> HoareTriple def
+R3285:3285 Quantum.SemanticsProofs <> P:22 var
+R3287:3287 Quantum.SemanticsProofs <> U:23 var
+R3289:3289 Quantum.SemanticsProofs <> Q:24 var
+prf 3303:3329 <> semantic_verification_sound
+binder 3343:3343 <> P:25
+binder 3345:3345 <> U:26
+binder 3347:3347 <> Q:27
+R3381:3389 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3355:3374 Quantum.SemanticsProofs <> SemanticallyVerified def
+R3376:3376 Quantum.SemanticsProofs <> P:25 var
+R3378:3378 Quantum.SemanticsProofs <> U:26 var
+R3380:3380 Quantum.SemanticsProofs <> Q:27 var
+R3390:3400 Quantum.HoaresHeisenberg <> HoareTriple def
+R3402:3402 Quantum.SemanticsProofs <> P:25 var
+R3404:3404 Quantum.SemanticsProofs <> U:26 var
+R3406:3406 Quantum.SemanticsProofs <> Q:27 var
+prf 3449:3488 <> verified_program_preserves_postcondition
+binder 3502:3502 <> P:28
+binder 3504:3504 <> U:29
+binder 3506:3506 <> Q:30
+R3531:3544 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3514:3516 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R3518:3521 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R3523:3526 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R3528:3530 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R3517:3517 Quantum.SemanticsProofs <> P:28 var
+R3522:3522 Quantum.SemanticsProofs <> U:29 var
+R3527:3527 Quantum.SemanticsProofs <> Q:30 var
+binder 3552:3553 <> ρ:31
+R3567:3577 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3563:3563 Quantum.SemanticsProofs <> P:28 var
+R3565:3566 Quantum.SemanticsProofs <> ρ:31 var
+R3578:3578 Quantum.SemanticsProofs <> Q:30 var
+R3581:3581 Quantum.SemanticsProofs <> U:29 var
+R3583:3584 Quantum.SemanticsProofs <> ρ:31 var
+prf 3825:3846 <> framework_ready_for_DJ
+R3853:3856 Coq.Init.Logic <> True ind
+prf 3896:3921 <> framework_ready_for_Grover
+R3928:3931 Coq.Init.Logic <> True ind

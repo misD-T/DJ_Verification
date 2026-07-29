@@ -1,0 +1,61 @@
+DIGEST 404553b175acc856dd13b41253a092a9
+FGrover.Grover
+R351:354 Coq.Lists.List <> <> lib
+R356:359 Coq.Bool.Bool <> <> lib
+R361:363 Coq.micromega.Lia <> <> lib
+R376:388 Coq.Lists.List ListNotations <> mod
+R409:433 DJ.Foundations.BitStrings <> <> lib
+R452:469 DJ.Oracles.Oracles <> <> lib
+R490:509 Quantum.QuantumState <> <> lib
+R528:551 Quantum.QuantumOperators <> <> lib
+R572:591 Grover.GroverOracles <> <> lib
+R610:631 Grover.GroverOperators <> <> lib
+def 845:857 <> GroverExecute
+R876:878 Coq.Init.Datatypes <> nat ind
+binder 872:872 <> n:1
+R898:911 DJ.Oracles.Oracles <> OracleInstance rec
+binder 894:894 <> f:2
+R928:939 Quantum.QuantumState <> QuantumState rec
+R947:960 Grover.GroverOperators <> GroverOperator def
+R962:962 Grover.Grover <> n:1 var
+R964:964 Grover.Grover <> f:2 var
+R967:978 Quantum.QuantumState <> InitialState def
+R980:980 Grover.Grover <> n:1 var
+def 1193:1204 <> GroverResult
+R1223:1225 Coq.Init.Datatypes <> nat ind
+binder 1219:1219 <> n:3
+R1250:1263 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1241:1246 <> oracle:4
+R1280:1288 DJ.Foundations.BitStrings <> BitString def
+R1296:1302 Quantum.QuantumState <> qs_bits proj
+R1305:1317 Grover.Grover <> GroverExecute def
+R1319:1319 Grover.Grover <> n:3 var
+R1321:1326 Grover.Grover <> oracle:4 var
+def 1539:1551 <> GroverCorrect
+R1570:1572 Coq.Init.Datatypes <> nat ind
+binder 1566:1566 <> n:5
+R1592:1605 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1588:1588 <> f:6
+R1662:1666 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1633:1641 Quantum.QuantumState <> qs_oracle proj
+R1644:1656 Grover.Grover <> GroverExecute def
+R1658:1658 Grover.Grover <> n:5 var
+R1660:1660 Grover.Grover <> f:6 var
+R1667:1670 Coq.Init.Datatypes <> Some constr
+R1672:1672 Grover.Grover <> f:6 var
+prf 2078:2093 <> grover_semantics
+binder 2107:2107 <> n:7
+binder 2109:2109 <> f:8
+R2120:2124 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2116:2118 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R2115:2115 Grover.Grover <> n:7 var
+R2125:2137 Grover.Grover <> GroverCorrect def
+R2139:2139 Grover.Grover <> n:7 var
+R2141:2141 Grover.Grover <> f:8 var
+R2186:2198 Grover.Grover <> GroverCorrect def
+R2211:2223 Grover.Grover <> GroverExecute def
+R2236:2249 Grover.GroverOperators <> GroverOperator def
+R2262:2268 Quantum.QuantumOperators <> Compose def
+R2295:2310 Grover.GroverOperators <> GroverIterations def
+R2355:2383 Grover.GroverOperators <> RepeatOperator_records_oracle thm
+R2355:2383 Grover.GroverOperators <> RepeatOperator_records_oracle thm

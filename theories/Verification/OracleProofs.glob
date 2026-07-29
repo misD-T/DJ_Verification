@@ -1,0 +1,717 @@
+DIGEST 6ec34159d2d8547ddb9e1b51dbe6e235
+FDJ.Verification.OracleProofs
+R221:224 Coq.Bool.Bool <> <> lib
+R226:229 Coq.Lists.List <> <> lib
+R231:235 Coq.Arith.Arith <> <> lib
+R237:239 Coq.micromega.Lia <> <> lib
+R258:291 Coq.Logic.FunctionalExtensionality <> <> lib
+R304:316 Coq.Lists.List ListNotations <> mod
+R337:361 DJ.Foundations.BitStrings <> <> lib
+R380:402 DJ.Foundations.Counting <> <> lib
+R421:446 DJ.Foundations.Enumeration <> <> lib
+R467:493 DJ.Oracles.BooleanFunctions <> <> lib
+R512:529 DJ.Oracles.Oracles <> <> lib
+R548:565 DJ.Oracles.Promise <> <> lib
+R586:609 DJ.Verification.Balanced <> <> lib
+R628:645 DJ.DeutschJozsa.DJ <> <> lib
+prf 854:872 <> count_true_zero_iff
+binder 886:886 <> l:1
+R908:914 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R904:906 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R892:901 DJ.Foundations.Counting <> count_true def
+R903:903 DJ.Verification.OracleProofs <> l:1 var
+binder 922:922 <> b:2
+R934:940 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R928:929 Coq.Lists.List <> In def
+R933:933 DJ.Verification.OracleProofs <> l:1 var
+R931:931 DJ.Verification.OracleProofs <> b:2 var
+R942:944 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R941:941 DJ.Verification.OracleProofs <> b:2 var
+R945:949 Coq.Init.Datatypes <> false constr
+prf 1297:1316 <> count_false_zero_iff
+binder 1330:1330 <> l:3
+R1353:1359 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1349:1351 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1336:1346 DJ.Foundations.Counting <> count_false def
+R1348:1348 DJ.Verification.OracleProofs <> l:3 var
+binder 1367:1367 <> b:4
+R1379:1385 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1373:1374 Coq.Lists.List <> In def
+R1378:1378 DJ.Verification.OracleProofs <> l:3 var
+R1376:1376 DJ.Verification.OracleProofs <> b:4 var
+R1387:1389 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1386:1386 DJ.Verification.OracleProofs <> b:4 var
+R1390:1393 Coq.Init.Datatypes <> true constr
+prf 1794:1813 <> count_true_map_false
+R1832:1835 Coq.Init.Datatypes <> list ind
+R1837:1845 DJ.Foundations.BitStrings <> BitString def
+binder 1828:1828 <> l:5
+R1887:1889 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1852:1861 DJ.Foundations.Counting <> count_true def
+R1864:1866 Coq.Lists.List <> map def
+R1885:1885 DJ.Verification.OracleProofs <> l:5 var
+R1878:1882 Coq.Init.Datatypes <> false constr
+prf 2012:2030 <> count_true_map_true
+R2049:2052 Coq.Init.Datatypes <> list ind
+R2054:2062 DJ.Foundations.BitStrings <> BitString def
+binder 2045:2045 <> l:6
+R2103:2105 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2069:2078 DJ.Foundations.Counting <> count_true def
+R2081:2083 Coq.Lists.List <> map def
+R2101:2101 DJ.Verification.OracleProofs <> l:6 var
+R2095:2098 Coq.Init.Datatypes <> true constr
+R2106:2111 Coq.Init.Datatypes <> length def
+R2113:2113 DJ.Verification.OracleProofs <> l:6 var
+prf 2235:2255 <> count_false_map_false
+R2274:2277 Coq.Init.Datatypes <> list ind
+R2279:2287 DJ.Foundations.BitStrings <> BitString def
+binder 2270:2270 <> l:7
+R2330:2332 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2294:2304 DJ.Foundations.Counting <> count_false def
+R2307:2309 Coq.Lists.List <> map def
+R2328:2328 DJ.Verification.OracleProofs <> l:7 var
+R2321:2325 Coq.Init.Datatypes <> false constr
+R2333:2338 Coq.Init.Datatypes <> length def
+R2340:2340 DJ.Verification.OracleProofs <> l:7 var
+prf 2462:2481 <> count_false_map_true
+R2500:2503 Coq.Init.Datatypes <> list ind
+R2505:2513 DJ.Foundations.BitStrings <> BitString def
+binder 2496:2496 <> l:8
+R2555:2557 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2520:2530 DJ.Foundations.Counting <> count_false def
+R2533:2535 Coq.Lists.List <> map def
+R2553:2553 DJ.Verification.OracleProofs <> l:8 var
+R2547:2550 Coq.Init.Datatypes <> true constr
+prf 2676:2704 <> enumerate_bitstrings_complete
+binder 2718:2718 <> n:9
+binder 2720:2720 <> x:10
+R2738:2744 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2734:2736 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2726:2731 Coq.Init.Datatypes <> length def
+R2733:2733 DJ.Verification.OracleProofs <> x:10 var
+R2737:2737 DJ.Verification.OracleProofs <> n:9 var
+R2745:2746 Coq.Lists.List <> In def
+R2751:2770 DJ.Foundations.Enumeration <> enumerate_bitstrings def
+R2772:2772 DJ.Verification.OracleProofs <> n:9 var
+R2748:2748 DJ.Verification.OracleProofs <> x:10 var
+R3131:3139 Coq.Lists.List <> in_or_app thm
+R3131:3139 Coq.Lists.List <> in_or_app thm
+R3198:3217 DJ.Foundations.Enumeration <> prepend_bit_contains thm
+R3198:3217 DJ.Foundations.Enumeration <> prepend_bit_contains thm
+R3258:3269 Coq.Arith.PeanoNat Nat succ_inj thm
+R3258:3269 Coq.Arith.PeanoNat Nat succ_inj thm
+R3337:3356 DJ.Foundations.Enumeration <> prepend_bit_contains thm
+R3337:3356 DJ.Foundations.Enumeration <> prepend_bit_contains thm
+R3397:3408 Coq.Arith.PeanoNat Nat succ_inj thm
+R3397:3408 Coq.Arith.PeanoNat Nat succ_inj thm
+prf 3459:3482 <> enumerate_outputs_length
+binder 3496:3496 <> A:11
+R3512:3515 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3503:3511 DJ.Foundations.BitStrings <> BitString def
+R3516:3516 DJ.Verification.OracleProofs <> A:11 var
+binder 3499:3499 <> f:12
+binder 3519:3519 <> n:13
+R3555:3559 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3525:3530 Coq.Init.Datatypes <> length def
+R3533:3549 DJ.Foundations.Enumeration <> enumerate_outputs def
+R3553:3553 DJ.Verification.OracleProofs <> n:13 var
+R3551:3551 DJ.Verification.OracleProofs <> f:12 var
+R3560:3565 Coq.Init.Datatypes <> length def
+R3568:3587 DJ.Foundations.Enumeration <> enumerate_bitstrings def
+R3589:3589 DJ.Verification.OracleProofs <> n:13 var
+R3634:3650 DJ.Foundations.Enumeration <> enumerate_outputs def
+R3664:3673 Coq.Lists.List <> map_length thm
+R3664:3673 Coq.Lists.List <> map_length thm
+prf 3693:3719 <> count_false_outputs_correct
+binder 3733:3733 <> n:14
+R3740:3745 DJ.Oracles.BooleanFunctions <> Oracle def
+binder 3736:3736 <> f:15
+R3775:3779 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3752:3770 DJ.Foundations.Counting <> count_false_outputs def
+R3772:3772 DJ.Verification.OracleProofs <> f:15 var
+R3774:3774 DJ.Verification.OracleProofs <> n:14 var
+R3780:3790 DJ.Foundations.Counting <> count_false def
+R3793:3806 DJ.Foundations.Counting <> oracle_outputs def
+R3808:3808 DJ.Verification.OracleProofs <> f:15 var
+R3810:3810 DJ.Verification.OracleProofs <> n:14 var
+R3853:3871 DJ.Foundations.Counting <> count_false_outputs def
+R3884:3899 DJ.Foundations.Enumeration <> number_of_inputs def
+R3912:3929 DJ.Foundations.Counting <> count_true_outputs def
+R3949:3969 DJ.Foundations.Counting <> oracle_outputs_length thm
+R3949:3969 DJ.Foundations.Counting <> oracle_outputs_length thm
+R3949:3969 DJ.Foundations.Counting <> oracle_outputs_length thm
+R3988:4009 DJ.Foundations.Counting <> count_false_from_total thm
+R3988:4009 DJ.Foundations.Counting <> count_false_from_total thm
+prf 4029:4061 <> count_true_zero_implies_all_false
+binder 4075:4075 <> l:16
+R4097:4103 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4093:4095 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4081:4090 DJ.Foundations.Counting <> count_true def
+R4092:4092 DJ.Verification.OracleProofs <> l:16 var
+binder 4111:4111 <> b:17
+R4123:4129 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4117:4118 Coq.Lists.List <> In def
+R4122:4122 DJ.Verification.OracleProofs <> l:16 var
+R4120:4120 DJ.Verification.OracleProofs <> b:17 var
+R4131:4133 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4130:4130 DJ.Verification.OracleProofs <> b:17 var
+R4134:4138 Coq.Init.Datatypes <> false constr
+prf 4543:4575 <> count_false_zero_implies_all_true
+binder 4589:4589 <> l:18
+R4612:4618 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4608:4610 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4595:4605 DJ.Foundations.Counting <> count_false def
+R4607:4607 DJ.Verification.OracleProofs <> l:18 var
+binder 4626:4626 <> b:19
+R4638:4644 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4632:4633 Coq.Lists.List <> In def
+R4637:4637 DJ.Verification.OracleProofs <> l:18 var
+R4635:4635 DJ.Verification.OracleProofs <> b:19 var
+R4646:4648 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4645:4645 DJ.Verification.OracleProofs <> b:19 var
+R4649:4652 Coq.Init.Datatypes <> true constr
+prf 5258:5282 <> constant_zero_is_constant
+binder 5296:5296 <> n:20
+R5302:5309 DJ.Verification.Balanced <> Constant def
+R5311:5311 DJ.Verification.OracleProofs <> n:20 var
+R5313:5325 DJ.Oracles.Oracles <> constant_zero def
+R5364:5371 DJ.Verification.Balanced <> Constant def
+R5397:5414 DJ.Foundations.Counting <> count_true_outputs def
+R5427:5440 DJ.Foundations.Counting <> oracle_outputs def
+R5467:5481 DJ.Oracles.Oracles <> oracle_function proj
+R5494:5506 DJ.Oracles.Oracles <> constant_zero def
+R5519:5535 DJ.Oracles.Oracles <> constant_zero_fun def
+R5549:5568 DJ.Verification.OracleProofs <> count_true_map_false thm
+R5549:5568 DJ.Verification.OracleProofs <> count_true_map_false thm
+prf 5594:5617 <> constant_one_is_constant
+binder 5631:5631 <> n:21
+R5637:5644 DJ.Verification.Balanced <> Constant def
+R5646:5646 DJ.Verification.OracleProofs <> n:21 var
+R5648:5659 DJ.Oracles.Oracles <> constant_one def
+R5698:5705 DJ.Verification.Balanced <> Constant def
+R5732:5750 DJ.Foundations.Counting <> count_false_outputs def
+R5763:5780 DJ.Foundations.Counting <> count_true_outputs def
+R5793:5806 DJ.Foundations.Counting <> oracle_outputs def
+R5819:5835 DJ.Foundations.Enumeration <> enumerate_outputs def
+R5850:5864 DJ.Oracles.Oracles <> oracle_function proj
+R5877:5888 DJ.Oracles.Oracles <> constant_one def
+R5901:5916 DJ.Oracles.Oracles <> constant_one_fun def
+R5944:5962 DJ.Verification.OracleProofs <> count_true_map_true thm
+R5944:5962 DJ.Verification.OracleProofs <> count_true_map_true thm
+R5944:5962 DJ.Verification.OracleProofs <> count_true_map_true thm
+R5977:5992 DJ.Foundations.Enumeration <> number_of_inputs def
+R6008:6034 DJ.Foundations.Enumeration <> enumerate_bitstrings_length thm
+R6008:6034 DJ.Foundations.Enumeration <> enumerate_bitstrings_length thm
+R6008:6034 DJ.Foundations.Enumeration <> enumerate_bitstrings_length thm
+prf 6460:6479 <> first_bit_count_true
+binder 6493:6493 <> n:22
+R6533:6537 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6499:6516 DJ.Foundations.Counting <> count_true_outputs def
+R6518:6526 DJ.Foundations.BitStrings <> first_bit def
+R6529:6529 Coq.Init.Datatypes <> S constr
+R6531:6531 DJ.Verification.OracleProofs <> n:22 var
+R6538:6544 Coq.Arith.PeanoNat Nat pow def
+R6548:6548 DJ.Verification.OracleProofs <> n:22 var
+R6587:6604 DJ.Foundations.Counting <> count_true_outputs def
+R6617:6630 DJ.Foundations.Counting <> oracle_outputs def
+R6643:6659 DJ.Foundations.Enumeration <> enumerate_outputs def
+R6674:6693 DJ.Foundations.Enumeration <> enumerate_bitstrings def
+prf 6719:6739 <> first_bit_count_false
+binder 6753:6753 <> n:23
+R6794:6798 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6759:6777 DJ.Foundations.Counting <> count_false_outputs def
+R6779:6787 DJ.Foundations.BitStrings <> first_bit def
+R6790:6790 Coq.Init.Datatypes <> S constr
+R6792:6792 DJ.Verification.OracleProofs <> n:23 var
+R6799:6805 Coq.Arith.PeanoNat Nat pow def
+R6809:6809 DJ.Verification.OracleProofs <> n:23 var
+R6848:6866 DJ.Foundations.Counting <> count_false_outputs def
+R6879:6892 DJ.Foundations.Counting <> oracle_outputs def
+R6905:6921 DJ.Foundations.Enumeration <> enumerate_outputs def
+R6936:6955 DJ.Foundations.Enumeration <> enumerate_bitstrings def
+prf 7022:7042 <> first_bit_is_balanced
+binder 7056:7056 <> n:24
+R7067:7073 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7063:7065 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R7062:7062 DJ.Verification.OracleProofs <> n:24 var
+R7074:7081 DJ.Verification.Balanced <> Balanced def
+R7083:7083 DJ.Verification.OracleProofs <> n:24 var
+R7085:7100 DJ.Oracles.Oracles <> oracle_first_bit def
+R7202:7209 DJ.Verification.Balanced <> Balanced def
+R7226:7240 DJ.Oracles.Oracles <> oracle_function proj
+R7255:7270 DJ.Oracles.Oracles <> oracle_first_bit def
+R7285:7297 DJ.Oracles.Oracles <> first_bit_fun def
+R7315:7334 DJ.Verification.OracleProofs <> first_bit_count_true prfax
+R7315:7334 DJ.Verification.OracleProofs <> first_bit_count_true prfax
+R7315:7334 DJ.Verification.OracleProofs <> first_bit_count_true prfax
+R7350:7370 DJ.Verification.OracleProofs <> first_bit_count_false prfax
+R7350:7370 DJ.Verification.OracleProofs <> first_bit_count_false prfax
+R7350:7370 DJ.Verification.OracleProofs <> first_bit_count_false prfax
+prf 7603:7623 <> parity_flip_first_bit
+binder 7637:7638 <> xs:25
+R7663:7667 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7644:7649 DJ.Foundations.BitStrings <> parity def
+R7656:7659 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7652:7655 Coq.Init.Datatypes <> true constr
+R7660:7661 DJ.Verification.OracleProofs <> xs:25 var
+R7668:7671 Coq.Init.Datatypes <> negb def
+R7674:7679 DJ.Foundations.BitStrings <> parity def
+R7687:7690 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7682:7686 Coq.Init.Datatypes <> false constr
+R7691:7692 DJ.Verification.OracleProofs <> xs:25 var
+R7749:7754 DJ.Foundations.BitStrings <> parity def
+R7749:7754 DJ.Foundations.BitStrings <> parity def
+prf 7798:7815 <> parity_is_balanced
+binder 7829:7829 <> n:26
+R7840:7846 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7836:7838 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R7835:7835 DJ.Verification.OracleProofs <> n:26 var
+R7847:7854 DJ.Verification.Balanced <> Balanced def
+R7856:7856 DJ.Verification.OracleProofs <> n:26 var
+R7858:7870 DJ.Oracles.Oracles <> oracle_parity def
+prf 7911:7933 <> full_parity_is_balanced
+binder 7947:7947 <> n:27
+R7953:7960 DJ.Verification.Balanced <> Balanced def
+R7962:7962 DJ.Verification.OracleProofs <> n:27 var
+R7964:7981 DJ.Oracles.Oracles <> oracle_full_parity def
+prf 8018:8041 <> xor_two_bits_is_balanced
+binder 8055:8055 <> n:28
+R8061:8068 DJ.Verification.Balanced <> Balanced def
+R8070:8070 DJ.Verification.OracleProofs <> n:28 var
+R8072:8090 DJ.Oracles.Oracles <> oracle_xor_two_bits def
+prf 8125:8152 <> example_balanced_is_balanced
+binder 8166:8166 <> n:29
+R8172:8179 DJ.Verification.Balanced <> Balanced def
+R8181:8181 DJ.Verification.OracleProofs <> n:29 var
+R8183:8205 DJ.Oracles.Oracles <> oracle_example_balanced def
+prf 8441:8458 <> affine_is_balanced
+binder 8472:8472 <> n:30
+R8478:8485 DJ.Verification.Balanced <> Balanced def
+R8487:8487 DJ.Verification.OracleProofs <> n:30 var
+R8489:8501 DJ.Oracles.Oracles <> oracle_affine def
+R8540:8547 DJ.Verification.Balanced <> Balanced def
+R8562:8576 DJ.Oracles.Oracles <> oracle_function proj
+R8589:8601 DJ.Oracles.Oracles <> oracle_affine def
+R8614:8623 DJ.Oracles.Oracles <> affine_fun def
+prf 8851:8869 <> and_xor_is_balanced
+binder 8883:8883 <> n:31
+R8889:8896 DJ.Verification.Balanced <> Balanced def
+R8898:8898 DJ.Verification.OracleProofs <> n:31 var
+R8900:8913 DJ.Oracles.Oracles <> oracle_and_xor def
+prf 9147:9162 <> majority_invalid
+binder 9176:9176 <> n:32
+R9182:9188 DJ.Verification.Balanced <> Invalid def
+R9190:9190 DJ.Verification.OracleProofs <> n:32 var
+R9192:9206 DJ.Oracles.Oracles <> oracle_majority def
+prf 9247:9267 <> single_marked_invalid
+binder 9281:9281 <> n:33
+R9287:9293 DJ.Verification.Balanced <> Invalid def
+R9295:9295 DJ.Verification.OracleProofs <> n:33 var
+R9297:9316 DJ.Oracles.Oracles <> oracle_single_marked def
+prf 9552:9578 <> first_bit_satisfies_promise
+binder 9592:9592 <> n:34
+R9603:9609 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R9599:9601 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R9598:9598 DJ.Verification.OracleProofs <> n:34 var
+R9610:9618 DJ.Verification.Balanced <> DJPromise def
+R9620:9620 DJ.Verification.OracleProofs <> n:34 var
+R9622:9637 DJ.Oracles.Oracles <> oracle_first_bit def
+R9689:9709 DJ.Verification.OracleProofs <> first_bit_is_balanced thm
+R9689:9709 DJ.Verification.OracleProofs <> first_bit_is_balanced thm
+prf 9729:9752 <> parity_satisfies_promise
+binder 9766:9766 <> n:35
+R9777:9783 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R9773:9775 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R9772:9772 DJ.Verification.OracleProofs <> n:35 var
+R9784:9792 DJ.Verification.Balanced <> DJPromise def
+R9794:9794 DJ.Verification.OracleProofs <> n:35 var
+R9796:9808 DJ.Oracles.Oracles <> oracle_parity def
+R9862:9879 DJ.Verification.OracleProofs <> parity_is_balanced prfax
+R9862:9879 DJ.Verification.OracleProofs <> parity_is_balanced prfax
+prf 9920:9943 <> affine_satisfies_promise
+binder 9957:9957 <> n:36
+R9963:9971 DJ.Verification.Balanced <> DJPromise def
+R9973:9973 DJ.Verification.OracleProofs <> n:36 var
+R9975:9987 DJ.Oracles.Oracles <> oracle_affine def
+R10037:10054 DJ.Verification.OracleProofs <> affine_is_balanced prfax
+R10037:10054 DJ.Verification.OracleProofs <> affine_is_balanced prfax
+prf 10080:10110 <> constant_zero_satisfies_promise
+binder 10124:10124 <> n:37
+R10130:10138 DJ.Verification.Balanced <> DJPromise def
+R10140:10140 DJ.Verification.OracleProofs <> n:37 var
+R10142:10154 DJ.Oracles.Oracles <> constant_zero def
+R10203:10227 DJ.Verification.OracleProofs <> constant_zero_is_constant thm
+R10203:10227 DJ.Verification.OracleProofs <> constant_zero_is_constant thm
+prf 10253:10282 <> constant_one_satisfies_promise
+binder 10296:10296 <> n:38
+R10302:10310 DJ.Verification.Balanced <> DJPromise def
+R10312:10312 DJ.Verification.OracleProofs <> n:38 var
+R10314:10325 DJ.Oracles.Oracles <> constant_one def
+R10374:10397 DJ.Verification.OracleProofs <> constant_one_is_constant thm
+R10374:10397 DJ.Verification.OracleProofs <> constant_one_is_constant thm
+prf 10423:10451 <> full_parity_satisfies_promise
+binder 10465:10465 <> n:39
+R10471:10479 DJ.Verification.Balanced <> DJPromise def
+R10481:10481 DJ.Verification.OracleProofs <> n:39 var
+R10483:10500 DJ.Oracles.Oracles <> oracle_full_parity def
+R10550:10572 DJ.Verification.OracleProofs <> full_parity_is_balanced prfax
+R10550:10572 DJ.Verification.OracleProofs <> full_parity_is_balanced prfax
+prf 10594:10623 <> xor_two_bits_satisfies_promise
+binder 10637:10637 <> n:40
+R10643:10651 DJ.Verification.Balanced <> DJPromise def
+R10653:10653 DJ.Verification.OracleProofs <> n:40 var
+R10655:10673 DJ.Oracles.Oracles <> oracle_xor_two_bits def
+R10723:10746 DJ.Verification.OracleProofs <> xor_two_bits_is_balanced prfax
+R10723:10746 DJ.Verification.OracleProofs <> xor_two_bits_is_balanced prfax
+prf 10770:10794 <> and_xor_satisfies_promise
+binder 10808:10808 <> n:41
+R10814:10822 DJ.Verification.Balanced <> DJPromise def
+R10824:10824 DJ.Verification.OracleProofs <> n:41 var
+R10826:10839 DJ.Oracles.Oracles <> oracle_and_xor def
+R10889:10907 DJ.Verification.OracleProofs <> and_xor_is_balanced prfax
+R10889:10907 DJ.Verification.OracleProofs <> and_xor_is_balanced prfax
+prf 11130:11150 <> affine_oracle_correct
+binder 11164:11164 <> x:42
+R11201:11203 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11170:11184 DJ.Oracles.Oracles <> oracle_function proj
+R11186:11198 DJ.Oracles.Oracles <> oracle_affine def
+R11200:11200 DJ.Verification.OracleProofs <> x:42 var
+R11204:11209 DJ.Oracles.BooleanFunctions <> affine def
+R11211:11211 DJ.Verification.OracleProofs <> x:42 var
+prf 11261:11287 <> xor_two_bits_oracle_correct
+binder 11301:11301 <> x:43
+R11344:11346 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11307:11321 DJ.Oracles.Oracles <> oracle_function proj
+R11323:11341 DJ.Oracles.Oracles <> oracle_xor_two_bits def
+R11343:11343 DJ.Verification.OracleProofs <> x:43 var
+R11347:11358 DJ.Oracles.BooleanFunctions <> xor_two_bits def
+R11360:11360 DJ.Verification.OracleProofs <> x:43 var
+prf 11412:11432 <> parity_oracle_correct
+binder 11446:11446 <> x:44
+R11483:11485 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11452:11466 DJ.Oracles.Oracles <> oracle_function proj
+R11468:11480 DJ.Oracles.Oracles <> oracle_parity def
+R11482:11482 DJ.Verification.OracleProofs <> x:44 var
+R11486:11491 DJ.Foundations.BitStrings <> parity def
+R11493:11493 DJ.Verification.OracleProofs <> x:44 var
+prf 11545:11578 <> example_balanced_satisfies_promise
+binder 11592:11592 <> n:45
+R11598:11606 DJ.Verification.Balanced <> DJPromise def
+R11608:11608 DJ.Verification.OracleProofs <> n:45 var
+R11610:11632 DJ.Oracles.Oracles <> oracle_example_balanced def
+R11682:11709 DJ.Verification.OracleProofs <> example_balanced_is_balanced prfax
+R11682:11709 DJ.Verification.OracleProofs <> example_balanced_is_balanced prfax
+prf 11924:11947 <> Balanced_not_zero_counts
+binder 11961:11961 <> n:46
+binder 11963:11963 <> f:47
+R11974:11978 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11970:11972 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R11969:11969 DJ.Verification.OracleProofs <> n:46 var
+R11991:11995 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11979:11986 DJ.Verification.Balanced <> Balanced def
+R11988:11988 DJ.Verification.OracleProofs <> n:46 var
+R11990:11990 DJ.Verification.OracleProofs <> f:47 var
+R12036:12039 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R11996:12013 DJ.Foundations.Counting <> count_true_outputs def
+R12016:12030 DJ.Oracles.Oracles <> oracle_function proj
+R12032:12032 DJ.Verification.OracleProofs <> f:47 var
+R12035:12035 DJ.Verification.OracleProofs <> n:46 var
+R12157:12159 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12116:12134 DJ.Foundations.Counting <> count_false_outputs def
+R12137:12151 DJ.Oracles.Oracles <> oracle_function proj
+R12157:12159 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12116:12134 DJ.Foundations.Counting <> count_false_outputs def
+R12137:12151 DJ.Oracles.Oracles <> oracle_function proj
+R12181:12188 DJ.Verification.Balanced <> Balanced def
+R12395:12407 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12346:12353 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R12306:12323 DJ.Foundations.Counting <> count_true_outputs def
+R12326:12340 DJ.Oracles.Oracles <> oracle_function proj
+R12354:12372 DJ.Foundations.Counting <> count_false_outputs def
+R12375:12389 DJ.Oracles.Oracles <> oracle_function proj
+R12408:12423 DJ.Foundations.Enumeration <> number_of_inputs def
+R12395:12407 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12346:12353 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R12306:12323 DJ.Foundations.Counting <> count_true_outputs def
+R12326:12340 DJ.Oracles.Oracles <> oracle_function proj
+R12354:12372 DJ.Foundations.Counting <> count_false_outputs def
+R12375:12389 DJ.Oracles.Oracles <> oracle_function proj
+R12408:12423 DJ.Foundations.Enumeration <> number_of_inputs def
+R12447:12465 DJ.Verification.Balanced <> count_outputs_total thm
+R12447:12465 DJ.Verification.Balanced <> count_outputs_total thm
+R12597:12599 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R12579:12594 DJ.Foundations.Enumeration <> number_of_inputs def
+R12597:12599 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R12579:12594 DJ.Foundations.Enumeration <> number_of_inputs def
+R12622:12646 DJ.Verification.Balanced <> number_of_inputs_positive thm
+R12622:12646 DJ.Verification.Balanced <> number_of_inputs_positive thm
+prf 12681:12703 <> parity_has_false_output
+binder 12717:12717 <> n:48
+R12728:12734 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12724:12726 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R12723:12723 DJ.Verification.OracleProofs <> n:48 var
+R12763:12765 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R12735:12753 DJ.Foundations.Counting <> count_false_outputs def
+R12755:12760 DJ.Foundations.BitStrings <> parity def
+R12762:12762 DJ.Verification.OracleProofs <> n:48 var
+R12809:12827 DJ.Foundations.Counting <> count_false_outputs def
+R12840:12857 DJ.Foundations.Counting <> count_true_outputs def
+R12870:12883 DJ.Foundations.Counting <> oracle_outputs def
+prf 12927:12948 <> parity_has_true_output
+binder 12962:12962 <> n:49
+R12973:12979 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12969:12971 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R12968:12968 DJ.Verification.OracleProofs <> n:49 var
+R13007:13009 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R12980:12997 DJ.Foundations.Counting <> count_true_outputs def
+R12999:13004 DJ.Foundations.BitStrings <> parity def
+R13006:13006 DJ.Verification.OracleProofs <> n:49 var
+R13053:13070 DJ.Foundations.Counting <> count_true_outputs def
+R13083:13096 DJ.Foundations.Counting <> oracle_outputs def
+prf 13339:13359 <> Constant_implies_kind
+binder 13371:13371 <> n:50
+binder 13373:13373 <> f:51
+R13391:13397 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13379:13386 DJ.Verification.Balanced <> Constant def
+R13388:13388 DJ.Verification.OracleProofs <> n:50 var
+R13390:13390 DJ.Verification.OracleProofs <> f:51 var
+R13428:13434 Coq.Init.Logic <> ::type_scope:x_'\/'_x not
+R13411:13413 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R13398:13408 DJ.Oracles.Oracles <> oracle_kind proj
+R13410:13410 DJ.Verification.OracleProofs <> f:51 var
+R13414:13427 DJ.Oracles.Oracles <> OKConstantZero constr
+R13448:13450 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R13435:13445 DJ.Oracles.Oracles <> oracle_kind proj
+R13447:13447 DJ.Verification.OracleProofs <> f:51 var
+R13451:13463 DJ.Oracles.Oracles <> OKConstantOne constr
+prf 13515:13540 <> constant_zero_not_balanced
+binder 13554:13554 <> n:52
+R13560:13561 Coq.Init.Logic <> ::type_scope:'~'_x not
+R13562:13569 DJ.Verification.Balanced <> Balanced def
+R13571:13571 DJ.Verification.OracleProofs <> n:52 var
+R13573:13585 DJ.Oracles.Oracles <> constant_zero def
+prf 13637:13661 <> constant_one_not_balanced
+binder 13675:13675 <> n:53
+R13681:13682 Coq.Init.Logic <> ::type_scope:'~'_x not
+R13683:13690 DJ.Verification.Balanced <> Balanced def
+R13692:13692 DJ.Verification.OracleProofs <> n:53 var
+R13694:13705 DJ.Oracles.Oracles <> constant_one def
+prf 13757:13785 <> Balanced_implies_not_constant
+binder 13799:13799 <> n:54
+binder 13801:13801 <> f:55
+R13812:13818 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13808:13810 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R13807:13807 DJ.Verification.OracleProofs <> n:54 var
+R13831:13837 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13819:13826 DJ.Verification.Balanced <> Balanced def
+R13828:13828 DJ.Verification.OracleProofs <> n:54 var
+R13830:13830 DJ.Verification.OracleProofs <> f:55 var
+R13838:13839 Coq.Init.Logic <> ::type_scope:'~'_x not
+R13840:13847 DJ.Verification.Balanced <> Constant def
+R13849:13849 DJ.Verification.OracleProofs <> n:54 var
+R13851:13851 DJ.Verification.OracleProofs <> f:55 var
+R13968:13991 DJ.Verification.OracleProofs <> Balanced_not_zero_counts thm
+R13968:13991 DJ.Verification.OracleProofs <> Balanced_not_zero_counts thm
+R14053:14082 DJ.Verification.Balanced <> Balanced_not_zero_false_counts thm
+R14053:14082 DJ.Verification.Balanced <> Balanced_not_zero_false_counts thm
+prf 14336:14352 <> In_oracle_outputs
+binder 14366:14366 <> n:56
+R14373:14378 DJ.Oracles.BooleanFunctions <> Oracle def
+binder 14369:14369 <> f:57
+binder 14381:14381 <> x:58
+R14399:14405 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R14395:14397 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14387:14392 Coq.Init.Datatypes <> length def
+R14394:14394 DJ.Verification.OracleProofs <> x:58 var
+R14398:14398 DJ.Verification.OracleProofs <> n:56 var
+R14406:14407 Coq.Lists.List <> In def
+R14416:14429 DJ.Foundations.Counting <> oracle_outputs def
+R14431:14431 DJ.Verification.OracleProofs <> f:57 var
+R14433:14433 DJ.Verification.OracleProofs <> n:56 var
+R14410:14410 DJ.Verification.OracleProofs <> f:57 var
+R14412:14412 DJ.Verification.OracleProofs <> x:58 var
+R14483:14496 DJ.Foundations.Counting <> oracle_outputs def
+R14511:14527 DJ.Foundations.Enumeration <> enumerate_outputs def
+R14541:14546 Coq.Lists.List <> in_map thm
+R14541:14546 Coq.Lists.List <> in_map thm
+R14560:14588 DJ.Verification.OracleProofs <> enumerate_bitstrings_complete thm
+R14560:14588 DJ.Verification.OracleProofs <> enumerate_bitstrings_complete thm
+prf 14625:14650 <> oracle_outputs_count_total
+binder 14664:14664 <> n:59
+R14671:14676 DJ.Oracles.BooleanFunctions <> Oracle def
+binder 14667:14667 <> f:60
+R14733:14737 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14705:14709 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R14683:14700 DJ.Foundations.Counting <> count_true_outputs def
+R14702:14702 DJ.Verification.OracleProofs <> f:60 var
+R14704:14704 DJ.Verification.OracleProofs <> n:59 var
+R14710:14728 DJ.Foundations.Counting <> count_false_outputs def
+R14730:14730 DJ.Verification.OracleProofs <> f:60 var
+R14732:14732 DJ.Verification.OracleProofs <> n:59 var
+R14738:14753 DJ.Foundations.Enumeration <> number_of_inputs def
+R14755:14755 DJ.Verification.OracleProofs <> n:59 var
+R14798:14824 DJ.Verification.OracleProofs <> count_false_outputs_correct thm
+R14798:14824 DJ.Verification.OracleProofs <> count_false_outputs_correct thm
+R14798:14824 DJ.Verification.OracleProofs <> count_false_outputs_correct thm
+R14839:14856 DJ.Foundations.Counting <> count_true_outputs def
+R14871:14886 DJ.Foundations.Enumeration <> number_of_inputs def
+R14906:14926 DJ.Foundations.Counting <> oracle_outputs_length thm
+R14906:14926 DJ.Foundations.Counting <> oracle_outputs_length thm
+R14906:14926 DJ.Foundations.Counting <> oracle_outputs_length thm
+R14945:14966 DJ.Foundations.Counting <> count_true_false_total thm
+R14945:14966 DJ.Foundations.Counting <> count_true_false_total thm
+prf 14986:15002 <> Constant_semantic
+binder 15016:15016 <> n:61
+R15023:15036 DJ.Oracles.Oracles <> OracleInstance rec
+binder 15019:15019 <> f:62
+R15055:15061 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15043:15050 DJ.Verification.Balanced <> Constant def
+R15052:15052 DJ.Verification.OracleProofs <> n:61 var
+R15054:15054 DJ.Verification.OracleProofs <> f:62 var
+R15062:15068 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R15077:15081 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R15073:15076 Coq.Init.Datatypes <> bool ind
+binder 15069:15069 <> b:63
+binder 15089:15089 <> x:64
+R15107:15113 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15103:15105 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15095:15100 Coq.Init.Datatypes <> length def
+R15102:15102 DJ.Verification.OracleProofs <> x:64 var
+R15106:15106 DJ.Verification.OracleProofs <> n:61 var
+R15133:15135 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15114:15128 DJ.Oracles.Oracles <> oracle_function proj
+R15130:15130 DJ.Verification.OracleProofs <> f:62 var
+R15132:15132 DJ.Verification.OracleProofs <> x:64 var
+R15136:15136 DJ.Verification.OracleProofs <> b:63 var
+R15188:15195 DJ.Verification.Balanced <> Constant def
+R15223:15240 DJ.Foundations.Counting <> count_true_outputs def
+R15268:15286 DJ.Foundations.Counting <> count_false_outputs def
+R15361:15365 Coq.Init.Datatypes <> false constr
+R15361:15365 Coq.Init.Datatypes <> false constr
+R15455:15468 DJ.Foundations.Counting <> oracle_outputs def
+R15471:15485 DJ.Oracles.Oracles <> oracle_function proj
+R15403:15435 DJ.Verification.OracleProofs <> count_true_zero_implies_all_false thm
+R15455:15468 DJ.Foundations.Counting <> oracle_outputs def
+R15471:15485 DJ.Oracles.Oracles <> oracle_function proj
+R15403:15435 DJ.Verification.OracleProofs <> count_true_zero_implies_all_false thm
+R15531:15547 DJ.Verification.OracleProofs <> In_oracle_outputs thm
+R15531:15547 DJ.Verification.OracleProofs <> In_oracle_outputs thm
+R15585:15588 Coq.Init.Datatypes <> true constr
+R15585:15588 Coq.Init.Datatypes <> true constr
+R15678:15691 DJ.Foundations.Counting <> oracle_outputs def
+R15694:15708 DJ.Oracles.Oracles <> oracle_function proj
+R15626:15658 DJ.Verification.OracleProofs <> count_false_zero_implies_all_true thm
+R15678:15691 DJ.Foundations.Counting <> oracle_outputs def
+R15694:15708 DJ.Oracles.Oracles <> oracle_function proj
+R15626:15658 DJ.Verification.OracleProofs <> count_false_zero_implies_all_true thm
+R15737:15763 DJ.Verification.OracleProofs <> count_false_outputs_correct thm
+R15737:15763 DJ.Verification.OracleProofs <> count_false_outputs_correct thm
+R15737:15763 DJ.Verification.OracleProofs <> count_false_outputs_correct thm
+R15802:15818 DJ.Verification.OracleProofs <> In_oracle_outputs thm
+R15802:15818 DJ.Verification.OracleProofs <> In_oracle_outputs thm
+prf 15859:15882 <> Constant_n_functional_eq
+binder 15896:15896 <> n:65
+R15903:15916 DJ.Oracles.Oracles <> OracleInstance rec
+binder 15899:15899 <> f:66
+R15935:15941 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15923:15930 DJ.Verification.Balanced <> Constant def
+R15932:15932 DJ.Verification.OracleProofs <> n:65 var
+R15934:15934 DJ.Verification.OracleProofs <> f:66 var
+R15942:15948 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R15957:15961 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R15953:15956 Coq.Init.Datatypes <> bool ind
+binder 15949:15949 <> b:67
+binder 15969:15969 <> x:68
+R15987:15993 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15983:15985 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15975:15980 Coq.Init.Datatypes <> length def
+R15982:15982 DJ.Verification.OracleProofs <> x:68 var
+R15986:15986 DJ.Verification.OracleProofs <> n:65 var
+R16013:16016 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15994:16008 DJ.Oracles.Oracles <> oracle_function proj
+R16010:16010 DJ.Verification.OracleProofs <> f:66 var
+R16012:16012 DJ.Verification.OracleProofs <> x:68 var
+R16021:16021 DJ.Verification.OracleProofs <> b:67 var
+R16050:16066 DJ.Oracles.Oracles <> constant_zero_fun def
+R16028:16043 DJ.Oracles.Oracles <> constant_one_fun def
+R16069:16069 DJ.Verification.OracleProofs <> x:68 var
+R16124:16140 DJ.Verification.OracleProofs <> Constant_semantic thm
+R16124:16140 DJ.Verification.OracleProofs <> Constant_semantic thm
+prf 16334:16359 <> Constant_semantic_instance
+binder 16373:16373 <> n:69
+R16380:16393 DJ.Oracles.Oracles <> OracleInstance rec
+binder 16376:16376 <> f:70
+R16412:16418 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R16400:16407 DJ.Verification.Balanced <> Constant def
+R16409:16409 DJ.Verification.OracleProofs <> n:69 var
+R16411:16411 DJ.Verification.OracleProofs <> f:70 var
+R16419:16425 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R16444:16448 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R16430:16443 DJ.Oracles.Oracles <> OracleInstance rec
+binder 16426:16426 <> g:71
+R16449:16449 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R16487:16494 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R16572:16572 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R16467:16470 Coq.Init.Logic <> ::type_scope:x_'\/'_x not
+R16451:16453 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16450:16450 DJ.Verification.OracleProofs <> g:71 var
+R16454:16466 DJ.Oracles.Oracles <> constant_zero def
+R16472:16474 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16471:16471 DJ.Verification.OracleProofs <> g:71 var
+R16475:16486 DJ.Oracles.Oracles <> constant_one def
+binder 16502:16502 <> x:72
+R16521:16528 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R16517:16519 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16509:16514 Coq.Init.Datatypes <> length def
+R16516:16516 DJ.Verification.OracleProofs <> x:72 var
+R16520:16520 DJ.Verification.OracleProofs <> n:69 var
+R16548:16552 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16529:16543 DJ.Oracles.Oracles <> oracle_function proj
+R16545:16545 DJ.Verification.OracleProofs <> f:70 var
+R16547:16547 DJ.Verification.OracleProofs <> x:72 var
+R16553:16567 DJ.Oracles.Oracles <> oracle_function proj
+R16569:16569 DJ.Verification.OracleProofs <> g:71 var
+R16571:16571 DJ.Verification.OracleProofs <> x:72 var
+R16627:16643 DJ.Verification.OracleProofs <> Constant_semantic thm
+R16627:16643 DJ.Verification.OracleProofs <> Constant_semantic thm
+R16733:16744 DJ.Oracles.Oracles <> constant_one def
+R16733:16744 DJ.Oracles.Oracles <> constant_one def
+R16918:16930 DJ.Oracles.Oracles <> constant_zero def
+R16918:16930 DJ.Oracles.Oracles <> constant_zero def
+prf 17079:17098 <> Balanced_double_true
+binder 17112:17112 <> n:73
+R17119:17132 DJ.Oracles.Oracles <> OracleInstance rec
+binder 17115:17115 <> f:74
+R17151:17157 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17139:17146 DJ.Verification.Balanced <> Balanced def
+R17148:17148 DJ.Verification.OracleProofs <> n:73 var
+R17150:17150 DJ.Verification.OracleProofs <> f:74 var
+R17243:17247 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R17198:17202 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R17158:17175 DJ.Foundations.Counting <> count_true_outputs def
+R17178:17192 DJ.Oracles.Oracles <> oracle_function proj
+R17194:17194 DJ.Verification.OracleProofs <> f:74 var
+R17197:17197 DJ.Verification.OracleProofs <> n:73 var
+R17203:17220 DJ.Foundations.Counting <> count_true_outputs def
+R17223:17237 DJ.Oracles.Oracles <> oracle_function proj
+R17239:17239 DJ.Verification.OracleProofs <> f:74 var
+R17242:17242 DJ.Verification.OracleProofs <> n:73 var
+R17248:17263 DJ.Foundations.Enumeration <> number_of_inputs def
+R17265:17265 DJ.Verification.OracleProofs <> n:73 var
+R17317:17324 DJ.Verification.Balanced <> Balanced def
+R17453:17465 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R17399:17411 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R17359:17376 DJ.Foundations.Counting <> count_true_outputs def
+R17379:17393 DJ.Oracles.Oracles <> oracle_function proj
+R17412:17430 DJ.Foundations.Counting <> count_false_outputs def
+R17433:17447 DJ.Oracles.Oracles <> oracle_function proj
+R17466:17481 DJ.Foundations.Enumeration <> number_of_inputs def
+R17453:17465 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R17399:17411 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R17359:17376 DJ.Foundations.Counting <> count_true_outputs def
+R17379:17393 DJ.Oracles.Oracles <> oracle_function proj
+R17412:17430 DJ.Foundations.Counting <> count_false_outputs def
+R17433:17447 DJ.Oracles.Oracles <> oracle_function proj
+R17466:17481 DJ.Foundations.Enumeration <> number_of_inputs def
+R17519:17544 DJ.Verification.OracleProofs <> oracle_outputs_count_total thm
+R17519:17544 DJ.Verification.OracleProofs <> oracle_outputs_count_total thm

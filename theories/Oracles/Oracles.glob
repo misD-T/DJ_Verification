@@ -1,0 +1,280 @@
+DIGEST 32ecb1abc02786fbe19445de051984f7
+FDJ.Oracles.Oracles
+R24:27 Coq.Bool.Bool <> <> lib
+R29:32 Coq.Lists.List <> <> lib
+R43:55 Coq.Lists.List ListNotations <> mod
+R76:100 DJ.Foundations.BitStrings <> <> lib
+R119:145 DJ.Oracles.BooleanFunctions <> <> lib
+ind 360:369 <> OracleKind
+constr 379:392 <> OKConstantZero
+constr 397:409 <> OKConstantOne
+constr 416:425 <> OKFirstBit
+constr 430:437 <> OKParity
+constr 442:453 <> OKFullParity
+constr 458:469 <> OKXorTwoBits
+constr 476:483 <> OKAffine
+constr 490:497 <> OKAndXor
+constr 504:520 <> OKExampleBalanced
+constr 527:540 <> OKSingleMarked
+constr 545:554 <> OKMajority
+constr 559:571 <> OKAlternating
+constr 578:585 <> OKGrover
+scheme 360:369 <> OracleKind_rect
+scheme 360:369 <> OracleKind_ind
+scheme 360:369 <> OracleKind_rec
+scheme 360:369 <> OracleKind_sind
+rec 795:808 <> OracleInstance
+proj 819:829 <> oracle_kind
+proj 850:864 <> oracle_function
+R833:842 DJ.Oracles.Oracles <> OracleKind ind
+R868:873 DJ.Oracles.BooleanFunctions <> Oracle def
+def 1090:1106 <> constant_zero_fun
+R1110:1115 DJ.Oracles.BooleanFunctions <> Oracle def
+R1132:1136 Coq.Init.Datatypes <> false constr
+def 1153:1165 <> constant_zero
+R1169:1182 DJ.Oracles.Oracles <> OracleInstance rec
+R1194:1204 DJ.Oracles.Oracles <> oracle_kind proj
+R1194:1204 DJ.Oracles.Oracles <> oracle_kind proj
+R1194:1204 DJ.Oracles.Oracles <> oracle_kind proj
+R1228:1242 DJ.Oracles.Oracles <> oracle_function proj
+R1228:1242 DJ.Oracles.Oracles <> oracle_function proj
+R1209:1222 DJ.Oracles.Oracles <> OKConstantZero constr
+R1247:1263 DJ.Oracles.Oracles <> constant_zero_fun def
+def 1284:1299 <> constant_one_fun
+R1303:1308 DJ.Oracles.BooleanFunctions <> Oracle def
+R1325:1328 Coq.Init.Datatypes <> true constr
+def 1345:1356 <> constant_one
+R1360:1373 DJ.Oracles.Oracles <> OracleInstance rec
+R1385:1395 DJ.Oracles.Oracles <> oracle_kind proj
+R1385:1395 DJ.Oracles.Oracles <> oracle_kind proj
+R1385:1395 DJ.Oracles.Oracles <> oracle_kind proj
+R1418:1432 DJ.Oracles.Oracles <> oracle_function proj
+R1418:1432 DJ.Oracles.Oracles <> oracle_function proj
+R1400:1412 DJ.Oracles.Oracles <> OKConstantOne constr
+R1437:1452 DJ.Oracles.Oracles <> constant_one_fun def
+def 1670:1682 <> first_bit_fun
+R1686:1691 DJ.Oracles.BooleanFunctions <> Oracle def
+R1699:1707 DJ.Foundations.BitStrings <> first_bit def
+def 1724:1739 <> oracle_first_bit
+R1743:1756 DJ.Oracles.Oracles <> OracleInstance rec
+R1768:1778 DJ.Oracles.Oracles <> oracle_kind proj
+R1768:1778 DJ.Oracles.Oracles <> oracle_kind proj
+R1768:1778 DJ.Oracles.Oracles <> oracle_kind proj
+R1798:1812 DJ.Oracles.Oracles <> oracle_function proj
+R1798:1812 DJ.Oracles.Oracles <> oracle_function proj
+R1783:1792 DJ.Oracles.Oracles <> OKFirstBit constr
+R1817:1829 DJ.Oracles.Oracles <> first_bit_fun def
+def 1850:1859 <> parity_fun
+R1863:1868 DJ.Oracles.BooleanFunctions <> Oracle def
+R1876:1881 DJ.Foundations.BitStrings <> parity def
+def 1898:1910 <> oracle_parity
+R1914:1927 DJ.Oracles.Oracles <> OracleInstance rec
+R1939:1949 DJ.Oracles.Oracles <> oracle_kind proj
+R1939:1949 DJ.Oracles.Oracles <> oracle_kind proj
+R1939:1949 DJ.Oracles.Oracles <> oracle_kind proj
+R1967:1981 DJ.Oracles.Oracles <> oracle_function proj
+R1967:1981 DJ.Oracles.Oracles <> oracle_function proj
+R1954:1961 DJ.Oracles.Oracles <> OKParity constr
+R1986:1995 DJ.Oracles.Oracles <> parity_fun def
+def 2016:2030 <> full_parity_fun
+R2034:2039 DJ.Oracles.BooleanFunctions <> Oracle def
+R2047:2052 DJ.Foundations.BitStrings <> parity def
+def 2069:2086 <> oracle_full_parity
+R2090:2103 DJ.Oracles.Oracles <> OracleInstance rec
+R2115:2125 DJ.Oracles.Oracles <> oracle_kind proj
+R2115:2125 DJ.Oracles.Oracles <> oracle_kind proj
+R2115:2125 DJ.Oracles.Oracles <> oracle_kind proj
+R2147:2161 DJ.Oracles.Oracles <> oracle_function proj
+R2147:2161 DJ.Oracles.Oracles <> oracle_function proj
+R2130:2141 DJ.Oracles.Oracles <> OKFullParity constr
+R2166:2180 DJ.Oracles.Oracles <> full_parity_fun def
+def 2201:2216 <> xor_two_bits_fun
+R2220:2225 DJ.Oracles.BooleanFunctions <> Oracle def
+R2233:2244 DJ.Oracles.BooleanFunctions <> xor_two_bits def
+def 2263:2281 <> oracle_xor_two_bits
+R2285:2298 DJ.Oracles.Oracles <> OracleInstance rec
+R2310:2320 DJ.Oracles.Oracles <> oracle_kind proj
+R2310:2320 DJ.Oracles.Oracles <> oracle_kind proj
+R2310:2320 DJ.Oracles.Oracles <> oracle_kind proj
+R2342:2356 DJ.Oracles.Oracles <> oracle_function proj
+R2342:2356 DJ.Oracles.Oracles <> oracle_function proj
+R2325:2336 DJ.Oracles.Oracles <> OKXorTwoBits constr
+R2361:2376 DJ.Oracles.Oracles <> xor_two_bits_fun def
+def 2592:2601 <> affine_fun
+R2605:2610 DJ.Oracles.BooleanFunctions <> Oracle def
+R2618:2623 DJ.Oracles.BooleanFunctions <> affine def
+def 2642:2654 <> oracle_affine
+R2658:2671 DJ.Oracles.Oracles <> OracleInstance rec
+R2683:2693 DJ.Oracles.Oracles <> oracle_kind proj
+R2683:2693 DJ.Oracles.Oracles <> oracle_kind proj
+R2683:2693 DJ.Oracles.Oracles <> oracle_kind proj
+R2711:2725 DJ.Oracles.Oracles <> oracle_function proj
+R2711:2725 DJ.Oracles.Oracles <> oracle_function proj
+R2698:2705 DJ.Oracles.Oracles <> OKAffine constr
+R2730:2739 DJ.Oracles.Oracles <> affine_fun def
+def 2957:2967 <> and_xor_fun
+R2971:2976 DJ.Oracles.BooleanFunctions <> Oracle def
+binder 2986:2986 <> x:6
+R2994:2997 Coq.Init.Datatypes <> andb def
+R3024:3029 DJ.Foundations.BitStrings <> parity def
+R3031:3031 DJ.Oracles.Oracles <> x:6 var
+R3005:3013 DJ.Foundations.BitStrings <> first_bit def
+R3015:3015 DJ.Oracles.Oracles <> x:6 var
+def 3051:3064 <> oracle_and_xor
+R3068:3081 DJ.Oracles.Oracles <> OracleInstance rec
+R3093:3103 DJ.Oracles.Oracles <> oracle_kind proj
+R3093:3103 DJ.Oracles.Oracles <> oracle_kind proj
+R3093:3103 DJ.Oracles.Oracles <> oracle_kind proj
+R3121:3135 DJ.Oracles.Oracles <> oracle_function proj
+R3121:3135 DJ.Oracles.Oracles <> oracle_function proj
+R3108:3115 DJ.Oracles.Oracles <> OKAndXor constr
+R3140:3150 DJ.Oracles.Oracles <> and_xor_fun def
+def 3367:3386 <> example_balanced_fun
+R3390:3395 DJ.Oracles.BooleanFunctions <> Oracle def
+binder 3405:3405 <> x:7
+R3413:3416 Coq.Init.Datatypes <> negb def
+R3419:3424 DJ.Foundations.BitStrings <> parity def
+R3426:3426 DJ.Oracles.Oracles <> x:7 var
+def 3446:3468 <> oracle_example_balanced
+R3472:3485 DJ.Oracles.Oracles <> OracleInstance rec
+R3497:3507 DJ.Oracles.Oracles <> oracle_kind proj
+R3497:3507 DJ.Oracles.Oracles <> oracle_kind proj
+R3497:3507 DJ.Oracles.Oracles <> oracle_kind proj
+R3534:3548 DJ.Oracles.Oracles <> oracle_function proj
+R3534:3548 DJ.Oracles.Oracles <> oracle_function proj
+R3512:3528 DJ.Oracles.Oracles <> OKExampleBalanced constr
+R3553:3572 DJ.Oracles.Oracles <> example_balanced_fun def
+def 3788:3804 <> single_marked_fun
+R3808:3813 DJ.Oracles.BooleanFunctions <> Oracle def
+binder 3823:3823 <> x:8
+R3831:3843 DJ.Foundations.BitStrings <> bitstring_eqb def
+R3850:3850 DJ.Oracles.Oracles <> x:8 var
+R3858:3865 DJ.Foundations.BitStrings <> all_ones def
+R3868:3877 DJ.Foundations.BitStrings <> bit_length def
+R3879:3879 DJ.Oracles.Oracles <> x:8 var
+def 3900:3919 <> oracle_single_marked
+R3923:3936 DJ.Oracles.Oracles <> OracleInstance rec
+R3948:3958 DJ.Oracles.Oracles <> oracle_kind proj
+R3948:3958 DJ.Oracles.Oracles <> oracle_kind proj
+R3948:3958 DJ.Oracles.Oracles <> oracle_kind proj
+R3982:3996 DJ.Oracles.Oracles <> oracle_function proj
+R3982:3996 DJ.Oracles.Oracles <> oracle_function proj
+R3963:3976 DJ.Oracles.Oracles <> OKSingleMarked constr
+R4001:4017 DJ.Oracles.Oracles <> single_marked_fun def
+def 4038:4049 <> majority_fun
+R4053:4058 DJ.Oracles.BooleanFunctions <> Oracle def
+R4066:4073 DJ.Oracles.BooleanFunctions <> majority def
+def 4092:4106 <> oracle_majority
+R4110:4123 DJ.Oracles.Oracles <> OracleInstance rec
+R4135:4145 DJ.Oracles.Oracles <> oracle_kind proj
+R4135:4145 DJ.Oracles.Oracles <> oracle_kind proj
+R4135:4145 DJ.Oracles.Oracles <> oracle_kind proj
+R4165:4179 DJ.Oracles.Oracles <> oracle_function proj
+R4165:4179 DJ.Oracles.Oracles <> oracle_function proj
+R4150:4159 DJ.Oracles.Oracles <> OKMajority constr
+R4184:4195 DJ.Oracles.Oracles <> majority_fun def
+def 4216:4230 <> alternating_fun
+R4234:4239 DJ.Oracles.BooleanFunctions <> Oracle def
+R4247:4257 DJ.Oracles.BooleanFunctions <> alternating def
+def 4276:4293 <> oracle_alternating
+R4297:4310 DJ.Oracles.Oracles <> OracleInstance rec
+R4322:4332 DJ.Oracles.Oracles <> oracle_kind proj
+R4322:4332 DJ.Oracles.Oracles <> oracle_kind proj
+R4322:4332 DJ.Oracles.Oracles <> oracle_kind proj
+R4355:4369 DJ.Oracles.Oracles <> oracle_function proj
+R4355:4369 DJ.Oracles.Oracles <> oracle_function proj
+R4337:4349 DJ.Oracles.Oracles <> OKAlternating constr
+R4374:4388 DJ.Oracles.Oracles <> alternating_fun def
+def 4694:4703 <> oracle_eqb
+R4724:4737 DJ.Oracles.Oracles <> OracleInstance rec
+binder 4718:4718 <> f:9
+binder 4720:4720 <> g:10
+R4754:4757 Coq.Init.Datatypes <> bool ind
+R4786:4796 DJ.Oracles.Oracles <> oracle_kind proj
+R4798:4798 DJ.Oracles.Oracles <> g:10 var
+R4771:4781 DJ.Oracles.Oracles <> oracle_kind proj
+R4783:4783 DJ.Oracles.Oracles <> f:9 var
+R4810:4823 DJ.Oracles.Oracles <> OKConstantZero constr
+R4826:4839 DJ.Oracles.Oracles <> OKConstantZero constr
+R4844:4847 Coq.Init.Datatypes <> true constr
+R4854:4866 DJ.Oracles.Oracles <> OKConstantOne constr
+R4869:4881 DJ.Oracles.Oracles <> OKConstantOne constr
+R4886:4889 Coq.Init.Datatypes <> true constr
+R4896:4905 DJ.Oracles.Oracles <> OKFirstBit constr
+R4908:4917 DJ.Oracles.Oracles <> OKFirstBit constr
+R4922:4925 Coq.Init.Datatypes <> true constr
+R4932:4939 DJ.Oracles.Oracles <> OKParity constr
+R4942:4949 DJ.Oracles.Oracles <> OKParity constr
+R4954:4957 Coq.Init.Datatypes <> true constr
+R4964:4975 DJ.Oracles.Oracles <> OKFullParity constr
+R4978:4989 DJ.Oracles.Oracles <> OKFullParity constr
+R4994:4997 Coq.Init.Datatypes <> true constr
+R5004:5015 DJ.Oracles.Oracles <> OKXorTwoBits constr
+R5018:5029 DJ.Oracles.Oracles <> OKXorTwoBits constr
+R5034:5037 Coq.Init.Datatypes <> true constr
+R5044:5051 DJ.Oracles.Oracles <> OKAffine constr
+R5054:5061 DJ.Oracles.Oracles <> OKAffine constr
+R5066:5069 Coq.Init.Datatypes <> true constr
+R5076:5083 DJ.Oracles.Oracles <> OKAndXor constr
+R5086:5093 DJ.Oracles.Oracles <> OKAndXor constr
+R5098:5101 Coq.Init.Datatypes <> true constr
+R5108:5124 DJ.Oracles.Oracles <> OKExampleBalanced constr
+R5127:5143 DJ.Oracles.Oracles <> OKExampleBalanced constr
+R5148:5151 Coq.Init.Datatypes <> true constr
+R5158:5171 DJ.Oracles.Oracles <> OKSingleMarked constr
+R5174:5187 DJ.Oracles.Oracles <> OKSingleMarked constr
+R5192:5195 Coq.Init.Datatypes <> true constr
+R5202:5211 DJ.Oracles.Oracles <> OKMajority constr
+R5214:5223 DJ.Oracles.Oracles <> OKMajority constr
+R5228:5231 Coq.Init.Datatypes <> true constr
+R5238:5250 DJ.Oracles.Oracles <> OKAlternating constr
+R5253:5265 DJ.Oracles.Oracles <> OKAlternating constr
+R5270:5273 Coq.Init.Datatypes <> true constr
+R5280:5287 DJ.Oracles.Oracles <> OKGrover constr
+R5290:5297 DJ.Oracles.Oracles <> OKGrover constr
+R5302:5305 Coq.Init.Datatypes <> true constr
+R5320:5324 Coq.Init.Datatypes <> false constr
+prf 5538:5560 <> constant_zero_evaluates
+binder 5574:5574 <> x:11
+R5611:5613 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5580:5594 DJ.Oracles.Oracles <> oracle_function proj
+R5596:5608 DJ.Oracles.Oracles <> constant_zero def
+R5610:5610 DJ.Oracles.Oracles <> x:11 var
+R5614:5618 Coq.Init.Datatypes <> false constr
+prf 5680:5701 <> constant_one_evaluates
+binder 5715:5715 <> x:12
+R5751:5753 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5721:5735 DJ.Oracles.Oracles <> oracle_function proj
+R5737:5748 DJ.Oracles.Oracles <> constant_one def
+R5750:5750 DJ.Oracles.Oracles <> x:12 var
+R5754:5757 Coq.Init.Datatypes <> true constr
+prf 5819:5839 <> parity_oracle_correct
+binder 5853:5853 <> x:13
+R5890:5892 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5859:5873 DJ.Oracles.Oracles <> oracle_function proj
+R5875:5887 DJ.Oracles.Oracles <> oracle_parity def
+R5889:5889 DJ.Oracles.Oracles <> x:13 var
+R5893:5898 DJ.Foundations.BitStrings <> parity def
+R5900:5900 DJ.Oracles.Oracles <> x:13 var
+prf 5963:5986 <> first_bit_oracle_correct
+binder 6000:6000 <> x:14
+R6040:6042 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6006:6020 DJ.Oracles.Oracles <> oracle_function proj
+R6022:6037 DJ.Oracles.Oracles <> oracle_first_bit def
+R6039:6039 DJ.Oracles.Oracles <> x:14 var
+R6043:6051 DJ.Foundations.BitStrings <> first_bit def
+R6053:6053 DJ.Oracles.Oracles <> x:14 var
+prf 6116:6136 <> affine_oracle_correct
+binder 6150:6150 <> x:15
+R6187:6189 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6156:6170 DJ.Oracles.Oracles <> oracle_function proj
+R6172:6184 DJ.Oracles.Oracles <> oracle_affine def
+R6186:6186 DJ.Oracles.Oracles <> x:15 var
+R6190:6195 DJ.Oracles.BooleanFunctions <> affine def
+R6197:6197 DJ.Oracles.Oracles <> x:15 var
+prf 6260:6290 <> oracle_eqb_parity_constant_zero
+R6335:6337 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6297:6306 DJ.Oracles.Oracles <> oracle_eqb def
+R6308:6320 DJ.Oracles.Oracles <> oracle_parity def
+R6322:6334 DJ.Oracles.Oracles <> constant_zero def
+R6338:6342 Coq.Init.Datatypes <> false constr

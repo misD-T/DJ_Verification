@@ -1,0 +1,161 @@
+DIGEST 271fb2a220b5c5ddb07ef8de3d63afe5
+FQuantum.HoaresHeisenberg
+R609:612 Coq.Lists.List <> <> lib
+R614:617 Coq.Bool.Bool <> <> lib
+R630:642 Coq.Lists.List ListNotations <> mod
+R663:682 Quantum.QuantumState <> <> lib
+R701:724 Quantum.QuantumOperators <> <> lib
+def 938:946 <> Predicate
+R966:969 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R954:965 Quantum.QuantumState <> QuantumState rec
+def 1185:1191 <> Refines
+R1203:1211 Quantum.HoaresHeisenberg <> Predicate def
+binder 1197:1197 <> P:1
+binder 1199:1199 <> Q:2
+binder 1237:1238 <> ρ:3
+R1248:1254 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1244:1244 Quantum.HoaresHeisenberg <> P:1 var
+R1246:1247 Quantum.HoaresHeisenberg <> ρ:3 var
+R1255:1255 Quantum.HoaresHeisenberg <> Q:2 var
+R1257:1258 Quantum.HoaresHeisenberg <> ρ:3 var
+def 1472:1482 <> HoareTriple
+R1501:1509 Quantum.HoaresHeisenberg <> Predicate def
+binder 1497:1497 <> P:4
+R1529:1543 Quantum.QuantumOperators <> QuantumOperator def
+binder 1525:1525 <> U:5
+R1563:1571 Quantum.HoaresHeisenberg <> Predicate def
+binder 1559:1559 <> Q:6
+binder 1606:1607 <> ρ:7
+R1617:1626 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1613:1613 Quantum.HoaresHeisenberg <> P:4 var
+R1615:1616 Quantum.HoaresHeisenberg <> ρ:7 var
+R1627:1627 Quantum.HoaresHeisenberg <> Q:6 var
+R1630:1630 Quantum.HoaresHeisenberg <> U:5 var
+R1632:1633 Quantum.HoaresHeisenberg <> ρ:7 var
+R1873:1883 Quantum.HoaresHeisenberg <> HoareTriple def
+not 1846:1846 <> :::'{{'_x_'}}'_x_'{{'_x_'}}'
+def 2119:2137 <> WeakestPrecondition
+R2155:2169 Quantum.QuantumOperators <> QuantumOperator def
+binder 2151:2151 <> U:8
+R2188:2196 Quantum.HoaresHeisenberg <> Predicate def
+binder 2184:2184 <> Q:9
+R2212:2220 Quantum.HoaresHeisenberg <> Predicate def
+binder 2232:2233 <> ρ:10
+R2241:2241 Quantum.HoaresHeisenberg <> Q:9 var
+R2244:2244 Quantum.HoaresHeisenberg <> U:8 var
+R2246:2247 Quantum.HoaresHeisenberg <> ρ:10 var
+rec 2458:2472 <> HHSpecification
+proj 2485:2489 <> HHPre
+proj 2507:2515 <> HHProgram
+proj 2539:2544 <> HHPost
+R2493:2501 Quantum.HoaresHeisenberg <> Predicate def
+R2519:2533 Quantum.QuantumOperators <> QuantumOperator def
+R2548:2556 Quantum.HoaresHeisenberg <> Predicate def
+def 2775:2784 <> HHVerified
+R2806:2820 Quantum.HoaresHeisenberg <> HHSpecification rec
+binder 2799:2802 <> spec:15
+R2848:2858 Quantum.HoaresHeisenberg <> HoareTriple def
+R2866:2870 Quantum.HoaresHeisenberg <> HHPre proj
+R2872:2875 Quantum.HoaresHeisenberg <> spec:15 var
+R2884:2892 Quantum.HoaresHeisenberg <> HHProgram proj
+R2894:2897 Quantum.HoaresHeisenberg <> spec:15 var
+R2906:2911 Quantum.HoaresHeisenberg <> HHPost proj
+R2913:2916 Quantum.HoaresHeisenberg <> spec:15 var
+prf 3126:3139 <> hoare_identity
+R3158:3166 Quantum.HoaresHeisenberg <> Predicate def
+binder 3154:3154 <> P:16
+R3175:3185 Quantum.HoaresHeisenberg <> HoareTriple def
+R3187:3187 Quantum.HoaresHeisenberg <> P:16 var
+R3189:3196 Quantum.QuantumOperators <> Identity def
+R3198:3198 Quantum.HoaresHeisenberg <> P:16 var
+R3238:3248 Quantum.HoaresHeisenberg <> HoareTriple def
+R3282:3289 Quantum.QuantumOperators <> Identity def
+prf 3519:3532 <> assertion_refl
+R3551:3559 Quantum.HoaresHeisenberg <> Predicate def
+binder 3547:3547 <> P:17
+R3568:3579 Quantum.QuantumState <> QuantumState rec
+binder 3563:3564 <> ρ:18
+R3592:3600 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3588:3588 Quantum.HoaresHeisenberg <> P:17 var
+R3590:3591 Quantum.HoaresHeisenberg <> ρ:18 var
+R3601:3601 Quantum.HoaresHeisenberg <> P:17 var
+R3603:3604 Quantum.HoaresHeisenberg <> ρ:18 var
+prf 3840:3854 <> verified_unfold
+R3876:3890 Quantum.HoaresHeisenberg <> HHSpecification rec
+binder 3869:3872 <> spec:19
+R3914:3923 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R3899:3908 Quantum.HoaresHeisenberg <> HHVerified def
+R3910:3913 Quantum.HoaresHeisenberg <> spec:19 var
+R3924:3934 Quantum.HoaresHeisenberg <> HoareTriple def
+R3944:3948 Quantum.HoaresHeisenberg <> HHPre proj
+R3950:3953 Quantum.HoaresHeisenberg <> spec:19 var
+R3964:3972 Quantum.HoaresHeisenberg <> HHProgram proj
+R3974:3977 Quantum.HoaresHeisenberg <> spec:19 var
+R3988:3993 Quantum.HoaresHeisenberg <> HHPost proj
+R3995:3998 Quantum.HoaresHeisenberg <> spec:19 var
+prf 4040:4067 <> weakest_precondition_correct
+R4086:4100 Quantum.QuantumOperators <> QuantumOperator def
+binder 4082:4082 <> U:20
+R4118:4126 Quantum.HoaresHeisenberg <> Predicate def
+binder 4114:4114 <> Q:21
+R4135:4137 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R4161:4169 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R4171:4179 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R4181:4183 Quantum.HoaresHeisenberg <> :::'{{'_x_'}}'_x_'{{'_x_'}}' not
+R4138:4156 Quantum.HoaresHeisenberg <> WeakestPrecondition def
+R4158:4158 Quantum.HoaresHeisenberg <> U:20 var
+R4160:4160 Quantum.HoaresHeisenberg <> Q:21 var
+R4170:4170 Quantum.HoaresHeisenberg <> U:20 var
+R4180:4180 Quantum.HoaresHeisenberg <> Q:21 var
+R4204:4214 Quantum.HoaresHeisenberg <> HoareTriple def
+R4227:4245 Quantum.HoaresHeisenberg <> WeakestPrecondition def
+def 4489:4495 <> Compose
+R4516:4530 Quantum.QuantumOperators <> QuantumOperator def
+binder 4510:4510 <> U:22
+binder 4512:4512 <> V:23
+R4547:4561 Quantum.QuantumOperators <> QuantumOperator def
+binder 4573:4574 <> ρ:24
+R4582:4582 Quantum.HoaresHeisenberg <> V:23 var
+R4585:4585 Quantum.HoaresHeisenberg <> U:22 var
+R4587:4588 Quantum.HoaresHeisenberg <> ρ:24 var
+prf 4601:4617 <> hoare_composition
+R4640:4648 Quantum.HoaresHeisenberg <> Predicate def
+binder 4632:4632 <> P:25
+binder 4634:4634 <> Q:26
+binder 4636:4636 <> R:27
+R4668:4682 Quantum.QuantumOperators <> QuantumOperator def
+binder 4662:4662 <> U:28
+binder 4664:4664 <> V:29
+R4710:4720 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4693:4703 Quantum.HoaresHeisenberg <> HoareTriple def
+R4705:4705 Quantum.HoaresHeisenberg <> P:25 var
+R4707:4707 Quantum.HoaresHeisenberg <> U:28 var
+R4709:4709 Quantum.HoaresHeisenberg <> Q:26 var
+R4738:4748 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4721:4731 Quantum.HoaresHeisenberg <> HoareTriple def
+R4733:4733 Quantum.HoaresHeisenberg <> Q:26 var
+R4735:4735 Quantum.HoaresHeisenberg <> V:29 var
+R4737:4737 Quantum.HoaresHeisenberg <> R:27 var
+R4749:4759 Quantum.HoaresHeisenberg <> HoareTriple def
+R4761:4761 Quantum.HoaresHeisenberg <> P:25 var
+R4764:4770 Quantum.HoaresHeisenberg <> Compose def
+R4772:4772 Quantum.HoaresHeisenberg <> U:28 var
+R4774:4774 Quantum.HoaresHeisenberg <> V:29 var
+R4777:4777 Quantum.HoaresHeisenberg <> R:27 var
+R4800:4810 Quantum.HoaresHeisenberg <> HoareTriple def
+R4823:4829 Quantum.HoaresHeisenberg <> Compose def
+prf 4925:4937 <> compose_assoc
+binder 4951:4951 <> A:30
+binder 4953:4953 <> B:31
+binder 4955:4955 <> C:32
+R4984:4992 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4961:4967 Quantum.HoaresHeisenberg <> Compose def
+R4969:4969 Quantum.HoaresHeisenberg <> A:30 var
+R4972:4978 Quantum.HoaresHeisenberg <> Compose def
+R4980:4980 Quantum.HoaresHeisenberg <> B:31 var
+R4982:4982 Quantum.HoaresHeisenberg <> C:32 var
+R4993:4999 Quantum.HoaresHeisenberg <> Compose def
+R5002:5008 Quantum.HoaresHeisenberg <> Compose def
+R5010:5010 Quantum.HoaresHeisenberg <> A:30 var
+R5012:5012 Quantum.HoaresHeisenberg <> B:31 var
+R5015:5015 Quantum.HoaresHeisenberg <> C:32 var

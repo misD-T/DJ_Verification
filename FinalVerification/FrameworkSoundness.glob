@@ -1,0 +1,103 @@
+DIGEST a55204243a85682ff81232ccb0069552
+FFinal.FrameworkSoundness
+R546:549 Coq.Lists.List <> <> lib
+R551:554 Coq.Bool.Bool <> <> lib
+R556:560 Coq.Arith.Arith <> <> lib
+R562:564 Coq.micromega.Lia <> <> lib
+R566:574 Coq.Logic.Classical <> <> lib
+R587:599 Coq.Lists.List ListNotations <> mod
+R622:641 Quantum.QuantumState <> <> lib
+R660:683 Quantum.QuantumOperators <> <> lib
+R704:714 Quantum.QDL <> <> lib
+R733:756 Quantum.HoaresHeisenberg <> <> lib
+R779:793 Final.Framework <> <> lib
+R812:838 Final.AlgorithmVerification <> <> lib
+R857:877 Final.LogicComparison <> <> lib
+prf 1088:1109 <> HH_framework_soundness
+binder 1123:1126 <> spec:1
+R1163:1172 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1132:1141 Quantum.HoaresHeisenberg <> HHVerified def
+R1144:1156 Final.AlgorithmVerification <> AlgorithmToHH def
+R1158:1161 Final.FrameworkSoundness <> spec:1 var
+R1173:1188 Final.AlgorithmVerification <> AlgorithmCorrect def
+R1195:1208 Final.AlgorithmVerification <> AlgorithmInput proj
+R1210:1213 Final.FrameworkSoundness <> spec:1 var
+R1221:1236 Final.AlgorithmVerification <> AlgorithmProgram proj
+R1238:1241 Final.FrameworkSoundness <> spec:1 var
+R1249:1263 Final.AlgorithmVerification <> AlgorithmOutput proj
+R1265:1268 Final.FrameworkSoundness <> spec:1 var
+R1313:1340 Final.AlgorithmVerification <> HH_implies_algorithm_correct thm
+R1313:1340 Final.AlgorithmVerification <> HH_implies_algorithm_correct thm
+prf 1573:1595 <> QDL_framework_soundness
+binder 1609:1612 <> spec:2
+binder 1614:1616 <> pre:3
+binder 1618:1621 <> post:4
+R1669:1678 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1627:1637 Quantum.QDL <> QDLVerified def
+R1640:1653 Final.AlgorithmVerification <> AlgorithmToQDL def
+R1655:1658 Final.FrameworkSoundness <> spec:2 var
+R1660:1662 Final.FrameworkSoundness <> pre:3 var
+R1664:1667 Final.FrameworkSoundness <> post:4 var
+R1679:1694 Final.AlgorithmVerification <> AlgorithmCorrect def
+R1701:1716 Final.AlgorithmVerification <> FormulaPredicate def
+R1718:1720 Final.FrameworkSoundness <> pre:3 var
+R1728:1743 Final.AlgorithmVerification <> AlgorithmProgram proj
+R1745:1748 Final.FrameworkSoundness <> spec:2 var
+R1756:1771 Final.AlgorithmVerification <> FormulaPredicate def
+R1773:1776 Final.FrameworkSoundness <> post:4 var
+R1830:1858 Final.AlgorithmVerification <> QDL_implies_algorithm_correct thm
+R1830:1858 Final.AlgorithmVerification <> QDL_implies_algorithm_correct thm
+prf 2091:2116 <> HH_QDL_framework_agreement
+binder 2130:2133 <> spec:5
+binder 2135:2137 <> pre:6
+binder 2139:2142 <> post:7
+R2179:2188 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2148:2157 Quantum.HoaresHeisenberg <> HHVerified def
+R2160:2172 Final.AlgorithmVerification <> AlgorithmToHH def
+R2174:2177 Final.FrameworkSoundness <> spec:5 var
+R2231:2240 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2189:2199 Quantum.QDL <> QDLVerified def
+R2202:2215 Final.AlgorithmVerification <> AlgorithmToQDL def
+R2217:2220 Final.FrameworkSoundness <> spec:5 var
+R2222:2224 Final.FrameworkSoundness <> pre:6 var
+R2226:2229 Final.FrameworkSoundness <> post:7 var
+R2338:2347 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R2241:2256 Final.AlgorithmVerification <> AlgorithmCorrect def
+R2263:2276 Final.AlgorithmVerification <> AlgorithmInput proj
+R2278:2281 Final.FrameworkSoundness <> spec:5 var
+R2289:2304 Final.AlgorithmVerification <> AlgorithmProgram proj
+R2306:2309 Final.FrameworkSoundness <> spec:5 var
+R2317:2331 Final.AlgorithmVerification <> AlgorithmOutput proj
+R2333:2336 Final.FrameworkSoundness <> spec:5 var
+R2348:2363 Final.AlgorithmVerification <> AlgorithmCorrect def
+R2370:2385 Final.AlgorithmVerification <> FormulaPredicate def
+R2387:2389 Final.FrameworkSoundness <> pre:6 var
+R2397:2412 Final.AlgorithmVerification <> AlgorithmProgram proj
+R2414:2417 Final.FrameworkSoundness <> spec:5 var
+R2425:2440 Final.AlgorithmVerification <> FormulaPredicate def
+R2442:2445 Final.FrameworkSoundness <> post:7 var
+R2520:2541 Final.FrameworkSoundness <> HH_framework_soundness thm
+R2520:2541 Final.FrameworkSoundness <> HH_framework_soundness thm
+R2573:2595 Final.FrameworkSoundness <> QDL_framework_soundness thm
+R2573:2595 Final.FrameworkSoundness <> QDL_framework_soundness thm
+prf 2832:2865 <> QuantumVerificationFramework_sound
+binder 2879:2882 <> spec:8
+R2919:2928 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2888:2897 Quantum.HoaresHeisenberg <> HHVerified def
+R2900:2912 Final.AlgorithmVerification <> AlgorithmToHH def
+R2914:2917 Final.FrameworkSoundness <> spec:8 var
+R2929:2935 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R2939:2943 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 2936:2936 <> P:9
+binder 2938:2938 <> Q:10
+R2944:2959 Final.AlgorithmVerification <> AlgorithmCorrect def
+R2966:2966 Final.FrameworkSoundness <> P:9 var
+R2974:2989 Final.AlgorithmVerification <> AlgorithmProgram proj
+R2991:2994 Final.FrameworkSoundness <> spec:8 var
+R3002:3002 Final.FrameworkSoundness <> Q:10 var
+R3053:3066 Final.AlgorithmVerification <> AlgorithmInput proj
+R3081:3095 Final.AlgorithmVerification <> AlgorithmOutput proj
+R3053:3066 Final.AlgorithmVerification <> AlgorithmInput proj
+R3081:3095 Final.AlgorithmVerification <> AlgorithmOutput proj
+R3115:3136 Final.FrameworkSoundness <> HH_framework_soundness thm
+R3115:3136 Final.FrameworkSoundness <> HH_framework_soundness thm

@@ -1,0 +1,868 @@
+DIGEST a85c18524f451a7a715c65dc122959a7
+FDJ.DeutschJozsa.DJ
+R221:224 Coq.Bool.Bool <> <> lib
+R226:229 Coq.Lists.List <> <> lib
+R242:254 Coq.Lists.List ListNotations <> mod
+R275:299 DJ.Foundations.BitStrings <> <> lib
+R318:344 DJ.Oracles.BooleanFunctions <> <> lib
+R363:380 DJ.Oracles.Oracles <> <> lib
+R401:424 DJ.Verification.Balanced <> <> lib
+R443:460 DJ.Oracles.Promise <> <> lib
+R481:500 Quantum.QuantumState <> <> lib
+R519:542 Quantum.QuantumOperators <> <> lib
+def 758:763 <> Output
+R768:785 Quantum.QuantumState <> MeasurementOutcome def
+def 804:813 <> ZeroOutput
+R820:822 Coq.Init.Datatypes <> nat ind
+binder 816:816 <> n:1
+R827:832 DJ.DeutschJozsa.DJ <> Output def
+R840:848 DJ.Foundations.BitStrings <> all_zeros def
+R850:850 DJ.DeutschJozsa.DJ <> n:1 var
+def 1064:1073 <> DJOperator
+R1092:1105 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1088:1088 <> f:2
+R1122:1136 Quantum.QuantumOperators <> QuantumOperator def
+binder 1148:1149 <> ρ:3
+R1178:1188 DJ.Oracles.Oracles <> oracle_kind proj
+R1190:1190 DJ.DeutschJozsa.DJ <> f:2 var
+R1204:1217 DJ.Oracles.Oracles <> OKConstantZero constr
+R1231:1234 Coq.Init.Datatypes <> Some constr
+R1237:1245 DJ.Foundations.BitStrings <> all_zeros def
+R1248:1256 Quantum.QuantumState <> qs_qubits proj
+R1258:1259 DJ.DeutschJozsa.DJ <> ρ:3 var
+R1270:1282 DJ.Oracles.Oracles <> OKConstantOne constr
+R1296:1299 Coq.Init.Datatypes <> Some constr
+R1302:1310 DJ.Foundations.BitStrings <> all_zeros def
+R1313:1321 Quantum.QuantumState <> qs_qubits proj
+R1323:1324 DJ.DeutschJozsa.DJ <> ρ:3 var
+R1335:1344 DJ.Oracles.Oracles <> OKFirstBit constr
+R1358:1361 Coq.Init.Datatypes <> Some constr
+R1368:1371 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1364:1367 Coq.Init.Datatypes <> true constr
+R1372:1377 Coq.Lists.List <> repeat def
+R1386:1389 Coq.Init.Peano <> pred abbrev
+R1392:1400 Quantum.QuantumState <> qs_qubits proj
+R1402:1403 DJ.DeutschJozsa.DJ <> ρ:3 var
+R1379:1383 Coq.Init.Datatypes <> false constr
+R1415:1422 DJ.Oracles.Oracles <> OKParity constr
+R1436:1439 Coq.Init.Datatypes <> Some constr
+R1442:1447 Coq.Lists.List <> repeat def
+R1455:1463 Quantum.QuantumState <> qs_qubits proj
+R1465:1466 DJ.DeutschJozsa.DJ <> ρ:3 var
+R1449:1452 Coq.Init.Datatypes <> true constr
+R1477:1488 DJ.Oracles.Oracles <> OKFullParity constr
+R1502:1505 Coq.Init.Datatypes <> Some constr
+R1508:1513 Coq.Lists.List <> repeat def
+R1521:1529 Quantum.QuantumState <> qs_qubits proj
+R1531:1532 DJ.DeutschJozsa.DJ <> ρ:3 var
+R1515:1518 Coq.Init.Datatypes <> true constr
+R1543:1550 DJ.Oracles.Oracles <> OKAffine constr
+R1564:1567 Coq.Init.Datatypes <> Some constr
+R1570:1575 Coq.Lists.List <> repeat def
+R1583:1591 Quantum.QuantumState <> qs_qubits proj
+R1593:1594 DJ.DeutschJozsa.DJ <> ρ:3 var
+R1577:1580 Coq.Init.Datatypes <> true constr
+R1605:1616 DJ.Oracles.Oracles <> OKXorTwoBits constr
+R1630:1633 Coq.Init.Datatypes <> Some constr
+R1636:1641 Coq.Lists.List <> repeat def
+R1649:1657 Quantum.QuantumState <> qs_qubits proj
+R1659:1660 DJ.DeutschJozsa.DJ <> ρ:3 var
+R1643:1646 Coq.Init.Datatypes <> true constr
+R1671:1678 DJ.Oracles.Oracles <> OKAndXor constr
+R1692:1695 Coq.Init.Datatypes <> Some constr
+R1698:1703 Coq.Lists.List <> repeat def
+R1711:1719 Quantum.QuantumState <> qs_qubits proj
+R1721:1722 DJ.DeutschJozsa.DJ <> ρ:3 var
+R1705:1708 Coq.Init.Datatypes <> true constr
+R1733:1749 DJ.Oracles.Oracles <> OKExampleBalanced constr
+R1763:1766 Coq.Init.Datatypes <> Some constr
+R1769:1774 Coq.Lists.List <> repeat def
+R1782:1790 Quantum.QuantumState <> qs_qubits proj
+R1792:1793 DJ.DeutschJozsa.DJ <> ρ:3 var
+R1776:1779 Coq.Init.Datatypes <> true constr
+R1818:1821 Coq.Init.Datatypes <> None constr
+binder 1159:1164 <> result:4
+R1851:1857 Quantum.QuantumOperators <> Compose def
+R1864:1882 Quantum.QuantumOperators <> MeasurementOperator def
+R1890:1896 Quantum.QuantumOperators <> Compose def
+R1906:1913 Quantum.QuantumOperators <> Hadamard def
+R1924:1930 Quantum.QuantumOperators <> Compose def
+R1944:1957 Quantum.QuantumOperators <> OracleOperator def
+R1959:1959 DJ.DeutschJozsa.DJ <> f:2 var
+R1973:1980 Quantum.QuantumOperators <> Hadamard def
+R1984:1985 DJ.DeutschJozsa.DJ <> ρ:3 var
+binder 1841:1843 <> ρ':5
+R1999:2005 Quantum.QuantumState <> qs_bits proj
+R1999:2005 Quantum.QuantumState <> qs_bits proj
+R1999:2005 Quantum.QuantumState <> qs_bits proj
+R2027:2039 Quantum.QuantumState <> qs_amplitudes proj
+R2027:2039 Quantum.QuantumState <> qs_amplitudes proj
+R2067:2075 Quantum.QuantumState <> qs_target proj
+R2067:2075 Quantum.QuantumState <> qs_target proj
+R2099:2107 Quantum.QuantumState <> qs_qubits proj
+R2099:2107 Quantum.QuantumState <> qs_qubits proj
+R2131:2139 Quantum.QuantumState <> qs_oracle proj
+R2131:2139 Quantum.QuantumState <> qs_oracle proj
+R2163:2176 Quantum.QuantumState <> qs_measurement proj
+R2163:2176 Quantum.QuantumState <> qs_measurement proj
+R2272:2281 Quantum.QuantumState <> qs_history proj
+R2272:2281 Quantum.QuantumState <> qs_history proj
+R2306:2314 Quantum.QuantumState <> qs_status proj
+R2306:2314 Quantum.QuantumState <> qs_status proj
+R2338:2355 Quantum.QuantumState <> qs_symbolic_output proj
+R2338:2355 Quantum.QuantumState <> qs_symbolic_output proj
+R2010:2016 Quantum.QuantumState <> qs_bits proj
+R2018:2020 DJ.DeutschJozsa.DJ <> ρ':5 var
+R2044:2056 Quantum.QuantumState <> qs_amplitudes proj
+R2058:2060 DJ.DeutschJozsa.DJ <> ρ':5 var
+R2080:2088 Quantum.QuantumState <> qs_target proj
+R2090:2092 DJ.DeutschJozsa.DJ <> ρ':5 var
+R2112:2120 Quantum.QuantumState <> qs_qubits proj
+R2122:2124 DJ.DeutschJozsa.DJ <> ρ':5 var
+R2144:2152 Quantum.QuantumState <> qs_oracle proj
+R2154:2156 DJ.DeutschJozsa.DJ <> ρ':5 var
+R2190:2195 DJ.DeutschJozsa.DJ <> result:4 var
+R2207:2210 Coq.Init.Datatypes <> Some constr
+R2219:2222 Coq.Init.Datatypes <> Some constr
+R2233:2236 Coq.Init.Datatypes <> None constr
+R2241:2254 Quantum.QuantumState <> qs_measurement proj
+R2256:2258 DJ.DeutschJozsa.DJ <> ρ':5 var
+R2286:2295 Quantum.QuantumState <> qs_history proj
+R2297:2299 DJ.DeutschJozsa.DJ <> ρ':5 var
+R2319:2327 Quantum.QuantumState <> qs_status proj
+R2329:2331 DJ.DeutschJozsa.DJ <> ρ':5 var
+R2360:2365 DJ.DeutschJozsa.DJ <> result:4 var
+def 2583:2591 <> DJExecute
+R2610:2623 DJ.Oracles.Oracles <> OracleInstance rec
+binder 2606:2606 <> f:7
+R2643:2645 Coq.Init.Datatypes <> nat ind
+binder 2639:2639 <> n:8
+R2662:2673 Quantum.QuantumState <> QuantumState rec
+R2681:2690 DJ.DeutschJozsa.DJ <> DJOperator def
+R2692:2692 DJ.DeutschJozsa.DJ <> f:7 var
+R2695:2706 Quantum.QuantumState <> InitialState def
+R2708:2708 DJ.DeutschJozsa.DJ <> n:8 var
+def 2923:2934 <> DeutschJozsa
+R2953:2966 DJ.Oracles.Oracles <> OracleInstance rec
+binder 2949:2949 <> f:9
+R2986:2988 Coq.Init.Datatypes <> nat ind
+binder 2982:2982 <> n:10
+R3005:3010 DJ.DeutschJozsa.DJ <> Output def
+R3018:3024 Quantum.QuantumOperators <> Measure def
+R3031:3039 DJ.DeutschJozsa.DJ <> DJExecute def
+R3041:3041 DJ.DeutschJozsa.DJ <> f:9 var
+R3043:3043 DJ.DeutschJozsa.DJ <> n:10 var
+abbrev 3061:3062 <> DJ
+R3067:3078 DJ.DeutschJozsa.DJ <> DeutschJozsa def
+def 3292:3300 <> DJAccepts
+R3319:3332 DJ.Oracles.Oracles <> OracleInstance rec
+binder 3315:3315 <> f:11
+R3352:3354 Coq.Init.Datatypes <> nat ind
+binder 3348:3348 <> n:12
+R3382:3391 DJ.Oracles.Promise <> OutputZero def
+R3393:3393 DJ.DeutschJozsa.DJ <> n:12 var
+R3396:3397 DJ.DeutschJozsa.DJ <> DJ abbrev
+R3399:3399 DJ.DeutschJozsa.DJ <> f:11 var
+R3401:3401 DJ.DeutschJozsa.DJ <> n:12 var
+def 3423:3431 <> DJRejects
+R3450:3463 DJ.Oracles.Oracles <> OracleInstance rec
+binder 3446:3446 <> f:13
+R3483:3485 Coq.Init.Datatypes <> nat ind
+binder 3479:3479 <> n:14
+R3513:3525 DJ.Oracles.Promise <> OutputNonZero def
+R3527:3527 DJ.DeutschJozsa.DJ <> n:14 var
+R3530:3531 DJ.DeutschJozsa.DJ <> DJ abbrev
+R3533:3533 DJ.DeutschJozsa.DJ <> f:13 var
+R3535:3535 DJ.DeutschJozsa.DJ <> n:14 var
+def 3754:3771 <> DJAlgorithmCorrect
+R3790:3792 Coq.Init.Datatypes <> nat ind
+binder 3786:3786 <> n:15
+R3812:3825 DJ.Oracles.Oracles <> OracleInstance rec
+binder 3808:3808 <> f:16
+R3853:3853 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R3885:3896 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R3928:3928 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R3866:3871 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3854:3861 DJ.Verification.Balanced <> Constant def
+R3863:3863 DJ.DeutschJozsa.DJ <> n:15 var
+R3865:3865 DJ.DeutschJozsa.DJ <> f:16 var
+R3872:3880 DJ.DeutschJozsa.DJ <> DJAccepts def
+R3882:3882 DJ.DeutschJozsa.DJ <> f:16 var
+R3884:3884 DJ.DeutschJozsa.DJ <> n:15 var
+R3909:3914 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3897:3904 DJ.Verification.Balanced <> Balanced def
+R3906:3906 DJ.DeutschJozsa.DJ <> n:15 var
+R3908:3908 DJ.DeutschJozsa.DJ <> f:16 var
+R3915:3923 DJ.DeutschJozsa.DJ <> DJRejects def
+R3925:3925 DJ.DeutschJozsa.DJ <> f:16 var
+R3927:3927 DJ.DeutschJozsa.DJ <> n:15 var
+def 4142:4151 <> DJVerified
+R4170:4172 Coq.Init.Datatypes <> nat ind
+binder 4166:4166 <> n:17
+R4192:4205 DJ.Oracles.Oracles <> OracleInstance rec
+binder 4188:4188 <> f:18
+R4249:4259 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R4233:4244 DJ.Oracles.Promise <> PromiseHolds def
+R4246:4246 DJ.DeutschJozsa.DJ <> n:17 var
+R4248:4248 DJ.DeutschJozsa.DJ <> f:18 var
+R4260:4277 DJ.DeutschJozsa.DJ <> DJAlgorithmCorrect def
+R4279:4279 DJ.DeutschJozsa.DJ <> n:17 var
+R4281:4281 DJ.DeutschJozsa.DJ <> f:18 var
+def 4494:4501 <> DJResult
+R4520:4533 DJ.Oracles.Oracles <> OracleInstance rec
+binder 4516:4516 <> f:19
+R4553:4555 Coq.Init.Datatypes <> nat ind
+binder 4549:4549 <> n:20
+R4572:4577 DJ.DeutschJozsa.DJ <> Output def
+R4585:4591 Quantum.QuantumOperators <> Measure def
+R4594:4602 DJ.DeutschJozsa.DJ <> DJExecute def
+R4604:4604 DJ.DeutschJozsa.DJ <> f:19 var
+R4606:4606 DJ.DeutschJozsa.DJ <> n:20 var
+prf 4815:4830 <> DJExecute_unfold
+binder 4844:4844 <> f:21
+binder 4846:4846 <> n:22
+R4865:4870 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4852:4860 DJ.DeutschJozsa.DJ <> DJExecute def
+R4862:4862 DJ.DeutschJozsa.DJ <> f:21 var
+R4864:4864 DJ.DeutschJozsa.DJ <> n:22 var
+R4871:4880 DJ.DeutschJozsa.DJ <> DJOperator def
+R4882:4882 DJ.DeutschJozsa.DJ <> f:21 var
+R4885:4896 Quantum.QuantumState <> InitialState def
+R4898:4898 DJ.DeutschJozsa.DJ <> n:22 var
+prf 4945:4971 <> DJOperator_executes_circuit
+binder 4985:4985 <> f:23
+binder 4987:4988 <> ψ:24
+R5019:5023 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4994:5000 Quantum.QuantumState <> qs_bits proj
+R5003:5012 DJ.DeutschJozsa.DJ <> DJOperator def
+R5014:5014 DJ.DeutschJozsa.DJ <> f:23 var
+R5016:5017 DJ.DeutschJozsa.DJ <> ψ:24 var
+R5024:5030 Quantum.QuantumState <> qs_bits proj
+R5037:5055 Quantum.QuantumOperators <> MeasurementOperator def
+R5064:5071 Quantum.QuantumOperators <> Hadamard def
+R5082:5095 Quantum.QuantumOperators <> OracleOperator def
+R5097:5097 DJ.DeutschJozsa.DJ <> f:23 var
+R5110:5117 Quantum.QuantumOperators <> Hadamard def
+R5119:5120 DJ.DeutschJozsa.DJ <> ψ:24 var
+R5177:5186 DJ.DeutschJozsa.DJ <> DJOperator def
+def 5433:5440 <> Executes
+R5459:5472 DJ.Oracles.Oracles <> OracleInstance rec
+binder 5455:5455 <> f:25
+R5492:5494 Coq.Init.Datatypes <> nat ind
+binder 5488:5488 <> n:26
+R5522:5528 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R5535:5539 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 5529:5534 <> result:27
+R5546:5548 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5540:5545 DJ.DeutschJozsa.DJ <> result:27 var
+R5549:5550 DJ.DeutschJozsa.DJ <> DJ abbrev
+R5552:5552 DJ.DeutschJozsa.DJ <> f:25 var
+R5554:5554 DJ.DeutschJozsa.DJ <> n:26 var
+prf 5762:5778 <> DJ_returns_output
+binder 5792:5792 <> f:28
+binder 5794:5794 <> n:29
+R5800:5806 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R5810:5814 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 5807:5809 <> out:30
+R5821:5823 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5815:5816 DJ.DeutschJozsa.DJ <> DJ abbrev
+R5818:5818 DJ.DeutschJozsa.DJ <> f:28 var
+R5820:5820 DJ.DeutschJozsa.DJ <> n:29 var
+R5824:5826 DJ.DeutschJozsa.DJ <> out:30 var
+R5861:5862 DJ.DeutschJozsa.DJ <> DJ abbrev
+R5861:5862 DJ.DeutschJozsa.DJ <> DJ abbrev
+prf 5903:5917 <> executes_exists
+binder 5931:5931 <> f:31
+binder 5933:5933 <> n:32
+R5939:5946 DJ.DeutschJozsa.DJ <> Executes def
+R5948:5948 DJ.DeutschJozsa.DJ <> f:31 var
+R5950:5950 DJ.DeutschJozsa.DJ <> n:32 var
+R5984:5991 DJ.DeutschJozsa.DJ <> Executes def
+R6005:6006 DJ.DeutschJozsa.DJ <> DJ abbrev
+R6005:6006 DJ.DeutschJozsa.DJ <> DJ abbrev
+prf 6047:6061 <> DJResult_unfold
+binder 6075:6075 <> f:33
+binder 6077:6077 <> n:34
+R6095:6097 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6083:6090 DJ.DeutschJozsa.DJ <> DJResult def
+R6092:6092 DJ.DeutschJozsa.DJ <> f:33 var
+R6094:6094 DJ.DeutschJozsa.DJ <> n:34 var
+R6098:6099 DJ.DeutschJozsa.DJ <> DJ abbrev
+R6101:6101 DJ.DeutschJozsa.DJ <> f:33 var
+R6103:6103 DJ.DeutschJozsa.DJ <> n:34 var
+prf 6344:6360 <> DJVerified_unfold
+binder 6374:6374 <> n:35
+binder 6376:6376 <> f:36
+R6396:6406 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R6382:6391 DJ.DeutschJozsa.DJ <> DJVerified def
+R6393:6393 DJ.DeutschJozsa.DJ <> n:35 var
+R6395:6395 DJ.DeutschJozsa.DJ <> f:36 var
+R6423:6433 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R6407:6418 DJ.Oracles.Promise <> PromiseHolds def
+R6420:6420 DJ.DeutschJozsa.DJ <> n:35 var
+R6422:6422 DJ.DeutschJozsa.DJ <> f:36 var
+R6434:6451 DJ.DeutschJozsa.DJ <> DJAlgorithmCorrect def
+R6453:6453 DJ.DeutschJozsa.DJ <> n:35 var
+R6455:6455 DJ.DeutschJozsa.DJ <> f:36 var
+prf 6500:6523 <> DJAlgorithmCorrect_split
+binder 6537:6537 <> n:37
+binder 6539:6539 <> f:38
+R6567:6576 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R6545:6562 DJ.DeutschJozsa.DJ <> DJAlgorithmCorrect def
+R6564:6564 DJ.DeutschJozsa.DJ <> n:37 var
+R6566:6566 DJ.DeutschJozsa.DJ <> f:38 var
+R6577:6577 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R6609:6621 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R6653:6653 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R6590:6595 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R6578:6585 DJ.Verification.Balanced <> Constant def
+R6587:6587 DJ.DeutschJozsa.DJ <> n:37 var
+R6589:6589 DJ.DeutschJozsa.DJ <> f:38 var
+R6596:6604 DJ.DeutschJozsa.DJ <> DJAccepts def
+R6606:6606 DJ.DeutschJozsa.DJ <> f:38 var
+R6608:6608 DJ.DeutschJozsa.DJ <> n:37 var
+R6634:6639 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R6622:6629 DJ.Verification.Balanced <> Balanced def
+R6631:6631 DJ.DeutschJozsa.DJ <> n:37 var
+R6633:6633 DJ.DeutschJozsa.DJ <> f:38 var
+R6640:6648 DJ.DeutschJozsa.DJ <> DJRejects def
+R6650:6650 DJ.DeutschJozsa.DJ <> f:38 var
+R6652:6652 DJ.DeutschJozsa.DJ <> n:37 var
+prf 6893:6913 <> DJExecute_measurement
+binder 6927:6927 <> f:39
+binder 6929:6929 <> n:40
+R6965:6969 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6935:6948 Quantum.QuantumState <> qs_measurement proj
+R6951:6959 DJ.DeutschJozsa.DJ <> DJExecute def
+R6961:6961 DJ.DeutschJozsa.DJ <> f:39 var
+R6963:6963 DJ.DeutschJozsa.DJ <> n:40 var
+R6976:6993 Quantum.QuantumState <> qs_symbolic_output proj
+R6996:7004 DJ.DeutschJozsa.DJ <> DJExecute def
+R7006:7006 DJ.DeutschJozsa.DJ <> f:39 var
+R7008:7008 DJ.DeutschJozsa.DJ <> n:40 var
+R7019:7022 Coq.Init.Datatypes <> Some constr
+R7036:7039 Coq.Init.Datatypes <> Some constr
+R7050:7053 Coq.Init.Datatypes <> None constr
+R7063:7066 Coq.Init.Datatypes <> Some constr
+R7069:7075 Quantum.QuantumState <> qs_bits proj
+R7078:7086 DJ.DeutschJozsa.DJ <> DJExecute def
+R7088:7088 DJ.DeutschJozsa.DJ <> f:39 var
+R7090:7090 DJ.DeutschJozsa.DJ <> n:40 var
+R7141:7149 DJ.DeutschJozsa.DJ <> DJExecute def
+R7162:7171 DJ.DeutschJozsa.DJ <> DJOperator def
+R7184:7202 Quantum.QuantumOperators <> MeasurementOperator def
+prf 7252:7286 <> DJExecute_measurement_from_symbolic
+binder 7300:7300 <> f:41
+binder 7302:7302 <> n:42
+binder 7304:7306 <> out:43
+R7359:7366 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7346:7350 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7312:7329 Quantum.QuantumState <> qs_symbolic_output proj
+R7332:7340 DJ.DeutschJozsa.DJ <> DJExecute def
+R7342:7342 DJ.DeutschJozsa.DJ <> f:41 var
+R7344:7344 DJ.DeutschJozsa.DJ <> n:42 var
+R7351:7354 Coq.Init.Datatypes <> Some constr
+R7356:7358 DJ.DeutschJozsa.DJ <> out:43 var
+R7397:7401 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7367:7380 Quantum.QuantumState <> qs_measurement proj
+R7383:7391 DJ.DeutschJozsa.DJ <> DJExecute def
+R7393:7393 DJ.DeutschJozsa.DJ <> f:41 var
+R7395:7395 DJ.DeutschJozsa.DJ <> n:42 var
+R7402:7405 Coq.Init.Datatypes <> Some constr
+R7407:7409 DJ.DeutschJozsa.DJ <> out:43 var
+R7458:7478 DJ.DeutschJozsa.DJ <> DJExecute_measurement thm
+R7458:7478 DJ.DeutschJozsa.DJ <> DJExecute_measurement thm
+R7458:7478 DJ.DeutschJozsa.DJ <> DJExecute_measurement thm
+prf 7532:7552 <> DJ_measurement_result
+binder 7566:7566 <> f:44
+binder 7568:7568 <> n:45
+binder 7570:7572 <> out:46
+R7621:7628 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7608:7612 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7578:7591 Quantum.QuantumState <> qs_measurement proj
+R7594:7602 DJ.DeutschJozsa.DJ <> DJExecute def
+R7604:7604 DJ.DeutschJozsa.DJ <> f:44 var
+R7606:7606 DJ.DeutschJozsa.DJ <> n:45 var
+R7613:7616 Coq.Init.Datatypes <> Some constr
+R7618:7620 DJ.DeutschJozsa.DJ <> out:46 var
+R7635:7637 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7629:7630 DJ.DeutschJozsa.DJ <> DJ abbrev
+R7632:7632 DJ.DeutschJozsa.DJ <> f:44 var
+R7634:7634 DJ.DeutschJozsa.DJ <> n:45 var
+R7638:7640 DJ.DeutschJozsa.DJ <> out:46 var
+R7688:7689 DJ.DeutschJozsa.DJ <> DeutschJozsa def
+R7702:7713 DJ.DeutschJozsa.DJ <> DeutschJozsa def
+R7728:7734 Quantum.QuantumOperators <> Measure def
+prf 7984:8005 <> DJ_constant_zero_final
+binder 8019:8019 <> n:47
+R8066:8070 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8025:8031 Quantum.QuantumState <> qs_bits proj
+R8038:8046 DJ.DeutschJozsa.DJ <> DJExecute def
+R8048:8060 DJ.Oracles.Oracles <> constant_zero def
+R8062:8062 DJ.DeutschJozsa.DJ <> n:47 var
+R8071:8079 DJ.Foundations.BitStrings <> all_zeros def
+R8081:8081 DJ.DeutschJozsa.DJ <> n:47 var
+R8120:8128 DJ.DeutschJozsa.DJ <> DJExecute def
+R8141:8150 DJ.DeutschJozsa.DJ <> DJOperator def
+R8163:8169 Quantum.QuantumOperators <> Compose def
+prf 8219:8243 <> DJ_constant_zero_symbolic
+binder 8257:8257 <> n:48
+R8315:8319 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8263:8280 Quantum.QuantumState <> qs_symbolic_output proj
+R8287:8295 DJ.DeutschJozsa.DJ <> DJExecute def
+R8297:8309 DJ.Oracles.Oracles <> constant_zero def
+R8311:8311 DJ.DeutschJozsa.DJ <> n:48 var
+R8320:8323 Coq.Init.Datatypes <> Some constr
+R8326:8334 DJ.Foundations.BitStrings <> all_zeros def
+R8336:8336 DJ.DeutschJozsa.DJ <> n:48 var
+R8376:8384 DJ.DeutschJozsa.DJ <> DJExecute def
+R8397:8406 DJ.DeutschJozsa.DJ <> DJOperator def
+prf 8456:8478 <> DJ_constant_zero_output
+binder 8492:8492 <> n:49
+R8516:8520 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8498:8499 DJ.DeutschJozsa.DJ <> DJ abbrev
+R8501:8513 DJ.Oracles.Oracles <> constant_zero def
+R8515:8515 DJ.DeutschJozsa.DJ <> n:49 var
+R8521:8529 DJ.Foundations.BitStrings <> all_zeros def
+R8531:8531 DJ.DeutschJozsa.DJ <> n:49 var
+R8569:8589 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R8569:8589 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R8603:8637 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R8603:8637 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R8651:8675 DJ.DeutschJozsa.DJ <> DJ_constant_zero_symbolic thm
+R8651:8675 DJ.DeutschJozsa.DJ <> DJ_constant_zero_symbolic thm
+prf 8695:8718 <> DJ_constant_one_symbolic
+binder 8732:8732 <> n:50
+R8789:8793 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8738:8755 Quantum.QuantumState <> qs_symbolic_output proj
+R8762:8770 DJ.DeutschJozsa.DJ <> DJExecute def
+R8772:8783 DJ.Oracles.Oracles <> constant_one def
+R8785:8785 DJ.DeutschJozsa.DJ <> n:50 var
+R8794:8797 Coq.Init.Datatypes <> Some constr
+R8800:8808 DJ.Foundations.BitStrings <> all_zeros def
+R8810:8810 DJ.DeutschJozsa.DJ <> n:50 var
+R8850:8858 DJ.DeutschJozsa.DJ <> DJExecute def
+R8871:8880 DJ.DeutschJozsa.DJ <> DJOperator def
+prf 8930:8951 <> DJ_constant_one_output
+binder 8965:8965 <> n:51
+R8988:8992 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8971:8972 DJ.DeutschJozsa.DJ <> DJ abbrev
+R8974:8985 DJ.Oracles.Oracles <> constant_one def
+R8987:8987 DJ.DeutschJozsa.DJ <> n:51 var
+R8993:9002 DJ.DeutschJozsa.DJ <> ZeroOutput def
+R9004:9004 DJ.DeutschJozsa.DJ <> n:51 var
+R9042:9062 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R9042:9062 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R9076:9110 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R9076:9110 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R9124:9147 DJ.DeutschJozsa.DJ <> DJ_constant_one_symbolic thm
+R9124:9147 DJ.DeutschJozsa.DJ <> DJ_constant_one_symbolic thm
+prf 9362:9379 <> DJ_parity_symbolic
+binder 9393:9393 <> n:52
+R9451:9455 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9399:9416 Quantum.QuantumState <> qs_symbolic_output proj
+R9423:9431 DJ.DeutschJozsa.DJ <> DJExecute def
+R9433:9445 DJ.Oracles.Oracles <> oracle_parity def
+R9447:9447 DJ.DeutschJozsa.DJ <> n:52 var
+R9456:9459 Coq.Init.Datatypes <> Some constr
+R9462:9467 Coq.Lists.List <> repeat def
+R9474:9474 DJ.DeutschJozsa.DJ <> n:52 var
+R9469:9472 Coq.Init.Datatypes <> true constr
+R9514:9522 DJ.DeutschJozsa.DJ <> DJExecute def
+R9535:9544 DJ.DeutschJozsa.DJ <> DJOperator def
+prf 9594:9623 <> DJ_parity_symbolic_measurement
+binder 9637:9637 <> n:53
+R9691:9695 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9643:9656 Quantum.QuantumState <> qs_measurement proj
+R9663:9671 DJ.DeutschJozsa.DJ <> DJExecute def
+R9673:9685 DJ.Oracles.Oracles <> oracle_parity def
+R9687:9687 DJ.DeutschJozsa.DJ <> n:53 var
+R9696:9699 Coq.Init.Datatypes <> Some constr
+R9702:9707 Coq.Lists.List <> repeat def
+R9714:9714 DJ.DeutschJozsa.DJ <> n:53 var
+R9709:9712 Coq.Init.Datatypes <> true constr
+R9753:9787 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R9753:9787 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R9801:9818 DJ.DeutschJozsa.DJ <> DJ_parity_symbolic thm
+R9801:9818 DJ.DeutschJozsa.DJ <> DJ_parity_symbolic thm
+prf 9838:9853 <> DJ_parity_output
+binder 9867:9867 <> n:54
+R9891:9895 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9873:9874 DJ.DeutschJozsa.DJ <> DJ abbrev
+R9876:9888 DJ.Oracles.Oracles <> oracle_parity def
+R9890:9890 DJ.DeutschJozsa.DJ <> n:54 var
+R9896:9901 Coq.Lists.List <> repeat def
+R9908:9908 DJ.DeutschJozsa.DJ <> n:54 var
+R9903:9906 Coq.Init.Datatypes <> true constr
+R9946:9966 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R9946:9966 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R9980:10009 DJ.DeutschJozsa.DJ <> DJ_parity_symbolic_measurement thm
+R9980:10009 DJ.DeutschJozsa.DJ <> DJ_parity_symbolic_measurement thm
+prf 10029:10045 <> DJ_parity_rejects
+binder 10059:10059 <> n:55
+R10070:10076 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10066:10068 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R10065:10065 DJ.DeutschJozsa.DJ <> n:55 var
+R10095:10100 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R10077:10078 DJ.DeutschJozsa.DJ <> DJ abbrev
+R10080:10092 DJ.Oracles.Oracles <> oracle_parity def
+R10094:10094 DJ.DeutschJozsa.DJ <> n:55 var
+R10101:10109 DJ.Foundations.BitStrings <> all_zeros def
+R10111:10111 DJ.DeutschJozsa.DJ <> n:55 var
+R10155:10170 DJ.DeutschJozsa.DJ <> DJ_parity_output thm
+R10155:10170 DJ.DeutschJozsa.DJ <> DJ_parity_output thm
+R10155:10170 DJ.DeutschJozsa.DJ <> DJ_parity_output thm
+R10184:10208 DJ.Foundations.BitStrings <> repeat_true_not_all_zeros thm
+R10184:10208 DJ.Foundations.BitStrings <> repeat_true_not_all_zeros thm
+prf 10243:10261 <> InitialState_qubits
+binder 10275:10275 <> n:56
+R10307:10309 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10281:10289 Quantum.QuantumState <> qs_qubits proj
+R10292:10303 Quantum.QuantumState <> InitialState def
+R10305:10305 DJ.DeutschJozsa.DJ <> n:56 var
+R10310:10310 DJ.DeutschJozsa.DJ <> n:56 var
+prf 10570:10595 <> DJOperator_symbolic_output
+binder 10609:10609 <> f:57
+binder 10611:10611 <> n:58
+R10657:10661 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10617:10634 Quantum.QuantumState <> qs_symbolic_output proj
+R10641:10649 DJ.DeutschJozsa.DJ <> DJExecute def
+R10651:10651 DJ.DeutschJozsa.DJ <> f:57 var
+R10653:10653 DJ.DeutschJozsa.DJ <> n:58 var
+R10668:10678 DJ.Oracles.Oracles <> oracle_kind proj
+R10680:10680 DJ.DeutschJozsa.DJ <> f:57 var
+R10692:10705 DJ.Oracles.Oracles <> OKConstantZero constr
+R10715:10718 Coq.Init.Datatypes <> Some constr
+R10721:10729 DJ.Foundations.BitStrings <> all_zeros def
+R10731:10731 DJ.DeutschJozsa.DJ <> n:58 var
+R10739:10751 DJ.Oracles.Oracles <> OKConstantOne constr
+R10761:10764 Coq.Init.Datatypes <> Some constr
+R10767:10775 DJ.Foundations.BitStrings <> all_zeros def
+R10777:10777 DJ.DeutschJozsa.DJ <> n:58 var
+R10785:10794 DJ.Oracles.Oracles <> OKFirstBit constr
+R10804:10807 Coq.Init.Datatypes <> Some constr
+R10814:10817 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R10810:10813 Coq.Init.Datatypes <> true constr
+R10818:10823 Coq.Lists.List <> repeat def
+R10832:10835 Coq.Init.Peano <> pred abbrev
+R10837:10837 DJ.DeutschJozsa.DJ <> n:58 var
+R10825:10829 Coq.Init.Datatypes <> false constr
+R10846:10853 DJ.Oracles.Oracles <> OKParity constr
+R10863:10866 Coq.Init.Datatypes <> Some constr
+R10869:10874 Coq.Lists.List <> repeat def
+R10881:10881 DJ.DeutschJozsa.DJ <> n:58 var
+R10876:10879 Coq.Init.Datatypes <> true constr
+R10889:10900 DJ.Oracles.Oracles <> OKFullParity constr
+R10910:10913 Coq.Init.Datatypes <> Some constr
+R10916:10921 Coq.Lists.List <> repeat def
+R10928:10928 DJ.DeutschJozsa.DJ <> n:58 var
+R10923:10926 Coq.Init.Datatypes <> true constr
+R10936:10943 DJ.Oracles.Oracles <> OKAffine constr
+R10953:10956 Coq.Init.Datatypes <> Some constr
+R10959:10964 Coq.Lists.List <> repeat def
+R10971:10971 DJ.DeutschJozsa.DJ <> n:58 var
+R10966:10969 Coq.Init.Datatypes <> true constr
+R10979:10990 DJ.Oracles.Oracles <> OKXorTwoBits constr
+R11000:11003 Coq.Init.Datatypes <> Some constr
+R11006:11011 Coq.Lists.List <> repeat def
+R11018:11018 DJ.DeutschJozsa.DJ <> n:58 var
+R11013:11016 Coq.Init.Datatypes <> true constr
+R11026:11033 DJ.Oracles.Oracles <> OKAndXor constr
+R11043:11046 Coq.Init.Datatypes <> Some constr
+R11049:11054 Coq.Lists.List <> repeat def
+R11061:11061 DJ.DeutschJozsa.DJ <> n:58 var
+R11056:11059 Coq.Init.Datatypes <> true constr
+R11069:11085 DJ.Oracles.Oracles <> OKExampleBalanced constr
+R11095:11098 Coq.Init.Datatypes <> Some constr
+R11101:11106 Coq.Lists.List <> repeat def
+R11113:11113 DJ.DeutschJozsa.DJ <> n:58 var
+R11108:11111 Coq.Init.Datatypes <> true constr
+R11131:11134 Coq.Init.Datatypes <> None constr
+R11179:11187 DJ.DeutschJozsa.DJ <> DJExecute def
+R11198:11207 DJ.DeutschJozsa.DJ <> DJOperator def
+R11233:11243 DJ.Oracles.Oracles <> oracle_kind proj
+R11233:11243 DJ.Oracles.Oracles <> oracle_kind proj
+prf 11477:11501 <> first_bit_output_not_zero
+binder 11515:11515 <> n:59
+R11526:11532 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11522:11524 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R11521:11521 DJ.DeutschJozsa.DJ <> n:59 var
+R11562:11567 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R11537:11540 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R11533:11536 Coq.Init.Datatypes <> true constr
+R11541:11546 Coq.Lists.List <> repeat def
+R11555:11558 Coq.Init.Peano <> pred abbrev
+R11560:11560 DJ.DeutschJozsa.DJ <> n:59 var
+R11548:11552 Coq.Init.Datatypes <> false constr
+R11568:11576 DJ.Foundations.BitStrings <> all_zeros def
+R11578:11578 DJ.DeutschJozsa.DJ <> n:59 var
+prf 11733:11760 <> DJ_first_bit_symbolic_output
+binder 11774:11774 <> n:60
+R11835:11839 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11780:11797 Quantum.QuantumState <> qs_symbolic_output proj
+R11804:11812 DJ.DeutschJozsa.DJ <> DJExecute def
+R11814:11829 DJ.Oracles.Oracles <> oracle_first_bit def
+R11831:11831 DJ.DeutschJozsa.DJ <> n:60 var
+R11840:11843 Coq.Init.Datatypes <> Some constr
+R11850:11853 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R11846:11849 Coq.Init.Datatypes <> true constr
+R11854:11859 Coq.Lists.List <> repeat def
+R11868:11871 Coq.Init.Peano <> pred abbrev
+R11873:11873 DJ.DeutschJozsa.DJ <> n:60 var
+R11861:11865 Coq.Init.Datatypes <> false constr
+R11916:11924 DJ.DeutschJozsa.DJ <> DJExecute def
+R11937:11946 DJ.DeutschJozsa.DJ <> DJOperator def
+prf 11996:12028 <> DJ_first_bit_symbolic_measurement
+binder 12042:12042 <> n:61
+R12099:12103 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12048:12061 Quantum.QuantumState <> qs_measurement proj
+R12068:12076 DJ.DeutschJozsa.DJ <> DJExecute def
+R12078:12093 DJ.Oracles.Oracles <> oracle_first_bit def
+R12095:12095 DJ.DeutschJozsa.DJ <> n:61 var
+R12104:12107 Coq.Init.Datatypes <> Some constr
+R12114:12117 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R12110:12113 Coq.Init.Datatypes <> true constr
+R12118:12123 Coq.Lists.List <> repeat def
+R12132:12135 Coq.Init.Peano <> pred abbrev
+R12137:12137 DJ.DeutschJozsa.DJ <> n:61 var
+R12125:12129 Coq.Init.Datatypes <> false constr
+R12177:12211 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R12177:12211 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R12225:12252 DJ.DeutschJozsa.DJ <> DJ_first_bit_symbolic_output thm
+R12225:12252 DJ.DeutschJozsa.DJ <> DJ_first_bit_symbolic_output thm
+prf 12272:12290 <> DJ_first_bit_output
+binder 12304:12304 <> n:62
+R12331:12335 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12310:12311 DJ.DeutschJozsa.DJ <> DJ abbrev
+R12313:12328 DJ.Oracles.Oracles <> oracle_first_bit def
+R12330:12330 DJ.DeutschJozsa.DJ <> n:62 var
+R12340:12343 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R12336:12339 Coq.Init.Datatypes <> true constr
+R12344:12349 Coq.Lists.List <> repeat def
+R12358:12361 Coq.Init.Peano <> pred abbrev
+R12363:12363 DJ.DeutschJozsa.DJ <> n:62 var
+R12351:12355 Coq.Init.Datatypes <> false constr
+R12402:12422 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R12402:12422 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R12436:12468 DJ.DeutschJozsa.DJ <> DJ_first_bit_symbolic_measurement thm
+R12436:12468 DJ.DeutschJozsa.DJ <> DJ_first_bit_symbolic_measurement thm
+prf 12683:12712 <> DJ_full_parity_symbolic_output
+binder 12726:12726 <> n:63
+R12789:12793 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12732:12749 Quantum.QuantumState <> qs_symbolic_output proj
+R12756:12764 DJ.DeutschJozsa.DJ <> DJExecute def
+R12766:12783 DJ.Oracles.Oracles <> oracle_full_parity def
+R12785:12785 DJ.DeutschJozsa.DJ <> n:63 var
+R12794:12797 Coq.Init.Datatypes <> Some constr
+R12800:12805 Coq.Lists.List <> repeat def
+R12812:12812 DJ.DeutschJozsa.DJ <> n:63 var
+R12807:12810 Coq.Init.Datatypes <> true constr
+R12852:12860 DJ.DeutschJozsa.DJ <> DJExecute def
+R12873:12882 DJ.DeutschJozsa.DJ <> DJOperator def
+prf 12932:12966 <> DJ_full_parity_symbolic_measurement
+binder 12980:12980 <> n:64
+R13039:13043 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12986:12999 Quantum.QuantumState <> qs_measurement proj
+R13006:13014 DJ.DeutschJozsa.DJ <> DJExecute def
+R13016:13033 DJ.Oracles.Oracles <> oracle_full_parity def
+R13035:13035 DJ.DeutschJozsa.DJ <> n:64 var
+R13044:13047 Coq.Init.Datatypes <> Some constr
+R13050:13055 Coq.Lists.List <> repeat def
+R13062:13062 DJ.DeutschJozsa.DJ <> n:64 var
+R13057:13060 Coq.Init.Datatypes <> true constr
+R13101:13135 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R13101:13135 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R13149:13178 DJ.DeutschJozsa.DJ <> DJ_full_parity_symbolic_output thm
+R13149:13178 DJ.DeutschJozsa.DJ <> DJ_full_parity_symbolic_output thm
+prf 13198:13218 <> DJ_full_parity_output
+binder 13232:13232 <> n:65
+R13261:13265 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R13238:13239 DJ.DeutschJozsa.DJ <> DJ abbrev
+R13241:13258 DJ.Oracles.Oracles <> oracle_full_parity def
+R13260:13260 DJ.DeutschJozsa.DJ <> n:65 var
+R13266:13271 Coq.Lists.List <> repeat def
+R13278:13278 DJ.DeutschJozsa.DJ <> n:65 var
+R13273:13276 Coq.Init.Datatypes <> true constr
+R13316:13336 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R13316:13336 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R13350:13384 DJ.DeutschJozsa.DJ <> DJ_full_parity_symbolic_measurement thm
+R13350:13384 DJ.DeutschJozsa.DJ <> DJ_full_parity_symbolic_measurement thm
+prf 13599:13623 <> DJ_affine_symbolic_output
+binder 13637:13637 <> n:66
+R13695:13699 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R13643:13660 Quantum.QuantumState <> qs_symbolic_output proj
+R13667:13675 DJ.DeutschJozsa.DJ <> DJExecute def
+R13677:13689 DJ.Oracles.Oracles <> oracle_affine def
+R13691:13691 DJ.DeutschJozsa.DJ <> n:66 var
+R13700:13703 Coq.Init.Datatypes <> Some constr
+R13706:13711 Coq.Lists.List <> repeat def
+R13718:13718 DJ.DeutschJozsa.DJ <> n:66 var
+R13713:13716 Coq.Init.Datatypes <> true constr
+R13758:13766 DJ.DeutschJozsa.DJ <> DJExecute def
+R13779:13788 DJ.DeutschJozsa.DJ <> DJOperator def
+prf 13838:13867 <> DJ_affine_symbolic_measurement
+binder 13881:13881 <> n:67
+R13935:13939 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R13887:13900 Quantum.QuantumState <> qs_measurement proj
+R13907:13915 DJ.DeutschJozsa.DJ <> DJExecute def
+R13917:13929 DJ.Oracles.Oracles <> oracle_affine def
+R13931:13931 DJ.DeutschJozsa.DJ <> n:67 var
+R13940:13943 Coq.Init.Datatypes <> Some constr
+R13946:13951 Coq.Lists.List <> repeat def
+R13958:13958 DJ.DeutschJozsa.DJ <> n:67 var
+R13953:13956 Coq.Init.Datatypes <> true constr
+R13997:14031 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R13997:14031 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R14045:14069 DJ.DeutschJozsa.DJ <> DJ_affine_symbolic_output thm
+R14045:14069 DJ.DeutschJozsa.DJ <> DJ_affine_symbolic_output thm
+prf 14089:14104 <> DJ_affine_output
+binder 14118:14118 <> n:68
+R14142:14146 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14124:14125 DJ.DeutschJozsa.DJ <> DJ abbrev
+R14127:14139 DJ.Oracles.Oracles <> oracle_affine def
+R14141:14141 DJ.DeutschJozsa.DJ <> n:68 var
+R14147:14152 Coq.Lists.List <> repeat def
+R14159:14159 DJ.DeutschJozsa.DJ <> n:68 var
+R14154:14157 Coq.Init.Datatypes <> true constr
+R14197:14217 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R14197:14217 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R14231:14260 DJ.DeutschJozsa.DJ <> DJ_affine_symbolic_measurement thm
+R14231:14260 DJ.DeutschJozsa.DJ <> DJ_affine_symbolic_measurement thm
+prf 14475:14505 <> DJ_xor_two_bits_symbolic_output
+binder 14519:14519 <> n:69
+R14583:14587 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14525:14542 Quantum.QuantumState <> qs_symbolic_output proj
+R14549:14557 DJ.DeutschJozsa.DJ <> DJExecute def
+R14559:14577 DJ.Oracles.Oracles <> oracle_xor_two_bits def
+R14579:14579 DJ.DeutschJozsa.DJ <> n:69 var
+R14588:14591 Coq.Init.Datatypes <> Some constr
+R14594:14599 Coq.Lists.List <> repeat def
+R14606:14606 DJ.DeutschJozsa.DJ <> n:69 var
+R14601:14604 Coq.Init.Datatypes <> true constr
+R14646:14654 DJ.DeutschJozsa.DJ <> DJExecute def
+R14667:14676 DJ.DeutschJozsa.DJ <> DJOperator def
+prf 14726:14761 <> DJ_xor_two_bits_symbolic_measurement
+binder 14775:14775 <> n:70
+R14835:14839 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14781:14794 Quantum.QuantumState <> qs_measurement proj
+R14801:14809 DJ.DeutschJozsa.DJ <> DJExecute def
+R14811:14829 DJ.Oracles.Oracles <> oracle_xor_two_bits def
+R14831:14831 DJ.DeutschJozsa.DJ <> n:70 var
+R14840:14843 Coq.Init.Datatypes <> Some constr
+R14846:14851 Coq.Lists.List <> repeat def
+R14858:14858 DJ.DeutschJozsa.DJ <> n:70 var
+R14853:14856 Coq.Init.Datatypes <> true constr
+R14897:14931 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R14897:14931 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R14945:14975 DJ.DeutschJozsa.DJ <> DJ_xor_two_bits_symbolic_output thm
+R14945:14975 DJ.DeutschJozsa.DJ <> DJ_xor_two_bits_symbolic_output thm
+prf 14995:15016 <> DJ_xor_two_bits_output
+binder 15030:15030 <> n:71
+R15060:15064 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15036:15037 DJ.DeutschJozsa.DJ <> DJ abbrev
+R15039:15057 DJ.Oracles.Oracles <> oracle_xor_two_bits def
+R15059:15059 DJ.DeutschJozsa.DJ <> n:71 var
+R15065:15070 Coq.Lists.List <> repeat def
+R15077:15077 DJ.DeutschJozsa.DJ <> n:71 var
+R15072:15075 Coq.Init.Datatypes <> true constr
+R15115:15135 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R15115:15135 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R15149:15184 DJ.DeutschJozsa.DJ <> DJ_xor_two_bits_symbolic_measurement thm
+R15149:15184 DJ.DeutschJozsa.DJ <> DJ_xor_two_bits_symbolic_measurement thm
+prf 15399:15424 <> DJ_and_xor_symbolic_output
+binder 15438:15438 <> n:72
+R15497:15501 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15444:15461 Quantum.QuantumState <> qs_symbolic_output proj
+R15468:15476 DJ.DeutschJozsa.DJ <> DJExecute def
+R15478:15491 DJ.Oracles.Oracles <> oracle_and_xor def
+R15493:15493 DJ.DeutschJozsa.DJ <> n:72 var
+R15502:15505 Coq.Init.Datatypes <> Some constr
+R15508:15513 Coq.Lists.List <> repeat def
+R15520:15520 DJ.DeutschJozsa.DJ <> n:72 var
+R15515:15518 Coq.Init.Datatypes <> true constr
+R15560:15568 DJ.DeutschJozsa.DJ <> DJExecute def
+R15581:15590 DJ.DeutschJozsa.DJ <> DJOperator def
+prf 15640:15670 <> DJ_and_xor_symbolic_measurement
+binder 15684:15684 <> n:73
+R15739:15743 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15690:15703 Quantum.QuantumState <> qs_measurement proj
+R15710:15718 DJ.DeutschJozsa.DJ <> DJExecute def
+R15720:15733 DJ.Oracles.Oracles <> oracle_and_xor def
+R15735:15735 DJ.DeutschJozsa.DJ <> n:73 var
+R15744:15747 Coq.Init.Datatypes <> Some constr
+R15750:15755 Coq.Lists.List <> repeat def
+R15762:15762 DJ.DeutschJozsa.DJ <> n:73 var
+R15757:15760 Coq.Init.Datatypes <> true constr
+R15801:15835 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R15801:15835 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R15849:15874 DJ.DeutschJozsa.DJ <> DJ_and_xor_symbolic_output thm
+R15849:15874 DJ.DeutschJozsa.DJ <> DJ_and_xor_symbolic_output thm
+prf 15894:15910 <> DJ_and_xor_output
+binder 15924:15924 <> n:74
+R15949:15953 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15930:15931 DJ.DeutschJozsa.DJ <> DJ abbrev
+R15933:15946 DJ.Oracles.Oracles <> oracle_and_xor def
+R15948:15948 DJ.DeutschJozsa.DJ <> n:74 var
+R15954:15959 Coq.Lists.List <> repeat def
+R15966:15966 DJ.DeutschJozsa.DJ <> n:74 var
+R15961:15964 Coq.Init.Datatypes <> true constr
+R16004:16024 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R16004:16024 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R16038:16068 DJ.DeutschJozsa.DJ <> DJ_and_xor_symbolic_measurement thm
+R16038:16068 DJ.DeutschJozsa.DJ <> DJ_and_xor_symbolic_measurement thm
+prf 16283:16317 <> DJ_example_balanced_symbolic_output
+binder 16331:16331 <> n:75
+R16399:16403 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16337:16354 Quantum.QuantumState <> qs_symbolic_output proj
+R16361:16369 DJ.DeutschJozsa.DJ <> DJExecute def
+R16371:16393 DJ.Oracles.Oracles <> oracle_example_balanced def
+R16395:16395 DJ.DeutschJozsa.DJ <> n:75 var
+R16404:16407 Coq.Init.Datatypes <> Some constr
+R16410:16415 Coq.Lists.List <> repeat def
+R16422:16422 DJ.DeutschJozsa.DJ <> n:75 var
+R16417:16420 Coq.Init.Datatypes <> true constr
+R16462:16470 DJ.DeutschJozsa.DJ <> DJExecute def
+R16483:16492 DJ.DeutschJozsa.DJ <> DJOperator def
+prf 16542:16581 <> DJ_example_balanced_symbolic_measurement
+binder 16595:16595 <> n:76
+R16659:16663 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16601:16614 Quantum.QuantumState <> qs_measurement proj
+R16621:16629 DJ.DeutschJozsa.DJ <> DJExecute def
+R16631:16653 DJ.Oracles.Oracles <> oracle_example_balanced def
+R16655:16655 DJ.DeutschJozsa.DJ <> n:76 var
+R16664:16667 Coq.Init.Datatypes <> Some constr
+R16670:16675 Coq.Lists.List <> repeat def
+R16682:16682 DJ.DeutschJozsa.DJ <> n:76 var
+R16677:16680 Coq.Init.Datatypes <> true constr
+R16721:16755 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R16721:16755 DJ.DeutschJozsa.DJ <> DJExecute_measurement_from_symbolic thm
+R16769:16803 DJ.DeutschJozsa.DJ <> DJ_example_balanced_symbolic_output thm
+R16769:16803 DJ.DeutschJozsa.DJ <> DJ_example_balanced_symbolic_output thm
+prf 16823:16848 <> DJ_example_balanced_output
+binder 16862:16862 <> n:77
+R16896:16900 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16868:16869 DJ.DeutschJozsa.DJ <> DJ abbrev
+R16871:16893 DJ.Oracles.Oracles <> oracle_example_balanced def
+R16895:16895 DJ.DeutschJozsa.DJ <> n:77 var
+R16901:16906 Coq.Lists.List <> repeat def
+R16913:16913 DJ.DeutschJozsa.DJ <> n:77 var
+R16908:16911 Coq.Init.Datatypes <> true constr
+R16951:16971 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R16951:16971 DJ.DeutschJozsa.DJ <> DJ_measurement_result thm
+R16985:17024 DJ.DeutschJozsa.DJ <> DJ_example_balanced_symbolic_measurement thm
+R16985:17024 DJ.DeutschJozsa.DJ <> DJ_example_balanced_symbolic_measurement thm
+prf 17239:17261 <> DJVerified_from_correct
+binder 17275:17275 <> n:78
+binder 17277:17277 <> f:79
+R17299:17305 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17283:17294 DJ.Oracles.Promise <> PromiseHolds def
+R17296:17296 DJ.DeutschJozsa.DJ <> n:78 var
+R17298:17298 DJ.DeutschJozsa.DJ <> f:79 var
+R17328:17334 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17306:17323 DJ.DeutschJozsa.DJ <> DJAlgorithmCorrect def
+R17325:17325 DJ.DeutschJozsa.DJ <> n:78 var
+R17327:17327 DJ.DeutschJozsa.DJ <> f:79 var
+R17335:17344 DJ.DeutschJozsa.DJ <> DJVerified def
+R17346:17346 DJ.DeutschJozsa.DJ <> n:78 var
+R17348:17348 DJ.DeutschJozsa.DJ <> f:79 var
+R17396:17405 DJ.DeutschJozsa.DJ <> DJVerified def

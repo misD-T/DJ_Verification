@@ -1,0 +1,176 @@
+DIGEST 1013a38a7d6ef04c151e01efcf48016e
+FQuantum.QuantumState
+R613:616 Coq.Lists.List <> <> lib
+R618:621 Coq.Bool.Bool <> <> lib
+R623:628 Coq.Strings.String <> <> lib
+R630:634 Coq.Reals.Reals <> <> lib
+R645:657 Coq.Lists.List ListNotations <> mod
+R699:723 DJ.Foundations.BitStrings <> <> lib
+R742:768 DJ.Oracles.BooleanFunctions <> <> lib
+R787:804 DJ.Oracles.Oracles <> <> lib
+def 1018:1035 <> MeasurementOutcome
+R1043:1051 DJ.Foundations.BitStrings <> BitString def
+ind 1264:1278 <> ExecutionStatus
+constr 1295:1301 <> Initial
+constr 1308:1320 <> AfterHadamard
+constr 1327:1337 <> AfterOracle
+constr 1344:1351 <> Finished
+scheme 1264:1278 <> ExecutionStatus_rect
+scheme 1264:1278 <> ExecutionStatus_ind
+scheme 1264:1278 <> ExecutionStatus_rec
+scheme 1264:1278 <> ExecutionStatus_sind
+def 1706:1714 <> Amplitude
+R1719:1719 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+def 1736:1749 <> AmplitudeState
+R1766:1769 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1757:1765 DJ.Foundations.BitStrings <> BitString def
+R1770:1778 Quantum.QuantumState <> Amplitude def
+def 2220:2240 <> InitialAmplitudeState
+R2259:2261 Coq.Init.Datatypes <> nat ind
+binder 2255:2255 <> n:3
+R2278:2291 Quantum.QuantumState <> AmplitudeState def
+binder 2301:2302 <> bs:4
+R2313:2325 DJ.Foundations.BitStrings <> bitstring_eqb def
+R2327:2328 Quantum.QuantumState <> bs:4 var
+R2331:2339 DJ.Foundations.BitStrings <> all_zeros def
+R2341:2341 Quantum.QuantumState <> n:3 var
+def 2383:2403 <> UniformAmplitudeState
+R2422:2424 Coq.Init.Datatypes <> nat ind
+binder 2418:2418 <> n:5
+R2441:2454 Quantum.QuantumState <> AmplitudeState def
+R2471:2473 Coq.Reals.Rdefinitions <> ::R_scope:'/'_x not
+R2498:2498 Coq.Reals.Rdefinitions <> ::R_scope:'/'_x not
+R2474:2477 Coq.Reals.R_sqrt <> sqrt def
+R2480:2482 Coq.Reals.Raxioms <> INR def
+R2485:2491 Coq.Arith.PeanoNat Nat pow def
+R2495:2495 Quantum.QuantumState <> n:5 var
+rec 2708:2719 <> QuantumState
+proj 2730:2736 <> qs_bits
+proj 2756:2768 <> qs_amplitudes
+proj 2800:2808 <> qs_target
+proj 2823:2831 <> qs_qubits
+proj 2845:2853 <> qs_oracle
+proj 2885:2898 <> qs_measurement
+proj 2934:2943 <> qs_history
+proj 2965:2973 <> qs_status
+proj 2999:3016 <> qs_symbolic_output
+R2740:2748 DJ.Foundations.BitStrings <> BitString def
+R2772:2777 Coq.Init.Datatypes <> option ind
+R2779:2792 Quantum.QuantumState <> AmplitudeState def
+R2812:2815 Coq.Init.Datatypes <> bool ind
+R2835:2837 Coq.Init.Datatypes <> nat ind
+R2857:2862 Coq.Init.Datatypes <> option ind
+R2864:2877 DJ.Oracles.Oracles <> OracleInstance rec
+R2902:2907 Coq.Init.Datatypes <> option ind
+R2909:2926 Quantum.QuantumState <> MeasurementOutcome def
+R2947:2950 Coq.Init.Datatypes <> list ind
+R2952:2957 Coq.Strings.String <> string ind
+R2977:2991 Quantum.QuantumState <> ExecutionStatus ind
+R3020:3025 Coq.Init.Datatypes <> option ind
+R3027:3035 DJ.Foundations.BitStrings <> BitString def
+def 3563:3574 <> InitialState
+R3593:3595 Coq.Init.Datatypes <> nat ind
+binder 3589:3589 <> n:16
+R3612:3623 Quantum.QuantumState <> QuantumState rec
+R3635:3641 Quantum.QuantumState <> qs_bits proj
+R3635:3641 Quantum.QuantumState <> qs_bits proj
+R3635:3641 Quantum.QuantumState <> qs_bits proj
+R3664:3676 Quantum.QuantumState <> qs_amplitudes proj
+R3664:3676 Quantum.QuantumState <> qs_amplitudes proj
+R3718:3726 Quantum.QuantumState <> qs_target proj
+R3718:3726 Quantum.QuantumState <> qs_target proj
+R3742:3750 Quantum.QuantumState <> qs_qubits proj
+R3742:3750 Quantum.QuantumState <> qs_qubits proj
+R3763:3771 Quantum.QuantumState <> qs_oracle proj
+R3763:3771 Quantum.QuantumState <> qs_oracle proj
+R3787:3800 Quantum.QuantumState <> qs_measurement proj
+R3787:3800 Quantum.QuantumState <> qs_measurement proj
+R3816:3825 Quantum.QuantumState <> qs_history proj
+R3816:3825 Quantum.QuantumState <> qs_history proj
+R3839:3847 Quantum.QuantumState <> qs_status proj
+R3839:3847 Quantum.QuantumState <> qs_status proj
+R3866:3883 Quantum.QuantumState <> qs_symbolic_output proj
+R3866:3883 Quantum.QuantumState <> qs_symbolic_output proj
+R3646:3654 DJ.Foundations.BitStrings <> all_zeros def
+R3656:3656 Quantum.QuantumState <> n:16 var
+R3681:3684 Coq.Init.Datatypes <> Some constr
+R3687:3707 Quantum.QuantumState <> InitialAmplitudeState def
+R3709:3709 Quantum.QuantumState <> n:16 var
+R3731:3734 Coq.Init.Datatypes <> true constr
+R3755:3755 Quantum.QuantumState <> n:16 var
+R3776:3779 Coq.Init.Datatypes <> None constr
+R3805:3808 Coq.Init.Datatypes <> None constr
+R3830:3831 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R3852:3858 Quantum.QuantumState <> Initial constr
+R3888:3891 Coq.Init.Datatypes <> None constr
+def 4107:4121 <> WellFormedState
+R4129:4140 Quantum.QuantumState <> QuantumState rec
+binder 4124:4125 <> ρ:17
+R4195:4206 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R4180:4182 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4156:4166 Coq.Lists.List <> length abbrev
+R4169:4175 Quantum.QuantumState <> qs_bits proj
+R4177:4178 Quantum.QuantumState <> ρ:17 var
+R4183:4191 Quantum.QuantumState <> qs_qubits proj
+R4193:4194 Quantum.QuantumState <> ρ:17 var
+R4213:4226 Quantum.QuantumState <> qs_measurement proj
+R4228:4229 Quantum.QuantumState <> ρ:17 var
+R4241:4244 Coq.Init.Datatypes <> Some constr
+R4281:4283 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4263:4273 Coq.Lists.List <> length abbrev
+R4284:4292 Quantum.QuantumState <> qs_qubits proj
+R4294:4295 Quantum.QuantumState <> ρ:17 var
+R4302:4305 Coq.Init.Datatypes <> None constr
+R4317:4320 Coq.Init.Logic <> True ind
+prf 4536:4554 <> InitialState_length
+binder 4568:4568 <> n:18
+R4612:4616 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4574:4584 Coq.Lists.List <> length abbrev
+R4587:4593 Quantum.QuantumState <> qs_bits proj
+R4596:4607 Quantum.QuantumState <> InitialState def
+R4609:4609 Quantum.QuantumState <> n:18 var
+R4617:4617 Quantum.QuantumState <> n:18 var
+R4661:4676 DJ.Foundations.BitStrings <> length_all_zeros thm
+R4661:4676 DJ.Foundations.BitStrings <> length_all_zeros thm
+def 4896:4902 <> StateEq
+R4925:4936 Quantum.QuantumState <> QuantumState rec
+binder 4917:4918 <> ρ:19
+binder 4920:4921 <> σ:20
+R4966:4968 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4964:4965 Quantum.QuantumState <> ρ:19 var
+R4969:4970 Quantum.QuantumState <> σ:20 var
+R5002:5008 Quantum.QuantumState <> StateEq def
+not 4985:4985 <> :::x_'≈'_x
+prf 5239:5250 <> StateEq_refl
+binder 5264:5265 <> ρ:21
+R5275:5279 Quantum.QuantumState <> :::x_'≈'_x not
+R5273:5274 Quantum.QuantumState <> ρ:21 var
+R5280:5281 Quantum.QuantumState <> ρ:21 var
+R5316:5322 Quantum.QuantumState <> StateEq def
+prf 5356:5366 <> StateEq_sym
+binder 5380:5381 <> ρ:22
+binder 5383:5384 <> σ:23
+R5401:5409 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5394:5398 Quantum.QuantumState <> :::x_'≈'_x not
+R5392:5393 Quantum.QuantumState <> ρ:22 var
+R5399:5400 Quantum.QuantumState <> σ:23 var
+R5412:5416 Quantum.QuantumState <> :::x_'≈'_x not
+R5410:5411 Quantum.QuantumState <> σ:23 var
+R5417:5418 Quantum.QuantumState <> ρ:22 var
+R5458:5464 Quantum.QuantumState <> StateEq def
+prf 5512:5524 <> StateEq_trans
+binder 5538:5539 <> ρ:24
+binder 5541:5542 <> σ:25
+binder 5544:5545 <> τ:26
+R5562:5570 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5555:5559 Quantum.QuantumState <> :::x_'≈'_x not
+R5553:5554 Quantum.QuantumState <> ρ:24 var
+R5560:5561 Quantum.QuantumState <> σ:25 var
+R5580:5588 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5573:5577 Quantum.QuantumState <> :::x_'≈'_x not
+R5571:5572 Quantum.QuantumState <> σ:25 var
+R5578:5579 Quantum.QuantumState <> τ:26 var
+R5591:5595 Quantum.QuantumState <> :::x_'≈'_x not
+R5589:5590 Quantum.QuantumState <> ρ:24 var
+R5596:5597 Quantum.QuantumState <> τ:26 var
+R5644:5650 Quantum.QuantumState <> StateEq def

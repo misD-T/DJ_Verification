@@ -1,0 +1,131 @@
+DIGEST 00c4dfefcc06fa1ecee45e9807f1c76c
+FFinal.LogicComparison
+R550:553 Coq.Lists.List <> <> lib
+R555:558 Coq.Bool.Bool <> <> lib
+R560:564 Coq.Arith.Arith <> <> lib
+R566:568 Coq.micromega.Lia <> <> lib
+R570:578 Coq.Logic.Classical <> <> lib
+R591:603 Coq.Lists.List ListNotations <> mod
+R626:645 Quantum.QuantumState <> <> lib
+R664:687 Quantum.QuantumOperators <> <> lib
+R708:718 Quantum.QDL <> <> lib
+R737:760 Quantum.HoaresHeisenberg <> <> lib
+R783:797 Final.Framework <> <> lib
+R816:842 Final.AlgorithmVerification <> <> lib
+def 1260:1279 <> EquivalentPredicates
+R1300:1308 Quantum.HoaresHeisenberg <> Predicate def
+binder 1294:1294 <> P:1
+binder 1296:1296 <> Q:2
+binder 1343:1344 <> ρ:3
+R1354:1358 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R1350:1350 Final.LogicComparison <> P:1 var
+R1352:1353 Final.LogicComparison <> ρ:3 var
+R1359:1359 Final.LogicComparison <> Q:2 var
+R1361:1362 Final.LogicComparison <> ρ:3 var
+prf 1378:1403 <> equivalent_predicates_refl
+binder 1417:1417 <> P:4
+R1423:1442 Final.LogicComparison <> EquivalentPredicates def
+R1444:1444 Final.LogicComparison <> P:4 var
+R1446:1446 Final.LogicComparison <> P:4 var
+prf 1516:1540 <> equivalent_predicates_sym
+binder 1554:1554 <> P:5
+binder 1556:1556 <> Q:6
+R1586:1595 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1562:1581 Final.LogicComparison <> EquivalentPredicates def
+R1583:1583 Final.LogicComparison <> P:5 var
+R1585:1585 Final.LogicComparison <> Q:6 var
+R1596:1615 Final.LogicComparison <> EquivalentPredicates def
+R1617:1617 Final.LogicComparison <> Q:6 var
+R1619:1619 Final.LogicComparison <> P:5 var
+prf 1704:1730 <> equivalent_predicates_trans
+binder 1744:1744 <> P:7
+binder 1746:1746 <> Q:8
+binder 1748:1748 <> R:9
+R1778:1787 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1754:1773 Final.LogicComparison <> EquivalentPredicates def
+R1775:1775 Final.LogicComparison <> P:7 var
+R1777:1777 Final.LogicComparison <> Q:8 var
+R1812:1821 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1788:1807 Final.LogicComparison <> EquivalentPredicates def
+R1809:1809 Final.LogicComparison <> Q:8 var
+R1811:1811 Final.LogicComparison <> R:9 var
+R1822:1841 Final.LogicComparison <> EquivalentPredicates def
+R1843:1843 Final.LogicComparison <> P:7 var
+R1845:1845 Final.LogicComparison <> R:9 var
+prf 2475:2509 <> HH_establishes_semantic_correctness
+binder 2523:2526 <> spec:10
+R2563:2572 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2532:2541 Quantum.HoaresHeisenberg <> HHVerified def
+R2544:2556 Final.AlgorithmVerification <> AlgorithmToHH def
+R2558:2561 Final.LogicComparison <> spec:10 var
+R2573:2588 Final.AlgorithmVerification <> AlgorithmCorrect def
+R2595:2608 Final.AlgorithmVerification <> AlgorithmInput proj
+R2610:2613 Final.LogicComparison <> spec:10 var
+R2621:2636 Final.AlgorithmVerification <> AlgorithmProgram proj
+R2638:2641 Final.LogicComparison <> spec:10 var
+R2649:2663 Final.AlgorithmVerification <> AlgorithmOutput proj
+R2665:2668 Final.LogicComparison <> spec:10 var
+R2713:2740 Final.AlgorithmVerification <> HH_implies_algorithm_correct thm
+R2713:2740 Final.AlgorithmVerification <> HH_implies_algorithm_correct thm
+prf 3177:3212 <> QDL_establishes_semantic_correctness
+binder 3226:3229 <> spec:11
+binder 3231:3233 <> pre:12
+binder 3235:3238 <> post:13
+R3286:3295 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3244:3254 Quantum.QDL <> QDLVerified def
+R3257:3270 Final.AlgorithmVerification <> AlgorithmToQDL def
+R3272:3275 Final.LogicComparison <> spec:11 var
+R3277:3279 Final.LogicComparison <> pre:12 var
+R3281:3284 Final.LogicComparison <> post:13 var
+R3296:3311 Final.AlgorithmVerification <> AlgorithmCorrect def
+R3318:3333 Final.AlgorithmVerification <> FormulaPredicate def
+R3335:3337 Final.LogicComparison <> pre:12 var
+R3345:3360 Final.AlgorithmVerification <> AlgorithmProgram proj
+R3362:3365 Final.LogicComparison <> spec:11 var
+R3373:3388 Final.AlgorithmVerification <> FormulaPredicate def
+R3390:3393 Final.LogicComparison <> post:13 var
+R3447:3475 Final.AlgorithmVerification <> QDL_implies_algorithm_correct thm
+R3447:3475 Final.AlgorithmVerification <> QDL_implies_algorithm_correct thm
+prf 4042:4063 <> HH_QDL_semantics_agree
+binder 4077:4080 <> spec:14
+binder 4082:4084 <> pre:15
+binder 4086:4089 <> post:16
+R4126:4135 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4095:4104 Quantum.HoaresHeisenberg <> HHVerified def
+R4107:4119 Final.AlgorithmVerification <> AlgorithmToHH def
+R4121:4124 Final.LogicComparison <> spec:14 var
+R4178:4187 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4136:4146 Quantum.QDL <> QDLVerified def
+R4149:4162 Final.AlgorithmVerification <> AlgorithmToQDL def
+R4164:4167 Final.LogicComparison <> spec:14 var
+R4169:4171 Final.LogicComparison <> pre:15 var
+R4173:4176 Final.LogicComparison <> post:16 var
+R4188:4194 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R4215:4219 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 4195:4203 <> HHMeaning:17
+binder 4205:4214 <> QDLMeaning:18
+R4305:4314 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R4220:4235 Final.AlgorithmVerification <> AlgorithmCorrect def
+R4241:4249 Final.LogicComparison <> HHMeaning:17 var
+R4256:4271 Final.AlgorithmVerification <> AlgorithmProgram proj
+R4273:4276 Final.LogicComparison <> spec:14 var
+R4284:4298 Final.AlgorithmVerification <> AlgorithmOutput proj
+R4300:4303 Final.LogicComparison <> spec:14 var
+R4315:4330 Final.AlgorithmVerification <> AlgorithmCorrect def
+R4336:4345 Final.LogicComparison <> QDLMeaning:18 var
+R4352:4367 Final.AlgorithmVerification <> AlgorithmProgram proj
+R4369:4372 Final.LogicComparison <> spec:14 var
+R4380:4395 Final.AlgorithmVerification <> FormulaPredicate def
+R4397:4400 Final.LogicComparison <> post:16 var
+R4468:4481 Final.AlgorithmVerification <> AlgorithmInput proj
+R4496:4511 Final.AlgorithmVerification <> FormulaPredicate def
+R4468:4481 Final.AlgorithmVerification <> AlgorithmInput proj
+R4496:4511 Final.AlgorithmVerification <> FormulaPredicate def
+R4553:4587 Final.LogicComparison <> HH_establishes_semantic_correctness thm
+R4553:4587 Final.LogicComparison <> HH_establishes_semantic_correctness thm
+R4630:4665 Final.LogicComparison <> QDL_establishes_semantic_correctness thm
+R4630:4665 Final.LogicComparison <> QDL_establishes_semantic_correctness thm
+rec 5103:5117 <> LogicComparison
+proj 5130:5142 <> HHProofExists
+proj 5155:5168 <> QDLProofExists
+proj 5181:5198 <> SharedSemanticGoal

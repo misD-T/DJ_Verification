@@ -1,0 +1,107 @@
+DIGEST 759180b5fdde015cc233151caf3ea2bd
+FGrover.GroverTrace
+R416:419 Coq.Lists.List <> <> lib
+R421:425 Coq.Arith.Arith <> <> lib
+R427:431 Coq.Reals.Reals <> <> lib
+R444:456 Coq.Lists.List ListNotations <> mod
+R477:501 DJ.Foundations.BitStrings <> <> lib
+R522:541 Quantum.QuantumState <> <> lib
+R560:583 Quantum.QuantumOperators <> <> lib
+R602:627 Quantum.AmplitudeSemantics <> <> lib
+R648:669 Grover.GroverOperators <> <> lib
+rec 879:894 <> GroverTraceEntry
+proj 907:920 <> TraceIteration
+proj 932:941 <> TraceState
+R924:926 Coq.Init.Datatypes <> nat ind
+R945:956 Quantum.QuantumState <> QuantumState rec
+def 1173:1183 <> GroverTrace
+R1200:1202 Coq.Init.Datatypes <> nat ind
+binder 1196:1196 <> k:4
+R1220:1234 Quantum.QuantumOperators <> QuantumOperator def
+binder 1216:1216 <> U:5
+R1253:1264 Quantum.QuantumState <> QuantumState rec
+binder 1248:1249 <> ρ:6
+R1279:1282 Coq.Init.Datatypes <> list ind
+R1284:1299 Grover.GroverTrace <> GroverTraceEntry rec
+R1313:1313 Grover.GroverTrace <> k:4 var
+R1335:1346 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1392:1401 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1347:1360 Grover.GroverTrace <> TraceIteration proj
+R1347:1360 Grover.GroverTrace <> TraceIteration proj
+R1347:1360 Grover.GroverTrace <> TraceIteration proj
+R1376:1385 Grover.GroverTrace <> TraceState proj
+R1376:1385 Grover.GroverTrace <> TraceState proj
+R1390:1391 Grover.GroverTrace <> ρ:6 var
+R1408:1408 Coq.Init.Datatypes <> S constr
+R1423:1432 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1482:1511 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1433:1446 Grover.GroverTrace <> TraceIteration proj
+R1433:1446 Grover.GroverTrace <> TraceIteration proj
+R1433:1446 Grover.GroverTrace <> TraceIteration proj
+R1464:1473 Grover.GroverTrace <> TraceState proj
+R1464:1473 Grover.GroverTrace <> TraceState proj
+R1451:1451 Coq.Init.Datatypes <> S constr
+R1478:1478 Grover.GroverTrace <> U:5 var
+R1480:1481 Grover.GroverTrace <> ρ:6 var
+R1512:1522 Grover.GroverTrace <> GroverTrace:7 def
+R1530:1530 Grover.GroverTrace <> U:5 var
+R1532:1533 Grover.GroverTrace <> ρ:6 var
+R1527:1527 Grover.GroverTrace <> U:5 var
+def 1755:1770 <> TraceProbability
+R1793:1808 Grover.GroverTrace <> GroverTraceEntry rec
+binder 1785:1789 <> entry:9
+R1829:1837 DJ.Foundations.BitStrings <> BitString def
+binder 1824:1825 <> bs:10
+R1854:1854 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R1868:1880 Quantum.QuantumState <> qs_amplitudes proj
+R1883:1892 Grover.GroverTrace <> TraceState proj
+R1894:1898 Grover.GroverTrace <> entry:9 var
+R1911:1914 Coq.Init.Datatypes <> None constr
+R1928:1931 Coq.Init.Datatypes <> Some constr
+R1946:1958 Quantum.AmplitudeSemantics <> ProbabilityOf def
+R1965:1966 Grover.GroverTrace <> bs:10 var
+def 2187:2197 <> TraceStates
+R2220:2223 Coq.Init.Datatypes <> list ind
+R2225:2240 Grover.GroverTrace <> GroverTraceEntry rec
+binder 2212:2216 <> trace:11
+R2257:2260 Coq.Init.Datatypes <> list ind
+R2262:2273 Quantum.QuantumState <> QuantumState rec
+R2281:2283 Coq.Lists.List <> map def
+R2296:2300 Grover.GroverTrace <> trace:11 var
+R2285:2294 Grover.GroverTrace <> TraceState proj
+def 2315:2329 <> FinalTraceState
+R2350:2353 Coq.Init.Datatypes <> list ind
+R2355:2370 Grover.GroverTrace <> GroverTraceEntry rec
+binder 2342:2346 <> trace:12
+R2385:2390 Coq.Init.Datatypes <> option ind
+R2392:2403 Quantum.QuantumState <> QuantumState rec
+R2417:2421 Grover.GroverTrace <> trace:12 var
+R2433:2434 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R2439:2442 Coq.Init.Datatypes <> None constr
+R2449:2449 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R2451:2451 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R2456:2459 Coq.Init.Datatypes <> Some constr
+R2462:2471 Grover.GroverTrace <> TraceState proj
+R2482:2485 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2492:2506 Grover.GroverTrace <> FinalTraceState:13 def
+def 2531:2546 <> StateAtIteration
+R2563:2565 Coq.Init.Datatypes <> nat ind
+binder 2559:2559 <> i:15
+R2587:2590 Coq.Init.Datatypes <> list ind
+R2592:2607 Grover.GroverTrace <> GroverTraceEntry rec
+binder 2579:2583 <> trace:16
+R2622:2627 Coq.Init.Datatypes <> option ind
+R2629:2640 Quantum.QuantumState <> QuantumState rec
+R2654:2658 Grover.GroverTrace <> trace:16 var
+R2670:2671 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R2676:2679 Coq.Init.Datatypes <> None constr
+R2687:2690 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2710:2716 Coq.Arith.PeanoNat Nat eqb def
+R2718:2718 Grover.GroverTrace <> i:15 var
+R2721:2734 Grover.GroverTrace <> TraceIteration proj
+R2753:2756 Coq.Init.Datatypes <> true constr
+R2770:2773 Coq.Init.Datatypes <> Some constr
+R2776:2785 Grover.GroverTrace <> TraceState proj
+R2799:2803 Coq.Init.Datatypes <> false constr
+R2817:2832 Grover.GroverTrace <> StateAtIteration:17 def
+R2834:2834 Grover.GroverTrace <> i:15 var

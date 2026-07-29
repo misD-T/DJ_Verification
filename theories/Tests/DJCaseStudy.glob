@@ -1,0 +1,143 @@
+DIGEST 31616be9de7ca9a269efea62ba62eeea
+FDJ.Tests.DJCaseStudy
+R552:555 Coq.Bool.Bool <> <> lib
+R557:560 Coq.Lists.List <> <> lib
+R562:566 Coq.Arith.Arith <> <> lib
+R568:570 Coq.micromega.Lia <> <> lib
+R572:580 Coq.Logic.Classical <> <> lib
+R582:587 Coq.Strings.String <> <> lib
+R600:612 Coq.Lists.List ListNotations <> mod
+R659:676 DJ.DeutschJozsa.DJ <> <> lib
+R695:718 DJ.DeutschJozsa.DJProofs <> <> lib
+R737:760 DJ.Verification.Balanced <> <> lib
+R779:806 DJ.Verification.OracleProofs <> <> lib
+R827:837 Quantum.QDL <> <> lib
+R856:879 Quantum.HoaresHeisenberg <> <> lib
+R900:917 DJ.Oracles.Oracles <> <> lib
+R936:953 DJ.Oracles.Promise <> <> lib
+R974:988 Final.Framework <> <> lib
+def 1202:1217 <> DeutschJozsaCase
+R1233:1253 Final.Framework <> VerifiedAlgorithmCase rec
+R1268:1280 Final.Framework <> AlgorithmName proj
+R1268:1280 Final.Framework <> AlgorithmName proj
+R1268:1280 Final.Framework <> AlgorithmName proj
+R1310:1329 Final.Framework <> VerificationProperty proj
+R1310:1329 Final.Framework <> VerificationProperty proj
+binder 1347:1347 <> n:1
+R1361:1370 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1357:1359 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R1356:1356 DJ.Tests.DJCaseStudy <> n:1 var
+R1371:1380 DJ.DeutschJozsa.DJ <> DJVerified def
+R1382:1382 DJ.Tests.DJCaseStudy <> n:1 var
+R1384:1396 DJ.Oracles.Oracles <> oracle_parity def
+prf 1869:1898 <> DJ_case_constant_zero_verified
+binder 1912:1912 <> n:2
+R1918:1927 DJ.DeutschJozsa.DJ <> DJVerified def
+R1929:1929 DJ.Tests.DJCaseStudy <> n:2 var
+R1931:1943 DJ.Oracles.Oracles <> constant_zero def
+R1981:2002 DJ.DeutschJozsa.DJProofs <> constant_zero_verified thm
+R1981:2002 DJ.DeutschJozsa.DJProofs <> constant_zero_verified thm
+prf 2376:2398 <> DJ_case_parity_verified
+binder 2412:2412 <> n:3
+R2423:2429 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2419:2421 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R2418:2418 DJ.Tests.DJCaseStudy <> n:3 var
+R2430:2439 DJ.DeutschJozsa.DJ <> DJVerified def
+R2441:2441 DJ.Tests.DJCaseStudy <> n:3 var
+R2443:2455 DJ.Oracles.Oracles <> oracle_parity def
+R2497:2511 DJ.DeutschJozsa.DJProofs <> parity_verified thm
+R2497:2511 DJ.DeutschJozsa.DJProofs <> parity_verified thm
+prf 2745:2770 <> DJ_case_first_bit_verified
+binder 2784:2784 <> n:4
+R2795:2801 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2791:2793 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R2790:2790 DJ.Tests.DJCaseStudy <> n:4 var
+R2802:2811 DJ.DeutschJozsa.DJ <> DJVerified def
+R2813:2813 DJ.Tests.DJCaseStudy <> n:4 var
+R2815:2830 DJ.Oracles.Oracles <> oracle_first_bit def
+R2872:2889 DJ.DeutschJozsa.DJProofs <> first_bit_verified thm
+R2872:2889 DJ.DeutschJozsa.DJProofs <> first_bit_verified thm
+prf 3127:3154 <> DJ_case_full_parity_verified
+binder 3168:3168 <> n:5
+R3179:3185 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3175:3177 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R3174:3174 DJ.Tests.DJCaseStudy <> n:5 var
+R3186:3195 DJ.DeutschJozsa.DJ <> DJVerified def
+R3197:3197 DJ.Tests.DJCaseStudy <> n:5 var
+R3199:3216 DJ.Oracles.Oracles <> oracle_full_parity def
+R3258:3277 DJ.DeutschJozsa.DJProofs <> full_parity_verified thm
+R3258:3277 DJ.DeutschJozsa.DJProofs <> full_parity_verified thm
+prf 3516:3538 <> DJ_case_affine_verified
+binder 3552:3552 <> n:6
+R3563:3569 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3559:3561 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R3558:3558 DJ.Tests.DJCaseStudy <> n:6 var
+R3570:3579 DJ.DeutschJozsa.DJ <> DJVerified def
+R3581:3581 DJ.Tests.DJCaseStudy <> n:6 var
+R3583:3595 DJ.Oracles.Oracles <> oracle_affine def
+R3637:3651 DJ.DeutschJozsa.DJProofs <> affine_verified thm
+R3637:3651 DJ.DeutschJozsa.DJProofs <> affine_verified thm
+prf 4198:4216 <> DJ_case_HH_balanced
+binder 4230:4230 <> n:7
+R4241:4247 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4237:4239 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R4236:4236 DJ.Tests.DJCaseStudy <> n:7 var
+R4248:4257 Quantum.HoaresHeisenberg <> HHVerified def
+R4260:4275 DJ.DeutschJozsa.DJProofs <> DJBalancedHHSpec def
+R4277:4277 DJ.Tests.DJCaseStudy <> n:7 var
+R4320:4342 DJ.DeutschJozsa.DJProofs <> DJ_balanced_HH_verified thm
+R4320:4342 DJ.DeutschJozsa.DJProofs <> DJ_balanced_HH_verified thm
+prf 4671:4690 <> DJ_case_QDL_balanced
+binder 4704:4704 <> n:8
+R4715:4721 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4711:4713 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R4710:4710 DJ.Tests.DJCaseStudy <> n:8 var
+R4722:4726 Quantum.QDL <> Valid def
+R4729:4745 DJ.DeutschJozsa.DJProofs <> DJBalancedFormula def
+R4747:4747 DJ.Tests.DJCaseStudy <> n:8 var
+R4790:4813 DJ.DeutschJozsa.DJProofs <> DJ_balanced_QDL_verified thm
+R4790:4813 DJ.DeutschJozsa.DJProofs <> DJ_balanced_QDL_verified thm
+prf 5349:5372 <> DJ_case_HH_and_QDL_agree
+binder 5386:5386 <> n:9
+R5397:5403 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5393:5395 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R5392:5392 DJ.Tests.DJCaseStudy <> n:9 var
+R5435:5444 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R5404:5413 Quantum.HoaresHeisenberg <> HHVerified def
+R5416:5431 DJ.DeutschJozsa.DJProofs <> DJBalancedHHSpec def
+R5433:5433 DJ.Tests.DJCaseStudy <> n:9 var
+R5445:5449 Quantum.QDL <> Valid def
+R5452:5468 DJ.DeutschJozsa.DJProofs <> DJBalancedFormula def
+R5470:5470 DJ.Tests.DJCaseStudy <> n:9 var
+R5534:5556 DJ.DeutschJozsa.DJProofs <> DJ_balanced_HH_verified thm
+R5534:5556 DJ.DeutschJozsa.DJProofs <> DJ_balanced_HH_verified thm
+R5579:5602 DJ.DeutschJozsa.DJProofs <> DJ_balanced_QDL_verified thm
+R5579:5602 DJ.DeutschJozsa.DJProofs <> DJ_balanced_QDL_verified thm
+prf 6045:6063 <> DJ_case_study_suite
+binder 6077:6077 <> n:10
+R6088:6094 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R6084:6086 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R6083:6083 DJ.Tests.DJCaseStudy <> n:10 var
+R6121:6128 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R6095:6104 DJ.DeutschJozsa.DJ <> DJVerified def
+R6106:6106 DJ.Tests.DJCaseStudy <> n:10 var
+R6108:6120 DJ.Oracles.Oracles <> oracle_parity def
+R6158:6165 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R6129:6138 DJ.DeutschJozsa.DJ <> DJVerified def
+R6140:6140 DJ.Tests.DJCaseStudy <> n:10 var
+R6142:6157 DJ.Oracles.Oracles <> oracle_first_bit def
+R6197:6204 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R6166:6175 DJ.DeutschJozsa.DJ <> DJVerified def
+R6177:6177 DJ.Tests.DJCaseStudy <> n:10 var
+R6179:6196 DJ.Oracles.Oracles <> oracle_full_parity def
+R6205:6214 DJ.DeutschJozsa.DJ <> DJVerified def
+R6216:6216 DJ.Tests.DJCaseStudy <> n:10 var
+R6218:6230 DJ.Oracles.Oracles <> oracle_affine def
+R6293:6307 DJ.DeutschJozsa.DJProofs <> parity_verified thm
+R6293:6307 DJ.DeutschJozsa.DJProofs <> parity_verified thm
+R6374:6391 DJ.DeutschJozsa.DJProofs <> first_bit_verified thm
+R6374:6391 DJ.DeutschJozsa.DJProofs <> first_bit_verified thm
+R6468:6487 DJ.DeutschJozsa.DJProofs <> full_parity_verified thm
+R6468:6487 DJ.DeutschJozsa.DJProofs <> full_parity_verified thm
+R6541:6555 DJ.DeutschJozsa.DJProofs <> affine_verified thm
+R6541:6555 DJ.DeutschJozsa.DJProofs <> affine_verified thm

@@ -57,7 +57,7 @@ Some f.
 (* Grover Semantic Preservation                              *)
 (*************************************************************)
 
-Theorem grover_semantics :
+Theorem grover_semantics_preservation :
 
 forall n f,
 
@@ -82,5 +82,27 @@ Proof.
   - lia.
 
   - apply RepeatOperator_records_oracle.
+
+Qed.
+
+(*************************************************************)
+(* Oracle Generality                                         *)
+(*************************************************************)
+
+Theorem grover_oracle_family_independence :
+
+forall n f,
+
+n > 0 ->
+
+GroverCorrect n f.
+
+Proof.
+
+  intros n f Hn.
+
+  apply grover_semantics_preservation.
+
+  exact Hn.
 
 Qed.

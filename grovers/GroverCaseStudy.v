@@ -38,12 +38,12 @@ Definition GroverSearchCase
 
  VerificationProperty :=
 
-   forall n,
+   forall n (f : OracleInstance),
 
    n > 0 ->
 
    HHVerified
-      (GroverHHSpec n oracle_grover)
+      (GroverHHSpec n f)
 
 |}.
 
@@ -61,7 +61,11 @@ HHVerified (GroverHHSpec n f).
 
 Proof.
 
+  intros n f Hn.
+
   apply Grover_HH_verified.
+
+  exact Hn.
 
 Qed.
 
@@ -79,7 +83,11 @@ Valid (GroverFormula n f).
 
 Proof.
 
+  intros n f Hn.
+
   apply Grover_QDL_verified.
+
+  exact Hn.
 
 Qed.
 
@@ -129,7 +137,7 @@ Proof.
 
   simpl.
 
-  intros n Hn.
+  intros n f Hn.
 
   apply Grover_HH_verified.
 

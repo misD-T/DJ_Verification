@@ -113,13 +113,16 @@ def HadamardOperator(
 
 def OracleOperator(
     state: QuantumState,
-    oracle_name: str,
-    oracle_function
+    oracle
 ) -> QuantumState:
     """
     Apply semantic oracle transition.
 
     Corresponds to Rocq:
+
+        Definition OracleOperator
+                   (f : OracleInstance)
+                   : QuantumOperator :=
 
         qs_target :=
             xorb
@@ -129,42 +132,55 @@ def OracleOperator(
 
         qs_oracle := Some f;
 
-        qs_history := "Oracle" :: qs_history ρ;
-
-    Parameters
-    ----------
-    state:
-        Current semantic quantum state.
-
-    oracle_name:
-        Identifier of the oracle instance.
-
-    oracle_function:
-        Algorithm-specific oracle behaviour.
-
-        This is supplied by the algorithm module
-        (Deutsch-Jozsa, Grover, etc.).
+        qs_history :=
+            "Oracle" :: qs_history ρ;
     """
 
 
-    oracle_result = oracle_function(
+    # Evaluate oracle function
+    #
+    # Corresponds to:
+    #
+    # (oracle_function f) (qs_bits ρ)
+    #
+
+    oracle_result = oracle.evaluate(
         state.bits
     )
 
 
     # XOR behaviour from Rocq xorb
+    #
+    # Boolean XOR in Python
+    #
+
     state.target = (
         state.target != oracle_result
     )
 
 
-    state.oracle = oracle_name
+    # Store oracle instance
+    #
+    # Corresponds to:
+    #
+    # qs_oracle := Some f
+    #
 
+    state.oracle = oracle.kind.value
+
+
+    # Semantic trace update
+    #
 
     state.add_history(
         "Oracle"
     )
 
+
+    # State transition
+    #
+    # Initial -> H -> Oracle
+    #
 
     if state.status == ExecutionStatus.AFTER_HADAMARD:
 

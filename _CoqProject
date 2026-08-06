@@ -31,6 +31,9 @@ grovers/GroverOperators.v
 grovers/GroverOracles.v
 grovers/GroverProofs.v
 grovers/GroverExperiments.v
+grovers/GroverProbabilityExperiments.v
+grovers/GroverProbabilityResults.v
+grovers/GroverProbabilitySoundness.v
 grovers/GroverExperimentResults.v
 grovers/GroverConvergenceExperiment.v
 grovers/GroverCaseStudy.v

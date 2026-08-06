@@ -4,18 +4,32 @@ QuantumState semantic representation.
 This module provides the Python representation of the abstract
 quantum state used by the Rocq verification framework.
 
-The class is intentionally independent from any quantum backend
-(PennyLane, Qiskit, etc.). It represents the semantic state that
-is transformed by quantum operators.
+The class mirrors the Rocq definition:
+
+Record QuantumState :=
+{
+    qs_bits;
+    qs_amplitudes;
+    qs_target;
+    qs_qubits;
+    qs_oracle;
+    qs_measurement;
+    qs_history;
+    qs_status;
+    qs_symbolic_output
+}.
+
+The object represents semantic evolution, not physical quantum
+simulation. Quantum backends such as PennyLane execute circuits,
+while QuantumState records the corresponding semantic transitions.
 """
 
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 import numpy as np
 
 from .execution_status import ExecutionStatus
-from .trace import SemanticTrace
 
 
 
@@ -24,34 +38,14 @@ from .trace import SemanticTrace
 #
 # Corresponds to Rocq:
 #
-# Record QuantumState :=
-# {
-#    qs_bits;
-#    qs_amplitudes;
-#    qs_target;
-#    qs_qubits;
-#    qs_oracle;
-#    qs_measurement;
-#    qs_history;
-#    qs_status;
-#    qs_symbolic_output
-# }
+# Record QuantumState := ...
 #
 # -------------------------------------------------
 
 @dataclass
 class QuantumState:
     """
-    Semantic representation of a quantum program state.
-
-    This object does not simulate quantum evolution itself.
-
-    Instead, it records the abstract semantic state and
-    execution trace produced by quantum operators.
-
-    Quantum backends such as PennyLane provide physical
-    execution, while QuantumState records the corresponding
-    semantic evolution.
+    Semantic representation of a quantum computation state.
     """
 
 
@@ -59,19 +53,19 @@ class QuantumState:
     bits: str
 
 
-    # Optional probability/amplitude representation
+    # Optional amplitude/probability representation
     amplitudes: np.ndarray | None
 
 
-    # Whether this state contains a target/marked condition
+    # Target/marked condition
     target: bool
 
 
-    # Number of qubits in the system
+    # Number of qubits
     qubits: int
 
 
-    # Oracle identifier used during execution
+    # Oracle identifier
     oracle: str | None
 
 
@@ -79,56 +73,76 @@ class QuantumState:
     measurement: str | None
 
 
-    # Semantic execution trace
+    # Semantic execution history
     #
-    # Corresponds to Rocq:
+    # Corresponds directly to Rocq:
     #
     # qs_history : list string
     #
-    trace: SemanticTrace
+    history: list[str] = field(
+        default_factory=list
+    )
 
 
-    # Current execution stage
-    status: ExecutionStatus = ExecutionStatus.INITIAL
+    # Current semantic execution status
+    status: ExecutionStatus = (
+        ExecutionStatus.INITIAL
+    )
 
 
-    # Symbolic result produced by the semantic model
+    # Symbolic result
     symbolic_output: str | None = None
 
 
 
     # -------------------------------------------------
-    # Utility methods
+    # History Management
     # -------------------------------------------------
 
-    def add_history(self, operation: str):
+    def add_history(
+        self,
+        operation: str
+    ):
         """
-        Append an operation to the semantic execution trace.
+        Append semantic operation to execution history.
 
         Corresponds to Rocq:
 
             qs_history := operation :: qs_history
-
-        The Python trace stores operations chronologically
-        for easier experimental analysis.
         """
 
-        self.trace.add(operation)
+        self.history.append(
+            operation
+        )
 
 
 
-    def update_status(self, status: ExecutionStatus):
+    # -------------------------------------------------
+    # Status Management
+    # -------------------------------------------------
+
+    def update_status(
+        self,
+        status: ExecutionStatus
+    ):
         """
-        Update semantic execution status.
+        Update semantic execution state.
         """
 
         self.status = status
 
 
 
-    def set_measurement(self, result: str):
+    # -------------------------------------------------
+    # Measurement
+    # -------------------------------------------------
+
+    def set_measurement(
+        self,
+        result: str
+    ):
         """
-        Store measurement outcome.
+        Store measurement result.
         """
 
         self.measurement = result
@@ -137,32 +151,45 @@ class QuantumState:
 
 
 
+    # -------------------------------------------------
+    # Summary
+    # -------------------------------------------------
+
     def summary(self):
         """
-        Return a readable semantic execution summary.
+        Return semantic execution summary.
         """
 
         return {
 
-            "bits": self.bits,
+            "bits":
+                self.bits,
 
-            "qubits": self.qubits,
+            "qubits":
+                self.qubits,
 
-            "oracle": self.oracle,
+            "oracle":
+                self.oracle,
 
-            "measurement": self.measurement,
+            "measurement":
+                self.measurement,
 
-            "trace": self.trace.to_list(),
+            "history":
+                self.history,
 
-            "status": self.status.value,
+            "status":
+                self.status.value,
 
-            "symbolic_output": self.symbolic_output
+            "symbolic_output":
+                self.symbolic_output
         }
 
 
 
+
+
 # -------------------------------------------------
-# Initial State
+# InitialState
 #
 # Corresponds to Rocq:
 #
@@ -181,13 +208,6 @@ def InitialState(
     """
 
 
-    trace = SemanticTrace()
-
-    trace.add(
-        "InitialState"
-    )
-
-
     return QuantumState(
 
         bits="0" * qubits,
@@ -202,7 +222,9 @@ def InitialState(
 
         measurement=None,
 
-        trace=trace,
+        history=[
+            "InitialState"
+        ],
 
         status=ExecutionStatus.INITIAL,
 

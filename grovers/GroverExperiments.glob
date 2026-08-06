@@ -1,60 +1,85 @@
-DIGEST ad550a1dde91958dc10bd8b531819b19
+DIGEST e0fa7980fd20ea98b21f3dc6ce407d72
 FGrover.GroverExperiments
 R351:354 Coq.Lists.List <> <> lib
 R356:359 Coq.Bool.Bool <> <> lib
 R361:365 Coq.Arith.Arith <> <> lib
 R367:371 Coq.Reals.Reals <> <> lib
-R384:396 Coq.Lists.List ListNotations <> mod
-R417:441 DJ.Foundations.BitStrings <> <> lib
-R460:477 DJ.Oracles.Oracles <> <> lib
-R498:517 Quantum.QuantumState <> <> lib
-R536:559 Quantum.QuantumOperators <> <> lib
-R578:603 Quantum.AmplitudeSemantics <> <> lib
-R624:645 Grover.GroverOperators <> <> lib
-R664:681 Grover.GroverTrace <> <> lib
-def 1094:1111 <> ExampleGroverTrace
-R1130:1132 Coq.Init.Datatypes <> nat ind
-binder 1126:1126 <> n:1
-R1152:1165 DJ.Oracles.Oracles <> OracleInstance rec
-binder 1148:1148 <> f:2
-R1182:1185 Coq.Init.Datatypes <> list ind
-R1187:1202 Grover.GroverTrace <> GroverTraceEntry rec
-R1210:1220 Grover.GroverTrace <> GroverTrace def
-R1229:1244 Grover.GroverOperators <> GroverIterations def
-R1246:1246 Grover.GroverExperiments <> n:1 var
-R1256:1270 Grover.GroverOperators <> GroverIteration def
-R1272:1272 Grover.GroverExperiments <> f:2 var
-R1282:1293 Quantum.QuantumState <> InitialState def
-R1295:1295 Grover.GroverExperiments <> n:1 var
-def 1510:1531 <> ProbabilityAtIteration
-R1550:1552 Coq.Init.Datatypes <> nat ind
-binder 1546:1546 <> n:3
-R1572:1585 DJ.Oracles.Oracles <> OracleInstance rec
-binder 1568:1568 <> f:4
-R1605:1607 Coq.Init.Datatypes <> nat ind
-binder 1601:1601 <> i:5
-R1628:1636 DJ.Foundations.BitStrings <> BitString def
-binder 1623:1624 <> bs:6
-R1653:1653 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
-R1667:1682 Grover.GroverTrace <> StateAtIteration def
-R1693:1693 Grover.GroverExperiments <> i:5 var
-R1705:1722 Grover.GroverExperiments <> ExampleGroverTrace def
-R1724:1724 Grover.GroverExperiments <> n:3 var
-R1726:1726 Grover.GroverExperiments <> f:4 var
-R1740:1743 Coq.Init.Datatypes <> None constr
-R1757:1760 Coq.Init.Datatypes <> Some constr
-R1781:1793 Quantum.QuantumState <> qs_amplitudes proj
-R1812:1815 Coq.Init.Datatypes <> None constr
-R1833:1836 Coq.Init.Datatypes <> Some constr
-R1855:1867 Quantum.AmplitudeSemantics <> ProbabilityOf def
-R1874:1875 Grover.GroverExperiments <> bs:6 var
-def 2107:2114 <> IsMarked
-R2133:2146 DJ.Oracles.Oracles <> OracleInstance rec
-binder 2129:2129 <> f:7
-R2167:2175 DJ.Foundations.BitStrings <> BitString def
-binder 2162:2163 <> bs:8
-R2223:2225 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2203:2217 DJ.Oracles.Oracles <> oracle_function proj
-R2219:2219 Grover.GroverExperiments <> f:7 var
-R2221:2222 Grover.GroverExperiments <> bs:8 var
-R2226:2229 Coq.Init.Datatypes <> true constr
+R373:375 Coq.micromega.Lia <> <> lib
+R388:400 Coq.Lists.List ListNotations <> mod
+R421:445 DJ.Foundations.BitStrings <> <> lib
+R464:481 DJ.Oracles.Oracles <> <> lib
+R502:521 Quantum.QuantumState <> <> lib
+R540:563 Quantum.QuantumOperators <> <> lib
+R582:607 Quantum.AmplitudeSemantics <> <> lib
+R628:649 Grover.GroverOperators <> <> lib
+R668:685 Grover.GroverTrace <> <> lib
+def 903:920 <> ExampleGroverTrace
+R939:941 Coq.Init.Datatypes <> nat ind
+binder 935:935 <> n:1
+R961:974 DJ.Oracles.Oracles <> OracleInstance rec
+binder 957:957 <> f:2
+R991:994 Coq.Init.Datatypes <> list ind
+R996:1011 Grover.GroverTrace <> GroverTraceEntry rec
+R1019:1029 Grover.GroverTrace <> GroverTrace def
+R1038:1053 Grover.GroverOperators <> GroverIterations def
+R1055:1055 Grover.GroverExperiments <> n:1 var
+R1065:1079 Grover.GroverOperators <> GroverIteration def
+R1081:1081 Grover.GroverExperiments <> f:2 var
+R1091:1098 Quantum.QuantumOperators <> Hadamard def
+R1101:1112 Quantum.QuantumState <> InitialState def
+R1114:1114 Grover.GroverExperiments <> n:1 var
+def 1336:1357 <> ProbabilityAtIteration
+R1376:1378 Coq.Init.Datatypes <> nat ind
+binder 1372:1372 <> n:3
+R1398:1411 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1394:1394 <> f:4
+R1431:1433 Coq.Init.Datatypes <> nat ind
+binder 1427:1427 <> i:5
+R1454:1462 DJ.Foundations.BitStrings <> BitString def
+binder 1449:1450 <> bs:6
+R1479:1479 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R1493:1508 Grover.GroverTrace <> StateAtIteration def
+R1519:1519 Grover.GroverExperiments <> i:5 var
+R1531:1548 Grover.GroverExperiments <> ExampleGroverTrace def
+R1550:1550 Grover.GroverExperiments <> n:3 var
+R1552:1552 Grover.GroverExperiments <> f:4 var
+R1566:1569 Coq.Init.Datatypes <> None constr
+R1588:1591 Coq.Init.Datatypes <> Some constr
+R1612:1624 Quantum.QuantumState <> qs_amplitudes proj
+R1643:1646 Coq.Init.Datatypes <> None constr
+R1673:1676 Coq.Init.Datatypes <> Some constr
+R1695:1707 Quantum.AmplitudeSemantics <> ProbabilityOf def
+R1714:1715 Grover.GroverExperiments <> bs:6 var
+def 1953:1960 <> IsMarked
+R1979:1992 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1975:1975 <> f:7
+R2013:2021 DJ.Foundations.BitStrings <> BitString def
+binder 2008:2009 <> bs:8
+R2069:2071 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2049:2063 DJ.Oracles.Oracles <> oracle_function proj
+R2065:2065 Grover.GroverExperiments <> f:7 var
+R2067:2068 Grover.GroverExperiments <> bs:8 var
+R2072:2075 Coq.Init.Datatypes <> true constr
+def 2295:2306 <> MarkedStates
+R2325:2338 DJ.Oracles.Oracles <> OracleInstance rec
+binder 2321:2321 <> f:9
+R2363:2366 Coq.Init.Datatypes <> list ind
+R2368:2376 DJ.Foundations.BitStrings <> BitString def
+binder 2354:2359 <> states:10
+R2393:2396 Coq.Init.Datatypes <> list ind
+R2398:2406 DJ.Foundations.BitStrings <> BitString def
+R2414:2419 Coq.Lists.List <> filter def
+R2449:2454 Grover.GroverExperiments <> states:10 var
+R2426:2440 DJ.Oracles.Oracles <> oracle_function proj
+R2442:2442 Grover.GroverExperiments <> f:9 var
+def 2475:2485 <> CountMarked
+R2504:2517 DJ.Oracles.Oracles <> OracleInstance rec
+binder 2500:2500 <> f:11
+R2542:2545 Coq.Init.Datatypes <> list ind
+R2547:2555 DJ.Foundations.BitStrings <> BitString def
+binder 2533:2538 <> states:12
+R2572:2574 Coq.Init.Datatypes <> nat ind
+R2582:2587 Coq.Init.Datatypes <> length def
+R2594:2605 Grover.GroverExperiments <> MarkedStates def
+R2607:2607 Grover.GroverExperiments <> f:11 var
+R2609:2614 Grover.GroverExperiments <> states:12 var

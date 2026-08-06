@@ -2,6 +2,10 @@
 (* GroverOperators.v                                         *)
 (*                                                           *)
 (* Semantic Operators for Grover Search                      *)
+(*                                                           *)
+(* Defines the semantic operators used by the Grover model.  *)
+(* Numerical amplitude experiments are handled externally    *)
+(* in the Python simulator.                                  *)
 (*************************************************************)
 
 From Coq Require Import List Bool String Lia.
@@ -73,7 +77,8 @@ fun ρ =>
 
   qs_measurement := qs_measurement ρ;
 
-  qs_history := qs_history ρ;
+  qs_history :=
+      "Oracle" :: qs_history ρ;
 
   qs_status := qs_status ρ;
 
@@ -123,7 +128,7 @@ fun ρ =>
 
 
 (*************************************************************)
-(* Single Grover Iteration                                   *)
+(* General Grover Iteration                                  *)
 (*************************************************************)
 
 Definition GroverIteration
@@ -131,8 +136,8 @@ Definition GroverIteration
          : QuantumOperator :=
 
 Compose
-   (OraclePhase f)
-   Diffusion.
+   Diffusion
+   (OraclePhase f).
 
 
 
@@ -160,8 +165,18 @@ end.
 
 
 (*************************************************************)
-(* Grover Iterations                                         *)
+(* Grover Iteration Count                                    *)
 (*************************************************************)
+
+(*
+   The experimental simulator computes:
+
+        floor(pi/4 * sqrt(2^n))
+
+   for the optimal iteration count.
+
+   The Rocq model abstracts this as a repetition parameter.
+*)
 
 Definition GroverIterations
        (n:nat)
@@ -174,16 +189,93 @@ n.
 (* Complete Grover Operator                                  *)
 (*************************************************************)
 
+(*
+   Grover execution:
+
+        Initial State
+             |
+             H
+             |
+          Grover^k
+             |
+        Measurement
+
+   Since Compose A B means A(B(x)),
+   the order below applies Hadamard first.
+*)
+
 Definition GroverOperator
          (n : nat)
          (f : OracleInstance)
          : QuantumOperator :=
 
 Compose
-   Hadamard
    (RepeatOperator
       (GroverIterations n)
-      (GroverIteration f)).
+      (GroverIteration f))
+   Hadamard.
+
+
+
+(*************************************************************)
+(* Oracle Tracking                                           *)
+(*************************************************************)
+
+Lemma OraclePhase_supports_all_oracles :
+
+forall f ρ,
+
+qs_oracle (OraclePhase f ρ)
+=
+Some f.
+
+Proof.
+
+  intros.
+
+  reflexivity.
+
+Qed.
+
+
+
+Lemma OraclePhase_records_oracle :
+
+forall f ρ,
+
+qs_oracle (OraclePhase f ρ)
+=
+Some f.
+
+Proof.
+
+  reflexivity.
+
+Qed.
+
+
+
+Lemma GroverIteration_records_oracle :
+
+forall f ρ,
+
+qs_oracle (GroverIteration f ρ)
+=
+Some f.
+
+Proof.
+
+  intros f ρ.
+
+  unfold GroverIteration.
+
+  unfold Compose.
+
+  simpl.
+
+  reflexivity.
+
+Qed.
 
 
 
@@ -319,9 +411,11 @@ Proof.
   unfold Compose.
 
   change
-  (qs_qubits (Diffusion (OraclePhase f ρ))
+  (
+   qs_qubits (Diffusion (OraclePhase f ρ))
    =
-   qs_qubits ρ).
+   qs_qubits ρ
+  ).
 
   rewrite Diffusion_preserves_qubits.
 
@@ -331,48 +425,42 @@ Qed.
 
 
 
-(*************************************************************)
-(* Oracle Tracking                                           *)
-(*************************************************************)
+Lemma GroverOperator_preserves_qubits :
 
+forall n f ρ,
 
-Lemma OraclePhase_records_oracle :
-
-forall f ρ,
-
-qs_oracle (OraclePhase f ρ)
+qs_qubits (GroverOperator n f ρ)
 =
-Some f.
+qs_qubits ρ.
 
 Proof.
 
-  reflexivity.
+  intros n f ρ.
 
-Qed.
-
-
-
-Lemma GroverIteration_records_oracle :
-
-forall f ρ,
-
-qs_oracle (GroverIteration f ρ)
-=
-Some f.
-
-Proof.
-
-  intros f ρ.
-
-  unfold GroverIteration.
+  unfold GroverOperator.
 
   unfold Compose.
 
   simpl.
 
-  reflexivity.
+  rewrite
+  (
+    RepeatOperator_preserves_qubits
+      (GroverIterations n)
+      (GroverIteration f)
+      (GroverIteration_preserves_qubits f)
+  ).
+
+  apply Hadamard_preserves_qubits.
 
 Qed.
+
+
+
+(*************************************************************)
+(* Repeat Operator Oracle Preservation                       *)
+(*************************************************************)
+
 
 Lemma RepeatOperator_records_oracle :
 
@@ -395,39 +483,10 @@ Proof.
 
   simpl.
 
-  apply (GroverIteration_records_oracle f
-        (RepeatOperator k (GroverIteration f) ρ)).
-
-Qed.
-
-(*************************************************************)
-(* Complete Grover Properties                                *)
-(*************************************************************)
-
-
-Lemma GroverOperator_preserves_qubits :
-
-forall n f ρ,
-
-qs_qubits (GroverOperator n f ρ)
-=
-qs_qubits ρ.
-
-Proof.
-
-  intros n f ρ.
-
-  unfold GroverOperator.
-
-  unfold Compose.
-
-  simpl.
-
-  rewrite (RepeatOperator_preserves_qubits
-             (GroverIterations n)
-             (GroverIteration f)
-             (Hadamard_preserves_qubits)).
-
-  reflexivity.
+  apply
+  (
+    GroverIteration_records_oracle f
+      (RepeatOperator k (GroverIteration f) ρ)
+  ).
 
 Qed.

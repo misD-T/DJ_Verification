@@ -100,6 +100,17 @@ match states with
 end.
 
 (*************************************************************)
+(* Extract Marked State                                      *)
+(*************************************************************)
+
+Definition GroverMarkedState
+           (n : nat)
+           (f : OracleInstance)
+           : option BitString :=
+
+FindMarkedState f (BasisStates n).
+
+(*************************************************************)
 (* Complete Grover Result                                    *)
 (*************************************************************)
 
@@ -108,7 +119,7 @@ Definition RunGroverExperiment
            (f : OracleInstance)
            : list GroverDataPoint :=
 
-match FindMarkedState f (BasisStates n) with
+match GroverMarkedState n f with
 
 | None => []
 
@@ -151,6 +162,41 @@ Proof.
     rewrite IHtrace.
 
     reflexivity.
+
+Qed.
+
+Lemma TraceToData_state :
+
+forall n trace bs d,
+
+In d (TraceToData n trace bs)
+
+->
+
+DataState d = bs.
+
+Proof.
+
+  intros n trace bs d H.
+
+  induction trace as [|entry rest IH].
+
+  - simpl in H.
+    contradiction.
+
+
+  - simpl in H.
+
+    destruct H as [H | H].
+
+    + subst d.
+
+      reflexivity.
+
+
+    + apply IH.
+
+      exact H.
 
 Qed.
 
@@ -198,5 +244,96 @@ Proof.
 
     + apply IH.
       exact H.
+
+Qed.
+
+Lemma GroverMarkedState_correct :
+
+forall n f bs,
+
+GroverMarkedState n f = Some bs
+->
+oracle_function f bs = true.
+
+Proof.
+
+  intros n f bs H.
+
+  unfold GroverMarkedState in H.
+
+  eapply FindMarkedState_correct.
+
+  exact H.
+
+Qed.
+
+Lemma GroverMarkedState_exists :
+
+forall n f bs,
+
+In bs (BasisStates n)
+->
+
+oracle_function f bs = true
+->
+
+exists marked,
+
+GroverMarkedState n f = Some marked.
+
+Proof.
+
+  intros n f bs Hbasis Hmarked.
+
+  unfold GroverMarkedState.
+
+  induction (BasisStates n).
+
+  - simpl in Hbasis.
+    contradiction.
+
+  - simpl.
+
+    destruct (oracle_function f a) eqn:H.
+
+    + exists a.
+      reflexivity.
+
+    + apply IHl.
+
+      simpl in Hbasis.
+
+      destruct Hbasis.
+
+      * subst.
+
+        rewrite Hmarked in H.
+
+        discriminate.
+
+      * exact H0.
+
+Qed.
+
+
+
+Lemma RunGroverExperiment_empty_if_no_marked :
+
+forall n f,
+
+GroverMarkedState n f = None
+->
+
+RunGroverExperiment n f = [].
+
+Proof.
+
+  intros n f H.
+
+  unfold RunGroverExperiment.
+
+  rewrite H.
+
+  reflexivity.
 
 Qed.

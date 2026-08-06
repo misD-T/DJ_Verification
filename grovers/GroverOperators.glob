@@ -1,316 +1,329 @@
-DIGEST f3c8244290657b76e813aeab93962e81
+DIGEST 97030c3c723cc24e43e6add40eda18ce
 FGrover.GroverOperators
-R351:354 Coq.Lists.List <> <> lib
-R356:359 Coq.Bool.Bool <> <> lib
-R361:366 Coq.Strings.String <> <> lib
-R368:370 Coq.micromega.Lia <> <> lib
-R383:395 Coq.Lists.List ListNotations <> mod
-R446:465 Quantum.QuantumState <> <> lib
-R484:507 Quantum.QuantumOperators <> <> lib
-R526:551 Quantum.AmplitudeSemantics <> <> lib
-R572:589 DJ.Oracles.Oracles <> <> lib
-def 805:820 <> IdentityOperator
-R824:838 Quantum.QuantumOperators <> QuantumOperator def
-binder 848:849 <> ρ:1
-R854:855 Grover.GroverOperators <> ρ:1 var
-def 1073:1079 <> Amplify
-R1096:1109 DJ.Oracles.Oracles <> OracleInstance rec
-binder 1092:1092 <> f:2
-R1127:1129 Coq.Init.Datatypes <> nat ind
-binder 1123:1123 <> n:3
-R1150:1163 Quantum.QuantumState <> AmplitudeState def
-binder 1143:1146 <> amps:4
-R1178:1191 Quantum.QuantumState <> AmplitudeState def
-R1199:1214 Quantum.AmplitudeSemantics <> ReflectAboutMean def
-R1221:1229 Quantum.AmplitudeSemantics <> PhaseFlip def
-R1231:1231 Grover.GroverOperators <> f:2 var
-R1233:1236 Grover.GroverOperators <> amps:4 var
-R1243:1243 Grover.GroverOperators <> n:3 var
-def 1461:1471 <> OraclePhase
-R1488:1501 DJ.Oracles.Oracles <> OracleInstance rec
-binder 1484:1484 <> f:5
-R1516:1530 Quantum.QuantumOperators <> QuantumOperator def
-binder 1542:1543 <> ρ:6
-R1555:1561 Quantum.QuantumState <> qs_bits proj
-R1555:1561 Quantum.QuantumState <> qs_bits proj
-R1555:1561 Quantum.QuantumState <> qs_bits proj
-R1583:1595 Quantum.QuantumState <> qs_amplitudes proj
-R1583:1595 Quantum.QuantumState <> qs_amplitudes proj
-R1717:1725 Quantum.QuantumState <> qs_target proj
-R1717:1725 Quantum.QuantumState <> qs_target proj
-R1749:1757 Quantum.QuantumState <> qs_qubits proj
-R1749:1757 Quantum.QuantumState <> qs_qubits proj
-R1781:1789 Quantum.QuantumState <> qs_oracle proj
-R1781:1789 Quantum.QuantumState <> qs_oracle proj
-R1807:1820 Quantum.QuantumState <> qs_measurement proj
-R1807:1820 Quantum.QuantumState <> qs_measurement proj
-R1849:1858 Quantum.QuantumState <> qs_history proj
-R1849:1858 Quantum.QuantumState <> qs_history proj
-R1883:1891 Quantum.QuantumState <> qs_status proj
-R1883:1891 Quantum.QuantumState <> qs_status proj
-R1915:1932 Quantum.QuantumState <> qs_symbolic_output proj
-R1915:1932 Quantum.QuantumState <> qs_symbolic_output proj
-R1566:1572 Quantum.QuantumState <> qs_bits proj
-R1574:1575 Grover.GroverOperators <> ρ:6 var
-R1609:1621 Quantum.QuantumState <> qs_amplitudes proj
-R1623:1624 Grover.GroverOperators <> ρ:6 var
-R1638:1641 Coq.Init.Datatypes <> None constr
-R1646:1649 Coq.Init.Datatypes <> None constr
-R1658:1661 Coq.Init.Datatypes <> Some constr
-R1678:1681 Coq.Init.Datatypes <> Some constr
-R1684:1692 Quantum.AmplitudeSemantics <> PhaseFlip def
-R1694:1694 Grover.GroverOperators <> f:5 var
-R1730:1738 Quantum.QuantumState <> qs_target proj
-R1740:1741 Grover.GroverOperators <> ρ:6 var
-R1762:1770 Quantum.QuantumState <> qs_qubits proj
-R1772:1773 Grover.GroverOperators <> ρ:6 var
-R1794:1797 Coq.Init.Datatypes <> Some constr
-R1799:1799 Grover.GroverOperators <> f:5 var
-R1825:1838 Quantum.QuantumState <> qs_measurement proj
-R1840:1841 Grover.GroverOperators <> ρ:6 var
-R1863:1872 Quantum.QuantumState <> qs_history proj
-R1874:1875 Grover.GroverOperators <> ρ:6 var
-R1896:1904 Quantum.QuantumState <> qs_status proj
-R1906:1907 Grover.GroverOperators <> ρ:6 var
-R1937:1954 Quantum.QuantumState <> qs_symbolic_output proj
-R1956:1957 Grover.GroverOperators <> ρ:6 var
-def 2179:2187 <> Diffusion
-R2201:2215 Quantum.QuantumOperators <> QuantumOperator def
-binder 2227:2228 <> ρ:7
-R2240:2246 Quantum.QuantumState <> qs_bits proj
-R2240:2246 Quantum.QuantumState <> qs_bits proj
-R2240:2246 Quantum.QuantumState <> qs_bits proj
-R2268:2280 Quantum.QuantumState <> qs_amplitudes proj
-R2268:2280 Quantum.QuantumState <> qs_amplitudes proj
-R2431:2439 Quantum.QuantumState <> qs_target proj
-R2431:2439 Quantum.QuantumState <> qs_target proj
-R2463:2471 Quantum.QuantumState <> qs_qubits proj
-R2463:2471 Quantum.QuantumState <> qs_qubits proj
-R2495:2503 Quantum.QuantumState <> qs_oracle proj
-R2495:2503 Quantum.QuantumState <> qs_oracle proj
-R2527:2540 Quantum.QuantumState <> qs_measurement proj
-R2527:2540 Quantum.QuantumState <> qs_measurement proj
-R2569:2578 Quantum.QuantumState <> qs_history proj
-R2569:2578 Quantum.QuantumState <> qs_history proj
-R2625:2633 Quantum.QuantumState <> qs_status proj
-R2625:2633 Quantum.QuantumState <> qs_status proj
-R2657:2674 Quantum.QuantumState <> qs_symbolic_output proj
-R2657:2674 Quantum.QuantumState <> qs_symbolic_output proj
-R2251:2257 Quantum.QuantumState <> qs_bits proj
-R2259:2260 Grover.GroverOperators <> ρ:7 var
-R2294:2306 Quantum.QuantumState <> qs_amplitudes proj
-R2308:2309 Grover.GroverOperators <> ρ:7 var
-R2323:2326 Coq.Init.Datatypes <> None constr
-R2331:2334 Coq.Init.Datatypes <> None constr
-R2343:2346 Coq.Init.Datatypes <> Some constr
-R2363:2366 Coq.Init.Datatypes <> Some constr
-R2378:2393 Quantum.AmplitudeSemantics <> ReflectAboutMean def
-R2401:2409 Quantum.QuantumState <> qs_qubits proj
-R2411:2412 Grover.GroverOperators <> ρ:7 var
-R2444:2452 Quantum.QuantumState <> qs_target proj
-R2454:2455 Grover.GroverOperators <> ρ:7 var
-R2476:2484 Quantum.QuantumState <> qs_qubits proj
-R2486:2487 Grover.GroverOperators <> ρ:7 var
-R2508:2516 Quantum.QuantumState <> qs_oracle proj
-R2518:2519 Grover.GroverOperators <> ρ:7 var
-R2545:2558 Quantum.QuantumState <> qs_measurement proj
-R2560:2561 Grover.GroverOperators <> ρ:7 var
-R2601:2604 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
-R2605:2614 Quantum.QuantumState <> qs_history proj
-R2616:2617 Grover.GroverOperators <> ρ:7 var
-R2638:2646 Quantum.QuantumState <> qs_status proj
-R2648:2649 Grover.GroverOperators <> ρ:7 var
-R2679:2696 Quantum.QuantumState <> qs_symbolic_output proj
-R2698:2699 Grover.GroverOperators <> ρ:7 var
-def 2921:2935 <> GroverIteration
-R2952:2965 DJ.Oracles.Oracles <> OracleInstance rec
-binder 2948:2948 <> f:8
-R2980:2994 Quantum.QuantumOperators <> QuantumOperator def
-R3002:3008 Quantum.QuantumOperators <> Compose def
-R3015:3025 Grover.GroverOperators <> OraclePhase def
-R3027:3027 Grover.GroverOperators <> f:8 var
-R3034:3042 Grover.GroverOperators <> Diffusion def
-def 3258:3271 <> RepeatOperator
-R3288:3290 Coq.Init.Datatypes <> nat ind
-binder 3284:3284 <> k:9
-R3308:3322 Quantum.QuantumOperators <> QuantumOperator def
-binder 3304:3304 <> U:10
-R3337:3351 Quantum.QuantumOperators <> QuantumOperator def
-R3365:3365 Grover.GroverOperators <> k:9 var
-R3377:3377 Coq.Init.Datatypes <> O constr
-R3387:3402 Grover.GroverOperators <> IdentityOperator def
-R3409:3409 Coq.Init.Datatypes <> S constr
-R3422:3428 Quantum.QuantumOperators <> Compose def
-R3437:3437 Grover.GroverOperators <> U:10 var
-R3447:3460 Grover.GroverOperators <> RepeatOperator:11 def
-R3465:3465 Grover.GroverOperators <> U:10 var
-def 3691:3706 <> GroverIterations
-R3719:3721 Coq.Init.Datatypes <> nat ind
-binder 3717:3717 <> n:13
-R3734:3736 Coq.Init.Datatypes <> nat ind
-R3742:3742 Grover.GroverOperators <> n:13 var
-def 3960:3973 <> GroverOperator
-R3990:3992 Coq.Init.Datatypes <> nat ind
-binder 3986:3986 <> n:14
-R4010:4023 DJ.Oracles.Oracles <> OracleInstance rec
-binder 4006:4006 <> f:15
-R4038:4052 Quantum.QuantumOperators <> QuantumOperator def
-R4060:4066 Quantum.QuantumOperators <> Compose def
-R4072:4079 Quantum.QuantumOperators <> Hadamard def
-R4086:4099 Grover.GroverOperators <> RepeatOperator def
-R4109:4124 Grover.GroverOperators <> GroverIterations def
-R4126:4126 Grover.GroverOperators <> n:14 var
-R4137:4151 Grover.GroverOperators <> GroverIteration def
-R4153:4153 Grover.GroverOperators <> f:15 var
-prf 4370:4402 <> IdentityOperator_preserves_qubits
-binder 4416:4417 <> ρ:16
-R4454:4458 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4423:4431 Quantum.QuantumState <> qs_qubits proj
-R4434:4449 Grover.GroverOperators <> IdentityOperator def
-R4451:4452 Grover.GroverOperators <> ρ:16 var
-R4459:4467 Quantum.QuantumState <> qs_qubits proj
-R4469:4470 Grover.GroverOperators <> ρ:16 var
-prf 4522:4547 <> Diffusion_preserves_qubits
-binder 4561:4562 <> ρ:17
-R4592:4596 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4568:4576 Quantum.QuantumState <> qs_qubits proj
-R4579:4587 Grover.GroverOperators <> Diffusion def
-R4589:4590 Grover.GroverOperators <> ρ:17 var
-R4597:4605 Quantum.QuantumState <> qs_qubits proj
-R4607:4608 Grover.GroverOperators <> ρ:17 var
-prf 4660:4687 <> OraclePhase_preserves_qubits
-binder 4701:4701 <> f:18
-binder 4703:4704 <> ρ:19
-R4738:4742 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4710:4718 Quantum.QuantumState <> qs_qubits proj
-R4721:4731 Grover.GroverOperators <> OraclePhase def
-R4733:4733 Grover.GroverOperators <> f:18 var
-R4735:4736 Grover.GroverOperators <> ρ:19 var
-R4743:4751 Quantum.QuantumState <> qs_qubits proj
-R4753:4754 Grover.GroverOperators <> ρ:19 var
-prf 4806:4830 <> Hadamard_preserves_qubits
-binder 4844:4845 <> ρ:20
-R4874:4878 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4851:4859 Quantum.QuantumState <> qs_qubits proj
-R4862:4869 Quantum.QuantumOperators <> Hadamard def
-R4871:4872 Grover.GroverOperators <> ρ:20 var
-R4879:4887 Quantum.QuantumState <> qs_qubits proj
-R4889:4890 Grover.GroverOperators <> ρ:20 var
-prf 4942:4972 <> RepeatOperator_preserves_qubits
-binder 4986:4986 <> k:21
-binder 4988:4988 <> U:22
-R4994:4994 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R5043:5053 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-binder 5002:5003 <> ρ:23
-R5024:5030 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5008:5016 Quantum.QuantumState <> qs_qubits proj
-R5019:5019 Grover.GroverOperators <> U:22 var
-R5021:5022 Grover.GroverOperators <> ρ:23 var
-R5031:5039 Quantum.QuantumState <> qs_qubits proj
-R5041:5042 Grover.GroverOperators <> ρ:23 var
-binder 5061:5062 <> ρ:24
-R5101:5105 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5068:5076 Quantum.QuantumState <> qs_qubits proj
-R5079:5092 Grover.GroverOperators <> RepeatOperator def
-R5094:5094 Grover.GroverOperators <> k:21 var
-R5096:5096 Grover.GroverOperators <> U:22 var
-R5098:5099 Grover.GroverOperators <> ρ:24 var
-R5106:5114 Quantum.QuantumState <> qs_qubits proj
-R5116:5117 Grover.GroverOperators <> ρ:24 var
-R5267:5273 Quantum.QuantumOperators <> Compose def
-prf 5347:5378 <> GroverIteration_preserves_qubits
-binder 5392:5392 <> f:25
-binder 5394:5395 <> ρ:26
-R5433:5437 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5401:5409 Quantum.QuantumState <> qs_qubits proj
-R5412:5426 Grover.GroverOperators <> GroverIteration def
-R5428:5428 Grover.GroverOperators <> f:25 var
-R5430:5431 Grover.GroverOperators <> ρ:26 var
-R5438:5446 Quantum.QuantumState <> qs_qubits proj
-R5448:5449 Grover.GroverOperators <> ρ:26 var
-R5492:5506 Grover.GroverOperators <> GroverIteration def
-R5521:5527 Quantum.QuantumOperators <> Compose def
-R5586:5596 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5546:5554 Quantum.QuantumState <> qs_qubits proj
-R5557:5565 Grover.GroverOperators <> Diffusion def
-R5568:5578 Grover.GroverOperators <> OraclePhase def
-R5597:5605 Quantum.QuantumState <> qs_qubits proj
-R5586:5596 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5546:5554 Quantum.QuantumState <> qs_qubits proj
-R5557:5565 Grover.GroverOperators <> Diffusion def
-R5568:5578 Grover.GroverOperators <> OraclePhase def
-R5597:5605 Quantum.QuantumState <> qs_qubits proj
-R5625:5650 Grover.GroverOperators <> Diffusion_preserves_qubits thm
-R5625:5650 Grover.GroverOperators <> Diffusion_preserves_qubits thm
-R5625:5650 Grover.GroverOperators <> Diffusion_preserves_qubits thm
-R5664:5691 Grover.GroverOperators <> OraclePhase_preserves_qubits thm
-R5664:5691 Grover.GroverOperators <> OraclePhase_preserves_qubits thm
-prf 5914:5939 <> OraclePhase_records_oracle
-binder 5953:5953 <> f:27
-binder 5955:5956 <> ρ:28
-R5990:5994 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5962:5970 Quantum.QuantumState <> qs_oracle proj
-R5973:5983 Grover.GroverOperators <> OraclePhase def
-R5985:5985 Grover.GroverOperators <> f:27 var
-R5987:5988 Grover.GroverOperators <> ρ:28 var
-R5995:5998 Coq.Init.Datatypes <> Some constr
-R6000:6000 Grover.GroverOperators <> f:27 var
-prf 6052:6081 <> GroverIteration_records_oracle
-binder 6095:6095 <> f:29
-binder 6097:6098 <> ρ:30
-R6136:6140 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6104:6112 Quantum.QuantumState <> qs_oracle proj
-R6115:6129 Grover.GroverOperators <> GroverIteration def
-R6131:6131 Grover.GroverOperators <> f:29 var
-R6133:6134 Grover.GroverOperators <> ρ:30 var
-R6141:6144 Coq.Init.Datatypes <> Some constr
-R6146:6146 Grover.GroverOperators <> f:29 var
-R6189:6203 Grover.GroverOperators <> GroverIteration def
-R6218:6224 Quantum.QuantumOperators <> Compose def
-prf 6274:6302 <> RepeatOperator_records_oracle
-binder 6316:6316 <> k:31
-binder 6318:6318 <> f:32
-binder 6320:6321 <> ρ:33
-R6391:6395 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6327:6335 Quantum.QuantumState <> qs_oracle proj
-R6339:6352 Grover.GroverOperators <> RepeatOperator def
-R6355:6355 Coq.Init.Datatypes <> S constr
-R6357:6357 Grover.GroverOperators <> k:31 var
-R6365:6379 Grover.GroverOperators <> GroverIteration def
-R6381:6381 Grover.GroverOperators <> f:32 var
-R6388:6389 Grover.GroverOperators <> ρ:33 var
-R6396:6399 Coq.Init.Datatypes <> Some constr
-R6401:6401 Grover.GroverOperators <> f:32 var
-R6458:6464 Quantum.QuantumOperators <> Compose def
-R6491:6520 Grover.GroverOperators <> GroverIteration_records_oracle thm
-R6534:6547 Grover.GroverOperators <> RepeatOperator def
-R6552:6566 Grover.GroverOperators <> GroverIteration def
-R6491:6520 Grover.GroverOperators <> GroverIteration_records_oracle thm
-R6534:6547 Grover.GroverOperators <> RepeatOperator def
-R6552:6566 Grover.GroverOperators <> GroverIteration def
-prf 6793:6823 <> GroverOperator_preserves_qubits
-binder 6837:6837 <> n:34
-binder 6839:6839 <> f:35
-binder 6841:6842 <> ρ:36
-R6881:6885 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6848:6856 Quantum.QuantumState <> qs_qubits proj
-R6859:6872 Grover.GroverOperators <> GroverOperator def
-R6874:6874 Grover.GroverOperators <> n:34 var
-R6876:6876 Grover.GroverOperators <> f:35 var
-R6878:6879 Grover.GroverOperators <> ρ:36 var
-R6886:6894 Quantum.QuantumState <> qs_qubits proj
-R6896:6897 Grover.GroverOperators <> ρ:36 var
-R6942:6955 Grover.GroverOperators <> GroverOperator def
-R6970:6976 Quantum.QuantumOperators <> Compose def
-R7005:7035 Grover.GroverOperators <> RepeatOperator_preserves_qubits thm
-R7052:7067 Grover.GroverOperators <> GroverIterations def
-R7087:7101 Grover.GroverOperators <> GroverIteration def
-R7121:7145 Grover.GroverOperators <> Hadamard_preserves_qubits thm
-R7005:7035 Grover.GroverOperators <> RepeatOperator_preserves_qubits thm
-R7052:7067 Grover.GroverOperators <> GroverIterations def
-R7087:7101 Grover.GroverOperators <> GroverIteration def
-R7121:7145 Grover.GroverOperators <> Hadamard_preserves_qubits thm
-R7005:7035 Grover.GroverOperators <> RepeatOperator_preserves_qubits thm
-R7052:7067 Grover.GroverOperators <> GroverIterations def
-R7087:7101 Grover.GroverOperators <> GroverIteration def
-R7121:7145 Grover.GroverOperators <> Hadamard_preserves_qubits thm
+R611:614 Coq.Lists.List <> <> lib
+R616:619 Coq.Bool.Bool <> <> lib
+R621:626 Coq.Strings.String <> <> lib
+R628:630 Coq.micromega.Lia <> <> lib
+R643:655 Coq.Lists.List ListNotations <> mod
+R706:725 Quantum.QuantumState <> <> lib
+R744:767 Quantum.QuantumOperators <> <> lib
+R786:811 Quantum.AmplitudeSemantics <> <> lib
+R832:849 DJ.Oracles.Oracles <> <> lib
+def 1065:1080 <> IdentityOperator
+R1084:1098 Quantum.QuantumOperators <> QuantumOperator def
+binder 1108:1109 <> ρ:1
+R1114:1115 Grover.GroverOperators <> ρ:1 var
+def 1333:1339 <> Amplify
+R1356:1369 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1352:1352 <> f:2
+R1387:1389 Coq.Init.Datatypes <> nat ind
+binder 1383:1383 <> n:3
+R1410:1423 Quantum.QuantumState <> AmplitudeState def
+binder 1403:1406 <> amps:4
+R1438:1451 Quantum.QuantumState <> AmplitudeState def
+R1459:1474 Quantum.AmplitudeSemantics <> ReflectAboutMean def
+R1481:1489 Quantum.AmplitudeSemantics <> PhaseFlip def
+R1491:1491 Grover.GroverOperators <> f:2 var
+R1493:1496 Grover.GroverOperators <> amps:4 var
+R1503:1503 Grover.GroverOperators <> n:3 var
+def 1721:1731 <> OraclePhase
+R1748:1761 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1744:1744 <> f:5
+R1776:1790 Quantum.QuantumOperators <> QuantumOperator def
+binder 1802:1803 <> ρ:6
+R1815:1821 Quantum.QuantumState <> qs_bits proj
+R1815:1821 Quantum.QuantumState <> qs_bits proj
+R1815:1821 Quantum.QuantumState <> qs_bits proj
+R1843:1855 Quantum.QuantumState <> qs_amplitudes proj
+R1843:1855 Quantum.QuantumState <> qs_amplitudes proj
+R1977:1985 Quantum.QuantumState <> qs_target proj
+R1977:1985 Quantum.QuantumState <> qs_target proj
+R2009:2017 Quantum.QuantumState <> qs_qubits proj
+R2009:2017 Quantum.QuantumState <> qs_qubits proj
+R2041:2049 Quantum.QuantumState <> qs_oracle proj
+R2041:2049 Quantum.QuantumState <> qs_oracle proj
+R2067:2080 Quantum.QuantumState <> qs_measurement proj
+R2067:2080 Quantum.QuantumState <> qs_measurement proj
+R2109:2118 Quantum.QuantumState <> qs_history proj
+R2109:2118 Quantum.QuantumState <> qs_history proj
+R2162:2170 Quantum.QuantumState <> qs_status proj
+R2162:2170 Quantum.QuantumState <> qs_status proj
+R2194:2211 Quantum.QuantumState <> qs_symbolic_output proj
+R2194:2211 Quantum.QuantumState <> qs_symbolic_output proj
+R1826:1832 Quantum.QuantumState <> qs_bits proj
+R1834:1835 Grover.GroverOperators <> ρ:6 var
+R1869:1881 Quantum.QuantumState <> qs_amplitudes proj
+R1883:1884 Grover.GroverOperators <> ρ:6 var
+R1898:1901 Coq.Init.Datatypes <> None constr
+R1906:1909 Coq.Init.Datatypes <> None constr
+R1918:1921 Coq.Init.Datatypes <> Some constr
+R1938:1941 Coq.Init.Datatypes <> Some constr
+R1944:1952 Quantum.AmplitudeSemantics <> PhaseFlip def
+R1954:1954 Grover.GroverOperators <> f:5 var
+R1990:1998 Quantum.QuantumState <> qs_target proj
+R2000:2001 Grover.GroverOperators <> ρ:6 var
+R2022:2030 Quantum.QuantumState <> qs_qubits proj
+R2032:2033 Grover.GroverOperators <> ρ:6 var
+R2054:2057 Coq.Init.Datatypes <> Some constr
+R2059:2059 Grover.GroverOperators <> f:5 var
+R2085:2098 Quantum.QuantumState <> qs_measurement proj
+R2100:2101 Grover.GroverOperators <> ρ:6 var
+R2138:2141 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2142:2151 Quantum.QuantumState <> qs_history proj
+R2153:2154 Grover.GroverOperators <> ρ:6 var
+R2175:2183 Quantum.QuantumState <> qs_status proj
+R2185:2186 Grover.GroverOperators <> ρ:6 var
+R2216:2233 Quantum.QuantumState <> qs_symbolic_output proj
+R2235:2236 Grover.GroverOperators <> ρ:6 var
+def 2458:2466 <> Diffusion
+R2480:2494 Quantum.QuantumOperators <> QuantumOperator def
+binder 2506:2507 <> ρ:7
+R2519:2525 Quantum.QuantumState <> qs_bits proj
+R2519:2525 Quantum.QuantumState <> qs_bits proj
+R2519:2525 Quantum.QuantumState <> qs_bits proj
+R2547:2559 Quantum.QuantumState <> qs_amplitudes proj
+R2547:2559 Quantum.QuantumState <> qs_amplitudes proj
+R2710:2718 Quantum.QuantumState <> qs_target proj
+R2710:2718 Quantum.QuantumState <> qs_target proj
+R2742:2750 Quantum.QuantumState <> qs_qubits proj
+R2742:2750 Quantum.QuantumState <> qs_qubits proj
+R2774:2782 Quantum.QuantumState <> qs_oracle proj
+R2774:2782 Quantum.QuantumState <> qs_oracle proj
+R2806:2819 Quantum.QuantumState <> qs_measurement proj
+R2806:2819 Quantum.QuantumState <> qs_measurement proj
+R2848:2857 Quantum.QuantumState <> qs_history proj
+R2848:2857 Quantum.QuantumState <> qs_history proj
+R2904:2912 Quantum.QuantumState <> qs_status proj
+R2904:2912 Quantum.QuantumState <> qs_status proj
+R2936:2953 Quantum.QuantumState <> qs_symbolic_output proj
+R2936:2953 Quantum.QuantumState <> qs_symbolic_output proj
+R2530:2536 Quantum.QuantumState <> qs_bits proj
+R2538:2539 Grover.GroverOperators <> ρ:7 var
+R2573:2585 Quantum.QuantumState <> qs_amplitudes proj
+R2587:2588 Grover.GroverOperators <> ρ:7 var
+R2602:2605 Coq.Init.Datatypes <> None constr
+R2610:2613 Coq.Init.Datatypes <> None constr
+R2622:2625 Coq.Init.Datatypes <> Some constr
+R2642:2645 Coq.Init.Datatypes <> Some constr
+R2657:2672 Quantum.AmplitudeSemantics <> ReflectAboutMean def
+R2680:2688 Quantum.QuantumState <> qs_qubits proj
+R2690:2691 Grover.GroverOperators <> ρ:7 var
+R2723:2731 Quantum.QuantumState <> qs_target proj
+R2733:2734 Grover.GroverOperators <> ρ:7 var
+R2755:2763 Quantum.QuantumState <> qs_qubits proj
+R2765:2766 Grover.GroverOperators <> ρ:7 var
+R2787:2795 Quantum.QuantumState <> qs_oracle proj
+R2797:2798 Grover.GroverOperators <> ρ:7 var
+R2824:2837 Quantum.QuantumState <> qs_measurement proj
+R2839:2840 Grover.GroverOperators <> ρ:7 var
+R2880:2883 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2884:2893 Quantum.QuantumState <> qs_history proj
+R2895:2896 Grover.GroverOperators <> ρ:7 var
+R2917:2925 Quantum.QuantumState <> qs_status proj
+R2927:2928 Grover.GroverOperators <> ρ:7 var
+R2958:2975 Quantum.QuantumState <> qs_symbolic_output proj
+R2977:2978 Grover.GroverOperators <> ρ:7 var
+def 3200:3214 <> GroverIteration
+R3231:3244 DJ.Oracles.Oracles <> OracleInstance rec
+binder 3227:3227 <> f:8
+R3259:3273 Quantum.QuantumOperators <> QuantumOperator def
+R3281:3287 Quantum.QuantumOperators <> Compose def
+R3293:3301 Grover.GroverOperators <> Diffusion def
+R3308:3318 Grover.GroverOperators <> OraclePhase def
+R3320:3320 Grover.GroverOperators <> f:8 var
+def 3537:3550 <> RepeatOperator
+R3567:3569 Coq.Init.Datatypes <> nat ind
+binder 3563:3563 <> k:9
+R3587:3601 Quantum.QuantumOperators <> QuantumOperator def
+binder 3583:3583 <> U:10
+R3616:3630 Quantum.QuantumOperators <> QuantumOperator def
+R3644:3644 Grover.GroverOperators <> k:9 var
+R3656:3656 Coq.Init.Datatypes <> O constr
+R3666:3681 Grover.GroverOperators <> IdentityOperator def
+R3688:3688 Coq.Init.Datatypes <> S constr
+R3701:3707 Quantum.QuantumOperators <> Compose def
+R3716:3716 Grover.GroverOperators <> U:10 var
+R3726:3739 Grover.GroverOperators <> RepeatOperator:11 def
+R3744:3744 Grover.GroverOperators <> U:10 var
+def 4158:4173 <> GroverIterations
+R4186:4188 Coq.Init.Datatypes <> nat ind
+binder 4184:4184 <> n:13
+R4201:4203 Coq.Init.Datatypes <> nat ind
+R4209:4209 Grover.GroverOperators <> n:13 var
+def 4672:4685 <> GroverOperator
+R4702:4704 Coq.Init.Datatypes <> nat ind
+binder 4698:4698 <> n:14
+R4722:4735 DJ.Oracles.Oracles <> OracleInstance rec
+binder 4718:4718 <> f:15
+R4750:4764 Quantum.QuantumOperators <> QuantumOperator def
+R4772:4778 Quantum.QuantumOperators <> Compose def
+R4785:4798 Grover.GroverOperators <> RepeatOperator def
+R4808:4823 Grover.GroverOperators <> GroverIterations def
+R4825:4825 Grover.GroverOperators <> n:14 var
+R4836:4850 Grover.GroverOperators <> GroverIteration def
+R4852:4852 Grover.GroverOperators <> f:15 var
+R4860:4867 Quantum.QuantumOperators <> Hadamard def
+prf 5080:5111 <> OraclePhase_supports_all_oracles
+binder 5125:5125 <> f:16
+binder 5127:5128 <> ρ:17
+R5162:5166 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5134:5142 Quantum.QuantumState <> qs_oracle proj
+R5145:5155 Grover.GroverOperators <> OraclePhase def
+R5157:5157 Grover.GroverOperators <> f:16 var
+R5159:5160 Grover.GroverOperators <> ρ:17 var
+R5167:5170 Coq.Init.Datatypes <> Some constr
+R5172:5172 Grover.GroverOperators <> f:16 var
+prf 5237:5262 <> OraclePhase_records_oracle
+binder 5276:5276 <> f:18
+binder 5278:5279 <> ρ:19
+R5313:5317 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5285:5293 Quantum.QuantumState <> qs_oracle proj
+R5296:5306 Grover.GroverOperators <> OraclePhase def
+R5308:5308 Grover.GroverOperators <> f:18 var
+R5310:5311 Grover.GroverOperators <> ρ:19 var
+R5318:5321 Coq.Init.Datatypes <> Some constr
+R5323:5323 Grover.GroverOperators <> f:18 var
+prf 5375:5404 <> GroverIteration_records_oracle
+binder 5418:5418 <> f:20
+binder 5420:5421 <> ρ:21
+R5459:5463 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5427:5435 Quantum.QuantumState <> qs_oracle proj
+R5438:5452 Grover.GroverOperators <> GroverIteration def
+R5454:5454 Grover.GroverOperators <> f:20 var
+R5456:5457 Grover.GroverOperators <> ρ:21 var
+R5464:5467 Coq.Init.Datatypes <> Some constr
+R5469:5469 Grover.GroverOperators <> f:20 var
+R5512:5526 Grover.GroverOperators <> GroverIteration def
+R5541:5547 Quantum.QuantumOperators <> Compose def
+prf 5800:5832 <> IdentityOperator_preserves_qubits
+binder 5846:5847 <> ρ:22
+R5884:5888 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5853:5861 Quantum.QuantumState <> qs_qubits proj
+R5864:5879 Grover.GroverOperators <> IdentityOperator def
+R5881:5882 Grover.GroverOperators <> ρ:22 var
+R5889:5897 Quantum.QuantumState <> qs_qubits proj
+R5899:5900 Grover.GroverOperators <> ρ:22 var
+prf 5952:5977 <> Diffusion_preserves_qubits
+binder 5991:5992 <> ρ:23
+R6022:6026 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5998:6006 Quantum.QuantumState <> qs_qubits proj
+R6009:6017 Grover.GroverOperators <> Diffusion def
+R6019:6020 Grover.GroverOperators <> ρ:23 var
+R6027:6035 Quantum.QuantumState <> qs_qubits proj
+R6037:6038 Grover.GroverOperators <> ρ:23 var
+prf 6090:6117 <> OraclePhase_preserves_qubits
+binder 6131:6131 <> f:24
+binder 6133:6134 <> ρ:25
+R6168:6172 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6140:6148 Quantum.QuantumState <> qs_qubits proj
+R6151:6161 Grover.GroverOperators <> OraclePhase def
+R6163:6163 Grover.GroverOperators <> f:24 var
+R6165:6166 Grover.GroverOperators <> ρ:25 var
+R6173:6181 Quantum.QuantumState <> qs_qubits proj
+R6183:6184 Grover.GroverOperators <> ρ:25 var
+prf 6236:6260 <> Hadamard_preserves_qubits
+binder 6274:6275 <> ρ:26
+R6304:6308 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6281:6289 Quantum.QuantumState <> qs_qubits proj
+R6292:6299 Quantum.QuantumOperators <> Hadamard def
+R6301:6302 Grover.GroverOperators <> ρ:26 var
+R6309:6317 Quantum.QuantumState <> qs_qubits proj
+R6319:6320 Grover.GroverOperators <> ρ:26 var
+prf 6372:6402 <> RepeatOperator_preserves_qubits
+binder 6416:6416 <> k:27
+binder 6418:6418 <> U:28
+R6424:6424 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R6473:6483 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+binder 6432:6433 <> ρ:29
+R6454:6460 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6438:6446 Quantum.QuantumState <> qs_qubits proj
+R6449:6449 Grover.GroverOperators <> U:28 var
+R6451:6452 Grover.GroverOperators <> ρ:29 var
+R6461:6469 Quantum.QuantumState <> qs_qubits proj
+R6471:6472 Grover.GroverOperators <> ρ:29 var
+binder 6491:6492 <> ρ:30
+R6531:6535 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6498:6506 Quantum.QuantumState <> qs_qubits proj
+R6509:6522 Grover.GroverOperators <> RepeatOperator def
+R6524:6524 Grover.GroverOperators <> k:27 var
+R6526:6526 Grover.GroverOperators <> U:28 var
+R6528:6529 Grover.GroverOperators <> ρ:30 var
+R6536:6544 Quantum.QuantumState <> qs_qubits proj
+R6546:6547 Grover.GroverOperators <> ρ:30 var
+R6697:6703 Quantum.QuantumOperators <> Compose def
+prf 6777:6808 <> GroverIteration_preserves_qubits
+binder 6822:6822 <> f:31
+binder 6824:6825 <> ρ:32
+R6863:6867 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6831:6839 Quantum.QuantumState <> qs_qubits proj
+R6842:6856 Grover.GroverOperators <> GroverIteration def
+R6858:6858 Grover.GroverOperators <> f:31 var
+R6860:6861 Grover.GroverOperators <> ρ:32 var
+R6868:6876 Quantum.QuantumState <> qs_qubits proj
+R6878:6879 Grover.GroverOperators <> ρ:32 var
+R6922:6936 Grover.GroverOperators <> GroverIteration def
+R6951:6957 Quantum.QuantumOperators <> Compose def
+R7021:7031 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6981:6989 Quantum.QuantumState <> qs_qubits proj
+R6992:7000 Grover.GroverOperators <> Diffusion def
+R7003:7013 Grover.GroverOperators <> OraclePhase def
+R7032:7040 Quantum.QuantumState <> qs_qubits proj
+R7021:7031 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6981:6989 Quantum.QuantumState <> qs_qubits proj
+R6992:7000 Grover.GroverOperators <> Diffusion def
+R7003:7013 Grover.GroverOperators <> OraclePhase def
+R7032:7040 Quantum.QuantumState <> qs_qubits proj
+R7064:7089 Grover.GroverOperators <> Diffusion_preserves_qubits thm
+R7064:7089 Grover.GroverOperators <> Diffusion_preserves_qubits thm
+R7064:7089 Grover.GroverOperators <> Diffusion_preserves_qubits thm
+R7103:7130 Grover.GroverOperators <> OraclePhase_preserves_qubits thm
+R7103:7130 Grover.GroverOperators <> OraclePhase_preserves_qubits thm
+prf 7154:7184 <> GroverOperator_preserves_qubits
+binder 7198:7198 <> n:33
+binder 7200:7200 <> f:34
+binder 7202:7203 <> ρ:35
+R7242:7246 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7209:7217 Quantum.QuantumState <> qs_qubits proj
+R7220:7233 Grover.GroverOperators <> GroverOperator def
+R7235:7235 Grover.GroverOperators <> n:33 var
+R7237:7237 Grover.GroverOperators <> f:34 var
+R7239:7240 Grover.GroverOperators <> ρ:35 var
+R7247:7255 Quantum.QuantumState <> qs_qubits proj
+R7257:7258 Grover.GroverOperators <> ρ:35 var
+R7303:7316 Grover.GroverOperators <> GroverOperator def
+R7331:7337 Quantum.QuantumOperators <> Compose def
+R7375:7405 Grover.GroverOperators <> RepeatOperator_preserves_qubits thm
+R7415:7430 Grover.GroverOperators <> GroverIterations def
+R7443:7457 Grover.GroverOperators <> GroverIteration def
+R7470:7501 Grover.GroverOperators <> GroverIteration_preserves_qubits thm
+R7375:7405 Grover.GroverOperators <> RepeatOperator_preserves_qubits thm
+R7415:7430 Grover.GroverOperators <> GroverIterations def
+R7443:7457 Grover.GroverOperators <> GroverIteration def
+R7470:7501 Grover.GroverOperators <> GroverIteration_preserves_qubits thm
+R7375:7405 Grover.GroverOperators <> RepeatOperator_preserves_qubits thm
+R7415:7430 Grover.GroverOperators <> GroverIterations def
+R7443:7457 Grover.GroverOperators <> GroverIteration def
+R7470:7501 Grover.GroverOperators <> GroverIteration_preserves_qubits thm
+R7523:7547 Grover.GroverOperators <> Hadamard_preserves_qubits thm
+R7523:7547 Grover.GroverOperators <> Hadamard_preserves_qubits thm
+prf 7770:7798 <> RepeatOperator_records_oracle
+binder 7812:7812 <> k:36
+binder 7814:7814 <> f:37
+binder 7816:7817 <> ρ:38
+R7887:7891 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7823:7831 Quantum.QuantumState <> qs_oracle proj
+R7835:7848 Grover.GroverOperators <> RepeatOperator def
+R7851:7851 Coq.Init.Datatypes <> S constr
+R7853:7853 Grover.GroverOperators <> k:36 var
+R7861:7875 Grover.GroverOperators <> GroverIteration def
+R7877:7877 Grover.GroverOperators <> f:37 var
+R7884:7885 Grover.GroverOperators <> ρ:38 var
+R7892:7895 Coq.Init.Datatypes <> Some constr
+R7897:7897 Grover.GroverOperators <> f:37 var
+R7954:7960 Quantum.QuantumOperators <> Compose def
+R7996:8025 Grover.GroverOperators <> GroverIteration_records_oracle thm
+R8037:8050 Grover.GroverOperators <> RepeatOperator def
+R8055:8069 Grover.GroverOperators <> GroverIteration def
+R7996:8025 Grover.GroverOperators <> GroverIteration_records_oracle thm
+R8037:8050 Grover.GroverOperators <> RepeatOperator def
+R8055:8069 Grover.GroverOperators <> GroverIteration def

@@ -1,4 +1,4 @@
-DIGEST 03becc634c0ca9ff977c54950db87659
+DIGEST 23f6aa32b1d05ebc35d0480d6abfcd1a
 FFinal.CaseStudyComparison
 R548:551 Coq.Lists.List <> <> lib
 R553:556 Coq.Bool.Bool <> <> lib
@@ -31,15 +31,15 @@ prf 1773:1791 <> GroverCase_verified
 R1798:1817 Final.Framework <> VerificationProperty proj
 R1819:1834 Grover.GroverCaseStudy <> GroverSearchCase def
 R1859:1874 Grover.GroverCaseStudy <> GroverSearchCase def
-R1918:1935 Grover.GroverProofs <> Grover_HH_verified thm
-R1918:1935 Grover.GroverProofs <> Grover_HH_verified thm
-prf 2317:2356 <> DJ_and_Grover_verified_by_same_framework
-R2400:2409 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
-R2363:2382 Final.Framework <> VerificationProperty proj
-R2384:2399 DJ.Tests.DJCaseStudy <> DeutschJozsaCase def
-R2410:2429 Final.Framework <> VerificationProperty proj
-R2431:2446 Grover.GroverCaseStudy <> GroverSearchCase def
-R2484:2508 Final.CaseStudyComparison <> DeutschJozsaCase_verified thm
-R2484:2508 Final.CaseStudyComparison <> DeutschJozsaCase_verified thm
-R2524:2542 Final.CaseStudyComparison <> GroverCase_verified thm
-R2524:2542 Final.CaseStudyComparison <> GroverCase_verified thm
+R1920:1937 Grover.GroverProofs <> Grover_HH_verified thm
+R1920:1937 Grover.GroverProofs <> Grover_HH_verified thm
+prf 2319:2358 <> DJ_and_Grover_verified_by_same_framework
+R2402:2411 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R2365:2384 Final.Framework <> VerificationProperty proj
+R2386:2401 DJ.Tests.DJCaseStudy <> DeutschJozsaCase def
+R2412:2431 Final.Framework <> VerificationProperty proj
+R2433:2448 Grover.GroverCaseStudy <> GroverSearchCase def
+R2486:2510 Final.CaseStudyComparison <> DeutschJozsaCase_verified thm
+R2486:2510 Final.CaseStudyComparison <> DeutschJozsaCase_verified thm
+R2526:2544 Final.CaseStudyComparison <> GroverCase_verified thm
+R2526:2544 Final.CaseStudyComparison <> GroverCase_verified thm

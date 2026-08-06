@@ -1,0 +1,15 @@
+venv/
+.venv/
+
+__pycache__/
+*.pyc
+
+# Rocq/Coq generated files
+*.vo
+*.vos
+*.vok
+*.glob
+*.aux
+
+# Cache files
+*.cache

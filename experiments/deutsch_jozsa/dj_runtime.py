@@ -1,144 +1,217 @@
-from dj_verify import run_test
+import statistics
 
-# -------------------------
-# SCALING EXPERIMENT
-# -------------------------
+from .dj_verify import run_test
+
+
+# ============================================================
+# Deutsch–Jozsa Scalability Experiment
+#
+# Evaluates:
+#
+# - execution time
+# - semantic execution behaviour
+# - verification stability
+# - scaling with qubit count
+#
+# ============================================================
+
 
 def scaling_experiment():
 
-    global n_target_bits
-    global n_wires
-    global dev
-    global deutsch_jozsa_circuit
+
+    print("\n")
+    print("=" * 90)
+    print("DEUTSCH-JOZSA SCALABILITY EXPERIMENT")
+    print("=" * 90)
 
     scaling_results = []
 
-    for n in [3, 4, 5, 6, 7, 8, 9]:
 
-        print("\n")
-        print("=" * 80)
-        print(f"SCALING EXPERIMENT: n_target_bits = {n}")
-        print("=" * 80)
 
-        # Update global settings
-        n_target_bits = n
-        n_wires = n + 1
+    # -------------------------------------------------
+    # Number of target qubits
+    # -------------------------------------------------
 
-        # Rebuild device
-        dev = qml.device(
-            "default.qubit",
-            wires=n_wires
-        )
+    qubit_sizes = [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ]
 
-        # Rebuild QNode for new wire count
-        @qml.qnode(dev)
-        def deutsch_jozsa_circuit(oracle_type):
 
-            qml.PauliX(wires=n_target_bits)
 
-            for i in range(n_wires):
-                qml.Hadamard(wires=i)
+    repetitions = 10
 
-            U(oracle_type, n_target_bits)
 
-            for i in range(n_target_bits):
-                qml.Hadamard(wires=i)
 
-            return qml.probs(
-                wires=range(n_target_bits)
+    for n in qubit_sizes:
+
+        # -------------------------------------------------
+        # Test oracle families
+        #
+        # Linear growth:
+        # parity
+        #
+        # Full register:
+        # full_parity
+        #
+        # -------------------------------------------------
+
+
+        for oracle in [
+            "full_parity",
+            "xor_two_bits",
+        ]:
+
+
+
+            runtimes = []
+
+
+            last_result = None
+
+
+
+            for _ in range(repetitions):
+
+
+                result = run_test(
+                    oracle,
+                    n_target_bits= n,
+                    verbose=False
+                )
+
+
+                runtimes.append(
+                    result["runtime"]
+                )
+
+
+                last_result = result
+
+
+
+            avg_runtime = statistics.mean(
+                runtimes
             )
 
-        # -------------------------
-        # PARITY
-        # -------------------------
 
-        parity_runtimes = []
-
-        for _ in range(10):
-
-            parity_result = run_test("parity")
-
-            parity_runtimes.append(
-            parity_result["runtime"]
+            std_runtime = statistics.stdev(
+                runtimes
             )
 
 
-        # -------------------------
-        # FULL PARITY
-        # -------------------------
 
-        full_parity_runtimes = []
-        
-        for _ in range(10):
+            scaling_results.append({
 
-            full_parity_result = run_test(
-                "full_parity"
-            )
 
-            full_parity_runtimes.append(
-                full_parity_result["runtime"]
-            )
-            
-        
-        parity_avg = statistics.mean(
-            parity_runtimes
-        )
+                "n":
+                    n,
 
-        parity_std = statistics.stdev(
-            parity_runtimes
-        )
 
-        full_parity_avg = statistics.mean(
-            full_parity_runtimes
-        )
+                "oracle":
+                    oracle,
 
-        full_parity_std = statistics.stdev(
-            full_parity_runtimes
-        )
 
-        scaling_results.append({
-            "n": n,
-            "oracle": "parity",
-            "output": parity_result["output"],
-            "verified": parity_result["verified"],
-            "runtime_avg": parity_avg,
-            "runtime_std": parity_std
-        })
-        
-        scaling_results.append({
-            "n": n,
-            "oracle": "full_parity",
-            "output": full_parity_result["output"],
-            "verified": full_parity_result["verified"],
-            "runtime_avg": full_parity_avg,
-            "runtime_std": full_parity_std
-        })
+                "output":
+                    last_result["output"],
 
-    # -------------------------
-    # SUMMARY TABLE
-    # -------------------------
+
+                "verified":
+                    last_result["verified"],
+
+
+                "qdl":
+                    last_result["qdl_result"],
+
+
+                "hh":
+                    last_result["hh_result"],
+
+
+                "runtime_avg":
+                    avg_runtime,
+
+
+                "runtime_std":
+                    std_runtime,
+
+
+                "trace":
+                    last_result["semantic_trace"],
+
+
+                "status":
+                    last_result["semantic_status"]
+
+            })
+
+
+
+    # -------------------------------------------------
+    # Summary
+    # -------------------------------------------------
+
 
     print("\n")
-    print("=" * 80)
-    print("SCALING SUMMARY")
-    print("=" * 80)
+    print("=" * 110)
+
+    print(
+        "SCALING SUMMARY"
+    )
+
+    print("=" * 110)
+
+
 
     for r in scaling_results:
 
+
         print(
-            f"n={r['n']:2}   "
-            f"{r['oracle']:12}   "
-            f"Output={r['output']}   "
-            f"Verified={r['verified']}   "
-            f"Avg={r['runtime_avg']:.6f}s   "
+
+            f"n={r['n']:2} "
+
+            f"{r['oracle']:15}"
+
+            f"Output={r['output']:10}"
+
+            f"Verified={str(r['verified']):5}"
+
+            f"QDL={str(r['qdl']):5}"
+
+            f"HH={str(r['hh']):5}"
+
+            f"Avg={r['runtime_avg']:.6f}s "
+
             f"Std={r['runtime_std']:.6f}s"
 
         )
 
+
+        print(
+            " Trace:",
+            " -> ".join(
+                r["trace"]
+            )
+        )
+
+
+
     return scaling_results
 
-# -------------------------
-# RUN EXPERIMENT
-# -------------------------
 
-scaling_results = scaling_experiment()
+
+# ============================================================
+# Execute Experiment
+# ============================================================
+
+
+if __name__ == "__main__":
+
+    scaling_results = (
+        scaling_experiment()
+    )

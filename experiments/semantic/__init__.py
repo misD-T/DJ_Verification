@@ -85,3 +85,17 @@ from .oracles import (
 
 # Package version
 __version__ = "1.0.0"
+
+# -------------------------------------------------
+# Verification
+# -------------------------------------------------
+
+from .verification import (
+    Property,
+    VerificationResult,
+    verify_property,
+    Proposition,
+    Predicate,
+    QDLFormula,
+    HoareTriple,
+)

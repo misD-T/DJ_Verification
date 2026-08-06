@@ -54,9 +54,15 @@ class OracleKind(Enum):
 
 
     EXAMPLE_BALANCED = "ExampleBalanced"
+    
+    RANDOM_BALANCED = "RandomBalanced"
 
 
     SINGLE_MARKED = "SingleMarked"
+    
+    MULTIPLE_MARKED = "MultipleMarked"
+    
+    PREDICATE = "Predicate"
 
     MAJORITY = "Majority"
 

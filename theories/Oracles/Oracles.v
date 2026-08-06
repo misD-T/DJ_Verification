@@ -29,7 +29,9 @@ Inductive OracleKind :=
 | OKMajority
 | OKAlternating
 
-| OKGrover.
+| OKGroverSingle
+| OKMultipleMarked
+| OKGroverPredicate.
 
 (*************************************************************)
 (* Oracle Instance                                           *)
@@ -226,7 +228,11 @@ match oracle_kind f, oracle_kind g with
 
 | OKAlternating, OKAlternating => true
 
-| OKGrover, OKGrover => true
+| OKGroverSingle, OKGroverSingle => true
+
+| OKMultipleMarked, OKMultipleMarked => true
+
+| OKGroverPredicate, OKGroverPredicate => true
 
 | _, _ => false
 

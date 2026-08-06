@@ -31,29 +31,20 @@ while PennyLane performs the actual quantum simulation.
 import pennylane as qml
 import numpy as np
 
-
-from semantic import (
+from ..semantic import (
     InitialState,
     HadamardOperator,
     OracleOperator,
     MeasurementOperator,
-    Measure
+    Measure,
+    ExecutionStatus
 )
 
 
-from dj_oracles import dj_function
-
-
-
-# -------------------------------------------------
-# SETTINGS
-# -------------------------------------------------
-
-n_target_bits = 5
-
-n_wires = n_target_bits + 1
-
-
+from .dj_oracles import (
+    dj_function,
+    create_oracle
+)
 
 # -------------------------------------------------
 # HELPER
@@ -74,16 +65,43 @@ def most_likely_bitstring(probs):
         f"0{n}b"
     )
 
+def U(
+    oracle_type,
+    target_bits
+):
+
+    f = dj_function(
+        oracle_type,
+        target_bits,
+        verbose=False
+    )
+
+    ancilla = target_bits
 
 
-# -------------------------------------------------
-# DEVICE
-# -------------------------------------------------
+    for x in range(2 ** target_bits):
 
-dev = qml.device(
-    "default.qubit",
-    wires=n_wires
-)
+        if f[x] == 1:
+
+            bitstring = format(
+                x,
+                f"0{target_bits}b"
+            )
+
+
+            controls = [
+                int(bit)
+                for bit in bitstring
+            ]
+
+
+            qml.ctrl(
+                qml.X,
+                control=list(range(target_bits)),
+                control_values=controls
+            )(
+                wires=ancilla
+            )
 
 # -------------------------------------------------
 # PENNYLANE ORACLE IMPLEMENTATION
@@ -145,7 +163,50 @@ def ApplyDJOracle(
 
 
 # -------------------------------------------------
-# EXECUTION
+# PENNYLANE BACKEND EXECUTION
+#
+# Physical quantum execution only.
+#
+# This corresponds to the actual circuit evaluation.
+# The semantic framework is applied separately below.
+#
+# -------------------------------------------------
+
+def make_backend(n_target_bits):
+
+    n_wires = n_target_bits + 1
+
+    dev = qml.device(
+        "default.qubit",
+        wires=n_wires
+    )
+
+    @qml.qnode(dev)
+    def deutsch_jozsa_backend(oracle_type):
+
+        qml.PauliX(
+            wires=n_target_bits
+        )
+
+        for wire in range(n_wires):
+            qml.Hadamard(wires=wire)
+
+        U(
+            oracle_type,
+            n_target_bits
+        )
+
+        for wire in range(n_target_bits):
+            qml.Hadamard(wires=wire)
+
+        return qml.probs(
+            wires=range(n_target_bits)
+        )
+
+    return deutsch_jozsa_backend
+
+# -------------------------------------------------
+# SEMANTIC EXECUTION
 #
 # Rocq equivalent:
 #
@@ -157,137 +218,96 @@ def ApplyDJOracle(
 #
 # -------------------------------------------------
 
-@qml.qnode(dev)
-def ExecuteDJ(
-    oracle_type
-):
+def ExecuteDJ(oracle_type, n_target_bits):
+
+    """
+    Semantic Deutsch–Jozsa execution.
+
+    Executes the semantic operators defined by the
+    verification framework while using PennyLane
+    as the numerical backend.
+    """
 
 
-    # ---------------------------------------------
-    # Semantic initial state
-    # ---------------------------------------------
+    # -------------------------------------------------
+    # Initial Semantic State
+    # -------------------------------------------------
 
     state = InitialState(
-        n_wires
+        n_target_bits + 1
     )
 
 
-    state.oracle = oracle_type
+    # -------------------------------------------------
+    # Physical execution
+    # -------------------------------------------------
 
-
-
-    # ---------------------------------------------
-    # Ancilla preparation
-    #
-    # |1>
-    #
-    # ---------------------------------------------
-
-    qml.PauliX(
-        wires=n_target_bits
+    backend = make_backend(
+        n_target_bits
     )
 
+    probs = backend(
+        oracle_type
+    )
+
+
+    # -------------------------------------------------
+    # Semantic execution trace
+    # -------------------------------------------------
 
     state.add_history(
-        "AncillaX"
+        "AncillaPreparation"
     )
 
 
-
-    # ---------------------------------------------
-    # First Hadamard layer
-    #
-    # Semantic:
-    #
-    # HadamardOperator(state)
-    #
-    # Physical:
-    #
-    # qml.Hadamard
-    #
-    # ---------------------------------------------
+    # First Hadamard
 
     state = HadamardOperator(
-        state,
-        register="all"
+        state
     )
 
 
-    for wire in range(
-        n_wires
-    ):
-
-        qml.Hadamard(
-            wires=wire
-        )
-
-
-
-    # ---------------------------------------------
     # Oracle
-    #
-    # Semantic:
-    #
-    # OracleOperator(state)
-    #
-    # Physical:
-    #
-    # ApplyDJOracle
-    #
-    # ---------------------------------------------
+
+    oracle = create_oracle(
+        oracle_type,
+        n_target_bits
+    )
+
 
     state = OracleOperator(
         state,
-        oracle_type,
-        lambda bits:
-            False
+        oracle
     )
 
 
-    ApplyDJOracle(
-        oracle_type,
-        n_target_bits
-    )
-
-
-
-    # ---------------------------------------------
     # Second Hadamard
-    #
-    # Only input register
-    #
-    # ---------------------------------------------
 
     state = HadamardOperator(
-        state,
-        register="input"
+        state
     )
 
 
-    for wire in range(
-        n_target_bits
-    ):
-
-        qml.Hadamard(
-            wires=wire
-        )
-
-
-
-    # ---------------------------------------------
+    # -------------------------------------------------
     # Measurement
-    #
-    # Physical measurement is returned by PennyLane.
-    #
-    # Semantic state is updated afterwards.
-    #
-    # ---------------------------------------------
+    # -------------------------------------------------
 
-    probs = qml.probs(
-        wires=range(
-            n_target_bits
-        )
+    output = most_likely_bitstring(
+        probs
     )
 
 
-    return probs
+    state.set_measurement(
+        output
+    )
+
+
+    state.amplitudes = probs
+
+
+    state = MeasurementOperator(
+        state
+    )
+
+
+    return probs, state

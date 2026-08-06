@@ -1,4 +1,4 @@
-DIGEST a10b08c32e90b55c01e1102657a81738
+DIGEST 57e9a2dbd060e4f180df7a091f64fd0c
 FGrover.GroverCaseStudy
 R419:422 Coq.Lists.List <> <> lib
 R424:427 Coq.Bool.Bool <> <> lib
@@ -25,62 +25,64 @@ R1159:1171 Final.Framework <> AlgorithmName proj
 R1201:1220 Final.Framework <> VerificationProperty proj
 R1201:1220 Final.Framework <> VerificationProperty proj
 binder 1238:1238 <> n:1
-R1252:1261 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R1248:1250 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
-R1247:1247 Grover.GroverCaseStudy <> n:1 var
-R1262:1271 Quantum.HoaresHeisenberg <> HHVerified def
-R1281:1292 Grover.GroverProofs <> GroverHHSpec def
-R1294:1294 Grover.GroverCaseStudy <> n:1 var
-R1296:1308 Grover.GroverOracles <> oracle_grover def
-prf 1526:1548 <> Grover_case_HH_verified
-binder 1562:1562 <> n:2
-R1569:1582 DJ.Oracles.Oracles <> OracleInstance rec
-binder 1565:1565 <> f:3
-R1594:1600 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R1590:1592 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
-R1589:1589 Grover.GroverCaseStudy <> n:2 var
-R1601:1610 Quantum.HoaresHeisenberg <> HHVerified def
-R1613:1624 Grover.GroverProofs <> GroverHHSpec def
-R1626:1626 Grover.GroverCaseStudy <> n:2 var
-R1628:1628 Grover.GroverCaseStudy <> f:3 var
-R1653:1670 Grover.GroverProofs <> Grover_HH_verified thm
-R1653:1670 Grover.GroverProofs <> Grover_HH_verified thm
-prf 1889:1912 <> Grover_case_QDL_verified
-binder 1926:1926 <> n:4
-R1933:1946 DJ.Oracles.Oracles <> OracleInstance rec
-binder 1929:1929 <> f:5
-R1958:1964 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R1954:1956 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
-R1953:1953 Grover.GroverCaseStudy <> n:4 var
-R1965:1969 Quantum.QDL <> Valid def
-R1972:1984 Grover.GroverProofs <> GroverFormula def
-R1986:1986 Grover.GroverCaseStudy <> n:4 var
-R1988:1988 Grover.GroverCaseStudy <> f:5 var
-R2013:2031 Grover.GroverProofs <> Grover_QDL_verified thm
-R2013:2031 Grover.GroverProofs <> Grover_QDL_verified thm
-prf 2250:2277 <> Grover_case_HH_and_QDL_agree
-binder 2291:2291 <> n:6
-R2298:2311 DJ.Oracles.Oracles <> OracleInstance rec
-binder 2294:2294 <> f:7
-R2323:2329 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R2319:2321 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
-R2318:2318 Grover.GroverCaseStudy <> n:6 var
-R2359:2368 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
-R2330:2339 Quantum.HoaresHeisenberg <> HHVerified def
-R2342:2353 Grover.GroverProofs <> GroverHHSpec def
-R2355:2355 Grover.GroverCaseStudy <> n:6 var
-R2357:2357 Grover.GroverCaseStudy <> f:7 var
-R2369:2373 Quantum.QDL <> Valid def
-R2376:2388 Grover.GroverProofs <> GroverFormula def
-R2390:2390 Grover.GroverCaseStudy <> n:6 var
-R2392:2392 Grover.GroverCaseStudy <> f:7 var
-R2456:2473 Grover.GroverProofs <> Grover_HH_verified thm
-R2456:2473 Grover.GroverProofs <> Grover_HH_verified thm
-R2509:2527 Grover.GroverProofs <> Grover_QDL_verified thm
-R2509:2527 Grover.GroverProofs <> Grover_QDL_verified thm
-prf 2761:2779 <> GroverCase_verified
-R2786:2805 Final.Framework <> VerificationProperty proj
-R2807:2822 Grover.GroverCaseStudy <> GroverSearchCase def
-R2847:2862 Grover.GroverCaseStudy <> GroverSearchCase def
-R2906:2923 Grover.GroverProofs <> Grover_HH_verified thm
-R2906:2923 Grover.GroverProofs <> Grover_HH_verified thm
+R1245:1258 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1241:1241 <> f:2
+R1273:1282 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1269:1271 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R1268:1268 Grover.GroverCaseStudy <> n:1 var
+R1283:1292 Quantum.HoaresHeisenberg <> HHVerified def
+R1302:1313 Grover.GroverProofs <> GroverHHSpec def
+R1315:1315 Grover.GroverCaseStudy <> n:1 var
+R1317:1317 Grover.GroverCaseStudy <> f:2 var
+prf 1535:1557 <> Grover_case_HH_verified
+binder 1571:1571 <> n:3
+R1578:1591 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1574:1574 <> f:4
+R1603:1609 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1599:1601 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R1598:1598 Grover.GroverCaseStudy <> n:3 var
+R1610:1619 Quantum.HoaresHeisenberg <> HHVerified def
+R1622:1633 Grover.GroverProofs <> GroverHHSpec def
+R1635:1635 Grover.GroverCaseStudy <> n:3 var
+R1637:1637 Grover.GroverCaseStudy <> f:4 var
+R1682:1699 Grover.GroverProofs <> Grover_HH_verified thm
+R1682:1699 Grover.GroverProofs <> Grover_HH_verified thm
+prf 1933:1956 <> Grover_case_QDL_verified
+binder 1970:1970 <> n:5
+R1977:1990 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1973:1973 <> f:6
+R2002:2008 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1998:2000 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R1997:1997 Grover.GroverCaseStudy <> n:5 var
+R2009:2013 Quantum.QDL <> Valid def
+R2016:2028 Grover.GroverProofs <> GroverFormula def
+R2030:2030 Grover.GroverCaseStudy <> n:5 var
+R2032:2032 Grover.GroverCaseStudy <> f:6 var
+R2077:2095 Grover.GroverProofs <> Grover_QDL_verified thm
+R2077:2095 Grover.GroverProofs <> Grover_QDL_verified thm
+prf 2329:2356 <> Grover_case_HH_and_QDL_agree
+binder 2370:2370 <> n:7
+R2377:2390 DJ.Oracles.Oracles <> OracleInstance rec
+binder 2373:2373 <> f:8
+R2402:2408 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2398:2400 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R2397:2397 Grover.GroverCaseStudy <> n:7 var
+R2438:2447 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R2409:2418 Quantum.HoaresHeisenberg <> HHVerified def
+R2421:2432 Grover.GroverProofs <> GroverHHSpec def
+R2434:2434 Grover.GroverCaseStudy <> n:7 var
+R2436:2436 Grover.GroverCaseStudy <> f:8 var
+R2448:2452 Quantum.QDL <> Valid def
+R2455:2467 Grover.GroverProofs <> GroverFormula def
+R2469:2469 Grover.GroverCaseStudy <> n:7 var
+R2471:2471 Grover.GroverCaseStudy <> f:8 var
+R2535:2552 Grover.GroverProofs <> Grover_HH_verified thm
+R2535:2552 Grover.GroverProofs <> Grover_HH_verified thm
+R2588:2606 Grover.GroverProofs <> Grover_QDL_verified thm
+R2588:2606 Grover.GroverProofs <> Grover_QDL_verified thm
+prf 2840:2858 <> GroverCase_verified
+R2865:2884 Final.Framework <> VerificationProperty proj
+R2886:2901 Grover.GroverCaseStudy <> GroverSearchCase def
+R2926:2941 Grover.GroverCaseStudy <> GroverSearchCase def
+R2987:3004 Grover.GroverProofs <> Grover_HH_verified thm
+R2987:3004 Grover.GroverProofs <> Grover_HH_verified thm

@@ -17,9 +17,9 @@ This file provides concrete instances used by:
 import numpy as np
 
 
-from semantic.oracles import (
-    OracleInstance,
-    OracleKind
+from ..semantic.oracles import (
+    OracleKind,
+    OracleInstance
 )
 
 
@@ -37,7 +37,8 @@ def is_balanced(f):
 
 
 def oracle_class(
-    oracle_type
+    oracle_type,
+    target_bits
 ):
 
     classes = {
@@ -67,10 +68,15 @@ def oracle_class(
         "random_balanced": "Random",
 
 
-        "majority": "Invalid",
-
         "single_marked": "Invalid"
     }
+    
+    if oracle_type == "majority":
+
+        if target_bits % 2 == 1:
+            return "Balanced"
+        else:
+            return "Invalid"
 
 
     return classes.get(
@@ -87,6 +93,10 @@ def oracle_complexity(
 
     scores = {
 
+        "constant_zero": 0,
+
+        "constant_one": 0,
+        
         "first_bit": 1,
 
         "parity": target_bits,
@@ -407,6 +417,9 @@ def create_oracle(
 
         "and_xor":
             OracleKind.AND_XOR,
+            
+        "random_balanced":
+            OracleKind.RANDOM_BALANCED,
 
         "single_marked":
             OracleKind.SINGLE_MARKED,
@@ -426,3 +439,21 @@ def create_oracle(
         function=oracle
 
     )
+
+def promise_distance(oracle_type, target_bits):
+
+    f = dj_function(
+        oracle_type,
+        target_bits,
+        verbose=False
+    )
+
+    ones = np.sum(f)
+
+    total = len(f)
+
+    distance = abs(
+        ones - total/2
+    )
+
+    return int(distance)

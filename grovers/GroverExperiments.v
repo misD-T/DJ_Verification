@@ -4,7 +4,7 @@
 (* Experiments for Semantic Grover Search                    *)
 (*************************************************************)
 
-From Coq Require Import List Bool Arith Reals.
+From Coq Require Import List Bool Arith Reals Lia.
 
 Import ListNotations.
 
@@ -20,12 +20,9 @@ Require Import Grover.GroverTrace.
 
 
 (*************************************************************)
-(* Experiments                                               *)
-(*************************************************************)
-
-(*************************************************************)
 (* Building Grover Trace                                     *)
 (*************************************************************)
+
 
 Definition ExampleGroverTrace
            (n : nat)
@@ -38,11 +35,14 @@ GroverTrace
 
    (GroverIteration f)
 
-   (InitialState n).
+   (Hadamard (InitialState n)).
+
+
 
 (*************************************************************)
-(* Query Probability                                         *)
+(* Probability Extraction                                    *)
 (*************************************************************)
+
 
 Definition ProbabilityAtIteration
            (n : nat)
@@ -56,13 +56,15 @@ match StateAtIteration
         (ExampleGroverTrace n f)
 with
 
-| None => 0%R
+| None =>
+    0%R
 
 | Some ρ =>
 
     match qs_amplitudes ρ with
 
-    | None => 0%R
+    | None =>
+        0%R
 
     | Some amps =>
         ProbabilityOf amps bs
@@ -71,9 +73,12 @@ with
 
 end.
 
+
+
 (*************************************************************)
-(* Defining Marked State                                     *)
+(* Oracle Predicate                                          *)
 (*************************************************************)
+
 
 Definition IsMarked
            (f : OracleInstance)
@@ -81,3 +86,37 @@ Definition IsMarked
            : Prop :=
 
 oracle_function f bs = true.
+
+
+
+(*************************************************************)
+(* Marked State Extraction                                   *)
+(*************************************************************)
+
+
+Definition MarkedStates
+           (f : OracleInstance)
+           (states : list BitString)
+           : list BitString :=
+
+filter
+   (oracle_function f)
+   states.
+
+
+
+Definition CountMarked
+           (f : OracleInstance)
+           (states : list BitString)
+           : nat :=
+
+length
+(
+ MarkedStates f states
+).
+
+
+
+(*************************************************************)
+(* Basic Sanity Properties                                   *)
+(*************************************************************)

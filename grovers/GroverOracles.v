@@ -3,16 +3,9 @@
 (*                                                           *)
 (* Oracle Definitions for Grover Search                      *)
 (*                                                           *)
-(* This file defines the oracle functions used by the        *)
-(* Grover search algorithm.                                  *)
-(*                                                           *)
-(* The initial implementation is intentionally restricted    *)
-(* to a single marked element so that the verification       *)
-(* framework can first be demonstrated before extending      *)
-(* to more general search problems.                          *)
 (*************************************************************)
 
-From Coq Require Import Bool List.
+From Coq Require Import Bool List Arith.
 
 Import ListNotations.
 
@@ -20,87 +13,263 @@ Require Import DJ.Foundations.BitStrings.
 Require Import DJ.Oracles.BooleanFunctions.
 Require Import DJ.Oracles.Oracles.
 
-(*************************************************************)
-(* Marked Element                                            *)
-(*************************************************************)
-
-(*
-   Initial case study:
-
-       marked = |11>
-
-   This represents the unique solution that Grover's
-   algorithm should amplify.
-*)
-
-Definition marked_state : BitString :=
-  [true; true].
 
 (*************************************************************)
-(* Oracle Function                                           *)
+(* Single Marked Oracle                                      *)
 (*************************************************************)
 
 (*
-   The oracle returns true exactly on the marked state.
+   Marks exactly one basis state.
 
-   Later this can be generalised to multiple marked
-   elements or arbitrary predicates.
+   Equivalent to Python:
+
+       single_marked_oracle(marked)
 *)
 
-Definition grover_oracle_fun : Oracle :=
+
+Definition grover_single_marked
+        (marked : BitString)
+        : Oracle :=
+
 fun x =>
 
-bitstring_eqb x marked_state.
+bitstring_eqb x marked.
 
-(*************************************************************)
-(* Oracle Instance                                           *)
-(*************************************************************)
 
-Definition oracle_grover : OracleInstance :=
+
+Definition oracle_grover_single
+        (marked : BitString)
+        : OracleInstance :=
+
 {|
-  oracle_kind := OKGrover;
-  oracle_function := grover_oracle_fun
+ oracle_kind := OKSingleMarked;
+ oracle_function := grover_single_marked marked
 |}.
+
+
+
+(*************************************************************)
+(* Multiple Marked Oracle                                    *)
+(*************************************************************)
+
+(*
+   General Grover oracle.
+
+   Marks every state contained in the marked list.
+
+   Equivalent to Python:
+
+       multiple_marked_oracle(marked_states)
+
+   Examples:
+
+       [ [true;true];
+         [false;false] ]
+
+       represents two marked states.
+
+*)
+
+
+Definition multiple_marked_oracle
+        (marked_states : list BitString)
+        : Oracle :=
+
+fun x =>
+
+existsb
+    (bitstring_eqb x)
+    marked_states.
+
+
+
+Definition oracle_grover_multiple
+        (marked_states : list BitString)
+        : OracleInstance :=
+
+{|
+ oracle_kind := OKMultipleMarked;
+ oracle_function := multiple_marked_oracle marked_states
+|}.
+
+
+
+(*************************************************************)
+(* Example Multiple Marked Instances                         *)
+(*************************************************************)
+
+
+Definition marked_states_two : list BitString :=
+
+[
+ [true;true];
+
+ [false;false]
+].
+
+
+
+Definition oracle_grover_two : OracleInstance :=
+
+oracle_grover_multiple
+    marked_states_two.
+
+
+
+(*************************************************************)
+(* Quarter Marked Instance                                   *)
+(*************************************************************)
+
+(*
+   Quarter marked search.
+
+   This is not a new oracle family.
+   It is simply a multiple marked oracle where
+   approximately N/4 states are marked.
+
+   Example:
+
+       first two bits are 1
+
+   For n-bit inputs:
+
+       11xxx...
+
+*)
+
+
+Definition quarter_marked
+        (x : BitString)
+        : bool :=
+
+match x with
+
+| true :: true :: _ =>
+    true
+
+| _ =>
+    false
+
+end.
+
+
+
+Definition oracle_grover_quarter : OracleInstance :=
+
+{|
+ oracle_kind := OKMultipleMarked;
+
+ oracle_function := quarter_marked
+|}.
+
+
+
+(*************************************************************)
+(* Predicate Oracle                                           *)
+(*************************************************************)
+
+(*
+   Arbitrary search predicate.
+
+   Equivalent to Python:
+
+       predicate_oracle(predicate)
+*)
+
+
+Definition predicate_oracle
+        (P : BitString -> bool)
+        : Oracle :=
+
+fun x => P x.
+
+
+
+Definition oracle_grover_predicate
+        (P : BitString -> bool)
+        : OracleInstance :=
+
+{|
+ oracle_kind := OKGroverPredicate;
+
+ oracle_function := predicate_oracle P
+|}.
+
+
+
+(*************************************************************)
+(* Example Predicates                                        *)
+(*************************************************************)
+
+
+Definition even_parity
+        (x : BitString)
+        : bool :=
+
+Nat.even
+(
+ length
+ (
+  filter (fun b => b) x
+ )
+).
+
+
 
 (*************************************************************)
 (* Oracle Properties                                         *)
 (*************************************************************)
 
-(*
-   These definitions are placeholders for future extensions.
 
-   Examples:
-
-     - Multiple marked elements
-     - Parameterised search problems
-     - Randomised search instances
-*)
-
-Definition SingleMarked : Prop :=
+Definition SingleMarked
+        (marked : BitString)
+        : Prop :=
 
 forall x,
 
-grover_oracle_fun x = true
+grover_single_marked marked x = true
+
+<->
+ 
+x = marked.
+
+
+
+Definition MultipleMarked
+        (marked_states : list BitString)
+        : Prop :=
+
+forall x,
+
+multiple_marked_oracle marked_states x = true
 
 <->
 
-x = marked_state.
+In x marked_states.
+
+
+
+Definition PredicateMarked
+        (P : BitString -> bool)
+        : Prop :=
+
+exists x,
+
+P x = true.
 
 (*************************************************************)
 (* Future Extensions                                         *)
 (*************************************************************)
 
-(*
-   Possible future oracle families:
+   (*
+      Possible future oracle families:
 
-   - Multiple marked states
+      - SAT search oracles
 
-   - Random marked states
+      - Graph search oracles
 
-   - Parameterised search predicates
+      - Constraint satisfaction predicates
 
-   - SAT instances
+      - Domain-specific search predicates
 
-   - Graph search instances
-
-*)
+   *)

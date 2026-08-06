@@ -1,181 +1,248 @@
-from dj_verify import run_test
+import statistics
 
-# -------------------------
+from .dj_verify import run_test
+
+
+# ============================================================
 # PROMISE ROBUSTNESS EXPERIMENT
-# -------------------------
+#
+# Evaluates behaviour when oracle assumptions are violated.
+#
+# Measures:
+#
+# - promise distance
+# - oracle bias
+# - output behaviour
+# - verification outcome
+# - semantic execution trace
+#
+# ============================================================
 
-def promise_robustness_experiment():
+
+def promise_robustness_experiment(target_bits = 5):
+
 
     print("\n")
     print("=" * 100)
     print("PROMISE ROBUSTNESS EXPERIMENT")
     print("=" * 100)
 
+
+
+    # -------------------------------------------------
+    # Oracle Set
+    #
+    # Valid DJ promise instances
+    # + invalid promise violations
+    #
+    # -------------------------------------------------
+
     oracle_set = [
 
-        # Promise satisfied
+
+        # -------------------------
+        # Valid constant oracles
+        # -------------------------
+
         "constant_zero",
         "constant_one",
 
+
+        # -------------------------
+        # Candidate balanced oracles
+        #
+        # Some depend on n.
+        # Example:
+        # majority is balanced only for odd n.
+        # -------------------------
+
         "first_bit",
+        "xor_two_bits",
+        "alternating",
         "full_parity",
-        
-        "almost_balanced_1",
-        "almost_balanced_2",
-        "almost_balanced_4",
-        "almost_balanced_8",
-
-        # Near-promise violations
-        "almost_balanced",
-        "quarter_ones",
-        "three_quarter_ones",
-
-        # Larger violations
-        "two_marked",
+        "affine",
+        "and_xor",
         "majority",
+        
+        "random_balanced",
+        
+        # Promise violations
         "single_marked"
+
     ]
+
+
 
     results = []
 
-    
-    for oracle in oracle_set:
-        probabilities = []
-        for _ in range(20):
+    repetitions = 20
 
-            result = run_test(oracle)
+
+
+    for oracle in oracle_set:
+
+
+        probabilities = []
+
+        last_result = None
+
+
+
+        for _ in range(repetitions):
+
+            result = run_test(
+                oracle,
+                n_target_bits= target_bits,
+                verbose=False
+            )
+
 
             probabilities.append(
                 result["prob_zero"]
             )
 
-        avg_prob = statistics.mean(
+
+            last_result = result
+
+
+
+        avg_probability = statistics.mean(
             probabilities
         )
 
-        std_prob = statistics.stdev(
+
+        std_probability = statistics.stdev(
             probabilities
         )
+
+
 
         results.append({
 
+            "n":
+                target_bits,
+                
             "oracle":
-                result["oracle"],
+                oracle,
+
+
+            "class":
+                last_result["class"],
+
 
             "distance":
-                result["distance"],
+                last_result["distance"],
+
 
             "bias":
-                result["bias"],
+                last_result["bias"],
+
 
             "output":
-                result["output"],
+                last_result["output"],
+
 
             "verified":
-                result["verified"],
+                last_result["verified"],
+
+
+            "qdl":
+                last_result["qdl_result"],
+
+
+            "hh":
+                last_result["hh_result"],
+
 
             "prob_zero":
-                avg_prob,
+                avg_probability,
+
 
             "prob_std":
-                std_prob
+                std_probability,
+
+
+            "trace":
+                last_result["semantic_trace"],
+
+
+            "status":
+                last_result["semantic_status"]
+
         })
 
+
+
+    # -------------------------------------------------
+    # Print Summary
+    # -------------------------------------------------
+
     print("\n")
-    print("=" * 100)
-    print("PROMISE ROBUSTNESS SUMMARY")
-    print("=" * 100)
+    print("=" * 120)
 
     print(
-        f"{'Oracle':20}"
-        f"{'Distance':10}"
-        f"{'Bias':10}"
-        f"{'P(0...0)':12}"
-        f"{'Std':12}"
-        f"{'Output':12}"
-        f"{'Verified'}"
+        "PROMISE ROBUSTNESS SUMMARY"
     )
 
-    print("-" * 100)
+    print("=" * 120)
+
+
+
+    print(
+
+        f"{'Oracle':20}"
+        f"{'Class':12}"
+        f"{'Distance':10}"
+        f"{'Bias':10}"
+        f"{'P(0)':12}"
+        f"{'Output':10}"
+        f"{'Verified':10}"
+        f"{'QDL':8}"
+        f"{'HH'}"
+
+    )
+
+
+    print("-" * 120)
+
+
 
     for r in results:
 
+
         print(
+
             f"{r['oracle']:20}"
+
+            f"{r['class']:12}"
+
             f"{r['distance']:<10}"
+
             f"{r['bias']:<10.4f}"
+
             f"{r['prob_zero']:<12.6f}"
-            f"{r['prob_std']:<12.6f}"
-            f"{r['output']:12}"
-            f"{str(r['verified'])}"
+
+            f"{r['output']:10}"
+
+            f"{str(r['verified']):10}"
+
+            f"{str(r['qdl']):8}"
+
+            f"{str(r['hh'])}"
+
         )
 
     return results
 
-# -------------------------
-# TESTS
-# -------------------------
-oracle_families = [
 
-    # Constant
-    "constant_zero",
-    "constant_one",
 
-    # Balanced
-    "xor_two_bits",
-    "first_bit",
-    "alternating",
-    "full_parity",
-    "affine",
-    "and_xor",
-    "random_balanced",
-    
-    # Near Promise
-    "almost_balanced",
-    "quarter_ones",
-    "three_quarter_ones",
-    "two_marked",
+# ============================================================
+# Execute Experiment
+# ============================================================
 
-    # Invalid / promise violations
-    "majority",
-    "single_marked"
-]
 
-promise_robustness_experiment()
+if __name__ == "__main__":
 
-"""
-results = []
-
-for oracle in oracle_families:
-
-    print("\n")
-    print("=" * 60)
-
-    result = run_test(oracle)
-
-    results.append(result)
-
-print("\n\nSUMMARY TABLE")
-print("=" * 80)
-
-for r in results:
-
-    print(
-        f"{r['oracle']:15} "
-        f"{r['class']:12} "
-        f"Complexity={r['complexity']:3} "
-        f"Output={r['output']:8} "
-        f"Verified={r['verified']} "
-        f"Distance={r['distance']} "
+    promise_results = (
+        promise_robustness_experiment()
     )
-
-    print(
-        f"    QDL: {r['qdl_formula']}"
-    )
-
-    print(
-        f"    QDL Verification: {r['qdl_result']}"
-    )
-
-    print()
-"""

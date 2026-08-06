@@ -71,7 +71,7 @@ Proof.
 
   simpl.
 
-  intros n Hn.
+  intros n f Hn.
 
   apply Grover_HH_verified.
 

@@ -1,232 +1,150 @@
-DIGEST fe61db4eea854aa5b2dda9bac3640f8d
+DIGEST 6bdf1ee7d9b0944117db797da917f139
 FGrover.GroverConvergenceExperiment
-R351:354 Coq.Lists.List <> <> lib
-R356:360 Coq.Arith.Arith <> <> lib
-R362:366 Coq.Reals.Reals <> <> lib
-R379:391 Coq.Lists.List ListNotations <> mod
-R412:436 DJ.Foundations.BitStrings <> <> lib
-R455:481 DJ.Oracles.BooleanFunctions <> <> lib
-R500:517 DJ.Oracles.Oracles <> <> lib
-R538:557 Quantum.QuantumState <> <> lib
-R576:601 Quantum.AmplitudeSemantics <> <> lib
-R622:641 Grover.GroverOracles <> <> lib
-R660:677 Grover.GroverTrace <> <> lib
-R696:719 Grover.GroverExperiments <> <> lib
-R738:767 Grover.GroverExperimentResults <> <> lib
-def 983:1000 <> GroverMarkedOracle
-R1019:1021 Coq.Init.Datatypes <> nat ind
-binder 1015:1015 <> n:1
-R1038:1051 DJ.Oracles.Oracles <> OracleInstance rec
-R1066:1076 DJ.Oracles.Oracles <> oracle_kind proj
-R1066:1076 DJ.Oracles.Oracles <> oracle_kind proj
-R1066:1076 DJ.Oracles.Oracles <> oracle_kind proj
-R1095:1109 DJ.Oracles.Oracles <> oracle_function proj
-R1095:1109 DJ.Oracles.Oracles <> oracle_function proj
-R1081:1088 DJ.Oracles.Oracles <> OKGrover constr
-binder 1124:1125 <> bs:2
-R1141:1153 DJ.Foundations.BitStrings <> bitstring_eqb def
-R1155:1156 Grover.GroverConvergenceExperiment <> bs:2 var
-R1159:1167 DJ.Foundations.BitStrings <> all_zeros def
-R1169:1169 Grover.GroverConvergenceExperiment <> n:1 var
-R1203:1207 Coq.Init.Datatypes <> false constr
-R1185:1188 Coq.Init.Datatypes <> true constr
-prf 1422:1446 <> GroverMarkedOracle_exists
-R1464:1466 Coq.Init.Datatypes <> nat ind
-binder 1460:1460 <> n:3
-R1472:1478 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
-R1481:1485 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
-binder 1479:1480 <> bs:4
-R1533:1535 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R1486:1500 DJ.Oracles.Oracles <> oracle_function proj
-R1506:1523 Grover.GroverConvergenceExperiment <> GroverMarkedOracle def
-R1525:1525 Grover.GroverConvergenceExperiment <> n:3 var
-R1531:1532 Grover.GroverConvergenceExperiment <> bs:4 var
-R1536:1539 Coq.Init.Datatypes <> true constr
-R1580:1588 DJ.Foundations.BitStrings <> all_zeros def
-R1580:1588 DJ.Foundations.BitStrings <> all_zeros def
-R1606:1623 Grover.GroverConvergenceExperiment <> GroverMarkedOracle def
-R1639:1639 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R1705:1708 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R1643:1655 DJ.Foundations.BitStrings <> bitstring_eqb def
-R1658:1666 DJ.Foundations.BitStrings <> all_zeros def
-R1672:1680 DJ.Foundations.BitStrings <> all_zeros def
-R1700:1704 Coq.Init.Datatypes <> false constr
-R1690:1693 Coq.Init.Datatypes <> true constr
-R1709:1712 Coq.Init.Datatypes <> true constr
-R1639:1639 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R1705:1708 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R1643:1655 DJ.Foundations.BitStrings <> bitstring_eqb def
-R1658:1666 DJ.Foundations.BitStrings <> all_zeros def
-R1672:1680 DJ.Foundations.BitStrings <> all_zeros def
-R1700:1704 Coq.Init.Datatypes <> false constr
-R1690:1693 Coq.Init.Datatypes <> true constr
-R1709:1712 Coq.Init.Datatypes <> true constr
-R1730:1757 DJ.Oracles.BooleanFunctions <> bitstring_eqb_all_zeros_refl thm
-R1730:1757 DJ.Oracles.BooleanFunctions <> bitstring_eqb_all_zeros_refl thm
-R1730:1757 DJ.Oracles.BooleanFunctions <> bitstring_eqb_all_zeros_refl thm
-prf 1800:1828 <> GroverMarkedOracle_marks_zero
-R1846:1848 Coq.Init.Datatypes <> nat ind
-binder 1842:1842 <> n:5
-R1912:1916 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R1854:1868 DJ.Oracles.Oracles <> oracle_function proj
-R1874:1891 Grover.GroverConvergenceExperiment <> GroverMarkedOracle def
-R1893:1893 Grover.GroverConvergenceExperiment <> n:5 var
-R1900:1908 DJ.Foundations.BitStrings <> all_zeros def
-R1910:1910 Grover.GroverConvergenceExperiment <> n:5 var
-R1917:1920 Coq.Init.Datatypes <> true constr
-R1960:1977 Grover.GroverConvergenceExperiment <> GroverMarkedOracle def
-R1993:1993 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2059:2062 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R1997:2009 DJ.Foundations.BitStrings <> bitstring_eqb def
-R2012:2020 DJ.Foundations.BitStrings <> all_zeros def
-R2026:2034 DJ.Foundations.BitStrings <> all_zeros def
-R2054:2058 Coq.Init.Datatypes <> false constr
-R2044:2047 Coq.Init.Datatypes <> true constr
-R2063:2066 Coq.Init.Datatypes <> true constr
-R1993:1993 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2059:2062 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R1997:2009 DJ.Foundations.BitStrings <> bitstring_eqb def
-R2012:2020 DJ.Foundations.BitStrings <> all_zeros def
-R2026:2034 DJ.Foundations.BitStrings <> all_zeros def
-R2054:2058 Coq.Init.Datatypes <> false constr
-R2044:2047 Coq.Init.Datatypes <> true constr
-R2063:2066 Coq.Init.Datatypes <> true constr
-R2084:2111 DJ.Oracles.BooleanFunctions <> bitstring_eqb_all_zeros_refl thm
-R2084:2111 DJ.Oracles.BooleanFunctions <> bitstring_eqb_all_zeros_refl thm
-R2084:2111 DJ.Oracles.BooleanFunctions <> bitstring_eqb_all_zeros_refl thm
-prf 2347:2376 <> AppendBit_preserves_membership
-binder 2390:2390 <> b:6
-binder 2392:2397 <> states:7
-binder 2399:2400 <> bs:8
-R2418:2425 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R2406:2407 Coq.Lists.List <> In def
-R2412:2417 Grover.GroverConvergenceExperiment <> states:7 var
-R2409:2410 Grover.GroverConvergenceExperiment <> bs:8 var
-R2426:2427 Coq.Lists.List <> In def
-R2440:2448 DJ.Foundations.BitStrings <> AppendBit def
-R2450:2450 Grover.GroverConvergenceExperiment <> b:6 var
-R2452:2457 Grover.GroverConvergenceExperiment <> states:7 var
-R2431:2434 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
-R2430:2430 Grover.GroverConvergenceExperiment <> b:6 var
-R2435:2436 Grover.GroverConvergenceExperiment <> bs:8 var
-R2510:2518 DJ.Foundations.BitStrings <> AppendBit def
-prf 2758:2775 <> all_zeros_in_basis
-R2793:2795 Coq.Init.Datatypes <> nat ind
-binder 2789:2789 <> n:9
-R2801:2802 Coq.Lists.List <> In def
-R2819:2829 Quantum.AmplitudeSemantics <> BasisStates def
-R2831:2831 Grover.GroverConvergenceExperiment <> n:9 var
-R2805:2813 DJ.Foundations.BitStrings <> all_zeros def
-R2815:2815 Grover.GroverConvergenceExperiment <> n:9 var
-R2937:2945 Coq.Lists.List <> in_or_app thm
-R2937:2945 Coq.Lists.List <> in_or_app thm
-R2974:3003 Grover.GroverConvergenceExperiment <> AppendBit_preserves_membership thm
-R2974:3003 Grover.GroverConvergenceExperiment <> AppendBit_preserves_membership thm
-prf 3236:3256 <> BasisStates_head_zero
-binder 3270:3270 <> n:10
-R3289:3291 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3276:3286 Quantum.AmplitudeSemantics <> BasisStates def
-R3288:3288 Grover.GroverConvergenceExperiment <> n:10 var
-R3303:3306 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
-R3292:3300 DJ.Foundations.BitStrings <> all_zeros def
-R3302:3302 Grover.GroverConvergenceExperiment <> n:10 var
-R3307:3308 Coq.Lists.List <> tl def
-R3311:3321 Quantum.AmplitudeSemantics <> BasisStates def
-R3323:3323 Grover.GroverConvergenceExperiment <> n:10 var
-prf 3460:3483 <> GroverMarkedOracle_found
-R3501:3503 Coq.Init.Datatypes <> nat ind
-binder 3497:3497 <> n:11
-R3569:3573 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3509:3523 Grover.GroverExperimentResults <> FindMarkedState def
-R3529:3546 Grover.GroverConvergenceExperiment <> GroverMarkedOracle def
-R3548:3548 Grover.GroverConvergenceExperiment <> n:11 var
-R3555:3565 Quantum.AmplitudeSemantics <> BasisStates def
-R3567:3567 Grover.GroverConvergenceExperiment <> n:11 var
-R3574:3577 Coq.Init.Datatypes <> Some constr
-R3580:3588 DJ.Foundations.BitStrings <> all_zeros def
-R3590:3590 Grover.GroverConvergenceExperiment <> n:11 var
-R3633:3653 Grover.GroverConvergenceExperiment <> BasisStates_head_zero thm
-R3633:3653 Grover.GroverConvergenceExperiment <> BasisStates_head_zero thm
-R3633:3653 Grover.GroverConvergenceExperiment <> BasisStates_head_zero thm
-R3683:3700 Grover.GroverConvergenceExperiment <> GroverMarkedOracle def
-R3717:3744 DJ.Oracles.BooleanFunctions <> bitstring_eqb_all_zeros_refl thm
-R3717:3744 DJ.Oracles.BooleanFunctions <> bitstring_eqb_all_zeros_refl thm
-R3717:3744 DJ.Oracles.BooleanFunctions <> bitstring_eqb_all_zeros_refl thm
-def 3987:4007 <> GroverConvergenceData
-R4026:4028 Coq.Init.Datatypes <> nat ind
-binder 4022:4022 <> n:12
-R4045:4048 Coq.Init.Datatypes <> list ind
-R4050:4064 Grover.GroverExperimentResults <> GroverDataPoint rec
-R4072:4090 Grover.GroverExperimentResults <> RunGroverExperiment def
-R4095:4095 Grover.GroverConvergenceExperiment <> n:12 var
-R4101:4118 Grover.GroverConvergenceExperiment <> GroverMarkedOracle def
-R4120:4120 Grover.GroverConvergenceExperiment <> n:12 var
-prf 4332:4359 <> GroverConvergenceData_length
-R4377:4379 Coq.Init.Datatypes <> nat ind
-binder 4373:4373 <> n:13
-R4417:4421 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4385:4390 Coq.Init.Datatypes <> length def
-R4393:4413 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-R4415:4415 Grover.GroverConvergenceExperiment <> n:13 var
-R4422:4427 Coq.Init.Datatypes <> length def
-R4430:4447 Grover.GroverExperiments <> ExampleGroverTrace def
-R4449:4449 Grover.GroverConvergenceExperiment <> n:13 var
-R4452:4469 Grover.GroverConvergenceExperiment <> GroverMarkedOracle def
-R4471:4471 Grover.GroverConvergenceExperiment <> n:13 var
-R4513:4533 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-R4546:4564 Grover.GroverExperimentResults <> RunGroverExperiment def
-R4581:4604 Grover.GroverConvergenceExperiment <> GroverMarkedOracle_found thm
-R4581:4604 Grover.GroverConvergenceExperiment <> GroverMarkedOracle_found thm
-R4581:4604 Grover.GroverConvergenceExperiment <> GroverMarkedOracle_found thm
-R4633:4650 Grover.GroverExperimentResults <> TraceToData_length thm
-R4633:4650 Grover.GroverExperimentResults <> TraceToData_length thm
-prf 4865:4891 <> GroverConvergenceData_state
-binder 4905:4905 <> n:14
-binder 4907:4907 <> d:15
-R4943:4952 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R4913:4914 Coq.Lists.List <> In def
-R4919:4939 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-R4941:4941 Grover.GroverConvergenceExperiment <> n:14 var
-R4916:4916 Grover.GroverConvergenceExperiment <> d:15 var
-R4964:4966 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4953:4961 Grover.GroverExperimentResults <> DataState proj
-R4963:4963 Grover.GroverConvergenceExperiment <> d:15 var
-R4967:4975 DJ.Foundations.BitStrings <> all_zeros def
-R4977:4977 Grover.GroverConvergenceExperiment <> n:14 var
-R5021:5041 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-R5059:5077 Grover.GroverExperimentResults <> RunGroverExperiment def
-R5099:5122 Grover.GroverConvergenceExperiment <> GroverMarkedOracle_found thm
-R5099:5122 Grover.GroverConvergenceExperiment <> GroverMarkedOracle_found thm
-R5099:5122 Grover.GroverConvergenceExperiment <> GroverMarkedOracle_found thm
-R5205:5222 Grover.GroverExperiments <> ExampleGroverTrace def
-R5227:5244 Grover.GroverConvergenceExperiment <> GroverMarkedOracle def
-R5205:5222 Grover.GroverExperiments <> ExampleGroverTrace def
-R5227:5244 Grover.GroverConvergenceExperiment <> GroverMarkedOracle def
-def 5833:5851 <> GroverExperiment_n2
-R5859:5879 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-def 5898:5916 <> GroverExperiment_n3
-R5924:5944 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-def 5963:5981 <> GroverExperiment_n4
-R5989:6009 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-def 6028:6046 <> GroverExperiment_n5
-R6054:6074 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-def 6292:6315 <> GroverScalingExperiments
-R6321:6325 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R6349:6353 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R6377:6381 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R6405:6409 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R6433:6437 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R6461:6463 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R6326:6346 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-R6354:6374 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-R6382:6402 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-R6410:6430 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-R6438:6458 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
-def 6679:6703 <> ExampleProbability_n3_it0
-R6711:6732 Grover.GroverExperiments <> ProbabilityAtIteration def
-R6746:6758 Grover.GroverOracles <> oracle_grover def
-R6773:6781 DJ.Foundations.BitStrings <> all_zeros def
-def 6801:6825 <> ExampleProbability_n3_it1
-R6833:6854 Grover.GroverExperiments <> ProbabilityAtIteration def
-R6868:6880 Grover.GroverOracles <> oracle_grover def
-R6895:6903 DJ.Foundations.BitStrings <> all_zeros def
+R548:551 Coq.Lists.List <> <> lib
+R553:556 Coq.Bool.Bool <> <> lib
+R558:562 Coq.Arith.Arith <> <> lib
+R564:568 Coq.Reals.Reals <> <> lib
+R581:593 Coq.Lists.List ListNotations <> mod
+R614:638 DJ.Foundations.BitStrings <> <> lib
+R657:683 DJ.Oracles.BooleanFunctions <> <> lib
+R702:719 DJ.Oracles.Oracles <> <> lib
+R740:759 Quantum.QuantumState <> <> lib
+R778:801 Quantum.QuantumOperators <> <> lib
+R820:845 Quantum.AmplitudeSemantics <> <> lib
+R866:887 Grover.GroverOperators <> <> lib
+R906:923 Grover.GroverTrace <> <> lib
+R942:965 Grover.GroverExperiments <> <> lib
+R984:1013 Grover.GroverExperimentResults <> <> lib
+R1032:1051 Grover.GroverOracles <> <> lib
+def 1271:1291 <> GroverConvergenceData
+R1307:1309 Coq.Init.Datatypes <> nat ind
+binder 1303:1303 <> n:1
+R1326:1339 DJ.Oracles.Oracles <> OracleInstance rec
+binder 1322:1322 <> f:2
+R1353:1356 Coq.Init.Datatypes <> list ind
+R1358:1372 Grover.GroverExperimentResults <> GroverDataPoint rec
+R1386:1402 Grover.GroverExperimentResults <> GroverMarkedState def
+R1404:1404 Grover.GroverConvergenceExperiment <> n:1 var
+R1406:1406 Grover.GroverConvergenceExperiment <> f:2 var
+R1418:1421 Coq.Init.Datatypes <> Some constr
+R1440:1450 Grover.GroverExperimentResults <> TraceToData def
+R1460:1460 Grover.GroverConvergenceExperiment <> n:1 var
+R1471:1488 Grover.GroverExperiments <> ExampleGroverTrace def
+R1490:1490 Grover.GroverConvergenceExperiment <> n:1 var
+R1492:1492 Grover.GroverConvergenceExperiment <> f:2 var
+R1515:1518 Coq.Init.Datatypes <> None constr
+R1523:1524 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+prf 1746:1773 <> GroverConvergenceData_length
+binder 1787:1787 <> n:3
+binder 1789:1789 <> f:4
+binder 1791:1796 <> marked:5
+R1837:1846 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1823:1825 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1802:1818 Grover.GroverExperimentResults <> GroverMarkedState def
+R1820:1820 Grover.GroverConvergenceExperiment <> n:3 var
+R1822:1822 Grover.GroverConvergenceExperiment <> f:4 var
+R1826:1829 Coq.Init.Datatypes <> Some constr
+R1831:1836 Grover.GroverConvergenceExperiment <> marked:5 var
+R1883:1891 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1847:1852 Coq.Init.Datatypes <> length def
+R1857:1877 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
+R1879:1879 Grover.GroverConvergenceExperiment <> n:3 var
+R1881:1881 Grover.GroverConvergenceExperiment <> f:4 var
+R1892:1897 Coq.Init.Datatypes <> length def
+R1902:1919 Grover.GroverExperiments <> ExampleGroverTrace def
+R1921:1921 Grover.GroverConvergenceExperiment <> n:3 var
+R1923:1923 Grover.GroverConvergenceExperiment <> f:4 var
+R1975:1995 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
+R2037:2054 Grover.GroverExperimentResults <> TraceToData_length thm
+R2037:2054 Grover.GroverExperimentResults <> TraceToData_length thm
+prf 2277:2303 <> GroverConvergenceData_state
+binder 2317:2317 <> n:6
+binder 2319:2319 <> f:7
+binder 2321:2321 <> d:8
+R2363:2372 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2327:2328 Coq.Lists.List <> In def
+R2337:2357 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
+R2359:2359 Grover.GroverConvergenceExperiment <> n:6 var
+R2361:2361 Grover.GroverConvergenceExperiment <> f:7 var
+R2330:2330 Grover.GroverConvergenceExperiment <> d:8 var
+R2373:2379 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R2386:2390 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 2380:2385 <> marked:9
+R2426:2433 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R2412:2414 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2391:2407 Grover.GroverExperimentResults <> GroverMarkedState def
+R2409:2409 Grover.GroverConvergenceExperiment <> n:6 var
+R2411:2411 Grover.GroverConvergenceExperiment <> f:7 var
+R2415:2418 Coq.Init.Datatypes <> Some constr
+R2420:2425 Grover.GroverConvergenceExperiment <> marked:9 var
+R2445:2447 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2434:2442 Grover.GroverExperimentResults <> DataState proj
+R2444:2444 Grover.GroverConvergenceExperiment <> d:8 var
+R2448:2453 Grover.GroverConvergenceExperiment <> marked:9 var
+R2499:2519 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
+R2542:2558 Grover.GroverExperimentResults <> GroverMarkedState def
+R2542:2558 Grover.GroverExperimentResults <> GroverMarkedState def
+R2737:2754 Grover.GroverExperiments <> ExampleGroverTrace def
+R2668:2684 Grover.GroverExperimentResults <> TraceToData_state thm
+R2737:2754 Grover.GroverExperiments <> ExampleGroverTrace def
+R2668:2684 Grover.GroverExperimentResults <> TraceToData_state thm
+def 3281:3306 <> GroverExperiment_single_n2
+R3314:3334 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
+R3343:3362 Grover.GroverOracles <> oracle_grover_single def
+R3365:3373 DJ.Foundations.BitStrings <> all_zeros def
+def 3398:3423 <> GroverExperiment_single_n3
+R3431:3451 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
+R3460:3479 Grover.GroverOracles <> oracle_grover_single def
+R3482:3490 DJ.Foundations.BitStrings <> all_zeros def
+def 3515:3540 <> GroverExperiment_single_n4
+R3548:3568 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
+R3577:3596 Grover.GroverOracles <> oracle_grover_single def
+R3599:3607 DJ.Foundations.BitStrings <> all_zeros def
+def 3632:3657 <> GroverExperiment_single_n5
+R3665:3685 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
+R3694:3713 Grover.GroverOracles <> oracle_grover_single def
+R3716:3724 DJ.Foundations.BitStrings <> all_zeros def
+def 3948:3976 <> GroverExperiment_multiple_two
+R3984:4004 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
+R4012:4028 Grover.GroverOracles <> oracle_grover_two def
+def 4049:4081 <> GroverExperiment_multiple_quarter
+R4089:4109 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
+R4117:4137 Grover.GroverOracles <> oracle_grover_quarter def
+def 4357:4389 <> GroverExperiment_predicate_parity
+R4397:4417 Grover.GroverConvergenceExperiment <> GroverConvergenceData def
+R4426:4448 Grover.GroverOracles <> oracle_grover_predicate def
+R4450:4460 Grover.GroverOracles <> even_parity def
+def 4681:4699 <> GroverScalingSingle
+R4707:4711 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4738:4742 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4769:4773 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4800:4804 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4831:4835 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4712:4737 Grover.GroverConvergenceExperiment <> GroverExperiment_single_n2 def
+R4743:4768 Grover.GroverConvergenceExperiment <> GroverExperiment_single_n3 def
+R4774:4799 Grover.GroverConvergenceExperiment <> GroverExperiment_single_n4 def
+R4805:4830 Grover.GroverConvergenceExperiment <> GroverExperiment_single_n5 def
+def 4856:4876 <> GroverScalingMultiple
+R4884:4888 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4918:4922 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4956:4960 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4889:4917 Grover.GroverConvergenceExperiment <> GroverExperiment_multiple_two def
+R4923:4955 Grover.GroverConvergenceExperiment <> GroverExperiment_multiple_quarter def
+def 5180:5208 <> GroverOracleFamilyExperiments
+R5216:5220 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5247:5251 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5281:5285 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5319:5323 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5221:5246 Grover.GroverConvergenceExperiment <> GroverExperiment_single_n3 def
+R5252:5280 Grover.GroverConvergenceExperiment <> GroverExperiment_multiple_two def
+R5286:5318 Grover.GroverConvergenceExperiment <> GroverExperiment_predicate_parity def
+def 5543:5567 <> ExampleProbability_n3_it0
+R5575:5596 Grover.GroverExperiments <> ProbabilityAtIteration def
+R5611:5630 Grover.GroverOracles <> oracle_grover_single def
+R5633:5641 DJ.Foundations.BitStrings <> all_zeros def
+R5660:5668 DJ.Foundations.BitStrings <> all_zeros def
+def 5692:5716 <> ExampleProbability_n3_it1
+R5724:5745 Grover.GroverExperiments <> ProbabilityAtIteration def
+R5760:5779 Grover.GroverOracles <> oracle_grover_single def
+R5782:5790 DJ.Foundations.BitStrings <> all_zeros def
+R5809:5817 DJ.Foundations.BitStrings <> all_zeros def

@@ -9,9 +9,9 @@ From Coq Require Import Bool List Arith.
 
 Import ListNotations.
 
-Require Import DJ.Foundations.BitStrings.
-Require Import DJ.Oracles.BooleanFunctions.
-Require Import DJ.Oracles.Oracles.
+Require Import forms.Foundations.BitStrings.
+Require Import forms.Oracles.BooleanFunctions.
+Require Import forms.Oracles.Oracles.
 
 
 (*************************************************************)

@@ -1,0 +1,10 @@
+n,oracle,oracle_class,complexity,output,verified,qdl,hh,semantic_trace,semantic_status,avg_runtime,std_runtime
+5,constant_zero,Constant,0,00000,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.0007607045000213475,0.00016270427199355133
+5,constant_one,Constant,0,00000,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.013461336000000301,0.0022255363329977446
+5,first_bit,Linear,1,10000,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.005610857800002122,0.0004710506966892721
+5,alternating,Linear,1,00001,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.006139200400002665,0.0010499477462717578
+5,xor_two_bits,Linear,2,11000,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.006126378600015414,0.0010062181162235919
+5,full_parity,Linear,5,11111,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.006940720799980227,0.0022302678980399004
+5,affine,Affine,6,10101,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.00613233669996589,0.0007967019042036999
+5,and_xor,Nonlinear,7,00111,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.005672701699973004,0.0007412149036032393
+5,random_balanced,Random,32,01101,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.007408471100006864,0.003004580364595742

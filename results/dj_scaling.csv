@@ -1,0 +1,15 @@
+n,oracle,output,verified,qdl,hh,runtime_avg,runtime_std,trace,status
+3,full_parity,111,True,True,True,0.0021821633000172367,0.00040475765346333184,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+3,xor_two_bits,110,True,True,True,0.0021544406999737475,0.0005876084302510403,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+4,full_parity,1111,True,True,True,0.0031833335000783338,0.0015695081266523243,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+4,xor_two_bits,1100,True,True,True,0.0023677769000187256,0.0001781147089382573,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+5,full_parity,11111,True,True,True,0.009460981799975343,0.006589216538972916,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+5,xor_two_bits,11000,True,True,True,0.0060331736999842175,0.0013674011705907992,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+6,full_parity,111111,True,True,True,0.012459054599980845,0.0018852231432473876,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+6,xor_two_bits,110000,True,True,True,0.011629058900007294,0.0009839116606737445,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+7,full_parity,1111111,True,True,True,0.05972251300001972,0.044301862853202874,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+7,xor_two_bits,1100000,True,True,True,0.12612421569997423,0.09063094577870655,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+8,full_parity,11111111,True,True,True,0.03131403129998489,0.005785257683429348,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+8,xor_two_bits,11000000,True,True,True,0.028186693400061812,0.0014542221056680032,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+9,full_parity,111111111,True,True,True,0.05923011250006312,0.0034410928997390474,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+9,xor_two_bits,110000000,True,True,True,0.05704052739997678,0.0019458816033187264,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED

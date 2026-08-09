@@ -1,4 +1,4 @@
-DIGEST 23f6aa32b1d05ebc35d0480d6abfcd1a
+DIGEST 935130a7be67256778b68fdd9b88143b
 FFinal.CaseStudyComparison
 R548:551 Coq.Lists.List <> <> lib
 R553:556 Coq.Bool.Bool <> <> lib
@@ -11,35 +11,35 @@ R631:650 Quantum.QuantumState <> <> lib
 R669:692 Quantum.QuantumOperators <> <> lib
 R713:723 Quantum.QDL <> <> lib
 R742:765 Quantum.HoaresHeisenberg <> <> lib
-R786:803 DJ.DeutschJozsa.DJ <> <> lib
-R822:845 DJ.DeutschJozsa.DJProofs <> <> lib
-R864:881 DJ.Oracles.Oracles <> <> lib
-R902:920 Grover.GroverProofs <> <> lib
-R939:958 Grover.GroverOracles <> <> lib
-R979:993 Final.Framework <> <> lib
-R1012:1038 Final.AlgorithmVerification <> <> lib
-R1057:1077 Final.LogicComparison <> <> lib
-R1297:1316 DJ.Tests.DJCaseStudy <> <> lib
-R1337:1358 Grover.GroverCaseStudy <> <> lib
-prf 1571:1595 <> DeutschJozsaCase_verified
-R1602:1621 Final.Framework <> VerificationProperty proj
-R1623:1638 DJ.Tests.DJCaseStudy <> DeutschJozsaCase def
-R1663:1678 DJ.Tests.DJCaseStudy <> DeutschJozsaCase def
-R1722:1736 DJ.DeutschJozsa.DJProofs <> parity_verified thm
-R1722:1736 DJ.DeutschJozsa.DJProofs <> parity_verified thm
-prf 1773:1791 <> GroverCase_verified
-R1798:1817 Final.Framework <> VerificationProperty proj
-R1819:1834 Grover.GroverCaseStudy <> GroverSearchCase def
-R1859:1874 Grover.GroverCaseStudy <> GroverSearchCase def
-R1920:1937 Grover.GroverProofs <> Grover_HH_verified thm
-R1920:1937 Grover.GroverProofs <> Grover_HH_verified thm
-prf 2319:2358 <> DJ_and_Grover_verified_by_same_framework
-R2402:2411 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
-R2365:2384 Final.Framework <> VerificationProperty proj
-R2386:2401 DJ.Tests.DJCaseStudy <> DeutschJozsaCase def
-R2412:2431 Final.Framework <> VerificationProperty proj
-R2433:2448 Grover.GroverCaseStudy <> GroverSearchCase def
-R2486:2510 Final.CaseStudyComparison <> DeutschJozsaCase_verified thm
-R2486:2510 Final.CaseStudyComparison <> DeutschJozsaCase_verified thm
-R2526:2544 Final.CaseStudyComparison <> GroverCase_verified thm
-R2526:2544 Final.CaseStudyComparison <> GroverCase_verified thm
+R786:790 DJ.DJ <> <> lib
+R809:819 DJ.DJProofs <> <> lib
+R838:858 forms.Oracles.Oracles <> <> lib
+R879:897 Grover.GroverProofs <> <> lib
+R916:935 Grover.GroverOracles <> <> lib
+R956:970 Final.Framework <> <> lib
+R989:1015 Final.AlgorithmVerification <> <> lib
+R1034:1054 Final.LogicComparison <> <> lib
+R1274:1293 DJ.Tests.DJCaseStudy <> <> lib
+R1314:1335 Grover.GroverCaseStudy <> <> lib
+prf 1548:1572 <> DeutschJozsaCase_verified
+R1579:1598 Final.Framework <> VerificationProperty proj
+R1600:1615 DJ.Tests.DJCaseStudy <> DeutschJozsaCase def
+R1640:1655 DJ.Tests.DJCaseStudy <> DeutschJozsaCase def
+R1699:1713 DJ.DJProofs <> parity_verified thm
+R1699:1713 DJ.DJProofs <> parity_verified thm
+prf 1750:1768 <> GroverCase_verified
+R1775:1794 Final.Framework <> VerificationProperty proj
+R1796:1811 Grover.GroverCaseStudy <> GroverSearchCase def
+R1836:1851 Grover.GroverCaseStudy <> GroverSearchCase def
+R1897:1914 Grover.GroverProofs <> Grover_HH_verified thm
+R1897:1914 Grover.GroverProofs <> Grover_HH_verified thm
+prf 2296:2335 <> DJ_and_Grover_verified_by_same_framework
+R2379:2388 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R2342:2361 Final.Framework <> VerificationProperty proj
+R2363:2378 DJ.Tests.DJCaseStudy <> DeutschJozsaCase def
+R2389:2408 Final.Framework <> VerificationProperty proj
+R2410:2425 Grover.GroverCaseStudy <> GroverSearchCase def
+R2463:2487 Final.CaseStudyComparison <> DeutschJozsaCase_verified thm
+R2463:2487 Final.CaseStudyComparison <> DeutschJozsaCase_verified thm
+R2503:2521 Final.CaseStudyComparison <> GroverCase_verified thm
+R2503:2521 Final.CaseStudyComparison <> GroverCase_verified thm

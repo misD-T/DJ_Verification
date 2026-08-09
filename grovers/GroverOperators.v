@@ -19,7 +19,7 @@ Require Import Quantum.QuantumState.
 Require Import Quantum.QuantumOperators.
 Require Import Quantum.AmplitudeSemantics.
 
-Require Import DJ.Oracles.Oracles.
+Require Import forms.Oracles.Oracles.
 
 
 (*************************************************************)

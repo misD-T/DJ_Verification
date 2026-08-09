@@ -9,8 +9,8 @@ Import ListNotations.
 Open Scope string_scope.
 Open Scope R_scope.
 
-Require Import DJ.Foundations.BitStrings.
-Require Import DJ.Oracles.Oracles.
+Require Import forms.Foundations.BitStrings.
+Require Import forms.Oracles.Oracles.
 Require Import Quantum.QuantumState.
 Require Import Quantum.QuantumOperators.
 

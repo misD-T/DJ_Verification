@@ -7,26 +7,18 @@ properties used by the semantic verification framework.
 The reusable verification infrastructure is provided by
 semantic.verification.
 
-Corresponds to:
+Corresponds to the Rocq framework:
 
-Rocq:
-
-    GroverCorrect n f :=
-        qs_oracle (GroverExecute n f)
-        =
-        Some f
+    GroverCorrect n f
 
     HHVerified (GroverHHSpec n f)
 
     Valid (GroverFormula n f)
-
 """
 
 from __future__ import annotations
 
-
 import time
-
 
 from ..semantic import (
 
@@ -41,181 +33,114 @@ from ..semantic import (
 
 )
 
-
 from .grover_circuit import (
     GroverCircuit
 )
 
-
 from .grover_oracles import (
-    OracleInstance,
     OracleKind
 )
 
-
-
 # ============================================================
-# Grover Correctness Property
+# Grover Semantic Correctness Property
 # ============================================================
 
-
-class GroverOraclePreservationProperty(Property):
+class GroverSemanticProperty(Property):
     """
-    Grover correctness property.
+    Mirrors the Rocq theorem
 
-    The Grover execution must preserve
-    the oracle instance being executed.
+        GroverCorrect n f
 
-    Corresponds to:
-
-    qs_oracle(GroverExecute n f)
-        =
-    Some f
+    which states that the oracle executed by the
+    Grover program is preserved in the final
+    semantic state.
     """
 
-    def __init__(
-            self,
-            oracle
-    ):
+    def __init__(self, oracle):
 
         super().__init__(
-            "Grover Oracle Preservation"
+            "Oracle Preserved"
         )
 
-        self.oracle = oracle
+        self.oracle = oracle.kind.name
 
+    def check(self, state):
 
-    def check(
-            self,
-            state
-    ):
-
-        return (
-
-            state.oracle
-            ==
-            self.oracle.kind.name
-
-        )
-
-
+        return state.oracle == self.oracle
 
 # ============================================================
-# QDL Propositions
+# Quantum Dynamic Logic Proposition
 # ============================================================
 
+class OracleTracked(Proposition):
 
-class OraclePreserved(Proposition):
-    """
-    QDL postcondition:
+    def evaluate(self, state):
 
-        Oracle remains unchanged.
-    """
-
-
-    def evaluate(
-            self,
-            state
-    ):
-
-        return (
-
-            state.oracle
-            is not None
-
-        )
-
+        return state.oracle is not None
 
     def __str__(self):
 
-        return "OraclePreserved"
-
+        return "OracleTracked"
 
 
 # ============================================================
-# Hoare-Heisenberg Predicates
+# Hoare–Heisenberg Predicate
 # ============================================================
 
+class OracleTrackedPredicate(Predicate):
 
-class OraclePreservedPredicate(Predicate):
+    def evaluate(self, state):
 
-
-    def evaluate(
-            self,
-            state
-    ):
-
-        return (
-
-            state.oracle
-            is not None
-
-        )
-
+        return state.oracle is not None
 
     def __str__(self):
 
-        return "OraclePreserved"
-
+        return "OracleTracked"
 
 
 # ============================================================
 # Verification Object Construction
 # ============================================================
 
-
-def build_verification_objects(
-        oracle
-):
+def build_verification_objects(oracle):
     """
-    Construct Grover QDL and HH verification objects.
+    Construct the semantic verification objects
+    corresponding to the Rocq framework.
 
-    The specification is independent of oracle family.
-
-    Supports:
-
-        - single marked
-        - multiple marked
-        - random marked
-        - predicate oracle
-
+    Unlike the numerical experiments, the semantic
+    proof is independent of the oracle family.
     """
 
-    prop = GroverOraclePreservationProperty(
+    prop = GroverSemanticProperty(
         oracle
     )
-
 
     qdl = QDLFormula(
 
-        assumption="ValidOracle",
+        assumption="InitialState",
 
         program="Grover",
 
-        proposition=OraclePreserved()
+        proposition=OracleTracked()
 
     )
-
 
     hh = HoareTriple(
 
-        precondition="ValidOracle",
+        precondition="InitialState",
 
         program="Grover",
 
-        predicate=OraclePreservedPredicate()
+        predicate=OracleTrackedPredicate()
 
     )
 
-
     return prop, qdl, hh
-
 
 
 # ============================================================
 # Grover Verification Experiment
 # ============================================================
-
 
 def run_test(
         qubits,
@@ -223,19 +148,17 @@ def run_test(
         verbose=False
 ):
     """
-    Execute Grover and verify semantic correctness.
+    Execute the semantic Grover program and verify the
+    Rocq correctness properties.
 
-    Returns structured results for experiments.
-
+    Returns structured semantic verification results.
     """
-
 
     # -------------------------------------------------
     # Execute Grover
     # -------------------------------------------------
 
     start = time.perf_counter()
-
 
     state = GroverCircuit(
 
@@ -247,22 +170,12 @@ def run_test(
 
     )
 
-
-    runtime = (
-
-        time.perf_counter()
-
-        -
-
-        start
-
-    )
+    runtime = time.perf_counter() - start
 
 
     # -------------------------------------------------
     # Build Verification Objects
     # -------------------------------------------------
-
 
     prop, qdl, hh = build_verification_objects(
 
@@ -272,9 +185,8 @@ def run_test(
 
 
     # -------------------------------------------------
-    # Property Verification
+    # Semantic Property Verification
     # -------------------------------------------------
-
 
     verification = verify_property(
 
@@ -286,20 +198,24 @@ def run_test(
 
 
     # -------------------------------------------------
-    # QDL Verification
+    # Quantum Dynamic Logic
     # -------------------------------------------------
 
     qdl_result = qdl.verify(
+
         state
+
     )
 
 
     # -------------------------------------------------
-    # HH Verification
+    # Hoare–Heisenberg Logic
     # -------------------------------------------------
 
     hh_result = hh.verify(
+
         state
+
     )
 
 
@@ -307,95 +223,60 @@ def run_test(
     # Console Output
     # -------------------------------------------------
 
-
     if verbose:
 
+        print()
+
+        print("=" * 70)
+
+        print("Grover Semantic Verification")
+
+        print("=" * 70)
+
+        print("Oracle:", oracle.kind.name)
+
+        print("Measurement:", state.measurement)
+
+        print("Status:", state.status.name)
+
+        print()
+
+        print("Grover Correctness")
+
+        print(verification)
+
+        print()
+
+        print("Quantum Dynamic Logic")
+
+        print(qdl)
+
+        print("Verified:", qdl_result)
+
+        print()
+
+        print("Hoare–Heisenberg Logic")
+
+        print(hh)
+
+        print("Verified:", hh_result)
+
+        print()
+
+        print("Semantic Trace")
+
+        print(" -> ".join(state.history))
 
         print()
 
         print("=" * 70)
 
-        print(
-            "Grover Verification"
-        )
 
-        print("=" * 70)
-
-
-        print(
-            "Oracle:",
-            oracle.kind.name
-        )
-
-
-        print(
-            "Measurement:",
-            state.measurement
-        )
-
-
-        print(
-            "Status:",
-            state.status.name
-        )
-
-
-        print()
-
-        print(
-            "Semantic Property"
-        )
-
-
-        print(
-            verification
-        )
-
-
-        print()
-
-
-        print(
-            "Quantum Dynamic Logic"
-        )
-
-
-        print(
-            qdl
-        )
-
-
-        print(
-            "Verified:",
-            qdl_result
-        )
-
-
-        print()
-
-
-        print(
-            "Hoare-Heisenberg Logic"
-        )
-
-
-        print(
-            hh
-        )
-
-
-        print(
-            "Verified:",
-            hh_result
-        )
-
-
-        print("=" * 70)
-
-
+    # -------------------------------------------------
+    # Structured Result
+    # -------------------------------------------------
 
     return {
-
 
         "oracle":
 
@@ -407,17 +288,12 @@ def run_test(
             state.measurement,
 
 
-        "status":
+        "runtime":
 
-            state.status.name,
-
-
-        "semantic_trace":
-
-            state.history,
+            runtime,
 
 
-        "semantic_property":
+        "verified":
 
             verification.verified,
 
@@ -442,9 +318,14 @@ def run_test(
             hh_result,
 
 
-        "runtime":
+        "semantic_trace":
 
-            runtime,
+            state.history,
+
+
+        "semantic_status":
+
+            state.status.name,
 
 
         "symbolic_output":

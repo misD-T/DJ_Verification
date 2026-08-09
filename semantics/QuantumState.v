@@ -12,9 +12,9 @@ From Coq Require Import List Bool String Reals.
 Import ListNotations.
 Open Scope R_scope.
 
-Require Import DJ.Foundations.BitStrings.
-Require Import DJ.Oracles.BooleanFunctions.
-Require Import DJ.Oracles.Oracles.
+Require Import forms.Foundations.BitStrings.
+Require Import forms.Oracles.BooleanFunctions.
+Require Import forms.Oracles.Oracles.
 
 (*************************************************************)
 (* Measurement Outcomes                                      *)

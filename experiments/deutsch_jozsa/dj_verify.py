@@ -337,55 +337,6 @@ def run_test(oracle_type, n_target_bits, verbose = False):
 
         hh_result = hh.verify(output)
 
-    # -------------------------------------------------
-    # Console Output
-    # -------------------------------------------------
-
-    if verbose:
-
-        print()
-
-        print("=" * 70)
-
-        print("Oracle:", oracle_type)
-
-        print("Category:", category)
-
-        print("Output:", output)
-
-        print(f"P(0...0): {prob_zero:.6f}")
-
-        print(f"Runtime: {runtime:.6f} s")
-
-        print()
-
-        print("Verification Property")
-
-        print(verification)
-
-        print()
-
-        print("Quantum Dynamic Logic")
-
-        print(qdl)
-
-        print("Verified:", qdl_result)
-
-        print()
-
-        print("Hoare–Heisenberg Logic")
-
-        if hh is None:
-
-            print("Undefined")
-
-        else:
-
-            print(hh)
-
-            print("Verified:", hh_result)
-
-        print("=" * 70)
 
     # -------------------------------------------------
     # Structured Result
@@ -393,62 +344,99 @@ def run_test(oracle_type, n_target_bits, verbose = False):
 
     return {
 
-        "oracle": oracle_type,
+    "oracle":
+        oracle_type,
 
-        "category": category,
 
-        "class": oracle_class(
+    "category":
+        category,
+
+
+    "class":
+        oracle_class(
             oracle_type,
             n_target_bits
         ),
 
-        "complexity": oracle_complexity(
+
+    "complexity":
+        oracle_complexity(
             oracle_type,
             n_target_bits
         ),
 
-        "distance": promise_distance(
+
+    "distance":
+        promise_distance(
             oracle_type,
             n_target_bits
         ),
 
-        "bias": oracle_bias(
+
+    "bias":
+        oracle_bias(
             oracle_type,
             n_target_bits
         ),
 
-        "output": output,
 
-        "prob_zero": prob_zero,
+    "output":
+        output,
 
-        "runtime": runtime,
 
-        "verified": verification.verified,
+    "prob_zero":
+        prob_zero,
 
-        "qdl_formula": str(qdl),
 
-        "qdl_result": qdl_result,
+    "runtime":
+        runtime,
 
-        "hh_formula": (
+
+    # Semantic verification
+
+    "verified":
+        verification.verified,
+
+
+    # QDL
+
+    "qdl_formula":
+        str(qdl),
+
+
+    "qdl_result":
+        qdl_result,
+
+
+    # Hoare-Heisenberg
+
+    "hh_formula":
+        (
             str(hh)
             if hh is not None
             else "Undefined"
         ),
 
-        "hh_result": hh_result,
-        
-        "semantic_trace":
-            state.history,
+
+    "hh_result":
+        hh_result,
 
 
-        "semantic_status":
-            state.status.name,
+    # Execution semantics
+
+    "semantic_trace":
+        state.history,
 
 
-        "semantic_measurement":
-            state.measurement,
+    "semantic_status":
+        state.status.name,
 
 
-        "symbolic_output":
-            state.symbolic_output,
+    "semantic_measurement":
+        state.measurement,
+
+
+    "symbolic_output":
+        state.symbolic_output
+
 }

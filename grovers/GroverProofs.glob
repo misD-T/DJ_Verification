@@ -1,4 +1,4 @@
-DIGEST 72e4898cbcfdc41798793d341a01be55
+DIGEST 8f8acdb8fbe7b01cf132562a5538253a
 FGrover.GroverProofs
 R884:887 Coq.Lists.List <> <> lib
 R889:892 Coq.Bool.Bool <> <> lib
@@ -6,141 +6,141 @@ R894:898 Coq.Arith.Arith <> <> lib
 R900:902 Coq.micromega.Lia <> <> lib
 R904:912 Coq.Logic.Classical <> <> lib
 R925:937 Coq.Lists.List ListNotations <> mod
-R960:984 DJ.Foundations.BitStrings <> <> lib
-R1003:1020 DJ.Oracles.Oracles <> <> lib
-R1041:1060 Quantum.QuantumState <> <> lib
-R1079:1102 Quantum.QuantumOperators <> <> lib
-R1123:1133 Quantum.QDL <> <> lib
-R1152:1175 Quantum.HoaresHeisenberg <> <> lib
-R1196:1215 Grover.GroverOracles <> <> lib
-R1234:1255 Grover.GroverOperators <> <> lib
-R1274:1286 Grover.Grover <> <> lib
-def 1707:1730 <> GroverOracleTrackingPost
-R1749:1762 DJ.Oracles.Oracles <> OracleInstance rec
-binder 1745:1745 <> f:1
-R1779:1787 Quantum.HoaresHeisenberg <> Predicate def
-binder 1799:1800 <> ψ:2
-R1820:1822 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R1808:1816 Quantum.QuantumState <> qs_oracle proj
-R1818:1819 Grover.GroverProofs <> ψ:2 var
-R1823:1826 Coq.Init.Datatypes <> Some constr
-R1828:1828 Grover.GroverProofs <> f:1 var
-def 2047:2058 <> GroverHHSpec
-R2077:2079 Coq.Init.Datatypes <> nat ind
-binder 2073:2073 <> n:3
-R2099:2112 DJ.Oracles.Oracles <> OracleInstance rec
-binder 2095:2095 <> f:4
-R2129:2143 Quantum.HoaresHeisenberg <> HHSpecification rec
-R2159:2163 Quantum.HoaresHeisenberg <> HHPre proj
-R2159:2163 Quantum.HoaresHeisenberg <> HHPre proj
-R2159:2163 Quantum.HoaresHeisenberg <> HHPre proj
-R2242:2250 Quantum.HoaresHeisenberg <> HHProgram proj
-R2242:2250 Quantum.HoaresHeisenberg <> HHProgram proj
-R2291:2296 Quantum.HoaresHeisenberg <> HHPost proj
-R2291:2296 Quantum.HoaresHeisenberg <> HHPost proj
-binder 2181:2182 <> ψ:5
-R2201:2213 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
-R2197:2199 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
-R2196:2196 Grover.GroverProofs <> n:3 var
-R2216:2218 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2214:2215 Grover.GroverProofs <> ψ:5 var
-R2219:2230 Quantum.QuantumState <> InitialState def
-R2232:2232 Grover.GroverProofs <> n:3 var
-R2264:2277 Grover.GroverOperators <> GroverOperator def
-R2279:2279 Grover.GroverProofs <> n:3 var
-R2281:2281 Grover.GroverProofs <> f:4 var
-R2310:2333 Grover.GroverProofs <> GroverOracleTrackingPost def
-R2335:2335 Grover.GroverProofs <> f:4 var
-def 2559:2571 <> GroverInitial
-R2590:2592 Coq.Init.Datatypes <> nat ind
-binder 2586:2586 <> n:6
-R2609:2615 Quantum.QDL <> Formula ind
-R2623:2626 Quantum.QDL <> Atom constr
-binder 2636:2637 <> ψ:7
-R2648:2650 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2646:2647 Grover.GroverProofs <> ψ:7 var
-R2651:2662 Quantum.QuantumState <> InitialState def
-R2664:2664 Grover.GroverProofs <> n:6 var
-def 2686:2698 <> GroverFormula
-R2717:2719 Coq.Init.Datatypes <> nat ind
-binder 2713:2713 <> n:8
-R2739:2752 DJ.Oracles.Oracles <> OracleInstance rec
-binder 2735:2735 <> f:9
-R2769:2775 Quantum.QDL <> Formula ind
-R2783:2793 Quantum.QDL <> Implication constr
-R2799:2811 Grover.GroverProofs <> GroverInitial def
-R2813:2813 Grover.GroverProofs <> n:8 var
-R2820:2822 Quantum.QDL <> Box constr
-R2831:2844 Grover.GroverOperators <> GroverOperator def
-R2846:2846 Grover.GroverProofs <> n:8 var
-R2848:2848 Grover.GroverProofs <> f:9 var
-R2858:2861 Quantum.QDL <> Atom constr
-R2873:2896 Grover.GroverProofs <> GroverOracleTrackingPost def
-R2898:2898 Grover.GroverProofs <> f:9 var
-prf 3127:3144 <> Grover_HH_verified
-binder 3158:3158 <> n:10
-binder 3160:3160 <> f:11
-R3171:3177 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R3167:3169 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
-R3166:3166 Grover.GroverProofs <> n:10 var
-R3178:3187 Quantum.HoaresHeisenberg <> HHVerified def
-R3190:3201 Grover.GroverProofs <> GroverHHSpec def
-R3203:3203 Grover.GroverProofs <> n:10 var
-R3205:3205 Grover.GroverProofs <> f:11 var
-R3253:3262 Quantum.HoaresHeisenberg <> HHVerified def
-R3277:3287 Quantum.HoaresHeisenberg <> HoareTriple def
-R3302:3313 Grover.GroverProofs <> GroverHHSpec def
-R3413:3436 Grover.GroverProofs <> GroverOracleTrackingPost def
-R3453:3465 Grover.Grover <> GroverExecute def
-R3481:3509 Grover.Grover <> grover_semantics_preservation thm
-R3481:3509 Grover.Grover <> grover_semantics_preservation thm
-prf 3749:3767 <> Grover_QDL_verified
-binder 3781:3781 <> n:12
-binder 3783:3783 <> f:13
-R3794:3800 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R3790:3792 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
-R3789:3789 Grover.GroverProofs <> n:12 var
-R3801:3805 Quantum.QDL <> Valid def
-R3808:3820 Grover.GroverProofs <> GroverFormula def
-R3822:3822 Grover.GroverProofs <> n:12 var
-R3824:3824 Grover.GroverProofs <> f:13 var
-R3872:3876 Quantum.QDL <> Valid def
-R3910:3922 Grover.GroverProofs <> GroverFormula def
-R3953:3965 Grover.GroverProofs <> GroverInitial def
-R4022:4045 Grover.GroverProofs <> GroverOracleTrackingPost def
-R4062:4074 Grover.Grover <> GroverExecute def
-R4090:4118 Grover.Grover <> grover_semantics_preservation thm
-R4090:4118 Grover.Grover <> grover_semantics_preservation thm
-prf 4472:4502 <> Grover_verified_implies_correct
-binder 4516:4516 <> n:14
-binder 4518:4518 <> f:15
-R4529:4535 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R4525:4527 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
-R4524:4524 Grover.GroverProofs <> n:14 var
-R4565:4574 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R4536:4545 Quantum.HoaresHeisenberg <> HHVerified def
-R4548:4559 Grover.GroverProofs <> GroverHHSpec def
-R4561:4561 Grover.GroverProofs <> n:14 var
-R4563:4563 Grover.GroverProofs <> f:15 var
-R4575:4587 Grover.Grover <> GroverCorrect def
-R4589:4589 Grover.GroverProofs <> n:14 var
-R4591:4591 Grover.GroverProofs <> f:15 var
-R4648:4660 Grover.Grover <> GroverCorrect def
-R4677:4686 Quantum.HoaresHeisenberg <> HHVerified def
-R4714:4724 Quantum.HoaresHeisenberg <> HoareTriple def
-R4752:4763 Grover.GroverProofs <> GroverHHSpec def
-R4791:4814 Grover.GroverProofs <> GroverOracleTrackingPost def
-R4863:4874 Quantum.QuantumState <> InitialState def
-R4863:4874 Quantum.QuantumState <> InitialState def
-prf 5455:5490 <> Grover_supports_all_oracle_instances
-binder 5504:5504 <> n:16
-binder 5506:5506 <> f:17
-R5517:5523 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R5513:5515 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
-R5512:5512 Grover.GroverProofs <> n:16 var
-R5524:5533 Quantum.HoaresHeisenberg <> HHVerified def
-R5536:5547 Grover.GroverProofs <> GroverHHSpec def
-R5549:5549 Grover.GroverProofs <> n:16 var
-R5551:5551 Grover.GroverProofs <> f:17 var
-R5596:5613 Grover.GroverProofs <> Grover_HH_verified thm
-R5596:5613 Grover.GroverProofs <> Grover_HH_verified thm
+R960:987 forms.Foundations.BitStrings <> <> lib
+R1006:1026 forms.Oracles.Oracles <> <> lib
+R1047:1066 Quantum.QuantumState <> <> lib
+R1085:1108 Quantum.QuantumOperators <> <> lib
+R1129:1139 Quantum.QDL <> <> lib
+R1158:1181 Quantum.HoaresHeisenberg <> <> lib
+R1202:1221 Grover.GroverOracles <> <> lib
+R1240:1261 Grover.GroverOperators <> <> lib
+R1280:1292 Grover.Grover <> <> lib
+def 1713:1736 <> GroverOracleTrackingPost
+R1755:1768 forms.Oracles.Oracles <> OracleInstance rec
+binder 1751:1751 <> f:1
+R1785:1793 Quantum.HoaresHeisenberg <> Predicate def
+binder 1805:1806 <> ψ:2
+R1826:1828 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1814:1822 Quantum.QuantumState <> qs_oracle proj
+R1824:1825 Grover.GroverProofs <> ψ:2 var
+R1829:1832 Coq.Init.Datatypes <> Some constr
+R1834:1834 Grover.GroverProofs <> f:1 var
+def 2053:2064 <> GroverHHSpec
+R2083:2085 Coq.Init.Datatypes <> nat ind
+binder 2079:2079 <> n:3
+R2105:2118 forms.Oracles.Oracles <> OracleInstance rec
+binder 2101:2101 <> f:4
+R2135:2149 Quantum.HoaresHeisenberg <> HHSpecification rec
+R2165:2169 Quantum.HoaresHeisenberg <> HHPre proj
+R2165:2169 Quantum.HoaresHeisenberg <> HHPre proj
+R2165:2169 Quantum.HoaresHeisenberg <> HHPre proj
+R2248:2256 Quantum.HoaresHeisenberg <> HHProgram proj
+R2248:2256 Quantum.HoaresHeisenberg <> HHProgram proj
+R2297:2302 Quantum.HoaresHeisenberg <> HHPost proj
+R2297:2302 Quantum.HoaresHeisenberg <> HHPost proj
+binder 2187:2188 <> ψ:5
+R2207:2219 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R2203:2205 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R2202:2202 Grover.GroverProofs <> n:3 var
+R2222:2224 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2220:2221 Grover.GroverProofs <> ψ:5 var
+R2225:2236 Quantum.QuantumState <> InitialState def
+R2238:2238 Grover.GroverProofs <> n:3 var
+R2270:2283 Grover.GroverOperators <> GroverOperator def
+R2285:2285 Grover.GroverProofs <> n:3 var
+R2287:2287 Grover.GroverProofs <> f:4 var
+R2316:2339 Grover.GroverProofs <> GroverOracleTrackingPost def
+R2341:2341 Grover.GroverProofs <> f:4 var
+def 2565:2577 <> GroverInitial
+R2596:2598 Coq.Init.Datatypes <> nat ind
+binder 2592:2592 <> n:6
+R2615:2621 Quantum.QDL <> Formula ind
+R2629:2632 Quantum.QDL <> Atom constr
+binder 2642:2643 <> ψ:7
+R2654:2656 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2652:2653 Grover.GroverProofs <> ψ:7 var
+R2657:2668 Quantum.QuantumState <> InitialState def
+R2670:2670 Grover.GroverProofs <> n:6 var
+def 2692:2704 <> GroverFormula
+R2723:2725 Coq.Init.Datatypes <> nat ind
+binder 2719:2719 <> n:8
+R2745:2758 forms.Oracles.Oracles <> OracleInstance rec
+binder 2741:2741 <> f:9
+R2775:2781 Quantum.QDL <> Formula ind
+R2789:2799 Quantum.QDL <> Implication constr
+R2805:2817 Grover.GroverProofs <> GroverInitial def
+R2819:2819 Grover.GroverProofs <> n:8 var
+R2826:2828 Quantum.QDL <> Box constr
+R2837:2850 Grover.GroverOperators <> GroverOperator def
+R2852:2852 Grover.GroverProofs <> n:8 var
+R2854:2854 Grover.GroverProofs <> f:9 var
+R2864:2867 Quantum.QDL <> Atom constr
+R2879:2902 Grover.GroverProofs <> GroverOracleTrackingPost def
+R2904:2904 Grover.GroverProofs <> f:9 var
+prf 3133:3150 <> Grover_HH_verified
+binder 3164:3164 <> n:10
+binder 3166:3166 <> f:11
+R3177:3183 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3173:3175 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R3172:3172 Grover.GroverProofs <> n:10 var
+R3184:3193 Quantum.HoaresHeisenberg <> HHVerified def
+R3196:3207 Grover.GroverProofs <> GroverHHSpec def
+R3209:3209 Grover.GroverProofs <> n:10 var
+R3211:3211 Grover.GroverProofs <> f:11 var
+R3259:3268 Quantum.HoaresHeisenberg <> HHVerified def
+R3283:3293 Quantum.HoaresHeisenberg <> HoareTriple def
+R3308:3319 Grover.GroverProofs <> GroverHHSpec def
+R3419:3442 Grover.GroverProofs <> GroverOracleTrackingPost def
+R3459:3471 Grover.Grover <> GroverExecute def
+R3487:3515 Grover.Grover <> grover_semantics_preservation thm
+R3487:3515 Grover.Grover <> grover_semantics_preservation thm
+prf 3755:3773 <> Grover_QDL_verified
+binder 3787:3787 <> n:12
+binder 3789:3789 <> f:13
+R3800:3806 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3796:3798 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R3795:3795 Grover.GroverProofs <> n:12 var
+R3807:3811 Quantum.QDL <> Valid def
+R3814:3826 Grover.GroverProofs <> GroverFormula def
+R3828:3828 Grover.GroverProofs <> n:12 var
+R3830:3830 Grover.GroverProofs <> f:13 var
+R3878:3882 Quantum.QDL <> Valid def
+R3916:3928 Grover.GroverProofs <> GroverFormula def
+R3959:3971 Grover.GroverProofs <> GroverInitial def
+R4028:4051 Grover.GroverProofs <> GroverOracleTrackingPost def
+R4068:4080 Grover.Grover <> GroverExecute def
+R4096:4124 Grover.Grover <> grover_semantics_preservation thm
+R4096:4124 Grover.Grover <> grover_semantics_preservation thm
+prf 4478:4508 <> Grover_verified_implies_correct
+binder 4522:4522 <> n:14
+binder 4524:4524 <> f:15
+R4535:4541 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4531:4533 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R4530:4530 Grover.GroverProofs <> n:14 var
+R4571:4580 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4542:4551 Quantum.HoaresHeisenberg <> HHVerified def
+R4554:4565 Grover.GroverProofs <> GroverHHSpec def
+R4567:4567 Grover.GroverProofs <> n:14 var
+R4569:4569 Grover.GroverProofs <> f:15 var
+R4581:4593 Grover.Grover <> GroverCorrect def
+R4595:4595 Grover.GroverProofs <> n:14 var
+R4597:4597 Grover.GroverProofs <> f:15 var
+R4654:4666 Grover.Grover <> GroverCorrect def
+R4683:4692 Quantum.HoaresHeisenberg <> HHVerified def
+R4720:4730 Quantum.HoaresHeisenberg <> HoareTriple def
+R4758:4769 Grover.GroverProofs <> GroverHHSpec def
+R4797:4820 Grover.GroverProofs <> GroverOracleTrackingPost def
+R4869:4880 Quantum.QuantumState <> InitialState def
+R4869:4880 Quantum.QuantumState <> InitialState def
+prf 5461:5496 <> Grover_supports_all_oracle_instances
+binder 5510:5510 <> n:16
+binder 5512:5512 <> f:17
+R5523:5529 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5519:5521 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R5518:5518 Grover.GroverProofs <> n:16 var
+R5530:5539 Quantum.HoaresHeisenberg <> HHVerified def
+R5542:5553 Grover.GroverProofs <> GroverHHSpec def
+R5555:5555 Grover.GroverProofs <> n:16 var
+R5557:5557 Grover.GroverProofs <> f:17 var
+R5602:5619 Grover.GroverProofs <> Grover_HH_verified thm
+R5602:5619 Grover.GroverProofs <> Grover_HH_verified thm

@@ -18,7 +18,7 @@ from ..semantic.oracles import (
     OracleKind
 )
 
-BitString = List[int]
+BitString = str
 
 
 # ============================================================
@@ -42,25 +42,14 @@ def bitstring_to_int(bits: BitString) -> int:
 
 
 
-def all_bitstrings(n: int) -> List[BitString]:
-    """
-    Generate all possible n-bit states.
-    """
+def all_bitstrings(n: int):
 
     states = []
 
-    for i in range(2**n):
-
-        bits = format(
-            i,
-            f"0{n}b"
-        )
+    for i in range(2 ** n):
 
         states.append(
-            [
-                int(bit)
-                for bit in bits
-            ]
+            format(i, f"0{n}b")
         )
 
     return states
@@ -204,10 +193,7 @@ def xor_first_two_bits(state: BitString):
         x0 XOR x1 = 1
     """
 
-    return (
-        state[0] ^ state[1]
-    ) == 1
-    
+    return (int(state[0]) ^ int(state[1])) == 1
 
 
 
@@ -218,4 +204,4 @@ def first_bit_is_one(state: BitString):
     Useful for testing many marked states.
     """
 
-    return state[0] == 1
+    return state[0] == "1"

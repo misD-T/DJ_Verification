@@ -9,7 +9,7 @@ From Coq Require Import List Arith Reals.
 
 Import ListNotations.
 
-Require Import DJ.Foundations.BitStrings.
+Require Import forms.Foundations.BitStrings.
 
 Require Import Quantum.QuantumState.
 Require Import Quantum.AmplitudeSemantics.

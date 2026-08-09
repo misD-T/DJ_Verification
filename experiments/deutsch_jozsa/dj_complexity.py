@@ -16,21 +16,10 @@ from .dj_verify import run_test
 #
 # ============================================================
 
+def oracle_complexity_experiment(
+        target_bits=5
+):
 
-def oracle_complexity_experiment():
-
-
-    print("\n")
-    print("=" * 80)
-    print("ORACLE COMPLEXITY EXPERIMENT")
-    print("=" * 80)
-    
-    target_bits = 5
-
-
-    # -------------------------------------------------
-    # Oracle families from Rocq OracleKind
-    # -------------------------------------------------
 
     oracle_set = [
 
@@ -56,8 +45,10 @@ def oracle_complexity_experiment():
         # Non-linear
 
         "and_xor",
-        
+
+
         # Random
+
         "random_balanced"
 
     ]
@@ -69,6 +60,7 @@ def oracle_complexity_experiment():
     repetitions = 10
 
 
+
     for oracle in oracle_set:
 
 
@@ -78,13 +70,18 @@ def oracle_complexity_experiment():
         last_result = None
 
 
+
         for _ in range(repetitions):
 
 
             result = run_test(
+
                 oracle,
-                n_target_bits= target_bits,
+
+                n_target_bits=target_bits,
+
                 verbose=False
+
             )
 
 
@@ -107,16 +104,18 @@ def oracle_complexity_experiment():
         )
 
 
+
         results.append({
 
             "n":
                 target_bits,
-                
+
+
             "oracle":
                 oracle,
 
 
-            "class":
+            "oracle_class":
                 last_result["class"],
 
 
@@ -153,80 +152,9 @@ def oracle_complexity_experiment():
 
 
             "std_runtime":
-                std_runtime,
+                std_runtime
 
         })
 
 
-    # -------------------------------------------------
-    # Display Results
-    # -------------------------------------------------
-
-
-    print("\n")
-    print("=" * 110)
-
-    print(
-        "ORACLE COMPLEXITY SUMMARY"
-    )
-
-    print("=" * 110)
-
-
-
-    for r in results:
-
-
-        print(
-
-            f"{r['oracle']:18} "
-
-            f"{r['class']:12} "
-
-            f"C={r['complexity']:3} "
-
-            f"Output={r['output']:8} "
-
-            f"Verified={str(r['verified']):5} "
-
-            f"QDL={str(r['qdl']):5} "
-
-            f"HH={str(r['hh']):5} "
-
-            f"Avg={r['avg_runtime']:.6f}s"
-
-        )
-
-
-        print(
-            " Trace:",
-            " -> ".join(
-                r["semantic_trace"]
-            )
-        )
-
-
-        print(
-            " Status:",
-            r["semantic_status"]
-        )
-
-
-        print()
-
-
-
     return results
-
-
-
-# ============================================================
-# Execute Experiment
-# ============================================================
-
-
-if __name__ == "__main__":
-
-    oracle_complexity_results = (
-        oracle_complexity_experiment()
-    )

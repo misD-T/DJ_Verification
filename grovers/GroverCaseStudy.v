@@ -10,7 +10,7 @@ From Coq Require Import List Bool Arith Lia Classical String.
 Import ListNotations.
 Open Scope string_scope.
 
-Require Import DJ.Oracles.Oracles.
+Require Import forms.Oracles.Oracles.
 Require Import Quantum.QuantumState.
 Require Import Quantum.QuantumOperators.
 

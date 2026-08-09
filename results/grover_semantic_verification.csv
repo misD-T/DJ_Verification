@@ -1,0 +1,5 @@
+oracle,measurement,runtime,verified,qdl_formula,qdl_result,hh_formula,hh_result,semantic_trace,semantic_status,symbolic_output
+SINGLE_MARKED,00000,6.1009999399175285e-06,False,InitialState -> [Grover] OracleTracked,True,{InitialState} Grover {OracleTracked},True,"['InitialState', 'H', 'Oracle', 'Diffusion', 'Measurement']",FINISHED,00000
+MULTIPLE_MARKED,00000,1.0613000085868407e-05,False,InitialState -> [Grover] OracleTracked,True,{InitialState} Grover {OracleTracked},True,"['InitialState', 'H', 'Oracle', 'Diffusion', 'Measurement']",FINISHED,00000
+MULTIPLE_MARKED,00000,5.235000003267487e-06,False,InitialState -> [Grover] OracleTracked,True,{InitialState} Grover {OracleTracked},True,"['InitialState', 'H', 'Oracle', 'Diffusion', 'Measurement']",FINISHED,00000
+PREDICATE,00000,6.9980000034775e-06,False,InitialState -> [Grover] OracleTracked,True,{InitialState} Grover {OracleTracked},True,"['InitialState', 'H', 'Oracle', 'Diffusion', 'Measurement']",FINISHED,00000

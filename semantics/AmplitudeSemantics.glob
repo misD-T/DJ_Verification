@@ -1,4 +1,4 @@
-DIGEST 6d266d85790807093f7b65eb01670984
+DIGEST 326aee344119f3d58f8f137dadfcb9b2
 FQuantum.AmplitudeSemantics
 R221:224 Coq.Lists.List <> <> lib
 R226:229 Coq.Bool.Bool <> <> lib
@@ -7,267 +7,267 @@ R237:241 Coq.Reals.Reals <> <> lib
 R243:248 Coq.Strings.String <> <> lib
 R250:254 Coq.micromega.Psatz <> <> lib
 R267:279 Coq.Lists.List ListNotations <> mod
-R349:373 DJ.Foundations.BitStrings <> <> lib
-R392:409 DJ.Oracles.Oracles <> <> lib
-R428:447 Quantum.QuantumState <> <> lib
-R466:489 Quantum.QuantumOperators <> <> lib
-def 701:715 <> PreservesQubits
-R734:748 Quantum.QuantumOperators <> QuantumOperator def
-binder 730:730 <> U:1
-binder 783:784 <> ρ:2
-R806:810 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R790:798 Quantum.QuantumState <> qs_qubits proj
-R801:801 Quantum.AmplitudeSemantics <> U:1 var
-R803:804 Quantum.AmplitudeSemantics <> ρ:2 var
-R811:819 Quantum.QuantumState <> qs_qubits proj
-R821:822 Quantum.AmplitudeSemantics <> ρ:2 var
-def 1036:1044 <> PhaseFlip
-R1063:1076 DJ.Oracles.Oracles <> OracleInstance rec
-binder 1059:1059 <> f:3
-R1099:1112 Quantum.QuantumState <> AmplitudeState def
-binder 1092:1095 <> amps:4
-R1129:1142 Quantum.QuantumState <> AmplitudeState def
-binder 1154:1154 <> x:5
-R1165:1179 DJ.Oracles.Oracles <> oracle_function proj
-R1181:1181 Quantum.AmplitudeSemantics <> f:3 var
-R1183:1183 Quantum.AmplitudeSemantics <> x:5 var
-R1211:1214 Quantum.AmplitudeSemantics <> amps:4 var
-R1216:1216 Quantum.AmplitudeSemantics <> x:5 var
-R1193:1194 Coq.Reals.Rdefinitions <> ::R_scope:'-'_x not
-R1201:1201 Coq.Reals.Rdefinitions <> ::R_scope:'-'_x not
-R1195:1198 Quantum.AmplitudeSemantics <> amps:4 var
-R1200:1200 Quantum.AmplitudeSemantics <> x:5 var
-def 1427:1437 <> BasisStates
-R1454:1456 Coq.Init.Datatypes <> nat ind
-binder 1450:1450 <> n:6
-R1471:1474 Coq.Init.Datatypes <> list ind
-R1476:1484 DJ.Foundations.BitStrings <> BitString def
-R1498:1498 Quantum.AmplitudeSemantics <> n:6 var
-R1520:1520 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
-R1523:1523 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
-R1521:1522 Coq.Lists.List ListNotations ::list_scope:'['_']' not
-R1530:1530 Coq.Init.Datatypes <> S constr
-R1559:1569 Quantum.AmplitudeSemantics <> BasisStates:7 def
-binder 1547:1554 <> previous:9
-R1584:1584 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
-R1609:1624 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
-R1648:1648 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
-R1585:1593 DJ.Foundations.BitStrings <> AppendBit def
-R1595:1599 Coq.Init.Datatypes <> false constr
-R1601:1608 Quantum.AmplitudeSemantics <> previous:9 var
-R1625:1633 DJ.Foundations.BitStrings <> AppendBit def
-R1635:1638 Coq.Init.Datatypes <> true constr
-R1640:1647 Quantum.AmplitudeSemantics <> previous:9 var
-def 1866:1878 <> SumAmplitudes
-R1897:1910 Quantum.QuantumState <> AmplitudeState def
-binder 1890:1893 <> amps:10
-R1932:1935 Coq.Init.Datatypes <> list ind
-R1937:1945 DJ.Foundations.BitStrings <> BitString def
-binder 1923:1928 <> states:11
-R1959:1959 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
-R1973:1978 Quantum.AmplitudeSemantics <> states:11 var
-R1990:1991 Coq.Lists.List ListNotations ::list_scope:'['_']' not
-R2011:2014 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
-R2034:2036 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
-R2028:2031 Quantum.AmplitudeSemantics <> amps:10 var
-R2037:2049 Quantum.AmplitudeSemantics <> SumAmplitudes:12 def
-R2051:2054 Quantum.AmplitudeSemantics <> amps:10 var
-def 2280:2292 <> MeanAmplitude
-R2311:2324 Quantum.QuantumState <> AmplitudeState def
-binder 2304:2307 <> amps:14
-R2339:2341 Coq.Init.Datatypes <> nat ind
-binder 2337:2337 <> n:15
-R2355:2355 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
-R2363:2363 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
-R2398:2404 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
-R2414:2414 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
-R2364:2376 Quantum.AmplitudeSemantics <> SumAmplitudes def
-R2378:2381 Quantum.AmplitudeSemantics <> amps:14 var
-R2384:2394 Quantum.AmplitudeSemantics <> BasisStates def
-R2396:2396 Quantum.AmplitudeSemantics <> n:15 var
-R2405:2407 Coq.Reals.Raxioms <> INR def
-R2411:2411 Coq.Arith.PeanoNat <> ::nat_scope:x_'^'_x not
-R2412:2412 Quantum.AmplitudeSemantics <> n:15 var
-def 2628:2645 <> DiffusionTransform
-R2667:2680 Quantum.QuantumState <> AmplitudeState def
-binder 2660:2663 <> amps:16
-R2700:2702 Coq.Init.Datatypes <> nat ind
-binder 2696:2696 <> n:17
-R2719:2732 Quantum.QuantumState <> AmplitudeState def
-binder 2744:2744 <> x:18
-R2752:2752 Coq.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
-R2779:2782 Coq.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
-R2756:2758 Coq.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
-R2759:2771 Quantum.AmplitudeSemantics <> MeanAmplitude def
-R2773:2776 Quantum.AmplitudeSemantics <> amps:16 var
-R2778:2778 Quantum.AmplitudeSemantics <> n:17 var
-R2783:2786 Quantum.AmplitudeSemantics <> amps:16 var
-R2788:2788 Quantum.AmplitudeSemantics <> x:18 var
-def 3002:3017 <> ReflectAboutMean
-R3037:3050 Quantum.QuantumState <> AmplitudeState def
-binder 3030:3033 <> amps:19
-R3068:3070 Coq.Init.Datatypes <> nat ind
-binder 3064:3064 <> n:20
-R3085:3098 Quantum.QuantumState <> AmplitudeState def
-R3106:3123 Quantum.AmplitudeSemantics <> DiffusionTransform def
-R3125:3128 Quantum.AmplitudeSemantics <> amps:19 var
-R3130:3130 Quantum.AmplitudeSemantics <> n:20 var
-def 3344:3354 <> AmplitudeOf
-R3376:3389 Quantum.QuantumState <> AmplitudeState def
-binder 3369:3372 <> amps:21
-R3410:3418 DJ.Foundations.BitStrings <> BitString def
-binder 3405:3406 <> bs:22
-R3435:3435 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
-R3443:3446 Quantum.AmplitudeSemantics <> amps:21 var
-R3448:3449 Quantum.AmplitudeSemantics <> bs:22 var
-def 3466:3478 <> ProbabilityOf
-R3500:3513 Quantum.QuantumState <> AmplitudeState def
-binder 3493:3496 <> amps:23
-R3534:3542 DJ.Foundations.BitStrings <> BitString def
-binder 3529:3530 <> bs:24
-R3559:3559 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
-R3576:3579 Quantum.AmplitudeSemantics <> amps:23 var
-R3581:3582 Quantum.AmplitudeSemantics <> bs:24 var
-binder 3571:3571 <> a:25
-R3591:3593 Coq.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
-R3590:3590 Quantum.AmplitudeSemantics <> a:25 var
-R3594:3594 Quantum.AmplitudeSemantics <> a:25 var
-def 3611:3632 <> MeasurementProbability
-R3654:3667 Quantum.QuantumState <> AmplitudeState def
-binder 3647:3650 <> amps:26
-R3688:3696 DJ.Foundations.BitStrings <> BitString def
-binder 3683:3684 <> bs:27
-R3713:3713 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
-R3721:3733 Quantum.AmplitudeSemantics <> ProbabilityOf def
-R3735:3738 Quantum.AmplitudeSemantics <> amps:26 var
-R3740:3741 Quantum.AmplitudeSemantics <> bs:27 var
-def 3756:3774 <> TotalProbabilityAux
-R3794:3807 Quantum.QuantumState <> AmplitudeState def
-binder 3787:3790 <> amps:28
-R3830:3833 Coq.Init.Datatypes <> list ind
-R3835:3843 DJ.Foundations.BitStrings <> BitString def
-binder 3821:3826 <> states:29
-R3858:3858 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
-R3872:3877 Quantum.AmplitudeSemantics <> states:29 var
-R3889:3890 Coq.Lists.List ListNotations ::list_scope:'['_']' not
-R3905:3908 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
-R3942:3954 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
-R3922:3934 Quantum.AmplitudeSemantics <> ProbabilityOf def
-R3936:3939 Quantum.AmplitudeSemantics <> amps:28 var
-R3955:3973 Quantum.AmplitudeSemantics <> TotalProbabilityAux:30 def
-R3975:3978 Quantum.AmplitudeSemantics <> amps:28 var
-def 4005:4020 <> TotalProbability
-R4042:4055 Quantum.QuantumState <> AmplitudeState def
-binder 4035:4038 <> amps:32
-R4075:4077 Coq.Init.Datatypes <> nat ind
-binder 4071:4071 <> n:33
-R4094:4094 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
-R4102:4120 Quantum.AmplitudeSemantics <> TotalProbabilityAux def
-R4122:4125 Quantum.AmplitudeSemantics <> amps:32 var
-R4128:4138 Quantum.AmplitudeSemantics <> BasisStates def
-R4140:4140 Quantum.AmplitudeSemantics <> n:33 var
-def 4158:4172 <> MostLikelyState
-R4194:4207 Quantum.QuantumState <> AmplitudeState def
-binder 4187:4190 <> amps:34
-R4227:4229 Coq.Init.Datatypes <> nat ind
-binder 4223:4223 <> n:35
-R4246:4254 DJ.Foundations.BitStrings <> BitString def
-R4262:4270 DJ.Foundations.BitStrings <> all_zeros def
-R4272:4272 Quantum.AmplitudeSemantics <> n:35 var
-def 4486:4498 <> IsMarkedState
-R4517:4530 DJ.Oracles.Oracles <> OracleInstance rec
-binder 4513:4513 <> f:36
-R4551:4559 DJ.Foundations.BitStrings <> BitString def
-binder 4546:4547 <> bs:37
-R4607:4609 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4587:4601 DJ.Oracles.Oracles <> oracle_function proj
-R4603:4603 Quantum.AmplitudeSemantics <> f:36 var
-R4605:4606 Quantum.AmplitudeSemantics <> bs:37 var
-R4610:4613 Coq.Init.Datatypes <> true constr
-def 4630:4653 <> GroverSuccessProbability
-R4675:4688 Quantum.QuantumState <> AmplitudeState def
-binder 4668:4671 <> amps:38
-R4708:4721 DJ.Oracles.Oracles <> OracleInstance rec
-binder 4704:4704 <> f:39
-R4741:4743 Coq.Init.Datatypes <> nat ind
-binder 4737:4737 <> n:40
-R4760:4760 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
-R4768:4786 Quantum.AmplitudeSemantics <> TotalProbabilityAux def
-R4790:4793 Quantum.AmplitudeSemantics <> amps:38 var
-R4798:4803 Coq.Lists.List <> filter def
-R4836:4846 Quantum.AmplitudeSemantics <> BasisStates def
-R4848:4848 Quantum.AmplitudeSemantics <> n:40 var
-R4811:4825 DJ.Oracles.Oracles <> oracle_function proj
-R4827:4827 Quantum.AmplitudeSemantics <> f:39 var
-prf 5059:5081 <> Probability_nonnegative
-binder 5095:5098 <> amps:41
-binder 5100:5101 <> bs:42
-R5108:5111 Coq.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
-R5112:5124 Quantum.AmplitudeSemantics <> ProbabilityOf def
-R5126:5129 Quantum.AmplitudeSemantics <> amps:41 var
-R5131:5132 Quantum.AmplitudeSemantics <> bs:42 var
-R5174:5186 Quantum.AmplitudeSemantics <> ProbabilityOf def
-prf 5219:5246 <> TotalProbability_nonnegative
-binder 5260:5263 <> amps:43
-binder 5265:5265 <> n:44
-R5272:5275 Coq.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
-R5276:5291 Quantum.AmplitudeSemantics <> TotalProbability def
-R5293:5296 Quantum.AmplitudeSemantics <> amps:43 var
-R5298:5298 Quantum.AmplitudeSemantics <> n:44 var
-prf 5384:5424 <> MeasurementProbability_equals_probability
-binder 5438:5441 <> amps:45
-binder 5443:5444 <> bs:46
-R5480:5483 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5450:5471 Quantum.AmplitudeSemantics <> MeasurementProbability def
-R5473:5476 Quantum.AmplitudeSemantics <> amps:45 var
-R5478:5479 Quantum.AmplitudeSemantics <> bs:46 var
-R5484:5496 Quantum.AmplitudeSemantics <> ProbabilityOf def
-R5498:5501 Quantum.AmplitudeSemantics <> amps:45 var
-R5503:5504 Quantum.AmplitudeSemantics <> bs:46 var
-prf 5766:5780 <> BasisStates_two
-R5798:5801 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5785:5795 Quantum.AmplitudeSemantics <> BasisStates def
-R5802:5805 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5819:5822 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5835:5838 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5851:5854 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5866:5868 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5806:5806 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R349:376 forms.Foundations.BitStrings <> <> lib
+R395:415 forms.Oracles.Oracles <> <> lib
+R434:453 Quantum.QuantumState <> <> lib
+R472:495 Quantum.QuantumOperators <> <> lib
+def 707:721 <> PreservesQubits
+R740:754 Quantum.QuantumOperators <> QuantumOperator def
+binder 736:736 <> U:1
+binder 789:790 <> ρ:2
+R812:816 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R796:804 Quantum.QuantumState <> qs_qubits proj
+R807:807 Quantum.AmplitudeSemantics <> U:1 var
+R809:810 Quantum.AmplitudeSemantics <> ρ:2 var
+R817:825 Quantum.QuantumState <> qs_qubits proj
+R827:828 Quantum.AmplitudeSemantics <> ρ:2 var
+def 1042:1050 <> PhaseFlip
+R1069:1082 forms.Oracles.Oracles <> OracleInstance rec
+binder 1065:1065 <> f:3
+R1105:1118 Quantum.QuantumState <> AmplitudeState def
+binder 1098:1101 <> amps:4
+R1135:1148 Quantum.QuantumState <> AmplitudeState def
+binder 1160:1160 <> x:5
+R1171:1185 forms.Oracles.Oracles <> oracle_function proj
+R1187:1187 Quantum.AmplitudeSemantics <> f:3 var
+R1189:1189 Quantum.AmplitudeSemantics <> x:5 var
+R1217:1220 Quantum.AmplitudeSemantics <> amps:4 var
+R1222:1222 Quantum.AmplitudeSemantics <> x:5 var
+R1199:1200 Coq.Reals.Rdefinitions <> ::R_scope:'-'_x not
+R1207:1207 Coq.Reals.Rdefinitions <> ::R_scope:'-'_x not
+R1201:1204 Quantum.AmplitudeSemantics <> amps:4 var
+R1206:1206 Quantum.AmplitudeSemantics <> x:5 var
+def 1433:1443 <> BasisStates
+R1460:1462 Coq.Init.Datatypes <> nat ind
+binder 1456:1456 <> n:6
+R1477:1480 Coq.Init.Datatypes <> list ind
+R1482:1490 forms.Foundations.BitStrings <> BitString def
+R1504:1504 Quantum.AmplitudeSemantics <> n:6 var
+R1526:1526 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1529:1529 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1527:1528 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R1536:1536 Coq.Init.Datatypes <> S constr
+R1565:1575 Quantum.AmplitudeSemantics <> BasisStates:7 def
+binder 1553:1560 <> previous:9
+R1590:1590 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R1615:1630 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R1654:1654 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R1591:1599 forms.Foundations.BitStrings <> AppendBit def
+R1601:1605 Coq.Init.Datatypes <> false constr
+R1607:1614 Quantum.AmplitudeSemantics <> previous:9 var
+R1631:1639 forms.Foundations.BitStrings <> AppendBit def
+R1641:1644 Coq.Init.Datatypes <> true constr
+R1646:1653 Quantum.AmplitudeSemantics <> previous:9 var
+def 1872:1884 <> SumAmplitudes
+R1903:1916 Quantum.QuantumState <> AmplitudeState def
+binder 1896:1899 <> amps:10
+R1938:1941 Coq.Init.Datatypes <> list ind
+R1943:1951 forms.Foundations.BitStrings <> BitString def
+binder 1929:1934 <> states:11
+R1965:1965 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R1979:1984 Quantum.AmplitudeSemantics <> states:11 var
+R1996:1997 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R2017:2020 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2040:2042 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R2034:2037 Quantum.AmplitudeSemantics <> amps:10 var
+R2043:2055 Quantum.AmplitudeSemantics <> SumAmplitudes:12 def
+R2057:2060 Quantum.AmplitudeSemantics <> amps:10 var
+def 2286:2298 <> MeanAmplitude
+R2317:2330 Quantum.QuantumState <> AmplitudeState def
+binder 2310:2313 <> amps:14
+R2345:2347 Coq.Init.Datatypes <> nat ind
+binder 2343:2343 <> n:15
+R2361:2361 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R2369:2369 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R2404:2410 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R2420:2420 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R2370:2382 Quantum.AmplitudeSemantics <> SumAmplitudes def
+R2384:2387 Quantum.AmplitudeSemantics <> amps:14 var
+R2390:2400 Quantum.AmplitudeSemantics <> BasisStates def
+R2402:2402 Quantum.AmplitudeSemantics <> n:15 var
+R2411:2413 Coq.Reals.Raxioms <> INR def
+R2417:2417 Coq.Arith.PeanoNat <> ::nat_scope:x_'^'_x not
+R2418:2418 Quantum.AmplitudeSemantics <> n:15 var
+def 2634:2651 <> DiffusionTransform
+R2673:2686 Quantum.QuantumState <> AmplitudeState def
+binder 2666:2669 <> amps:16
+R2706:2708 Coq.Init.Datatypes <> nat ind
+binder 2702:2702 <> n:17
+R2725:2738 Quantum.QuantumState <> AmplitudeState def
+binder 2750:2750 <> x:18
+R2758:2758 Coq.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
+R2785:2788 Coq.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
+R2762:2764 Coq.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R2765:2777 Quantum.AmplitudeSemantics <> MeanAmplitude def
+R2779:2782 Quantum.AmplitudeSemantics <> amps:16 var
+R2784:2784 Quantum.AmplitudeSemantics <> n:17 var
+R2789:2792 Quantum.AmplitudeSemantics <> amps:16 var
+R2794:2794 Quantum.AmplitudeSemantics <> x:18 var
+def 3008:3023 <> ReflectAboutMean
+R3043:3056 Quantum.QuantumState <> AmplitudeState def
+binder 3036:3039 <> amps:19
+R3074:3076 Coq.Init.Datatypes <> nat ind
+binder 3070:3070 <> n:20
+R3091:3104 Quantum.QuantumState <> AmplitudeState def
+R3112:3129 Quantum.AmplitudeSemantics <> DiffusionTransform def
+R3131:3134 Quantum.AmplitudeSemantics <> amps:19 var
+R3136:3136 Quantum.AmplitudeSemantics <> n:20 var
+def 3350:3360 <> AmplitudeOf
+R3382:3395 Quantum.QuantumState <> AmplitudeState def
+binder 3375:3378 <> amps:21
+R3416:3424 forms.Foundations.BitStrings <> BitString def
+binder 3411:3412 <> bs:22
+R3441:3441 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R3449:3452 Quantum.AmplitudeSemantics <> amps:21 var
+R3454:3455 Quantum.AmplitudeSemantics <> bs:22 var
+def 3472:3484 <> ProbabilityOf
+R3506:3519 Quantum.QuantumState <> AmplitudeState def
+binder 3499:3502 <> amps:23
+R3540:3548 forms.Foundations.BitStrings <> BitString def
+binder 3535:3536 <> bs:24
+R3565:3565 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R3582:3585 Quantum.AmplitudeSemantics <> amps:23 var
+R3587:3588 Quantum.AmplitudeSemantics <> bs:24 var
+binder 3577:3577 <> a:25
+R3597:3599 Coq.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R3596:3596 Quantum.AmplitudeSemantics <> a:25 var
+R3600:3600 Quantum.AmplitudeSemantics <> a:25 var
+def 3617:3638 <> MeasurementProbability
+R3660:3673 Quantum.QuantumState <> AmplitudeState def
+binder 3653:3656 <> amps:26
+R3694:3702 forms.Foundations.BitStrings <> BitString def
+binder 3689:3690 <> bs:27
+R3719:3719 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R3727:3739 Quantum.AmplitudeSemantics <> ProbabilityOf def
+R3741:3744 Quantum.AmplitudeSemantics <> amps:26 var
+R3746:3747 Quantum.AmplitudeSemantics <> bs:27 var
+def 3762:3780 <> TotalProbabilityAux
+R3800:3813 Quantum.QuantumState <> AmplitudeState def
+binder 3793:3796 <> amps:28
+R3836:3839 Coq.Init.Datatypes <> list ind
+R3841:3849 forms.Foundations.BitStrings <> BitString def
+binder 3827:3832 <> states:29
+R3864:3864 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R3878:3883 Quantum.AmplitudeSemantics <> states:29 var
+R3895:3896 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R3911:3914 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3948:3960 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R3928:3940 Quantum.AmplitudeSemantics <> ProbabilityOf def
+R3942:3945 Quantum.AmplitudeSemantics <> amps:28 var
+R3961:3979 Quantum.AmplitudeSemantics <> TotalProbabilityAux:30 def
+R3981:3984 Quantum.AmplitudeSemantics <> amps:28 var
+def 4011:4026 <> TotalProbability
+R4048:4061 Quantum.QuantumState <> AmplitudeState def
+binder 4041:4044 <> amps:32
+R4081:4083 Coq.Init.Datatypes <> nat ind
+binder 4077:4077 <> n:33
+R4100:4100 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4108:4126 Quantum.AmplitudeSemantics <> TotalProbabilityAux def
+R4128:4131 Quantum.AmplitudeSemantics <> amps:32 var
+R4134:4144 Quantum.AmplitudeSemantics <> BasisStates def
+R4146:4146 Quantum.AmplitudeSemantics <> n:33 var
+def 4164:4178 <> MostLikelyState
+R4200:4213 Quantum.QuantumState <> AmplitudeState def
+binder 4193:4196 <> amps:34
+R4233:4235 Coq.Init.Datatypes <> nat ind
+binder 4229:4229 <> n:35
+R4252:4260 forms.Foundations.BitStrings <> BitString def
+R4268:4276 forms.Foundations.BitStrings <> all_zeros def
+R4278:4278 Quantum.AmplitudeSemantics <> n:35 var
+def 4492:4504 <> IsMarkedState
+R4523:4536 forms.Oracles.Oracles <> OracleInstance rec
+binder 4519:4519 <> f:36
+R4557:4565 forms.Foundations.BitStrings <> BitString def
+binder 4552:4553 <> bs:37
+R4613:4615 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4593:4607 forms.Oracles.Oracles <> oracle_function proj
+R4609:4609 Quantum.AmplitudeSemantics <> f:36 var
+R4611:4612 Quantum.AmplitudeSemantics <> bs:37 var
+R4616:4619 Coq.Init.Datatypes <> true constr
+def 4636:4659 <> GroverSuccessProbability
+R4681:4694 Quantum.QuantumState <> AmplitudeState def
+binder 4674:4677 <> amps:38
+R4714:4727 forms.Oracles.Oracles <> OracleInstance rec
+binder 4710:4710 <> f:39
+R4747:4749 Coq.Init.Datatypes <> nat ind
+binder 4743:4743 <> n:40
+R4766:4766 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4774:4792 Quantum.AmplitudeSemantics <> TotalProbabilityAux def
+R4796:4799 Quantum.AmplitudeSemantics <> amps:38 var
+R4804:4809 Coq.Lists.List <> filter def
+R4842:4852 Quantum.AmplitudeSemantics <> BasisStates def
+R4854:4854 Quantum.AmplitudeSemantics <> n:40 var
+R4817:4831 forms.Oracles.Oracles <> oracle_function proj
+R4833:4833 Quantum.AmplitudeSemantics <> f:39 var
+prf 5065:5087 <> Probability_nonnegative
+binder 5101:5104 <> amps:41
+binder 5106:5107 <> bs:42
+R5114:5117 Coq.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5118:5130 Quantum.AmplitudeSemantics <> ProbabilityOf def
+R5132:5135 Quantum.AmplitudeSemantics <> amps:41 var
+R5137:5138 Quantum.AmplitudeSemantics <> bs:42 var
+R5180:5192 Quantum.AmplitudeSemantics <> ProbabilityOf def
+prf 5225:5252 <> TotalProbability_nonnegative
+binder 5266:5269 <> amps:43
+binder 5271:5271 <> n:44
+R5278:5281 Coq.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5282:5297 Quantum.AmplitudeSemantics <> TotalProbability def
+R5299:5302 Quantum.AmplitudeSemantics <> amps:43 var
+R5304:5304 Quantum.AmplitudeSemantics <> n:44 var
+prf 5390:5430 <> MeasurementProbability_equals_probability
+binder 5444:5447 <> amps:45
+binder 5449:5450 <> bs:46
+R5486:5489 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5456:5477 Quantum.AmplitudeSemantics <> MeasurementProbability def
+R5479:5482 Quantum.AmplitudeSemantics <> amps:45 var
+R5484:5485 Quantum.AmplitudeSemantics <> bs:46 var
+R5490:5502 Quantum.AmplitudeSemantics <> ProbabilityOf def
+R5504:5507 Quantum.AmplitudeSemantics <> amps:45 var
+R5509:5510 Quantum.AmplitudeSemantics <> bs:46 var
+prf 5772:5786 <> BasisStates_two
+R5804:5807 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5791:5801 Quantum.AmplitudeSemantics <> BasisStates def
+R5808:5811 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5825:5828 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5841:5844 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5857:5860 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5872:5874 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
 R5812:5812 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
 R5818:5818 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5807:5811 Coq.Init.Datatypes <> false constr
+R5824:5824 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
 R5813:5817 Coq.Init.Datatypes <> false constr
-R5823:5823 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5819:5823 Coq.Init.Datatypes <> false constr
 R5829:5829 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5834:5834 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5824:5828 Coq.Init.Datatypes <> false constr
-R5830:5833 Coq.Init.Datatypes <> true constr
-R5839:5839 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5844:5844 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5835:5835 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5840:5840 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5830:5834 Coq.Init.Datatypes <> false constr
+R5836:5839 Coq.Init.Datatypes <> true constr
+R5845:5845 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
 R5850:5850 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5840:5843 Coq.Init.Datatypes <> true constr
-R5845:5849 Coq.Init.Datatypes <> false constr
-R5855:5855 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5860:5860 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5865:5865 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
-R5856:5859 Coq.Init.Datatypes <> true constr
-R5861:5864 Coq.Init.Datatypes <> true constr
-prf 5916:5933 <> BasisStates_length
-binder 5945:5945 <> n:47
-R5978:5982 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5951:5961 Coq.Lists.List <> length abbrev
-R5964:5974 Quantum.AmplitudeSemantics <> BasisStates def
-R5976:5976 Quantum.AmplitudeSemantics <> n:47 var
-R5983:5989 Coq.Arith.PeanoNat Nat pow def
-R5993:5993 Quantum.AmplitudeSemantics <> n:47 var
-prf 6026:6050 <> UniformAmplitude_constant
-binder 6064:6064 <> n:48
-binder 6066:6066 <> x:49
-binder 6068:6068 <> y:50
-R6099:6102 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6074:6094 Quantum.QuantumState <> UniformAmplitudeState def
-R6096:6096 Quantum.AmplitudeSemantics <> n:48 var
-R6098:6098 Quantum.AmplitudeSemantics <> x:49 var
-R6103:6123 Quantum.QuantumState <> UniformAmplitudeState def
-R6125:6125 Quantum.AmplitudeSemantics <> n:48 var
-R6127:6127 Quantum.AmplitudeSemantics <> y:50 var
+R5856:5856 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5846:5849 Coq.Init.Datatypes <> true constr
+R5851:5855 Coq.Init.Datatypes <> false constr
+R5861:5861 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5866:5866 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5871:5871 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5862:5865 Coq.Init.Datatypes <> true constr
+R5867:5870 Coq.Init.Datatypes <> true constr
+prf 5922:5939 <> BasisStates_length
+binder 5951:5951 <> n:47
+R5984:5988 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5957:5967 Coq.Lists.List <> length abbrev
+R5970:5980 Quantum.AmplitudeSemantics <> BasisStates def
+R5982:5982 Quantum.AmplitudeSemantics <> n:47 var
+R5989:5995 Coq.Arith.PeanoNat Nat pow def
+R5999:5999 Quantum.AmplitudeSemantics <> n:47 var
+prf 6032:6056 <> UniformAmplitude_constant
+binder 6070:6070 <> n:48
+binder 6072:6072 <> x:49
+binder 6074:6074 <> y:50
+R6105:6108 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6080:6100 Quantum.QuantumState <> UniformAmplitudeState def
+R6102:6102 Quantum.AmplitudeSemantics <> n:48 var
+R6104:6104 Quantum.AmplitudeSemantics <> x:49 var
+R6109:6129 Quantum.QuantumState <> UniformAmplitudeState def
+R6131:6131 Quantum.AmplitudeSemantics <> n:48 var
+R6133:6133 Quantum.AmplitudeSemantics <> y:50 var

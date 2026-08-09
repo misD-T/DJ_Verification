@@ -18,9 +18,9 @@ Require Import Quantum.QuantumOperators.
 Require Import Quantum.QDL.
 Require Import Quantum.HoaresHeisenberg.
 
-Require Import DJ.DeutschJozsa.DJ.
-Require Import DJ.DeutschJozsa.DJProofs.
-Require Import DJ.Oracles.Oracles.
+Require Import DJ.DJ.
+Require Import DJ.DJProofs.
+Require Import forms.Oracles.Oracles.
 
 Require Import Grover.GroverProofs.
 Require Import Grover.GroverOracles.

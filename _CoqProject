@@ -1,20 +1,20 @@
--R theories DJ
-theories/Foundations/BitStrings.v
-theories/Foundations/Enumeration.v
-theories/Foundations/Counting.v
+-R formalisations forms
+formalisations/Foundations/BitStrings.v
+formalisations/Foundations/Enumeration.v
+formalisations/Foundations/Counting.v
 
-theories/Oracles/BooleanFunctions.v
-theories/Oracles/Oracles.v
-theories/Oracles/Promise.v
+formalisations/Oracles/BooleanFunctions.v
+formalisations/Oracles/Oracles.v
+formalisations/Oracles/Promise.v
 
-theories/Verification/Balanced.v
-theories/Verification/OracleProofs.v
+formalisations/Verification/Balanced.v
+formalisations/Verification/OracleProofs.v
 
-theories/DeutschJozsa/DJ.v
-theories/DeutschJozsa/DJProofs.v
-
-theories/Tests/DJTests.v
-theories/Tests/DJCaseStudy.v
+-R deutschjozsa DJ
+deutschjozsa/DJ.v
+deutschjozsa/DJProofs.v
+deutschjozsa/Tests/DJTests.v
+deutschjozsa/Tests/DJCaseStudy.v
 
 -Q semantics Quantum
 semantics/QuantumState.v

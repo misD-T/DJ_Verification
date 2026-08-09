@@ -11,9 +11,9 @@ From Coq Require Import List Bool Arith Reals.
 
 Import ListNotations.
 
-Require Import DJ.Foundations.BitStrings.
-Require Import DJ.Oracles.BooleanFunctions.
-Require Import DJ.Oracles.Oracles.
+Require Import forms.Foundations.BitStrings.
+Require Import forms.Oracles.BooleanFunctions.
+Require Import forms.Oracles.Oracles.
 
 Require Import Quantum.QuantumState.
 Require Import Quantum.QuantumOperators.

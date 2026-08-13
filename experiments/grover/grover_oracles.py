@@ -1,22 +1,27 @@
 """
-grover_oracles.py
-
 Classical oracle definitions for Grover search.
 
-Each oracle maps a bitstring state to:
-    True  -> marked state
-    False -> unmarked state
+Each oracle maps a computational-basis bitstring to:
+
+    True  -> marked
+    False -> unmarked
 
 These correspond to the OracleInstance definitions
-used in the Rocq verification framework.
+used by the semantic verification framework.
 """
 
 import random
-from typing import List, Callable
+
+from typing import (
+    List,
+    Callable
+)
+
 from ..semantic.oracles import (
     OracleInstance,
     OracleKind
 )
+
 
 BitString = str
 
@@ -25,40 +30,22 @@ BitString = str
 # Helper Functions
 # ============================================================
 
-def bitstring_to_int(bits: BitString) -> int:
-    """
-    Convert bitstring representation to integer.
-
-    Example:
-        [1,0,1] -> 5
-    """
-
-    value = 0
-
-    for bit in bits:
-        value = (value << 1) | bit
-
-    return value
-
-
-
 def all_bitstrings(n: int):
 
-    states = []
-
-    for i in range(2 ** n):
-
-        states.append(
-            format(i, f"0{n}b")
+    return [
+        format(
+            i,
+            f"0{n}b"
         )
+        for i in range(
+            2 ** n
+        )
+    ]
 
-    return states
 
-
-
-# -------------------------------------------------
-# Single marked state oracle
-# -------------------------------------------------
+# ============================================================
+# Single Marked Oracle
+# ============================================================
 
 def single_marked_oracle(
     marked: BitString
@@ -70,15 +57,10 @@ def single_marked_oracle(
 
         return x == marked
 
-
     return OracleInstance(
-
         kind=OracleKind.SINGLE_MARKED,
-
         function=oracle_function
-
     )
-
 
 
 # ============================================================
@@ -86,38 +68,41 @@ def single_marked_oracle(
 # ============================================================
 
 def multiple_marked_oracle(
-        marked_states: List[BitString]
+    marked_states: List[BitString]
 ) -> OracleInstance:
 
-
     def oracle_function(
-            state: BitString
+        state: BitString
     ) -> bool:
 
         return state in marked_states
 
-
     return OracleInstance(
-
         kind=OracleKind.MULTIPLE_MARKED,
-
         function=oracle_function
-
     )
-
 
 
 # ============================================================
 # Random Marked Oracle
 # ============================================================
 
-def random_marked_oracle(n: int, number_marked: int):
-    """
-    Generates a random oracle containing
-    a chosen number of marked states.
-    """
+def random_marked_oracle(
+    n: int,
+    number_marked: int
+):
 
     states = all_bitstrings(n)
+
+    if number_marked <= 0:
+        raise ValueError(
+            "number_marked must be greater than zero"
+        )
+
+    if number_marked > len(states):
+        raise ValueError(
+            "number_marked cannot exceed database size"
+        )
 
     marked_states = random.sample(
         states,
@@ -125,10 +110,11 @@ def random_marked_oracle(n: int, number_marked: int):
     )
 
     return (
-        multiple_marked_oracle(marked_states), 
+        multiple_marked_oracle(
+            marked_states
+        ),
         marked_states
     )
-
 
 
 # ============================================================
@@ -136,72 +122,55 @@ def random_marked_oracle(n: int, number_marked: int):
 # ============================================================
 
 def predicate_oracle(
-        predicate: Callable[[BitString], bool]
+    predicate: Callable[[BitString], bool]
 ) -> OracleInstance:
 
-
     def oracle_function(
-            state: BitString
+        state: BitString
     ) -> bool:
 
         return predicate(state)
 
-
     return OracleInstance(
-
         kind=OracleKind.PREDICATE,
-
         function=oracle_function
-
     )
+
 
 # ============================================================
 # Predicate Marked State Extraction
 # ============================================================
 
 def predicate_marked_states(
-        n: int,
-        predicate: Callable[[BitString], bool]
+    n: int,
+    predicate: Callable[[BitString], bool]
 ):
-    """
-    Enumerates all states satisfying a predicate.
-
-    Used for experiments where Grover is
-    parameterised by a search predicate.
-    """
 
     states = all_bitstrings(n)
 
     return [
-
         state
-
         for state in states
-
         if predicate(state)
-
     ]
+
 
 # ============================================================
 # Example Predicates
 # ============================================================
 
-def xor_first_two_bits(state: BitString):
-    """
-    Marks states where:
+def xor_first_two_bits(
+    state: BitString
+):
 
-        x0 XOR x1 = 1
-    """
+    return (
+        int(state[0])
+        ^ int(state[1])
+    ) == 1
 
-    return (int(state[0]) ^ int(state[1])) == 1
 
-
-
-def first_bit_is_one(state: BitString):
-    """
-    Marks half the database.
-
-    Useful for testing many marked states.
-    """
+def first_bit_is_one(
+    state: BitString
+):
 
     return state[0] == "1"

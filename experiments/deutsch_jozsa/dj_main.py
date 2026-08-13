@@ -1,3 +1,5 @@
+from unittest import result
+
 from .dj_runtime import scaling_experiment
 from .dj_complexity import oracle_complexity_experiment
 from .dj_promise import promise_robustness_experiment
@@ -74,6 +76,21 @@ def run_semantic_verification():
 
         print(
             f"HH: {result['hh_result']}"
+        )
+        
+        print(
+            f"Status: {result['semantic_status']}"
+        )
+
+        print(
+            f"Measurement: {result['semantic_measurement']}"
+        )
+
+        print(
+            "Trace:",
+            " -> ".join(
+                result["semantic_trace"]
+            )
         )
 
 
@@ -182,7 +199,7 @@ def run_oracle_complexity():
         print(
             f"{r['oracle']:18}"
             f"{r['oracle_class']:12}"
-            f"C={r['complexity']:3}"
+            f"Structural C={r['structural_complexity']:3}"
             f"Verified={r['verified']}"
             f"Runtime={r['avg_runtime']:.6f}s"
         )

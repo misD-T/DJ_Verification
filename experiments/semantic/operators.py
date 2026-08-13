@@ -15,7 +15,7 @@ The actual quantum circuit execution is handled separately by
 the backend implementation (e.g. PennyLane).
 """
 
-
+import numpy as np
 from .quantum_state import QuantumState
 from .execution_status import ExecutionStatus
 from .transforms import HadamardTransform
@@ -51,22 +51,16 @@ def HadamardOperator(
     """
     Apply semantic Hadamard transformation.
 
-    Corresponds to Rocq:
+    The transformation is applied to the complete
+    amplitude representation of the state.
 
-        qs_amplitudes :=
-            match qs_amplitudes ρ with
-            | None => None
-            | Some amps =>
-                Some(
-                    HadamardTransform amps n
-                )
-            end;
+    For n qubits:
 
-        qs_history := "H" :: qs_history ρ;
+        H^{⊗n} |ψ>
 
+    is computed by HadamardTransform().
     """
 
-    # Apply semantic amplitude transformation
     if state.amplitudes is not None:
 
         state.amplitudes = HadamardTransform(
@@ -74,20 +68,15 @@ def HadamardOperator(
             state.qubits
         )
 
-
-    # Record semantic transition
     state.add_history(
         "H"
     )
 
-
-    # Match Rocq status transition
     if state.status == ExecutionStatus.INITIAL:
 
         state.update_status(
             ExecutionStatus.AFTER_HADAMARD
         )
-
 
     elif state.status == ExecutionStatus.AFTER_ORACLE:
 
@@ -95,10 +84,42 @@ def HadamardOperator(
             ExecutionStatus.FINISHED
         )
 
-
     return state
 
 
+def _apply_oracle_to_amplitudes(
+    state: QuantumState,
+    oracle
+) -> None:
+    """
+    Apply the semantic phase oracle to the amplitude
+    representation of the state.
+
+    For every computational basis state |x>:
+
+        U_f |x> = (-1)^f(x) |x>
+
+    This is the phase-oracle behaviour required by
+    Grover's algorithm.
+    """
+
+    if state.amplitudes is None:
+        return
+
+    amplitudes = state.amplitudes
+
+    for index in range(
+        len(amplitudes)
+    ):
+
+        bits = format(
+            index,
+            f"0{state.qubits}b"
+        )
+
+        if oracle.evaluate(bits):
+
+            amplitudes[index] *= -1
 
 # -------------------------------------------------
 # Oracle Operator
@@ -118,76 +139,86 @@ def OracleOperator(
     """
     Apply semantic oracle transition.
 
-    Corresponds to Rocq:
+    For amplitude-based states, the oracle performs
+    the Grover phase transformation:
 
-        Definition OracleOperator
-                   (f : OracleInstance)
-                   : QuantumOperator :=
+        |x> -> (-1)^f(x) |x>
 
-        qs_target :=
-            xorb
-              (qs_target ρ)
-              ((oracle_function f)
-               (qs_bits ρ));
-
-        qs_oracle := Some f;
-
-        qs_history :=
-            "Oracle" :: qs_history ρ;
+    The oracle identity and marked states are also
+    recorded in the semantic state.
     """
 
+    # -------------------------------------------------
+    # Apply phase oracle to amplitudes
+    # -------------------------------------------------
 
-    # Evaluate oracle function
-    #
-    # Corresponds to:
-    #
-    # (oracle_function f) (qs_bits ρ)
-    #
+    _apply_oracle_to_amplitudes(
+        state,
+        oracle
+    )
+
+    # -------------------------------------------------
+    # Evaluate symbolic current state
+    # -------------------------------------------------
 
     oracle_result = oracle.evaluate(
         state.bits
     )
 
-
-    # XOR behaviour from Rocq xorb
-    #
-    # Boolean XOR in Python
-    #
-
     state.target = (
         state.target != oracle_result
     )
 
+    # -------------------------------------------------
+    # Store oracle identity
+    # -------------------------------------------------
 
-    # Store oracle instance
-    #
-    # Corresponds to:
-    #
-    # qs_oracle := Some f
-    #
+    state.oracle = (
+        oracle.kind.value
+    )
 
-    state.oracle = oracle.kind.value
+    # -------------------------------------------------
+    # Record marked computational states
+    # -------------------------------------------------
 
+    if state.amplitudes is not None:
 
-    # Semantic trace update
-    #
+        state.marked_states = [
+
+            format(
+                index,
+                f"0{state.qubits}b"
+            )
+
+            for index in range(
+                len(state.amplitudes)
+            )
+
+            if oracle.evaluate(
+                format(
+                    index,
+                    f"0{state.qubits}b"
+                )
+            )
+        ]
+
+    # -------------------------------------------------
+    # Semantic trace
+    # -------------------------------------------------
 
     state.add_history(
         "Oracle"
     )
 
-
-    # State transition
-    #
-    # Initial -> H -> Oracle
-    #
+    # -------------------------------------------------
+    # Status transition
+    # -------------------------------------------------
 
     if state.status == ExecutionStatus.AFTER_HADAMARD:
 
         state.update_status(
             ExecutionStatus.AFTER_ORACLE
         )
-
 
     return state
 
@@ -207,19 +238,32 @@ def DiffusionOperator(
     state: QuantumState
 ) -> QuantumState:
     """
-    Apply Grover diffusion semantic transition.
+    Apply the Grover diffusion operator.
+
+    The diffusion transformation performs inversion
+    about the mean amplitude:
+
+        a_i -> 2 * mean(a) - a_i
     """
 
+    if state.amplitudes is not None:
+
+        mean = np.mean(
+            state.amplitudes
+        )
+
+        state.amplitudes = (
+            2 * mean
+            - state.amplitudes
+        )
 
     state.add_history(
         "Diffusion"
     )
 
-
     state.update_status(
         ExecutionStatus.AFTER_DIFFUSION
     )
-
 
     return state
 
@@ -241,46 +285,48 @@ def MeasurementOperator(
     """
     Apply semantic measurement transition.
 
-    Corresponds to Rocq:
+    If amplitudes are available, the measured result
+    is represented by the most likely computational
+    basis state.
 
-        qs_measurement :=
-            match qs_symbolic_output ρ with
-
-            | Some out =>
-                Some out
-
-            | None =>
-                Some(qs_bits ρ)
-
-            end;
-
-        qs_status := Finished;
+    Otherwise the symbolic output or current basis
+    state is used.
     """
-
 
     if state.symbolic_output is not None:
 
         result = state.symbolic_output
 
+    elif state.amplitudes is not None:
+
+        index = int(
+            np.argmax(
+                np.abs(
+                    state.amplitudes
+                ) ** 2
+            )
+        )
+
+        result = format(
+            index,
+            f"0{state.qubits}b"
+        )
+
     else:
 
         result = state.bits
-
 
     state.set_measurement(
         result
     )
 
-
     state.add_history(
         "Measurement"
     )
 
-
     state.update_status(
         ExecutionStatus.FINISHED
     )
-
 
     return state
 

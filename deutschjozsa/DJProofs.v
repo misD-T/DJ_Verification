@@ -502,7 +502,7 @@ Theorem DJ_constant_QDL_verified :
 
 forall n,
 
-Valid (DJConstantFormula n).
+Valid (DJConstantFormula n).itted
 
 Proof.
   intros n.

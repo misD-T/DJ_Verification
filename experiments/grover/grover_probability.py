@@ -1,7 +1,8 @@
 """
 Grover probability amplification experiment.
 
-Computes probability evolution after each Grover iteration.
+Measures the probability of obtaining one of the marked
+states after each Grover iteration.
 
 Supports:
 
@@ -9,170 +10,106 @@ Supports:
     - multiple marked states
     - random marked states
     - predicate-generated marked states
-
-Corresponds to:
-
-GroverProbabilityExperiment.v
 """
 
-
-import math
-
-
 from .grover_simulator import (
-
     initial_state,
-
     grover_iteration,
-
     probability,
-
     convert_marked_states
-
 )
 
 
-
-# -------------------------------------------------
+# ============================================================
 # Optimal Grover Iterations
-# -------------------------------------------------
+# ============================================================
 
 def optimal_grover_iterations(
-        qubits,
-        marked_count=1
+    qubits,
+    marked_count=1
 ):
+    """
+    Calculate the standard approximate optimal number
+    of Grover iterations.
 
+        floor(pi/4 * sqrt(N/M))
+
+    where:
+
+        N = database size
+        M = number of marked states
+    """
+
+    if marked_count <= 0:
+        raise ValueError(
+            "marked_count must be greater than zero"
+        )
 
     N = 2 ** qubits
 
-
     return int(
-
-        math.floor(
-
-            (math.pi / 4)
-
-            *
-
-            math.sqrt(
-
-                N / marked_count
-
-            )
-
-        )
-
+        (3.141592653589793 / 4)
+        * (
+            N / marked_count
+        ) ** 0.5
     )
 
 
-
-# -------------------------------------------------
+# ============================================================
 # Probability Amplification
-# -------------------------------------------------
+# ============================================================
 
 def probability_amplification(
-
-        qubits,
-
-        marked_states,
-
-        iterations
-
+    qubits,
+    marked_states,
+    iterations
 ):
-
-
     """
-    Run Grover amplitude amplification.
-
-
-    Parameters:
-
-        qubits:
-            number of qubits
-
-
-        marked_states:
-
-            Example:
-
-            [
-              [0,0,0],
-              [1,1,1]
-            ]
-
-
-        iterations:
-            number of Grover iterations
-
+    Measure marked-state probability after every
+    Grover iteration.
 
     Returns:
 
         [
-          (iteration, probability)
+            (iteration, probability),
+            ...
         ]
-
     """
 
-
+    if not marked_states:
+        raise ValueError(
+            "At least one marked state is required."
+        )
 
     state = initial_state(
-
         qubits
-
     )
-
-
 
     marked_indices = convert_marked_states(
-
         marked_states
-
     )
-
-
 
     results = []
 
-
-
     for i in range(
-
-            iterations + 1
-
+        iterations + 1
     ):
 
-
         p = probability(
-
             state,
-
             marked_indices
-
         )
-
 
         results.append(
-
             (
-
                 i,
-
-                p
-
+                float(p)
             )
-
         )
-
-
 
         state = grover_iteration(
-
             state,
-
             marked_indices
-
         )
-
-
 
     return results

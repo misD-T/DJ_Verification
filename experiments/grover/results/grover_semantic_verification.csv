@@ -1,0 +1,2 @@
+oracle,qubits,marked_states,marked_state_count,iterations,measurement,runtime,verified,output_verified,qdl_formula,qdl_result,hh_formula,hh_result,semantic_trace,semantic_status,symbolic_output
+SINGLE_MARKED,5,['00000'],1,4,00000,0.0017554940004629316,True,True,InitialState -> [Grover] MarkedState,True,{InitialState} Grover {MarkedState},True,"['InitialState', 'H', 'Oracle', 'Diffusion', 'Oracle', 'Diffusion', 'Oracle', 'Diffusion', 'Oracle', 'Diffusion', 'Measurement']",FINISHED,00000

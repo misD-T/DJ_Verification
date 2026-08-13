@@ -39,7 +39,7 @@ def scaling_experiment():
     ]
 
 
-    repetitions = 10
+    repetitions = 30
 
 
 
@@ -92,6 +92,10 @@ def scaling_experiment():
                 runtimes
 
             )
+            
+            median_runtime = statistics.median(
+                runtimes
+            )
 
 
             std_runtime = statistics.stdev(
@@ -113,13 +117,18 @@ def scaling_experiment():
                 "oracle":
 
                     oracle,
+                    
+                "structural_complexity":
+                    last_result["structural_complexity"],
 
 
+                "promise_valid":
+                    last_result["promise_valid"],
+                    
                 "output":
 
                     last_result["output"],
-
-
+                    
                 "verified":
 
                     last_result["verified"],
@@ -145,6 +154,11 @@ def scaling_experiment():
                     std_runtime,
 
 
+                "runtime_median":
+
+                    median_runtime,
+
+
                 "trace":
 
                     last_result["semantic_trace"],
@@ -160,18 +174,3 @@ def scaling_experiment():
 
 
     return scaling_results
-
-
-
-# ============================================================
-# Execute Experiment
-# ============================================================
-
-if __name__ == "__main__":
-
-
-    results = scaling_experiment()
-
-    for r in results:
-
-        print(r)

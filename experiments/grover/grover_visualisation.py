@@ -1,379 +1,387 @@
 """
-Grover visualisation utilities.
+Visualisation utilities for the Grover experiments.
 
-Creates plots for Grover probability amplification.
+Produces publication-quality PNG figures for:
 
-Input:
-    [(iteration, probability)]
-
-Output:
-    probability amplification graphs.
+    1. Probability amplification
+    2. Oracle evaluation
+    3. Scaling
+    4. Search quality
+    5. Database search
 """
 
+import os
 
 import matplotlib.pyplot as plt
 
 
+RESULTS_DIR = (
+    "experiments/grover/results"
+)
+
+
+def _ensure_results_directory():
+
+    os.makedirs(
+        RESULTS_DIR,
+        exist_ok=True
+    )
+
+
+# ============================================================
+# 1. Probability Amplification
+# ============================================================
 
 def plot_probability_amplification(
-        comparison_results,
-        optimal_iterations
+    curve,
+    filename="grover_probability_amplification.png"
 ):
-    """
-    Plot probability amplification for every oracle family.
 
-    comparison_results:
+    _ensure_results_directory()
 
-        {
-
-            "Single": [(iteration,p),...],
-
-            "Multiple": [...],
-
-            "Random": [...],
-
-            "Predicate": [...]
-
-        }
-
-    """
-
-    plt.figure(figsize=(9,6))
-
-    for oracle_name, results in comparison_results.items():
-
-        iterations = [
-
-            x[0]
-
-            for x in results
-
-        ]
-
-        probabilities = [
-
-            x[1]
-
-            for x in results
-
-        ]
-
-        plt.plot(
-
-            iterations,
-
-            probabilities,
-
-            marker="o",
-
-            label=oracle_name
-
-        )
-
-        if oracle_name in optimal_iterations:
-
-            plt.axvline(
-
-                optimal_iterations[oracle_name],
-
-                linestyle="--",
-
-                alpha=0.35
-
-            )
-
-    plt.xlabel("Grover Iteration")
-
-    plt.ylabel("Probability of Marked State")
-
-    plt.title("Grover Probability Amplification")
-
-    plt.ylim(0,1.05)
-
-    plt.grid(True)
-
-    plt.legend()
-
-    plt.savefig(
-
-        "experiments/grover/results/grover_probability_amplification.png",
-
-        dpi=300,
-
-        bbox_inches="tight"
-
-    )
-
-    plt.close()
-
-# -------------------------------------------------
-# Scaling Runtime
-# -------------------------------------------------
-
-def plot_scaling_runtime(all_results):
-
-    plt.figure(figsize=(8,5))
-
-    for oracle_name, results in all_results.items():
-
-        qubits = [
-
-            r["qubits"]
-
-            for r in results
-
-        ]
-
-        runtimes = [
-
-            r["runtime"]
-
-            for r in results
-
-        ]
-
-        plt.plot(
-
-            qubits,
-
-            runtimes,
-
-            marker="o",
-
-            label=oracle_name
-
-        )
-
-    plt.xlabel("Number of Qubits")
-
-    plt.ylabel("Runtime (seconds)")
-
-    plt.title("Grover Runtime Scaling")
-
-    plt.grid(True)
-
-    plt.legend()
-
-    plt.savefig(
-
-        "experiments/grover/results/grover_runtime_scaling.png",
-
-        dpi=300,
-
-        bbox_inches="tight"
-
-    )
-
-    plt.close()
-
-# -------------------------------------------------
-# Scaling Probability
-# -------------------------------------------------
-
-def plot_scaling_probability(all_results):
-
-    plt.figure(figsize=(8,5))
-
-    for oracle_name, results in all_results.items():
-
-        qubits = [
-
-            r["qubits"]
-
-            for r in results
-
-        ]
-
-        probabilities = [
-
-            r["final_probability"]
-
-            for r in results
-
-        ]
-
-        plt.plot(
-
-            qubits,
-
-            probabilities,
-
-            marker="o",
-
-            label=oracle_name
-
-        )
-
-    plt.xlabel("Number of Qubits")
-
-    plt.ylabel("Final Success Probability")
-
-    plt.title("Grover Success Probability Scaling")
-
-    plt.ylim(0,1.05)
-
-    plt.grid(True)
-
-    plt.legend()
-
-    plt.savefig(
-
-        "experiments/grover/results/grover_probability_scaling.png",
-
-        dpi=300,
-
-        bbox_inches="tight"
-
-    )
-
-    plt.close()
-
-# ============================================================
-# Oracle Evaluation Plot
-# ============================================================
-
-
-def plot_oracle_evaluation(results):
-    """
-    Plot final success probability
-    for different Grover oracle families.
-    """
-
-
-    oracles = [
-        result.oracle
-        for result in results
+    iterations = [
+        x[0]
+        for x in curve
     ]
-
 
     probabilities = [
-        result.final_probability
-        for result in results
+        x[1]
+        for x in curve
     ]
 
-
     plt.figure(
-        figsize=(8,5)
+        figsize=(8, 5)
     )
 
-
-    bars = plt.bar(
-        oracles,
-        probabilities
+    plt.plot(
+        iterations,
+        probabilities,
+        marker="o"
     )
-
-
-    for bar, probability in zip(
-            bars,
-            probabilities
-    ):
-
-        plt.text(
-            bar.get_x() + bar.get_width()/2,
-            probability + 0.02,
-            f"{probability:.4f}",
-            ha="center"
-        )
-
 
     plt.xlabel(
-        "Oracle Family"
+        "Grover Iteration"
     )
-
 
     plt.ylabel(
-        "Final Probability of Marked State"
+        "Probability of Marked State"
     )
-
 
     plt.title(
-        "Grover Oracle Family Evaluation"
+        "Grover Probability Amplification"
     )
-
 
     plt.ylim(
         0,
         1.05
     )
 
-
-    plt.xticks(
-        rotation=45
-    )
-
-
     plt.grid(
-        axis="y"
+        True,
+        alpha=0.3
     )
 
+    plt.tight_layout()
 
     plt.savefig(
-        "experiments/grover/results/grover_oracle_evaluation.png",
+        os.path.join(
+            RESULTS_DIR,
+            filename
+        ),
         dpi=300,
         bbox_inches="tight"
     )
-
 
     plt.close()
 
+
 # ============================================================
-# Search Quality Plot
+# 2. Oracle Evaluation
 # ============================================================
 
-def plot_search_quality(comparison):
+def plot_oracle_evaluation(
+    results
+):
 
-    plt.figure(figsize=(9,6))
+    _ensure_results_directory()
 
-    for oracle_name, results in comparison.items():
+    names = [
+        r.oracle
+        for r in results
+    ]
 
-        iterations = [
+    probabilities = [
+        r.final_probability
+        for r in results
+    ]
 
-            r.iteration
+    plt.figure(
+        figsize=(9, 5)
+    )
 
+    plt.bar(
+        names,
+        probabilities
+    )
+
+    plt.xlabel(
+        "Oracle Type"
+    )
+
+    plt.ylabel(
+        "Final Success Probability"
+    )
+
+    plt.title(
+        "Grover Oracle Evaluation"
+    )
+
+    plt.ylim(
+        0,
+        1.05
+    )
+
+    plt.grid(
+        axis="y",
+        alpha=0.3
+    )
+
+    plt.tight_layout()
+
+    plt.savefig(
+        os.path.join(
+            RESULTS_DIR,
+            "grover_oracle_evaluation.png"
+        ),
+        dpi=300,
+        bbox_inches="tight"
+    )
+
+    plt.close()
+
+
+# ============================================================
+# 3. Scaling
+# ============================================================
+
+def plot_scaling(
+    results
+):
+
+    _ensure_results_directory()
+
+    plt.figure(
+        figsize=(8, 5)
+    )
+
+    oracle_families = sorted(
+        set(
+            r["oracle_family"]
             for r in results
+        )
+    )
 
-        ]
+    for family in oracle_families:
 
-        probabilities = [
-
-            r.marked_probability
-
-            for r in results
-
-        ]
-
-        plt.plot(
-
-            iterations,
-
-            probabilities,
-
-            marker="o",
-
-            label=oracle_name
-
+        data = sorted(
+            [
+                r
+                for r in results
+                if r["oracle_family"] == family
+            ],
+            key=lambda x: x["qubits"]
         )
 
-    plt.xlabel("Grover Iteration")
+        plt.plot(
+            [
+                r["qubits"]
+                for r in data
+            ],
+            [
+                r["runtime"]
+                for r in data
+            ],
+            marker="o",
+            label=family
+        )
 
-    plt.ylabel("Probability of Marked State")
+    plt.xlabel(
+        "Number of Qubits"
+    )
 
-    plt.title("Grover Search Quality")
+    plt.ylabel(
+        "Runtime (s)"
+    )
 
-    plt.ylim(0,1.05)
+    plt.title(
+        "Grover Runtime Scaling"
+    )
 
-    plt.grid(True)
+    plt.grid(
+        True,
+        alpha=0.3
+    )
 
     plt.legend()
 
+    plt.tight_layout()
+
     plt.savefig(
-
-        "experiments/grover/results/grover_search_quality.png",
-
+        os.path.join(
+            RESULTS_DIR,
+            "grover_scaling.png"
+        ),
         dpi=300,
-
         bbox_inches="tight"
+    )
 
+    plt.close()
+
+
+# ============================================================
+# 4. Search Quality
+# ============================================================
+
+def plot_search_quality(
+    results
+):
+
+    _ensure_results_directory()
+
+    iterations = [
+        r.iteration
+        for r in results
+    ]
+
+    marked_probability = [
+        r.marked_probability
+        for r in results
+    ]
+
+    max_unmarked_probability = [
+        r.max_unmarked_probability
+        for r in results
+    ]
+
+    plt.figure(
+        figsize=(8, 5)
+    )
+
+    plt.plot(
+        iterations,
+        marked_probability,
+        marker="o",
+        label="Marked states"
+    )
+
+    plt.plot(
+        iterations,
+        max_unmarked_probability,
+        marker="s",
+        label="Maximum unmarked state"
+    )
+
+    plt.xlabel(
+        "Grover Iteration"
+    )
+
+    plt.ylabel(
+        "Probability"
+    )
+
+    plt.title(
+        "Grover Search Quality"
+    )
+
+    plt.ylim(
+        0,
+        1.05
+    )
+
+    plt.grid(
+        True,
+        alpha=0.3
+    )
+
+    plt.legend()
+
+    plt.tight_layout()
+
+    plt.savefig(
+        os.path.join(
+            RESULTS_DIR,
+            "grover_search_quality.png"
+        ),
+        dpi=300,
+        bbox_inches="tight"
+    )
+
+    plt.close()
+
+
+# ============================================================
+# 5. Database Search
+# ============================================================
+
+def plot_database_search(
+    result
+):
+
+    _ensure_results_directory()
+
+    curve = result["curve"]
+
+    iterations = [
+        x[0]
+        for x in curve
+    ]
+
+    probabilities = [
+        x[1]
+        for x in curve
+    ]
+
+    plt.figure(
+        figsize=(8, 5)
+    )
+
+    plt.plot(
+        iterations,
+        probabilities,
+        marker="o"
+    )
+
+    plt.xlabel(
+        "Grover Iteration"
+    )
+
+    plt.ylabel(
+        "Probability of Target"
+    )
+
+    plt.title(
+        "Grover Unsorted Database Search"
+    )
+
+    plt.ylim(
+        0,
+        1.05
+    )
+
+    plt.grid(
+        True,
+        alpha=0.3
+    )
+
+    plt.tight_layout()
+
+    plt.savefig(
+        os.path.join(
+            RESULTS_DIR,
+            "grover_database_search.png"
+        ),
+        dpi=300,
+        bbox_inches="tight"
     )
 
     plt.close()

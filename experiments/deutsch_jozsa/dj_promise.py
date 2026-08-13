@@ -54,10 +54,14 @@ def promise_robustness_experiment(target_bits=5):
     results = []
 
 
-    repetitions = 20
+    repetitions = 10
 
 
 
+    stochastic_oracles = {
+    "random_balanced"
+    }
+    
     for oracle in oracle_set:
 
 
@@ -66,7 +70,11 @@ def promise_robustness_experiment(target_bits=5):
 
         last_result = None
 
-
+        oracle_repetitions = (
+            10
+            if oracle in stochastic_oracles
+            else 1
+        )
 
         for _ in range(repetitions):
 
@@ -100,10 +108,10 @@ def promise_robustness_experiment(target_bits=5):
         )
 
 
-        std_probability = statistics.stdev(
-
-            probabilities
-
+        std_probability = (
+            statistics.stdev(probabilities)
+            if len(probabilities) > 1
+            else 0.0
         )
 
 
@@ -129,7 +137,16 @@ def promise_robustness_experiment(target_bits=5):
             "distance":
 
                 last_result["distance"],
+                
+            "promise_distance_normalised":
+                last_result["distance"]
+                / last_result["truth_table_size"],
 
+            "promise_valid":
+                last_result["promise_valid"],
+                
+            "verification_reason":
+                last_result["verification_reason"],
 
             "bias":
 

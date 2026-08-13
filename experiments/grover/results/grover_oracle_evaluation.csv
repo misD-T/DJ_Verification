@@ -1,0 +1,5 @@
+oracle,marked_states,optimal_iterations,final_probability
+Single Marked,1,4,0.9991823155432936
+Multiple Marked,2,3,0.9613189697265623
+Random Marked,3,2,0.9997787475585938
+Predicate,16,1,0.49999999999999994

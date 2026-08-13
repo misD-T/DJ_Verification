@@ -18,7 +18,11 @@ with the reusable semantic framework.
 """
 
 
-from ..semantic.quantum_state import InitialState
+from ..semantic.quantum_state import (
+    InitialState,
+    UniformSuperposition
+)
+
 from ..semantic.operators import (
     HadamardOperator,
     OracleOperator,
@@ -27,8 +31,6 @@ from ..semantic.operators import (
 )
 
 
-from ..semantic.execution_status import ExecutionStatus
-
 
 
 # -------------------------------------------------
@@ -36,35 +38,32 @@ from ..semantic.execution_status import ExecutionStatus
 # -------------------------------------------------
 
 def GroverIteration(
-        state,
-        oracle
+    state,
+    oracle
 ):
     """
     Apply one semantic Grover iteration.
 
-    Corresponds to:
+    A Grover iteration consists of:
 
-        GroverIteration f
+        Oracle
+            |
+            v
+        Diffusion
 
-    in Rocq.
+    The initial Hadamard transformation is applied
+    once by GroverCircuit() to create the uniform
+    superposition.
     """
-
-
-    state = HadamardOperator(
-        state
-    )
-
 
     state = OracleOperator(
         state,
         oracle
     )
 
-
     state = DiffusionOperator(
         state
     )
-
 
     return state
 
@@ -75,39 +74,62 @@ def GroverIteration(
 # -------------------------------------------------
 
 def GroverCircuit(
-        qubits,
-        oracle,
-        iterations
+    qubits,
+    oracle,
+    iterations
 ):
     """
     Execute semantic Grover search.
 
-    Corresponds to:
+    Semantic execution:
 
-        GroverTrace
-            (GroverIterations n)
-            (GroverIteration f)
-            (InitialState n)
-
+        InitialState
+            |
+            H
+            |
+        UniformSuperposition
+            |
+        +--- GroverIteration ---+
+        |       Oracle          |
+        |          |             |
+        |      Diffusion         |
+        |          |             |
+        +----------+-------------+
+            |
+        Measurement
     """
-
 
     state = InitialState(
         qubits
     )
 
+    # -------------------------------------------------
+    # Create initial uniform superposition
+    # -------------------------------------------------
 
-    for _ in range(iterations):
+    state = HadamardOperator(
+        state
+    )
+
+    # -------------------------------------------------
+    # Grover iterations
+    # -------------------------------------------------
+
+    for _ in range(
+        iterations
+    ):
 
         state = GroverIteration(
             state,
             oracle
         )
 
+    # -------------------------------------------------
+    # Measurement
+    # -------------------------------------------------
 
     state = MeasurementOperator(
         state
     )
-
 
     return state

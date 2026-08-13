@@ -273,34 +273,21 @@ def run_test(oracle_type, n_target_bits, verbose = False):
     # Oracle Categories
     # -------------------------------------------------
 
-    constant_oracles = {
-        "constant_zero",
-        "constant_one",
+    category = oracle_class(
+    oracle_type,
+    n_target_bits
+    )
+    
+    # -------------------------------------------------
+    # Promise Validity
+    # -------------------------------------------------
+
+    promise_valid = (
+    category in {
+        "Constant",
+        "Balanced"
     }
-
-    balanced_oracles = {
-        "first_bit",
-        "parity",
-        "full_parity",
-        "xor_two_bits",
-        "alternating",
-        "affine",
-        "and_xor",
-        "random_balanced",
-    }
-
-    if oracle_type in constant_oracles:
-
-        category = "Constant"
-
-    elif oracle_type in balanced_oracles:
-
-        category = "Balanced"
-
-    else:
-
-        category = "Invalid"
-
+    )
     # -------------------------------------------------
     # Build Verification Objects
     # -------------------------------------------------
@@ -314,29 +301,48 @@ def run_test(oracle_type, n_target_bits, verbose = False):
     # Property Verification
     # -------------------------------------------------
 
-    verification = verify_property(
-        prop,
-        output
-    )
+    if promise_valid:
+
+        verification = verify_property(
+            prop,
+            output
+        )
+
+    else:
+
+        verification = None
 
     # -------------------------------------------------
     # Quantum Dynamic Logic
     # -------------------------------------------------
 
-    qdl_result = qdl.verify(output)
+    if promise_valid:
+
+        qdl_result = qdl.verify(
+            output
+        )
+
+    else:
+
+        qdl_result = None
 
     # -------------------------------------------------
     # Hoare–Heisenberg Logic
     # -------------------------------------------------
 
-    if hh is None:
+    if not promise_valid:
 
-        hh_result = False
+        hh_result = None
+
+    elif hh is None:
+
+        hh_result = None
 
     else:
 
-        hh_result = hh.verify(output)
-
+        hh_result = hh.verify(
+            output
+        )
 
     # -------------------------------------------------
     # Structured Result
@@ -346,21 +352,33 @@ def run_test(oracle_type, n_target_bits, verbose = False):
 
     "oracle":
         oracle_type,
+        
+    "n":
+        n_target_bits,
+
+    "truth_table_size":
+        2 ** n_target_bits,
 
 
     "category":
         category,
+        
+    "promise_valid":
+        promise_valid,
 
-
+    "verification_reason":
+    (
+        "Verified against Deutsch-Jozsa specification"
+        if promise_valid
+        else "No verification specification: oracle violates Deutsch-Jozsa promise"
+    ),
+    
     "class":
-        oracle_class(
-            oracle_type,
-            n_target_bits
-        ),
+        category,
 
 
-    "complexity":
-        oracle_complexity(
+    "structural_complexity":
+        oracle_structural_complexity(
             oracle_type,
             n_target_bits
         ),
@@ -395,7 +413,11 @@ def run_test(oracle_type, n_target_bits, verbose = False):
     # Semantic verification
 
     "verified":
-        verification.verified,
+        (
+            verification.verified
+            if verification is not None
+            else None
+        ),
 
 
     # QDL
@@ -420,8 +442,8 @@ def run_test(oracle_type, n_target_bits, verbose = False):
 
     "hh_result":
         hh_result,
-
-
+        
+    
     # Execution semantics
 
     "semantic_trace":

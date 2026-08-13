@@ -119,10 +119,27 @@ def oracle_complexity_experiment(
                 last_result["class"],
 
 
-            "complexity":
-                last_result["complexity"],
+            "structural_complexity":
+                last_result["structural_complexity"],
+                
+            "bias":
+                last_result["bias"],
+
+            "prob_zero":
+                last_result["prob_zero"],
+
+            "promise_valid":
+                last_result["promise_valid"],
 
 
+            "normalised_complexity":
+                (
+                    last_result["structural_complexity"]
+                    / target_bits
+                    if target_bits > 0
+                    else 0
+                ),
+                
             "output":
                 last_result["output"],
 

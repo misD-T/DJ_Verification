@@ -40,84 +40,74 @@ def oracle_class(
     oracle_type,
     target_bits
 ):
+    """
+    Classify an oracle according to its actual truth table
+    and the Deutsch-Jozsa promise.
 
-    classes = {
+    Returns:
+        Constant  - all outputs are identical
+        Balanced  - exactly half of inputs map to 1
+        Invalid   - violates the Deutsch-Jozsa promise
+    """
 
-        "constant_zero": "Constant",
-
-        "constant_one": "Constant",
-
-
-        "first_bit": "Linear",
-
-        "parity": "Linear",
-
-        "full_parity": "Linear",
-
-        "xor_two_bits": "Linear",
-
-        "alternating": "Linear",
-
-
-        "affine": "Affine",
-
-
-        "and_xor": "Nonlinear",
-
-
-        "random_balanced": "Random",
-
-
-        "single_marked": "Invalid"
-    }
-    
-    if oracle_type == "majority":
-
-        if target_bits % 2 == 1:
-            return "Balanced"
-        else:
-            return "Invalid"
-
-
-    return classes.get(
+    f = dj_function(
         oracle_type,
-        "Unknown"
+        target_bits,
+        verbose=False
     )
 
+    ones = int(np.sum(f))
+    total = len(f)
+
+    if ones == 0 or ones == total:
+        return "Constant"
+
+    if ones * 2 == total:
+        return "Balanced"
+
+    return "Invalid"
 
 
-def oracle_complexity(
+def oracle_structural_complexity(
     oracle_type,
     target_bits
 ):
+    """
+    Return a structural complexity score for the oracle.
+
+    The score represents the number of input bits directly
+    involved in the oracle's Boolean construction.
+
+    This is an experimental structural measure rather than
+    a formal computational complexity measure.
+    """
 
     scores = {
 
         "constant_zero": 0,
 
         "constant_one": 0,
-        
+
         "first_bit": 1,
+
+        "alternating": 1,
+
+        "xor_two_bits": 2,
 
         "parity": target_bits,
 
         "full_parity": target_bits,
 
-        "xor_two_bits": 2,
+        "affine": target_bits,
 
-        "alternating": 1,
-
-        "affine": target_bits + 1,
-
-        "and_xor": target_bits + 2,
+        "and_xor": target_bits,
 
         "random_balanced": 2 ** target_bits
     }
 
-
     return scores.get(
         oracle_type,
-        0
+        None
     )
 
 

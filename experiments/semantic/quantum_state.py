@@ -58,6 +58,9 @@ class QuantumState:
 
 
     # Target/marked condition
+    #
+    # Used by the semantic model to record whether
+    # the current symbolic state satisfies the oracle.
     target: bool
 
 
@@ -71,6 +74,15 @@ class QuantumState:
 
     # Measurement result
     measurement: str | None
+
+
+    # Marked states used by search algorithms such
+    # as Grover.
+    #
+    # Stored as computational-basis bitstrings.
+    marked_states: list[str] = field(
+        default_factory=list
+    )
 
 
     # Semantic execution history
@@ -185,7 +197,23 @@ class QuantumState:
         }
 
 
+def set_marked_states(
+    state: QuantumState,
+    marked_states: list[str]
+) -> QuantumState:
+    """
+    Record the marked computational-basis states
+    associated with a search oracle.
 
+    This is semantic metadata rather than a numerical
+    quantum operation.
+    """
+
+    state.marked_states = list(
+        marked_states
+    )
+
+    return state
 
 
 # -------------------------------------------------
@@ -204,17 +232,32 @@ def InitialState(
     """
     Construct the initial semantic quantum state.
 
-    Equivalent to Rocq InitialState.
+    The semantic amplitude representation starts in
+    computational basis state |0...0>.
+
+    This is important because HadamardOperator must
+    subsequently transform |0...0> into a uniform
+    superposition for Deutsch-Jozsa and Grover.
     """
 
+    dimension = 2 ** qubits
+
+    amplitudes = np.zeros(
+        dimension,
+        dtype=complex
+    )
+
+    amplitudes[0] = 1.0
 
     return QuantumState(
 
         bits="0" * qubits,
 
-        amplitudes=None,
+        amplitudes=amplitudes,
 
         target=target,
+
+        marked_states=[],
 
         qubits=qubits,
 
@@ -230,3 +273,28 @@ def InitialState(
 
         symbolic_output=None
     )
+    
+def UniformSuperposition(
+    state: QuantumState
+) -> QuantumState:
+    """
+    Initialise the amplitude representation of a
+    quantum state as the uniform superposition.
+
+    This is useful for Grover's search space.
+    """
+
+    dimension = 2 ** state.qubits
+
+    state.amplitudes = np.ones(
+        dimension,
+        dtype=complex
+    ) / np.sqrt(
+        dimension
+    )
+
+    state.add_history(
+        "UniformSuperposition"
+    )
+
+    return state

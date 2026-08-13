@@ -1,48 +1,40 @@
 """
-Main execution file for Grover experiments.
+Main experimental driver for the Grover experiments.
 
-Runs all Grover experiments across:
-    - Single marked states
-    - Multiple marked states
-    - Random marked states
-    - Predicate search
+Runs:
+
+    1. Semantic verification
+    2. Probability amplification
+    3. Oracle evaluation
+    4. Scaling
+    5. Search quality
+    6. Unsorted database search
+
+All numerical experiments are written to CSV files and
+visualised as PNG figures.
 """
 
-
-from ..util.result_writer import save_results_csv
-
-from .grover_oracles import (
-
-    single_marked_oracle,
-    multiple_marked_oracle,
-    random_marked_oracle,
-    predicate_oracle,
-    predicate_marked_states,
-    xor_first_two_bits
-
-)
+from dataclasses import asdict
 
 
-from .grover_circuit import (
-    GroverCircuit
+from .grover_verify import (
+    run_test
 )
 
 
 from .grover_probability import (
-
     probability_amplification,
     optimal_grover_iterations
+)
 
+
+from .grover_oracle_evaluation import (
+    run_oracle_evaluation as execute_oracle_evaluation
 )
 
 
 from .grover_scaling import (
     run_scaling_experiment
-)
-
-
-from .grover_oracle_evaluation import (
-    run_oracle_evaluation
 )
 
 
@@ -57,400 +49,146 @@ from .grover_search import (
 
 
 from .grover_visualisation import (
-
     plot_probability_amplification,
-    plot_scaling_runtime,
-    plot_scaling_probability,
     plot_oracle_evaluation,
-    plot_search_quality
-
+    plot_scaling,
+    plot_search_quality,
+    plot_database_search
 )
 
-from .grover_verify import run_test
+
+from ..util.result_writer import (
+    save_results_csv
+)
 
 
 # ============================================================
-# Experiment 0
+# Experiment 1
 # Semantic Verification
 # ============================================================
 
 def run_semantic_verification():
 
     print()
-    print("=" * 60)
-    print("Experiment 0 : Semantic Verification")
-    print("=" * 60)
+
+    print("=" * 80)
+
+    print("Grover Semantic Verification")
+
+    print("=" * 80)
+
 
     qubits = 5
 
-    oracles = [
 
-        single_marked_oracle(
-            [0, 0, 0, 0, 0]
-        ),
+    # --------------------------------------------------------
+    # Single marked oracle
+    # --------------------------------------------------------
 
-        multiple_marked_oracle(
-            [
-                [0, 0, 0, 0, 0],
-                [1, 1, 1, 1, 1]
-            ]
-        ),
-
-        random_marked_oracle(
-            qubits,
-            3
-        )[0],
-
-        predicate_oracle(
-            xor_first_two_bits
-        )
-
-    ]
-
-    results = []
+    from .grover_oracles import (
+        single_marked_oracle
+    )
 
 
-    for oracle in oracles:
+    oracle = single_marked_oracle(
+        "00000"
+    )
 
-        result = run_test(
-            qubits,
-            oracle,
-            verbose=True
-        )
 
-        results.append(result)
-
+    result = run_test(
+        qubits,
+        oracle,
+        verbose=True
+    )
 
 
     save_results_csv(
         "grover_semantic_verification.csv",
-        results
+        [result],
+        output_dir="experiments/grover/results"
     )
-
-# ============================================================
-# Semantic Demonstration
-# ============================================================
-
-
-def run_single_marked_demo():
-
-
-    print()
-    print("Grover Single Marked State Demo")
-    print("--------------------------------")
-
-
-    qubits = 5
-
-
-    marked = [
-        0,0,0,0,0
-    ]
-
-
-    oracle = single_marked_oracle(
-        marked
-    )
-
-
-    state = GroverCircuit(
-
-        qubits,
-
-        oracle,
-
-        1
-
-    )
-
-
-    print(
-        state.summary()
-    )
-
-
-
-
-# ============================================================
-# Experiment 1
-# Probability Amplification
-# ============================================================
-
-
-def run_probability_experiment():
-
-
-    print()
-    print("="*60)
-    print("Experiment 1 : Probability Amplification")
-    print("="*60)
-
-
-    qubits = 5
-
-
-    experiments = {
-
-
-        "Single Marked":
-
-        [
-            [
-                0,0,0,0,0
-            ]
-        ],
-
-
-        "Multiple Marked":
-
-        [
-
-            [
-                0,0,0,0,0
-            ],
-
-            [
-                1,1,1,1,1
-            ]
-
-        ],
-
-
-        "Random Marked":
-
-        random_marked_oracle(
-
-            qubits,
-
-            3
-
-        )[1],
-
-
-
-        "Predicate":
-
-        predicate_marked_states(
-
-            qubits,
-
-            xor_first_two_bits
-
-        )
-
-    }
-
-
-
-    comparison_results = {}
-
-    optimal_iterations = {}
-
-
-
-    for name, marked_states in experiments.items():
-
-
-        optimal = optimal_grover_iterations(
-
-            qubits,
-
-            len(marked_states)
-
-        )
-
-
-        results = probability_amplification(
-
-            qubits,
-
-            marked_states,
-
-            optimal + 2
-
-        )
-
-
-        comparison_results[name] = results
-
-        optimal_iterations[name] = optimal
-
-
-
-        print()
-        print(name)
-        print("-"*len(name))
-
-
-        print(
-            f"Marked states: {len(marked_states)}"
-        )
-
-
-        print(
-            f"Optimal iterations: {optimal}"
-        )
-
-
-        for iteration, probability in results:
-
-
-            print(
-
-                f"{iteration:<5} "
-                f"{probability:.4f}"
-
-            )
-
-
-    rows = []
-
-
-    for name, data in comparison_results.items():
-
-        for iteration, probability in data:
-
-            rows.append({
-
-                "experiment":
-                    name,
-
-                "iteration":
-                    iteration,
-
-                "probability":
-                    probability,
-
-                "optimal_iteration":
-                    optimal_iterations[name]
-
-            })
-
-
-    save_results_csv(
-        "grover_probability_amplification.csv",
-        rows
-    )
-
-
-
-    plot_probability_amplification(
-        comparison_results,
-        optimal_iterations
-    )
-
-
+    
+    return result
 
 
 # ============================================================
 # Experiment 2
-# Scaling
+# Probability Amplification
 # ============================================================
 
-
-def run_scaling():
-
+def run_probability_experiment():
 
     print()
-    print("="*60)
-    print("Experiment 2 : Scaling")
-    print("="*60)
+
+    print("=" * 80)
+
+    print("Grover Probability Amplification")
+
+    print("=" * 80)
 
 
+    qubits = 5
 
-    families = [
 
-        "single",
+    marked_states = [
+        "00000"
+    ]
 
-        "multiple",
 
-        "random",
+    iterations = optimal_grover_iterations(
+        qubits,
+        len(marked_states)
+    )
 
-        "predicate"
+
+    curve = probability_amplification(
+        qubits,
+        marked_states,
+        iterations
+    )
+
+
+    results = [
+
+        {
+            "iteration":
+                iteration,
+
+            "probability":
+                probability
+
+        }
+
+        for iteration, probability
+        in curve
 
     ]
 
 
-
-    results = {}
-
-
-
-    for family in families:
-
-
-        print()
+    for result in results:
 
         print(
-            "Oracle:",
-            family
-        )
 
+            f"Iteration={result['iteration']:2} "
 
-        family_results = run_scaling_experiment(
-
-            oracle_family=family
+            f"Probability={result['probability']:.6f}"
 
         )
-
-
-        results[family] = family_results
-
-
-
-        for r in family_results:
-
-
-            print(
-
-                r["qubits"],
-
-                r["runtime"],
-
-                r["final_probability"]
-
-            )
-
-
-
-    rows=[]
-
-
-    for family,data in results.items():
-
-        for r in data:
-
-            rows.append({
-
-                "oracle_family":
-                    family,
-
-                "qubits":
-                    r["qubits"],
-
-                "runtime":
-                    r["runtime"],
-
-                "success_probability":
-                    r["final_probability"]
-
-            })
-
 
 
     save_results_csv(
-        "grover_scaling.csv",
-        rows
+        "grover_probability.csv",
+        results,
+        output_dir="experiments/grover/results"
     )
 
 
-
-    plot_scaling_runtime(results)
-
-    plot_scaling_probability(results)
-
+    plot_probability_amplification(
+        curve
+    )
 
 
+    return results
 
 
 # ============================================================
@@ -458,267 +196,290 @@ def run_scaling():
 # Oracle Evaluation
 # ============================================================
 
-
-def run_oracle_evaluation_experiment():
-
+def run_oracle_evaluation():
 
     print()
-    print("="*60)
-    print("Experiment 3 : Oracle Evaluation")
-    print("="*60)
+
+    print("=" * 80)
+
+    print("Grover Oracle Evaluation")
+
+    print("=" * 80)
 
 
-
-    results = run_oracle_evaluation(
-
-        qubits=5
-
-    )
-    rows=[]
+    results = execute_oracle_evaluation()
 
 
-    for r in results:
+    for result in results:
 
-        rows.append({
+        print(
 
-            "oracle":
-                r.oracle,
+            f"{result.oracle:18}"
 
-            "marked_states":
-                r.marked_states,
+            f"Marked={result.marked_states:3} "
 
-            "success_probability":
-                r.final_probability
+            f"Iterations={result.optimal_iterations:3} "
 
-        })
+            f"Probability={result.final_probability:.6f}"
+
+        )
 
 
     save_results_csv(
         "grover_oracle_evaluation.csv",
-        rows
+        [
+            asdict(result)
+            for result in results
+        ],
+        output_dir="experiments/grover/results"
     )
 
 
+    plot_oracle_evaluation(
+        results
+    )
 
 
+    return results
 
-# -------------------------------------------------
+
+# ============================================================
 # Experiment 4
+# Scaling
+# ============================================================
+
+def run_scaling():
+
+    print()
+
+    print("=" * 80)
+
+    print("Grover Scaling Experiment")
+
+    print("=" * 80)
+
+
+    all_results = []
+
+
+    for family in [
+
+        "single",
+        "multiple",
+        "random",
+        "predicate"
+
+    ]:
+
+
+        results = run_scaling_experiment(
+
+            oracle_family=family,
+
+            min_qubits=3,
+
+            max_qubits=8
+
+        )
+
+
+        all_results.extend(
+            results
+        )
+
+
+    for result in all_results:
+
+        print(
+
+            f"n={result['qubits']:2} "
+
+            f"{result['oracle_family']:10} "
+
+            f"N={result['database_size']:4} "
+
+            f"Iterations={result['optimal_iterations']:3} "
+
+            f"Runtime={result['runtime']:.6f}s "
+
+            f"P={result['final_probability']:.6f}"
+
+        )
+
+
+    save_results_csv(
+        "grover_scaling.csv",
+        all_results,
+        output_dir="experiments/grover/results"
+    )
+
+
+    plot_scaling(
+        all_results
+    )
+
+
+    return all_results
+
+
+# ============================================================
+# Experiment 5
 # Search Quality
-# -------------------------------------------------
+# ============================================================
 
 def run_search_quality():
 
     print()
-    print("=" * 60)
-    print("Experiment 4 : Search Quality")
-    print("=" * 60)
+
+    print("=" * 80)
+
+    print("Grover Search Quality")
+
+    print("=" * 80)
 
 
     qubits = 5
 
 
-    experiments = {
+    marked_states = [
+
+        "00000"
+
+    ]
 
 
-        # -----------------------------------------
-        # Single marked state
-        # -----------------------------------------
+    iterations = optimal_grover_iterations(
 
-        "Single":
+        qubits,
 
-        [
-            "00000"
-        ],
+        len(marked_states)
+
+    )
 
 
+    results = search_quality_experiment(
 
-        # -----------------------------------------
-        # Multiple marked states
-        # -----------------------------------------
+        qubits,
 
-        "Multiple":
+        marked_states,
 
-        [
-            "00000",
-            "11111"
-        ],
+        iterations
+
+    )
 
 
+    for result in results:
 
-        # -----------------------------------------
-        # Random marked states
-        # -----------------------------------------
+        print(
 
-        "Random":
+            f"Iteration={result.iteration:2} "
 
-        random_marked_oracle(
+            f"Marked={result.marked_probability:.6f} "
 
-            qubits,
-            3
+            f"MaxUnmarked="
 
-        )[1],
-
-
-
-        # -----------------------------------------
-        # Predicate oracle
-        # -----------------------------------------
-
-        "Predicate":
-
-        predicate_marked_states(
-
-            qubits,
-
-            xor_first_two_bits
+            f"{result.max_unmarked_probability:.6f}"
 
         )
-
-    }
-
-
-
-    comparison = {
-
-        "Single":
-            [
-                "00000"
-            ],
-
-        "Multiple":
-            [
-                "00000",
-                "11111"
-            ],
-
-        "Random":
-            random_marked_oracle(
-                qubits,
-                3
-            )[1],
-
-        "Predicate":
-            predicate_marked_states(
-                qubits,
-                xor_first_two_bits
-            )
-
-    }
-
-
-    search_results = {}
-
-
-    for name, marked_states in comparison.items():
-
-
-        results = search_quality_experiment(
-
-            qubits,
-
-            marked_states,
-
-            6
-
-        )
-
-
-        search_results[name] = results
-
-
-
-    rows=[]
-
-
-    for experiment,data in search_results.items():
-
-        for r in data:
-
-            rows.append({
-
-                "oracle":
-
-                    experiment,
-
-                "iteration":
-
-                    r.iteration,
-
-                "marked_probability":
-
-                    r.marked_probability,
-
-                "max_unmarked_probability":
-
-                    r.max_unmarked_probability
-
-            })
 
 
     save_results_csv(
         "grover_search_quality.csv",
-        rows
+        [
+            asdict(result)
+            for result in results
+        ],
+        output_dir="experiments/grover/results"
     )
-    
+
+
     plot_search_quality(
-    search_results
+        results
     )
 
 
-# -------------------------------------------------
-# Experiment 5
+    return results
+
+
+# ============================================================
+# Experiment 6
 # Database Search
-# -------------------------------------------------
+# ============================================================
 
 def run_database_search():
 
     print()
 
-    print("=" * 60)
+    print("=" * 80)
 
-    print(
-        "Experiment 5 : Database Search"
-    )
+    print("Grover Unsorted Database Search")
 
-    print("=" * 60)
+    print("=" * 80)
 
 
     result = grover_database_search(
-
         "Cherry"
-
     )
 
 
-    rows=[]
+    print(
+        "Target:",
+        result["target"]
+    )
 
 
-    for iteration, probability in result["curve"]:
+    print(
+        "Marked state:",
+        result["marked_state"]
+    )
 
-        rows.append({
 
-            "target":
-                result["target"],
+    print(
+        "Database size:",
+        result["database_size"]
+    )
 
-            "marked_state":
-                result["marked_state"],
 
-            "iteration":
-                iteration,
+    print(
+        "Qubits:",
+        result["qubits"]
+    )
 
-            "probability":
-                probability
 
-        })
+    print(
+        "Optimal iterations:",
+        result["optimal_iterations"]
+    )
+
+
+    print(
+        "Final probability:",
+        f"{result['final_probability']:.6f}"
+    )
 
 
     save_results_csv(
         "grover_database_search.csv",
-        rows
+        [
+            {
+                "target": result["target"],
+                "marked_state": result["marked_state"],
+                "database_size": result["database_size"],
+                "qubits": result["qubits"],
+                "optimal_iterations": result["optimal_iterations"],
+                "final_probability": result["final_probability"]
+            }
+        ],
+        output_dir="experiments/grover/results"
     )
 
 
+    plot_database_search(
+        result
+    )
+
+
+    return result
 
 
 # ============================================================
@@ -727,27 +488,13 @@ def run_database_search():
 
 def main():
 
-    # -------------------------------------------------
-    # Semantic Demonstration
-    # -------------------------------------------------
-
-    run_single_marked_demo()
-
-    # -------------------------------------------------
-    # Semantic Verification
-    # -------------------------------------------------
-
     run_semantic_verification()
-
-    # -------------------------------------------------
-    # Numerical Experiments
-    # -------------------------------------------------
 
     run_probability_experiment()
 
-    run_scaling()
+    run_oracle_evaluation()
 
-    run_oracle_evaluation_experiment()
+    run_scaling()
 
     run_search_quality()
 
@@ -755,4 +502,6 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
+

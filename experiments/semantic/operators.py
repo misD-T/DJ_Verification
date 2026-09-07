@@ -91,17 +91,6 @@ def _apply_oracle_to_amplitudes(
     state: QuantumState,
     oracle
 ) -> None:
-    """
-    Apply the semantic phase oracle to the amplitude
-    representation of the state.
-
-    For every computational basis state |x>:
-
-        U_f |x> = (-1)^f(x) |x>
-
-    This is the phase-oracle behaviour required by
-    Grover's algorithm.
-    """
 
     if state.amplitudes is None:
         return
@@ -129,7 +118,6 @@ def _apply_oracle_to_amplitudes(
 # Definition OracleOperator
 #            (f : OracleInstance)
 #            : QuantumOperator := ...
-#
 # -------------------------------------------------
 
 def OracleOperator(
@@ -160,7 +148,6 @@ def OracleOperator(
     # -------------------------------------------------
     # Evaluate symbolic current state
     # -------------------------------------------------
-
     oracle_result = oracle.evaluate(
         state.bits
     )

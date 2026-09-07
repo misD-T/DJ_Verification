@@ -399,33 +399,26 @@ def plot_verification_comparison(results):
     plt.figure(figsize=(11, 5))
 
     names = [
-        r["oracle"]
+        r.get("oracle", r.get("Oracle", "Unknown"))
         for r in results
     ]
 
+    # Safely evaluate truthiness across multiple potential key names
     qdl = [
-        1 if r["qdl"] is True else 0
+        1 if any(r.get(k) is True for k in ["qdl", "QDL", "qdl_result"]) else 0
         for r in results
     ]
 
     hh = [
-        1 if r["hh"] is True else 0
+        1 if any(r.get(k) is True for k in ["hh", "HH", "hh_result"]) else 0
         for r in results
     ]
 
     positions = range(len(names))
-
     width = 0.35
 
-    qdl_positions = [
-        p - width / 2
-        for p in positions
-    ]
-
-    hh_positions = [
-        p + width / 2
-        for p in positions
-    ]
+    qdl_positions = [p - width / 2 for p in positions]
+    hh_positions = [p + width / 2 for p in positions]
 
     plt.bar(
         qdl_positions,
@@ -448,37 +441,16 @@ def plot_verification_comparison(results):
         ha="right"
     )
 
-    plt.ylabel(
-        "Verification Result"
-    )
-
-    plt.yticks(
-        [0, 1],
-        ["False", "True"]
-    )
-
-    plt.title(
-        "Verification Agreement Across Oracle Instances"
-    )
-
-    plt.ylim(
-        0,
-        1.2
-    )
-
-    plt.grid(
-        axis="y"
-    )
-
+    plt.ylabel("Verification Result")
+    plt.yticks([0, 1], ["False", "True"])
+    plt.title("Verification Agreement Across Oracle Instances")
+    plt.ylim(0, 1.2)
+    plt.grid(axis="y")
     plt.legend()
-
     plt.tight_layout()
 
     plt.savefig(
-        os.path.join(
-            RESULTS_DIR,
-            "dj_verification_comparison.png"
-        ),
+        os.path.join(RESULTS_DIR, "dj_verification_comparison.png"),
         dpi=300,
         bbox_inches="tight"
     )

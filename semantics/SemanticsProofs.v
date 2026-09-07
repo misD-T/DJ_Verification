@@ -120,15 +120,44 @@ Theorem box_implies_hoare :
     ->
     {{ P }} U {{ P }}.
 Proof.
-Admitted.
+  intros U P Hvalid.
 
-Theorem hoare_implies_modal :
-  forall U P,
+  unfold Valid in Hvalid.
+  unfold HoareTriple.
+
+  intros ρ Hpre.
+
+  simpl in Hvalid.
+
+  exact (Hvalid ρ).
+Qed.
+
+Theorem hoare_implies_modal_under_precondition :
+
+  forall U P ρ,
+
     {{ P }} U {{ P }}
+
     ->
-    Valid (Box U (Atom P)).
+
+    P ρ
+
+    ->
+
+    satisfies ρ
+      (Box U (Atom P)).
+
 Proof.
-Admitted.
+
+  intros U P ρ Hhoare Hpre.
+
+  unfold HoareTriple in Hhoare.
+
+  simpl.
+
+  exact (Hhoare ρ Hpre).
+
+Qed.
 
 (*************************************************************)
 (* Generic Semantic Soundness                                *)

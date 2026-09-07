@@ -1,4 +1,4 @@
-DIGEST fcf076f73faec5d134c067a36ba8908d
+DIGEST 7774e6c41fb9f1029b11695711fabe6e
 FGrover.GroverTrace
 R416:419 Coq.Lists.List <> <> lib
 R421:425 Coq.Arith.Arith <> <> lib
@@ -150,29 +150,39 @@ R4714:4727 Grover.GroverTrace <> TraceIteration proj
 R4703:4709 Coq.Arith.PeanoNat Nat eqb def
 R4714:4727 Grover.GroverTrace <> TraceIteration proj
 prf 4908:4932 <> StateAtIteration_in_trace
-binder 4946:4946 <> i:26
-binder 4948:4952 <> trace:27
-binder 4954:4955 <> ρ:28
-R4995:5004 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R4985:4987 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4961:4976 Grover.GroverTrace <> StateAtIteration def
-R4978:4978 Grover.GroverTrace <> i:26 var
-R4980:4984 Grover.GroverTrace <> trace:27 var
-R4988:4991 Coq.Init.Datatypes <> Some constr
-R4993:4994 Grover.GroverTrace <> ρ:28 var
-R5005:5011 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
-R5017:5021 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
-binder 5012:5016 <> entry:29
-R5036:5042 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
-R5022:5023 Coq.Lists.List <> In def
-R5031:5035 Grover.GroverTrace <> trace:27 var
-R5025:5029 Grover.GroverTrace <> entry:29 var
-R5064:5070 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
-R5059:5061 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5043:5052 Grover.GroverTrace <> TraceState proj
-R5054:5058 Grover.GroverTrace <> entry:29 var
-R5062:5063 Grover.GroverTrace <> ρ:28 var
-R5091:5093 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5071:5084 Grover.GroverTrace <> TraceIteration proj
-R5086:5090 Grover.GroverTrace <> entry:29 var
-R5094:5094 Grover.GroverTrace <> i:26 var
+binder 4948:4948 <> i:26
+binder 4950:4954 <> trace:27
+binder 4956:4957 <> ρ:28
+R5001:5018 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4991:4993 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4967:4982 Grover.GroverTrace <> StateAtIteration def
+R4984:4984 Grover.GroverTrace <> i:26 var
+R4986:4990 Grover.GroverTrace <> trace:27 var
+R4994:4997 Coq.Init.Datatypes <> Some constr
+R4999:5000 Grover.GroverTrace <> ρ:28 var
+R5019:5025 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R5031:5041 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 5026:5030 <> entry:29
+R5056:5073 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R5042:5043 Coq.Lists.List <> In def
+R5051:5055 Grover.GroverTrace <> trace:27 var
+R5045:5049 Grover.GroverTrace <> entry:29 var
+R5095:5112 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R5090:5092 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5074:5083 Grover.GroverTrace <> TraceState proj
+R5085:5089 Grover.GroverTrace <> entry:29 var
+R5093:5094 Grover.GroverTrace <> ρ:28 var
+R5133:5135 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5113:5126 Grover.GroverTrace <> TraceIteration proj
+R5128:5132 Grover.GroverTrace <> entry:29 var
+R5136:5136 Grover.GroverTrace <> i:26 var
+R5381:5387 Coq.Arith.PeanoNat Nat eqb def
+R5392:5405 Grover.GroverTrace <> TraceIteration proj
+R5381:5387 Coq.Arith.PeanoNat Nat eqb def
+R5392:5405 Grover.GroverTrace <> TraceIteration proj
+R5552:5556 Coq.Lists.List <> in_eq thm
+R5552:5556 Coq.Lists.List <> in_eq thm
+R5624:5633 Coq.Arith.PeanoNat Nat eqb_eq thm
+R5624:5633 Coq.Arith.PeanoNat Nat eqb_eq thm
+R5895:5901 Coq.Lists.List <> in_cons thm
+R5895:5901 Coq.Lists.List <> in_cons thm

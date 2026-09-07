@@ -10,6 +10,7 @@ from .dj_visualisation import (
     plot_oracle_complexity,
     plot_promise_probability,
     plot_promise_distance,
+    plot_verification_comparison,
 )
 
 from .dj_verify import run_test
@@ -100,6 +101,10 @@ def run_semantic_verification():
 
         results
 
+    )
+    
+    plot_verification_comparison(
+        results
     )
 
 # ============================================================

@@ -375,7 +375,8 @@ def create_oracle(
 
     def oracle(bits):
 
-        index = int(bits,2)
+        target_register = bits[1:]
+        index = int(target_register,2)
 
         return bool(
             table[index]

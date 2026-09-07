@@ -311,20 +311,82 @@ Qed.
 
 Lemma StateAtIteration_in_trace :
 
-forall i trace ρ,
+  forall i trace ρ,
 
-StateAtIteration i trace = Some ρ
+    StateAtIteration i trace = Some ρ
 
-->
+    ->
 
-exists entry,
+    exists entry,
 
-In entry trace
-/\ 
-TraceState entry = ρ
-/\ 
-TraceIteration entry = i.
+      In entry trace
+      /\
+      TraceState entry = ρ
+      /\
+      TraceIteration entry = i.
 
 Proof.
 
-Admitted.
+  intros i trace.
+
+  induction trace as [| x xs IH].
+
+  - (* Empty trace *)
+
+    intros ρ H.
+
+    simpl in H.
+
+    discriminate H.
+
+
+  - (* Non-empty trace *)
+
+    intros ρ H.
+
+    simpl in H.
+
+    destruct (Nat.eqb i (TraceIteration x)) eqn:Heq.
+
+    + (* Head entry matches the requested iteration *)
+
+      inversion H.
+
+      exists x.
+
+      split.
+
+      * apply in_eq.
+
+      * split.
+
+        -- reflexivity.
+
+        -- apply Nat.eqb_eq in Heq.
+
+           symmetry.
+
+           exact Heq.
+
+
+    + (* Head entry does not match; search the remainder *)
+
+      apply IH in H.
+
+      destruct H as [entry [Hin [Hstate Hiteration]]].
+
+      exists entry.
+
+      split.
+
+      * apply in_cons.
+
+        exact Hin.
+
+      * split.
+
+        -- exact Hstate.
+
+        -- exact Hiteration.
+
+Qed.

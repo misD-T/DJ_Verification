@@ -1,0 +1,21 @@
+n,oracle,structural_complexity,promise_valid,output,verified,qdl,hh,runtime_avg,runtime_std,runtime_median,trace,status
+3,full_parity,3,True,111,True,True,True,0.0015877843333441887,0.00021496930418875727,0.0015263890000483116,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+3,xor_two_bits,2,True,110,True,True,True,0.0015045074999913291,0.00012675701501243448,0.0014848349999851962,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+4,full_parity,4,True,1111,True,True,True,0.0023073890000015734,8.695579523795373e-05,0.002294140500055164,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+4,xor_two_bits,2,True,1100,True,True,True,0.0023246446999867962,0.00015545818593260566,0.002301011499980632,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+5,full_parity,5,True,11111,True,True,True,0.008656261099997665,0.0038254140782934066,0.007825948000004246,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+5,xor_two_bits,2,True,11000,True,True,True,0.009593212366663313,0.0031892457299566236,0.009932133500001328,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+6,full_parity,6,True,111111,True,True,True,0.027399069700000684,0.019054564761700973,0.02121435300000485,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+6,xor_two_bits,2,True,110000,True,True,True,0.024322977666668067,0.010222304446346874,0.021067565000009836,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+7,full_parity,7,True,1111111,True,True,True,0.04500380886665501,0.009777161380104355,0.043689000999961536,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+7,xor_two_bits,2,True,1100000,True,True,True,0.04930556946667366,0.01631285138488614,0.04606671500005177,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+8,full_parity,8,True,11111111,True,True,True,0.02863028886668341,0.004858840822302805,0.027738995499987595,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+8,xor_two_bits,2,True,11000000,True,True,True,0.03045466573333139,0.004665900517341959,0.028856586000017614,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+9,full_parity,9,True,111111111,True,True,True,0.06307645756666412,0.004997344085547459,0.062268843000026664,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+9,xor_two_bits,2,True,110000000,True,True,True,0.05809883343334832,0.002175178359697351,0.05752568700000893,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+10,full_parity,10,True,1111111111,True,True,True,0.1351674464333352,0.008767070255160835,0.13405853799997658,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+10,xor_two_bits,2,True,1100000000,True,True,True,0.131165480000008,0.00600862784811252,0.13057682650003244,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+11,full_parity,11,True,11111111111,True,True,True,0.3070048847666612,0.017550473263494074,0.3012053740000624,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+11,xor_two_bits,2,True,11000000000,True,True,True,0.30113364943334014,0.013302294632717693,0.29629414000004317,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+12,full_parity,12,True,111111111111,True,True,True,0.7457187201666746,0.0368556619918905,0.7344264045000273,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED
+12,xor_two_bits,2,True,110000000000,True,True,True,0.7379254416666754,0.03096039570701871,0.740317602999994,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED

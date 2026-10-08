@@ -3,6 +3,7 @@ from unittest import result
 from .dj_runtime import scaling_experiment
 from .dj_complexity import oracle_complexity_experiment
 from .dj_promise import promise_robustness_experiment
+from .dj_fault_experiment import run_fault_experiment
 
 from .dj_visualisation import (
     plot_scaling_runtime,
@@ -12,6 +13,7 @@ from .dj_visualisation import (
     plot_promise_distance,
     plot_verification_comparison,
 )
+
 
 from .dj_verify import run_test
 
@@ -339,11 +341,11 @@ def main():
     
     run_scaling()
 
-
     run_oracle_complexity()
 
-
     run_promise_robustness()
+    
+    run_fault_experiment()
 
 
 

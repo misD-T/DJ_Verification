@@ -155,7 +155,7 @@ OutputNonZero n (DJ f n).
 
 
 (*************************************************************)
-(* Correctness Specification                                 *)
+(*  Specification                                 *)
 (*************************************************************)
 
 Definition DJAlgorithmCorrect

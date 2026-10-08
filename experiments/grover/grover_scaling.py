@@ -18,7 +18,7 @@ Supports:
 """
 
 import time
-
+import random
 from .grover_probability import (
     probability_amplification,
     optimal_grover_iterations
@@ -35,7 +35,8 @@ def run_scaling_experiment(
     oracle_family="single",
     min_qubits=3,
     max_qubits=8
-):
+):  
+    random.seed(42)
 
     results = []
 

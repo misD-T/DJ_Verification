@@ -1,0 +1,3 @@
+implementation,oracle,qubits,oracle_preserved,execution_status,semantic_trace,verification_result
+correct,constant_zero,5,True,ExecutionStatus.FINISHED,InitialState -> H -> Oracle -> H -> Measurement,PASS
+faulty,constant_zero,5,False,ExecutionStatus.FINISHED,InitialState -> H -> BadOracle -> H -> Measurement,REJECTED

@@ -1,3 +1,4 @@
+import random
 import statistics
 
 from .dj_verify import run_test
@@ -19,6 +20,8 @@ from .dj_verify import run_test
 def oracle_complexity_experiment(
         target_bits=5
 ):
+    random.seed(42)
+
 
 
     oracle_set = [

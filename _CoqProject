@@ -15,6 +15,7 @@ deutschjozsa/DJ.v
 deutschjozsa/DJProofs.v
 deutschjozsa/Tests/DJTests.v
 deutschjozsa/Tests/DJCaseStudy.v
+deutschjozsa/Tests/DJFaultTests.v
 
 -Q semantics Quantum
 semantics/QuantumState.v
@@ -37,6 +38,8 @@ grovers/GroverProbabilitySoundness.v
 grovers/GroverExperimentResults.v
 grovers/GroverConvergenceExperiment.v
 grovers/GroverCaseStudy.v
+grovers/GroverFaultTests.v
+grovers/GroverFaults.v
 
 -Q FinalVerification Final
 FinalVerification/Framework.v
@@ -44,3 +47,4 @@ FinalVerification/AlgorithmVerification.v
 FinalVerification/LogicComparison.v
 FinalVerification/CaseStudyComparison.v
 FinalVerification/FrameworkSoundness.v
+FinalVerification/FaultDetection.v

@@ -56,6 +56,8 @@ from .grover_visualisation import (
     plot_database_search
 )
 
+from .grover_fault_experiment import (
+    run_fault_experiment)
 
 from ..util.result_writer import (
     save_results_csv
@@ -499,6 +501,8 @@ def main():
     run_search_quality()
 
     run_database_search()
+    
+    run_fault_experiment()
 
 
 if __name__ == "__main__":

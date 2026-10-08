@@ -1,0 +1,10 @@
+n,oracle,oracle_class,structural_complexity,bias,prob_zero,promise_valid,normalised_complexity,output,verified,qdl,hh,semantic_trace,semantic_status,avg_runtime,std_runtime
+5,constant_zero,Constant,0,0.0,0.9999999999999982,True,0.0,00000,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.0008922313000084614,0.00010047735082043936
+5,constant_one,Constant,0,1.0,0.9999999999999982,True,0.0,00000,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.018728896999971312,0.01055253874177894
+5,first_bit,Balanced,1,0.5,1.8142106940266828e-34,True,0.2,10000,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.010691960800011202,0.0035565081884327138
+5,alternating,Balanced,1,0.5,1.5563467254518633e-35,True,0.2,00001,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.009090625699968768,0.0021593259070663007
+5,xor_two_bits,Balanced,2,0.5,1.1913527410433241e-67,True,0.4,11000,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.007690975900027297,0.0024523308900908673
+5,full_parity,Balanced,5,0.5,2.7558374720802387e-167,True,1.0,11111,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.011130767299982835,0.004728179724105268
+5,affine,Balanced,5,0.5,1.240800271153179e-102,True,1.0,10101,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.013331279599992741,0.006026313806934348
+5,and_xor,Balanced,5,0.5,8.632586236046793e-102,True,1.0,00111,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.011863738900001409,0.008083976531275468
+5,random_balanced,Balanced,32,0.5,1.2410811040084576e-35,True,6.4,10001,True,True,True,"['InitialState', 'AncillaPreparation', 'H', 'Oracle', 'H', 'Measurement']",FINISHED,0.011644900999976926,0.006374863763023737

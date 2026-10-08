@@ -11,7 +11,7 @@ Compares:
 The experiment measures the number of marked states,
 optimal iteration count and final success probability.
 """
-
+import random
 from dataclasses import dataclass, asdict
 
 from .grover_probability import (
@@ -66,7 +66,7 @@ def evaluate_oracle(
 def run_oracle_evaluation(
     qubits=5
 ):
-
+    random.seed(42)
     results = []
 
     # --------------------------------------------------------
